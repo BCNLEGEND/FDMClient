@@ -1,0 +1,191 @@
+/**********************************************************************/
+/* RESET */
+html {
+  font-size: 62.5%;
+}
+@media (min-width: 600px) {
+  html {
+    font-size: 71%;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 89%;
+  }
+}
+@media (min-width: 1400px) {
+  html {
+    font-size: 100%;
+  }
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--primary-font);
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*************************************************************/
+/* SPECIFIC FONTS */
+
+@font-face {
+  font-family: 'Nexa light';
+  src: url('../src/media/fonts/nexa_light-webfont.woff') format('woff');
+  src: url('../src/media/fonts/nexa_light-webfont.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'Nexa bold';
+  src: url('../src/media/fonts/nexa_bold-webfont.woff') format('woff');
+  src: url('../src/media/fonts/nexa_bold-webfont.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'Lovetime clean';
+  src: url('../src/media/fonts/lovetime_clean-webfont.woff') format('woff');
+  src: url('../src/media/fonts/lovetime_clean-webfont.woff2') format('woff');
+}
+
+/****************************************************************/
+
+:root {
+  --primary-font: 'Nexa bold';
+  --primary-font-light: 'Nexa light';
+  --secondary-font: 'Lovetime clean';
+  --primary-color: #0047ba;
+  --primary-color-light: #5b87da;
+  --secondary-color: #3fae2a;
+  --size-xxs: 1rem;
+  --size-xs: 2rem;
+  --size-s: 3rem;
+  --size-m: 5rem;
+  --size-l: 7.5rem;
+  --size-xl: 10rem;
+  --size-xxl: 15rem;
+}
+
+.DayPicker {
+  width: 80%;
+  color: var(--primary-color);
+}
+
+.DayPicker-Month {
+  width: 80%;
+}
+.DayPicker-NavButton--next {
+  font-size: 1.5rem;
+}
+
+.DayPicker-NavButton--prev {
+  font-size: 1.5rem;
+}
+.DayPicker-NavButton {
+  top: 0.5rem;
+}
+
+/* MAP global CSS */
+
+.mapboxPopup {
+  color: var(--primary-color);
+  font-size: var(--size-xxs);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupImg {
+  width: var(--size-s);
+  height: var(--size-s);
+  margin-right: var(--size-xxs);
+}
+
+.MuiTabs-indicator {
+  background-color: var(--secondary-color) !important;
+}
+
+.MuiTypography-body1 {
+  font-size: 1.1rem;
+  font-family: var(--primary-font) !important;
+}
+
+.MuiTab-wrapper {
+  font-family: var(--primary-font) !important;
+}
