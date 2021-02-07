@@ -74,13 +74,16 @@ function SignupForm(props) {
     e.preventDefault();
     try {
       props.toggleLoading();
-      const res = await axios.post('/api/v1/users/signup', {
-        firstName,
-        lastName,
-        email,
-        password,
-        passwordConfirm,
-      });
+      const res = await axios.post(
+        'https://api-farmacia-del-mar.herokuapp.com/api/v1/users/signup',
+        {
+          firstName,
+          lastName,
+          email,
+          password,
+          passwordConfirm,
+        }
+      );
       console.log(res);
       localStorage.setItem('jwt', res.data.token);
       changeUser(res.data.data.user);

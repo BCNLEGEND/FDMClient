@@ -29,10 +29,13 @@ function LoginForm(props) {
     e.preventDefault();
     try {
       props.toggleLoading();
-      const res = await axios.post('/api/v1/users/login', {
-        email: username,
-        password: password,
-      });
+      const res = await axios.post(
+        'https://api-farmacia-del-mar.herokuapp.com/api/v1/users/login',
+        {
+          email: username,
+          password: password,
+        }
+      );
       setUsername('');
       setPassword('');
       localStorage.setItem('jwt', res.data.token);

@@ -9,7 +9,7 @@ const handle = app.getRequestHandler();
 
 const apiPaths = {
   '/api': {
-    target: 'http://localhost:8000',
+    target: 'https://api-farmacia-del-mar.herokuapp.com',
     pathRewrite: {
       '^/api': '/api',
     },
