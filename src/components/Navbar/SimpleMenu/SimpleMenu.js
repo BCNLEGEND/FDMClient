@@ -42,28 +42,20 @@ function SimpleMenu(props) {
         onClose={handleClose}
       >
         <Link href="/" passHref>
-          <MenuItem onClick={handleClose}>
-            <a className={classes.menuLink}>{text[language].home}</a>
-          </MenuItem>
+          <MenuItem onClick={handleClose}>{text[language].home}</MenuItem>
         </Link>
         <Link href="/services" passHref>
-          <MenuItem onClick={handleClose}>
-            <a className={classes.menuLink}>{text[language].service}</a>
-          </MenuItem>
+          <MenuItem onClick={handleClose}>{text[language].service}</MenuItem>
         </Link>
         <Link href="/team" passHref>
-          <MenuItem onClick={handleClose}>
-            <a className={classes.menuLink}>{text[language].team}</a>
-          </MenuItem>
+          <MenuItem onClick={handleClose}>{text[language].team}</MenuItem>
         </Link>
         <Link href="/contact" passHref>
-          <MenuItem onClick={handleClose}>
-            <a className={classes.menuLink}>{text[language].contact}</a>
-          </MenuItem>
+          <MenuItem onClick={handleClose}>{text[language].contact}</MenuItem>
         </Link>
         <Link href="/emergencies" passHref>
           <MenuItem onClick={handleClose}>
-            <a className={classes.menuLink}>{text[language].emergencies}</a>
+            {text[language].emergencies}
           </MenuItem>
         </Link>
       </Menu>

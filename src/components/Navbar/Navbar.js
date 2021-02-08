@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('md')]: {
-      width: '20ch',
+      width: '20vh',
     },
   },
   sectionDesktop: {
@@ -191,14 +191,6 @@ export default function PrimarySearchAppBar() {
       <AppBar position="static">
         <Toolbar>
           <SimpleMenu />
-          <Image
-            layout="responsive"
-            width="300"
-            height="50"
-            src="/media/img/FDM_logo_white.png"
-            className={classes.logo}
-            alt="Logo Farmàcia del mar"
-          ></Image>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -214,11 +206,6 @@ export default function PrimarySearchAppBar() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            {/* <IconButton aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={1} color="secondary">
-                <MailIcon />
-              </Badge>
-            </IconButton> */}
             {loggedIn ? (
               <IconButton
                 aria-label="show 17 new notifications"
@@ -229,26 +216,25 @@ export default function PrimarySearchAppBar() {
                 </Badge>
               </IconButton>
             ) : (
-              ''
+              <IconButton
+                edge="end"
+                aria-label="account of current user"
+                aria-controls={menuId}
+                aria-haspopup="true"
+                onClick={handleProfileMenuOpen}
+                color="inherit"
+              >
+                {loggedIn ? (
+                  <Avatar
+                    alt={`${user.firstName} ${user.lastName}`}
+                    src={`/media/users/${user.photo}`}
+                    className={classes.img}
+                  />
+                ) : (
+                  <AccountCircle />
+                )}
+              </IconButton>
             )}
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              {loggedIn ? (
-                <Avatar
-                  alt={`${user.firstName} ${user.lastName}`}
-                  src={`/media/users/${user.photo}`}
-                  className={classes.img}
-                />
-              ) : (
-                <AccountCircle />
-              )}
-            </IconButton>
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
