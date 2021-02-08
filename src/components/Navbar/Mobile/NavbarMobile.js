@@ -18,16 +18,16 @@ function NavbarMobile(props) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" className={classes.root}>
+      <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           <SimpleMenu />
-          <div className={classes.title}>
+          <div className={classes.logo}>
             <Image
               layout="responsive"
               width="100"
               height="10"
               src="/media/img/FDM_logo_white.png"
-              className={classes.title}
+              className={classes.logo}
               alt="Logo Farmàcia del mar"
             ></Image>
           </div>

@@ -1,17 +1,22 @@
 import sizes from '../../../utils/mediaSizes';
-import { bp } from '../../../utils/breakpoints';
+
 const styles = {
   root: {
     width: '100vw',
-    flexGrow: 1,
     backgroundColor: 'var(--primary-color)',
   },
-  title: {
+  appBar: {
+    display: 'flex',
+    justifyContent: 'space-around',
+  },
+  logo: {
+    width: '60%',
+    height: '90%',
     flexGrow: 1,
     textAlign: 'center',
     textDecoration: 'uppercase',
-    padding: '0 var(--size-s)',
-    [sizes.up(bp.sm)]: {
+    padding: 'var(--size-xxs) var(--size-s)',
+    [sizes.up('sm')]: {
       padding: '0 var(--size-m)',
     },
   },

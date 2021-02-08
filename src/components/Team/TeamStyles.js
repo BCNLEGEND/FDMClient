@@ -22,7 +22,7 @@ const styles = {
     alignItems: 'center',
     position: 'relative',
     [sizes.up('sm')]: {
-      width: ' 80%',
+      width: ' 100%',
       flexDirection: 'row',
       flexWrap: 'wrap',
     },
@@ -37,8 +37,12 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     [sizes.up('sm')]: {
-      width: '45%',
+      width: '40%',
       margin: 'var(--size-xxs)',
+    },
+    [sizes.up('md')]: {
+      width: '29%',
+      // margin: 'var(--size-xxs)',
     },
   },
   imgContainer: {
