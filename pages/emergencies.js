@@ -30,17 +30,18 @@ export default function emergencies() {
           La Farmàcia del Mar està dins la roda de torns de Guàrdies d’Arenys de
           Mar. Durant el mes de {currentMonth} ens pertoquen els següents dies
           de Guàrdies:
-          <ul>
-            {calendarDates.map(
-              (date) =>
-                date.getMonth() === now.getMonth() && (
-                  <li className={styles.listItem} key={date.getTime}>{`${
-                    WEEKDAYS_LONG[date.getDay()]
-                  } ${date.getDate()} ${currentMonth} ${now.getFullYear()}`}</li>
-                )
-            )}
-          </ul>
         </p>
+        <ul>
+          {calendarDates.map(
+            (date) =>
+              date.getMonth() === now.getMonth() && (
+                <li className={styles.listItem} key={date.getTime()}>{`${
+                  WEEKDAYS_LONG[date.getDay()]
+                } ${date.getDate()} ${currentMonth} ${now.getFullYear()}`}</li>
+              )
+          )}
+        </ul>
+
         <Calendar />
       </main>
       <Footer />

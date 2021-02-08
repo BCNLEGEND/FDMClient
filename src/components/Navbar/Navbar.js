@@ -123,24 +123,24 @@ export default function PrimarySearchAppBar() {
     >
       {loggedIn ? (
         <div>
-          <Link href="/user/profile">
-            <a>
-              <MenuItem onClick={handleMenuClose}>Mi Perfil</MenuItem>
-            </a>
-          </Link>
-          <Link href="/user/profile">
-            <a>
-              <MenuItem onClick={handleMenuClose}>Mis Encargos</MenuItem>
-            </a>
-          </Link>
+          <MenuItem onClick={handleMenuClose}>
+            <Link href="/user/profile">
+              <a>Mi Perfil</a>
+            </Link>
+          </MenuItem>
+          <MenuItem onClick={handleMenuClose}>
+            <Link href="/user/profile">
+              <a>Mis Encargos</a>
+            </Link>
+          </MenuItem>
           <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
         </div>
       ) : (
-        <Link href="/login">
-          <a>
-            <MenuItem onClick={handleMenuClose}>login/ Signup</MenuItem>
-          </a>
-        </Link>
+        <MenuItem onClick={handleMenuClose}>
+          <Link href="/login">
+            <a>login/ Signup</a>
+          </Link>
+        </MenuItem>
       )}
     </Menu>
   );
@@ -172,9 +172,9 @@ export default function PrimarySearchAppBar() {
         </IconButton>
         <p>Notifications</p>
       </MenuItem> */}
-      <Link href="/login">
-        <a>
-          <MenuItem onClick={handleProfileMenuOpen}>
+      <MenuItem onClick={handleProfileMenuOpen}>
+        <Link href="/login">
+          <a>
             <IconButton
               aria-label="account of current user"
               aria-controls="primary-search-account-menu"
@@ -184,9 +184,9 @@ export default function PrimarySearchAppBar() {
               <AccountCircle />
             </IconButton>
             <p>Login</p>
-          </MenuItem>
-        </a>
-      </Link>
+          </a>
+        </Link>
+      </MenuItem>
     </Menu>
   );
 
@@ -268,7 +268,7 @@ export default function PrimarySearchAppBar() {
         </Toolbar>
       </AppBar>
       {renderMobileMenu}
-      {renderMenu}
+      {/* {renderMenu} */}
     </div>
   );
 }

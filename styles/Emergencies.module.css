@@ -34,4 +34,5 @@
   height: var(--size-xxs);
   width: var(--size-xxs);
   margin-right: var(--size-xxs);
+  margin-left: var(--size-s);
 }
