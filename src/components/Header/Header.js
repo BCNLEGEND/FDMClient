@@ -14,7 +14,7 @@ function header(props) {
   const isBreakPoint = useMediaQuery(bp.lg);
   return (
     <header className={classes.header}>
-      {isBreakPoint ? (
+      {!isBreakPoint ? (
         <div className={classes.background}>
           <Image
             layout="responsive"

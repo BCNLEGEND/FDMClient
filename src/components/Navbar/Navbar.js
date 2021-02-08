@@ -6,7 +6,7 @@ const Navbar = () => {
   const isBreakpoint = useMediaQuery(bp.lg);
   return (
     <div>
-      {isBreakpoint ? (
+      {!isBreakpoint ? (
         <>
           <NavbarMobile />
         </>

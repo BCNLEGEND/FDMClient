@@ -67,6 +67,10 @@ function Home() {
           href="/media/img/maskable_icons/favicon-16x16.png"
         />
         <link rel="manifest" href="/farmaciadelmar.webmanifest"></link>
+        <link
+          href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css"
+          rel="stylesheet"
+        />
       </Head>
       <Header />
       <main className={styles.main}>

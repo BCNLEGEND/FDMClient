@@ -9,15 +9,21 @@ const styles = {
     alignItems: 'center',
   },
   content: {
+    width: '90%',
     borderTop: '.1px solid var(--primary-color)',
     marginTop: 'var(--size-m)',
     color: 'var(--primary-color)',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     padding: 'var(--size-xs) 0',
     borderBottom: '.1px solid var(--primary-color)',
+    [sizes.up('sm')]: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-around',
+    },
   },
   copy: {
     paddingTop: 'var(--size-xs)',
@@ -30,7 +36,7 @@ const styles = {
   container: {
     padding: '0 var(--size-xxs)',
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
   },
   icon: {
@@ -38,10 +44,19 @@ const styles = {
     height: 'var(--size-xs)',
     width: 'var(--size-xs)',
     marginRight: 'var(--size-xxs)',
-    marginLeft: 'var(--size-s)',
+    // marginLeft: 'var(--size-s)',
     [sizes.up('sm')]: {
       marginLeft: 'var(--size-xxs)',
     },
+  },
+  address: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyItems: 'center',
+  },
+  map: {
+    width: '45%',
+    height: '100%',
   },
 };
 

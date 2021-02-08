@@ -161,22 +161,6 @@ select {
   top: 0.5rem;
 }
 
-/* MAP global CSS */
-
-.mapboxPopup {
-  color: var(--primary-color);
-  font-size: var(--size-xxs);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.popupImg {
-  width: var(--size-s);
-  height: var(--size-s);
-  margin-right: var(--size-xxs);
-}
-
 .MuiTabs-indicator {
   background-color: var(--secondary-color) !important;
 }
@@ -188,4 +172,22 @@ select {
 
 .MuiTab-wrapper {
   font-family: var(--primary-font) !important;
+}
+
+.footerMapPopup {
+  color: var(--primary-color);
+  font-size: var(--size-xxs);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerMapImg {
+  width: var(--size-xs);
+  height: var(--size-xs);
+  margin-right: var(--size-xxs);
+}
+
+.footerMapTitle {
+  font-size: var(--size-xxs);
 }
