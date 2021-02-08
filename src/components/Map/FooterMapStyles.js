@@ -1,7 +1,7 @@
 const styles = {
   container: {
     position: 'relative',
-    height: '18vh',
+    height: '20vw',
     width: '38vw',
   },
   map: {

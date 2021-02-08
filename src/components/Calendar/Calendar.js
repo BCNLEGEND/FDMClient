@@ -25,7 +25,13 @@ function GuardiesCalendar(props) {
     },
   };
   const { classes } = props;
-  const isBreakpoint = useMediaQuery(bp.md);
+  const isBreakpointMd = useMediaQuery(bp.md);
+  const isBreakpointLg = useMediaQuery(bp.lg);
+  const numOfMonths = () => {
+    if (isBreakpointLg) return 3;
+    if (isBreakpointMd) return 2;
+    return 1;
+  };
   return (
     <section className={classes.root}>
       <h3 className={classes.heading}>Estem de Guardià</h3>
@@ -40,7 +46,7 @@ function GuardiesCalendar(props) {
         weekdaysShort={WEEKDAYS_SHORT}
         modifiers={modifiers}
         modifiersStyles={modifiersStyles}
-        numberOfMonths={isBreakpoint ? 2 : 1}
+        numberOfMonths={numOfMonths()}
         className={classes.calendar}
       />
     </section>

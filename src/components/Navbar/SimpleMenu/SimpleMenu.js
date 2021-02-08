@@ -8,7 +8,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import { withStyles } from '@material-ui/styles';
 
 import { LanguageContext } from '../../../context/language';
-import styles from './NavbarMobileStyles';
+import styles from '../NavbarStyles';
 import text from './text';
 
 function SimpleMenu(props) {

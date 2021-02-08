@@ -1,4 +1,4 @@
-import sizes from '../../../utils/mediaSizes';
+import sizes from '../../utils/mediaSizes';
 
 const styles = {
   root: {

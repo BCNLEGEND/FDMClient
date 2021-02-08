@@ -9,7 +9,7 @@ class FooterMap extends Component {
     this.state = {
       lng: 2.5498124789463175,
       lat: 41.57872132733914,
-      zoom: 16,
+      zoom: 15,
     };
   }
 
@@ -23,22 +23,21 @@ class FooterMap extends Component {
       zoom: this.state.zoom,
     });
 
-    const popup = new mapboxgl.Popup({
-      closeButton: false,
-      closeOnClick: false,
-      anchor: 'bottom',
-      maxWidth: '200px',
-    }).setHTML(
-      '<div class="footerMapPopup"><img src="/favicon.ico" class="footerMapImg"/><h1 class="footerMapTitle">Farmàcia del Mar</h1></div>'
-    );
+    // const popup = new mapboxgl.Popup({
+    //   closeButton: false,
+    //   closeOnClick: false,
+    //   anchor: 'bottom',
+    //   maxWidth: '200px',
+    // }).setHTML(
+    //   '<div class="footerMapPopup"><img src="/favicon.ico" class="footerMapImg"/><h1 class="footerMapTitle">Farmàcia del Mar</h1></div>'
+    // );
 
     const marker = new mapboxgl.Marker({
       color: '#0047ba',
     })
-      .setPopup(popup)
       .setLngLat([2.5498124789463175, 41.57872132733914])
-      .addTo(map)
-      .togglePopup();
+      .addTo(map);
+    // .togglePopup();
   }
 
   render() {

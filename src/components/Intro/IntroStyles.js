@@ -4,17 +4,24 @@ const styles = {
   root: {
     padding: '0 var(--size-s)',
     paddingTop: 'var(--size-m)',
-    width: ' 90%',
+    width: ' 100%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     [sizes.up('sm')]: {
-      width: ' 80%',
+      width: ' 90%',
+    },
+    [sizes.up('lg')]: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
     },
   },
   text: {
     color: 'var(--primary-color)',
+    [sizes.up('lg')]: {
+      width: '55%',
+    },
   },
   headerMain: {
     display: 'block',
@@ -44,6 +51,9 @@ const styles = {
   img: {
     width: '60%',
     margin: 'var(--size-s) auto',
+    [sizes.up('lg')]: {
+      width: '30%',
+    },
   },
   image: {},
 };

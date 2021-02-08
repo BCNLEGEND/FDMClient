@@ -12,9 +12,16 @@ const styles = {
     [sizes.up('sm')]: {
       width: ' 80%',
     },
+    [sizes.up('lg')]: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+    },
   },
   text: {
     color: 'var(--primary-color)',
+    [sizes.up('lg')]: {
+      width: '60%',
+    },
   },
   paragraph: {
     textAlign: 'justify',
@@ -36,6 +43,9 @@ const styles = {
   imgContainer: {
     paddingTop: 'var(--size-m)',
     width: '60%',
+    [sizes.up('lg')]: {
+      width: '30%',
+    },
   },
 };
 
