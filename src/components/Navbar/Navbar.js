@@ -111,7 +111,7 @@ export default function PrimarySearchAppBar() {
   };
 
   const menuId = 'primary-search-account-menu';
-  const renderMenu = (
+  const renderMenu = loggedIn ? (
     <Menu
       anchorEl={anchorEl}
       anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
@@ -121,27 +121,33 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      {loggedIn ? (
-        <div>
-          <MenuItem onClick={handleMenuClose}>
-            <Link href="/user/profile">
-              <a>Mi Perfil</a>
-            </Link>
-          </MenuItem>
-          <MenuItem onClick={handleMenuClose}>
-            <Link href="/user/profile">
-              <a>Mis Encargos</a>
-            </Link>
-          </MenuItem>
-          <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
-        </div>
-      ) : (
-        <MenuItem onClick={handleMenuClose}>
-          <Link href="/login">
-            <a>login/ Signup</a>
-          </Link>
-        </MenuItem>
-      )}
+      <MenuItem onClick={handleMenuClose}>
+        <Link href="/user/profile">
+          <a>Mi Perfil</a>
+        </Link>
+      </MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        <Link href="/user/profile">
+          <a>Mis Encargos</a>
+        </Link>
+      </MenuItem>
+      <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
+    </Menu>
+  ) : (
+    <Menu
+      anchorEl={anchorEl}
+      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      id={menuId}
+      keepMounted
+      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+      open={isMenuOpen}
+      onClose={handleMenuClose}
+    >
+      <MenuItem onClick={handleMenuClose}>
+        <Link href="/login">
+          <a>login</a>
+        </Link>
+      </MenuItem>
     </Menu>
   );
 
