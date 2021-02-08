@@ -41,33 +41,32 @@ function SimpleMenu(props) {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <Link href="/">
-          <a className={classes.menuLink}>
-            <MenuItem onClick={handleClose}>{text[language].home}</MenuItem>
-          </a>
-        </Link>
-        <Link href="/services">
-          <a className={classes.menuLink}>
-            <MenuItem onClick={handleClose}>{text[language].service}</MenuItem>
-          </a>
-        </Link>
-        <Link href="/team">
-          <a className={classes.menuLink}>
-            <MenuItem onClick={handleClose}>{text[language].team}</MenuItem>
-          </a>
-        </Link>
-        <Link href="/contact">
-          <a className={classes.menuLink}>
-            <MenuItem onClick={handleClose}>{text[language].contact}</MenuItem>
-          </a>
-        </Link>
-        <Link href="/emergencies">
-          <a className={classes.menuLink}>
-            <MenuItem onClick={handleClose}>
-              {text[language].emergencies}
-            </MenuItem>
-          </a>
-        </Link>
+        <MenuItem onClick={handleClose}>
+          <Link href="/">
+            <a className={classes.menuLink}>{text[language].home}</a>
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link href="/services">
+            <a className={classes.menuLink}>{text[language].service}</a>
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link href="/team">
+            <a className={classes.menuLink}>{text[language].team}</a>
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link href="/contact">
+            <a className={classes.menuLink}>{text[language].contact}</a>
+          </Link>
+        </MenuItem>
+
+        <MenuItem onClick={handleClose}>
+          <Link href="/emergencies">
+            <a className={classes.menuLink}>{text[language].emergencies}</a>
+          </Link>
+        </MenuItem>
       </Menu>
     </div>
   );
