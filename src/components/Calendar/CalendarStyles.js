@@ -9,7 +9,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     [sizes.up('sm')]: {
-      width: ' 80%',
+      width: '80%',
     },
   },
   heading: {
@@ -19,6 +19,25 @@ const styles = {
     alignSelf: 'flex-start',
     width: '70%',
     textAlign: 'left',
+  },
+  calendar: {
+    color: 'var(--primary-color)',
+  },
+  '.DayPicker-wrapper': {
+    width: '90% !important',
+  },
+  '.DayPicker': {
+    width: '90%',
+  },
+  '.DayPicker-Month': {
+    width: '80%',
+    color: 'var(--primary-color)',
+  },
+  '.DayPicker-NavButton--next, .DayPicker-NavButton--prev': {
+    fontSize: '1.5rem',
+  },
+  '.DayPicker-NavButton': {
+    top: '0.5rem',
   },
 };
 

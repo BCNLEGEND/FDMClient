@@ -142,25 +142,6 @@ select {
   --size-xxl: 15rem;
 }
 
-.DayPicker {
-  width: 80%;
-  color: var(--primary-color);
-}
-
-.DayPicker-Month {
-  width: 80%;
-}
-.DayPicker-NavButton--next {
-  font-size: 1.5rem;
-}
-
-.DayPicker-NavButton--prev {
-  font-size: 1.5rem;
-}
-.DayPicker-NavButton {
-  top: 0.5rem;
-}
-
 .MuiTabs-indicator {
   background-color: var(--secondary-color) !important;
 }

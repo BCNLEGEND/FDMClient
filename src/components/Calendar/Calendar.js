@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import DayPicker from 'react-day-picker';
-import { withStyles } from '@material-ui/core/styles';
 import 'react-day-picker/lib/style.css';
+import { withStyles } from '@material-ui/core/styles';
 import styles from './CalendarStyles';
 import { MONTHS, WEEKDAYS_LONG, WEEKDAYS_SHORT } from '../../utils/localeCA';
+import { useMediaQuery } from '../../utils/useMediaQuery';
+import { bp } from '../../utils/breakpoints';
 
 import { calendarDates } from '../../utils/Guardies';
 
@@ -23,6 +25,7 @@ function GuardiesCalendar(props) {
     },
   };
   const { classes } = props;
+  const isBreakpoint = useMediaQuery(bp.md);
   return (
     <section className={classes.root}>
       <h3 className={classes.heading}>Estem de Guardià</h3>
@@ -37,6 +40,8 @@ function GuardiesCalendar(props) {
         weekdaysShort={WEEKDAYS_SHORT}
         modifiers={modifiers}
         modifiersStyles={modifiersStyles}
+        numberOfMonths={isBreakpoint ? 2 : 1}
+        className={classes.calendar}
       />
     </section>
   );
