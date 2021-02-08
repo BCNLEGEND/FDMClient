@@ -14,8 +14,6 @@ import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
-
-import styles from './NavbarStyles';
 import SimpleMenu from './SimpleMenu/SimpleMenu';
 
 import { UserContext } from '../../context/user';
@@ -121,16 +119,12 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>
-        <Link href="/user/profile">
-          <a>Mi Perfil</a>
-        </Link>
-      </MenuItem>
-      <MenuItem onClick={handleMenuClose}>
-        <Link href="/user/profile">
-          <a>Mis Encargos</a>
-        </Link>
-      </MenuItem>
+      <Link href="/user/profile" passHref>
+        <MenuItem onClick={handleMenuClose}>Mi Perfil</MenuItem>
+      </Link>
+      <Link href="/user/profile" passHref>
+        <MenuItem onClick={handleMenuClose}>Mis Encargos</MenuItem>
+      </Link>
       <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
     </Menu>
   ) : (
@@ -143,11 +137,9 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>
-        <Link href="/login">
-          <a>login</a>
-        </Link>
-      </MenuItem>
+      <Link href="/login" passHref>
+        <MenuItem onClick={handleMenuClose}>login</MenuItem>
+      </Link>
     </Menu>
   );
 
@@ -178,21 +170,19 @@ export default function PrimarySearchAppBar() {
         </IconButton>
         <p>Notifications</p>
       </MenuItem> */}
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <Link href="/login">
-          <a>
-            <IconButton
-              aria-label="account of current user"
-              aria-controls="primary-search-account-menu"
-              aria-haspopup="true"
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
+      <Link href="/login" passHref>
+        <MenuItem onClick={handleProfileMenuOpen}>
+          <IconButton
+            aria-label="account of current user"
+            aria-controls="primary-search-account-menu"
+            aria-haspopup="true"
+            color="inherit"
+          >
+            <AccountCircle />
             <p>Login</p>
-          </a>
-        </Link>
-      </MenuItem>
+          </IconButton>
+        </MenuItem>
+      </Link>
     </Menu>
   );
 

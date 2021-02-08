@@ -41,32 +41,31 @@ function SimpleMenu(props) {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>
-          <Link href="/">
+        <Link href="/" passHref>
+          <MenuItem onClick={handleClose}>
             <a className={classes.menuLink}>{text[language].home}</a>
-          </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link href="/services">
+          </MenuItem>
+        </Link>
+        <Link href="/services" passHref>
+          <MenuItem onClick={handleClose}>
             <a className={classes.menuLink}>{text[language].service}</a>
-          </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link href="/team">
+          </MenuItem>
+        </Link>
+        <Link href="/team" passHref>
+          <MenuItem onClick={handleClose}>
             <a className={classes.menuLink}>{text[language].team}</a>
-          </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link href="/contact">
+          </MenuItem>
+        </Link>
+        <Link href="/contact" passHref>
+          <MenuItem onClick={handleClose}>
             <a className={classes.menuLink}>{text[language].contact}</a>
-          </Link>
-        </MenuItem>
-
-        <MenuItem onClick={handleClose}>
-          <Link href="/emergencies">
+          </MenuItem>
+        </Link>
+        <Link href="/emergencies" passHref>
+          <MenuItem onClick={handleClose}>
             <a className={classes.menuLink}>{text[language].emergencies}</a>
-          </Link>
-        </MenuItem>
+          </MenuItem>
+        </Link>
       </Menu>
     </div>
   );
