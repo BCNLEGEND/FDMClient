@@ -3,7 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import SimpleMenu from './SimpleMenu/SimpleMenu';
 import Logo from './Logo/Logo';
 import LanguageMenu from './Language/LanguageMenu';
-import ProfileMenu from './ProfileMenu/ProfileMenu';
+import ProfileMenu from './ProfileMenu/NavUserProfileMenu';
 import styles from './NavbarStyles';
 
 function Navbar(props) {
