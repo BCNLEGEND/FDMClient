@@ -1,6 +1,12 @@
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
+import { ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import '../styles/globals.css';
+import theme from '../src/theme/theme';
+
 import Navbar from '../src/components/Navbar/Navbar';
 import Footer from '../src/components/Footer/Footer';
 import { UserProvider } from '../src/context/user';
@@ -13,7 +19,14 @@ const CrispWithNoSSR = dynamic(
   }
 );
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    const jssStyles = document.querySelector('#jss-server-side');
+    if (jssStyles) {
+      jssStyles.parentElement.removeChild(jssStyles);
+    }
+  }, []);
+
   return (
     <LanguageProvider>
       <UserProvider>
@@ -30,7 +43,6 @@ function MyApp({ Component, pageProps }) {
             property="og:description"
             content="A la Farmàcia del Mar, també coneguda com Farmàcia Sílvia Ametlla Pallí en Arenys de Mar, el nostre principal objectiu és estar Sempre a prop teu"
           />
-          <meta name="theme-color" content="#0047ba" />
           <title>Farmàcia del mar » Arenys de Mar » Sempre a prop teu</title>
           <link rel="icon" href="/favivon.ico" />
           <link rel="canonical" href="https://farmaciadelmar.com/" />
@@ -78,13 +90,19 @@ function MyApp({ Component, pageProps }) {
             rel="stylesheet"
           />
         </Head>
-        <Navbar />
-        <Component {...pageProps} />
-        <CrispWithNoSSR />
-        <Footer />
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Navbar />
+          <Component {...pageProps} />
+          <CrispWithNoSSR />
+          <Footer />
+        </ThemeProvider>
       </UserProvider>
     </LanguageProvider>
   );
 }
 
-export default MyApp;
+MyApp.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.object.isRequired,
+};
