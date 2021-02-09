@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import Head from 'next/head';
 import Calendar from '../src/components/Calendar/CalendarFull';
 import Footer from '../src/components/Footer/Footer';
 
@@ -15,7 +14,6 @@ export default function emergencies() {
   const currentMonth = months[language][now.getMonth()];
   return (
     <>
-      <Head></Head>
       <main className={styles.root}>
         <h1 className={styles.primaryHeading}>Calendari de Guàrdies:</h1>
         <p className={styles.paragraph}>

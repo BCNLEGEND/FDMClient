@@ -82,7 +82,7 @@ function LoginForm(props) {
       >
         Login
       </Button>
-      <Link href="/">
+      <Link href="/" passHref>
         <p className={classes.forgot}>Forgot your password? click here</p>
       </Link>
     </form>
