@@ -1,20 +1,22 @@
 import React, { useContext } from 'react';
+import { withStyles } from '@material-ui/core/styles';
+import styles from './UserProfileMenuStyles';
 import Link from 'next/link';
 
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import Avatar from '@material-ui/core/Avatar';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import { withStyles } from '@material-ui/styles';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
-import { LanguageContext } from '../../../context/language';
-import styles from './SimpleMenuStyles';
-import text from './text';
+import { LanguageContext } from '../../../../context/language';
+import { UserContext } from '../../../../context/user';
 
-function SimpleMenu(props) {
-  const { language } = useContext(LanguageContext);
-  const [anchorEl, setAnchorEl] = React.useState(null);
+function UserProfileMenu(props) {
   const { classes } = props;
+  const { language } = useContext(LanguageContext);
+  const { user } = useContext(UserContext);
+  const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -25,14 +27,17 @@ function SimpleMenu(props) {
   };
 
   return (
-    <div>
+    <div className={classes.root}>
       <IconButton
         aria-controls="simple-menu"
         aria-haspopup="true"
         onClick={handleClick}
         color="inherit"
       >
-        <MenuIcon className={classes.iconBtn} />
+        <Avatar
+          src={`/media/users/${user.photo}`}
+          className={classes.iconBtn}
+        />
       </IconButton>
       <Menu
         id="simple-menu"
@@ -42,28 +47,19 @@ function SimpleMenu(props) {
         onClose={handleClose}
       >
         <MenuItem onClick={handleClose} className={classes.link}>
+          <Link href="/user/profile" passHref>
+            Mi Perfil
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose} className={classes.link}>
           <Link href="/" passHref>
-            {text[language].home}
+            Mis Encargos
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose} className={classes.link}>
-          <Link href="/services" passHref>
-            {text[language].service}
-          </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose} className={classes.link}>
-          <Link href="/team" passHref>
-            {text[language].team}
-          </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose} className={classes.link}>
-          <Link href="/contact" passHref>
-            {text[language].contact}
-          </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose} className={classes.link}>
-          <Link href="/emergencies" passHref>
-            {text[language].emergencies}
+          <ExitToAppIcon className={classes.icon} />
+          <Link href="/" passHref>
+            Logout
           </Link>
         </MenuItem>
       </Menu>
@@ -71,4 +67,4 @@ function SimpleMenu(props) {
   );
 }
 
-export default withStyles(styles)(SimpleMenu);
+export default withStyles(styles)(UserProfileMenu);
