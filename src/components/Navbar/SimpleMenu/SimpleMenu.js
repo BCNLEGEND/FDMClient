@@ -9,7 +9,7 @@ import { withStyles } from '@material-ui/styles';
 
 import { LanguageContext } from '../../../context/language';
 import styles from './SimpleMenuStyles';
-import text from './text';
+import text from './SimpleMenuText';
 
 function SimpleMenu(props) {
   const { language } = useContext(LanguageContext);

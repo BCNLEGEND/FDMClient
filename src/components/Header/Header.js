@@ -6,7 +6,7 @@ import { bp } from '../../utils/breakpoints';
 import styles from './HeaderStyles';
 import Typewriter from '../Typewriter/Typewriter';
 import { LanguageContext } from '../../context/language';
-import text from './text';
+import text from './HeaderText';
 
 function header(props) {
   const { language } = useContext(LanguageContext);
