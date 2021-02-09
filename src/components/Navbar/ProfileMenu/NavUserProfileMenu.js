@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import styles from './ProfileMenuStyles';
+import styles from './NavUserProfileMenuStyles';
 import Link from 'next/link';
 
 import PersonIcon from '@material-ui/icons/Person';
