@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import '../styles/globals.css';
 import Navbar from '../src/components/Navbar/Navbar';
+import Footer from '../src/components/Footer/Footer';
 import { UserProvider } from '../src/context/user';
 import { LanguageProvider } from '../src/context/language';
 
@@ -80,6 +81,7 @@ function MyApp({ Component, pageProps }) {
         <Navbar />
         <Component {...pageProps} />
         <CrispWithNoSSR />
+        <Footer />
       </UserProvider>
     </LanguageProvider>
   );

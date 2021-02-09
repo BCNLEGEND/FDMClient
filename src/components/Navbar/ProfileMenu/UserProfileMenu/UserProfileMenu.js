@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
-import { withStyles } from '@material-ui/core/styles';
-import styles from './UserProfileMenuStyles';
 import Link from 'next/link';
+import { withStyles } from '@material-ui/core/styles';
 
 import IconButton from '@material-ui/core/IconButton';
 import Avatar from '@material-ui/core/Avatar';
@@ -9,6 +8,7 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
+import styles from './UserProfileMenuStyles';
 import { LanguageContext } from '../../../../context/language';
 import { UserContext } from '../../../../context/user';
 

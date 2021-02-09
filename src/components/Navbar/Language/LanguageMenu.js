@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
@@ -13,7 +12,7 @@ import { LanguageContext } from '../../../context/language';
 import styles from './LanguageMenuStyles';
 
 function LanguageMenu(props) {
-  const { language, changeLanguage } = useContext(LanguageContext);
+  const { changeLanguage } = useContext(LanguageContext);
   const { classes } = props;
   const isBreakPoint = useMediaQuery(bp.lg);
 
@@ -44,10 +43,10 @@ function LanguageMenu(props) {
           Cat
         </MenuItem>
         <MenuItem value="es" className={classes.item}>
-          Esp
+          🇪🇸 Esp
         </MenuItem>
         <MenuItem value="en" className={classes.item}>
-          Eng
+          🇬🇧 Eng
         </MenuItem>
       </Select>
     </FormControl>

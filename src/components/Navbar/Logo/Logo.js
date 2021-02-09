@@ -7,7 +7,6 @@ function Logo() {
       <Image
         src="/media/img/FDM_logo_white.png"
         alt="Logo Farmàcia del Mar"
-        // layout="responsive"
         width={200}
         height={28}
         priority

@@ -17,7 +17,6 @@ function Home() {
         <Team />
         <GuardiesCalendar />
       </main>
-      <Footer />
     </div>
   );
 }

@@ -4,9 +4,9 @@ import VerticalTabs from '../src/components/Services/ServicesDetails/ServiceMenu
 
 export default function services() {
   return (
-    <div>
+    <main>
       <Services />
       <VerticalTabs />
-    </div>
+    </main>
   );
 }

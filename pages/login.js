@@ -4,11 +4,11 @@ import styles from '../styles/Home.module.css';
 
 function Login() {
   return (
-    <div className={styles.container}>
+    <main className={styles.container}>
       <section>
         <Auth />
       </section>
-    </div>
+    </main>
   );
 }
 
