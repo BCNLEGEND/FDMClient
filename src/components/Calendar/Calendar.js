@@ -32,6 +32,9 @@ function GuardiesCalendar(props) {
     if (isBreakpointMd) return 2;
     return 1;
   };
+
+  const months = numOfMonths();
+
   return (
     <section className={classes.root}>
       <h3 className={classes.heading}>Estem de Guardià</h3>
@@ -46,7 +49,7 @@ function GuardiesCalendar(props) {
         weekdaysShort={WEEKDAYS_SHORT}
         modifiers={modifiers}
         modifiersStyles={modifiersStyles}
-        numberOfMonths={numOfMonths()}
+        numberOfMonths={months}
         className={classes.calendar}
       />
     </section>

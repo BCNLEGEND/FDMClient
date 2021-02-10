@@ -25,6 +25,9 @@ const styles = {
       top: '15%',
       left: '70%',
     },
+    [sizes.up('xxl')]: {
+      top: '18%',
+    },
   },
   secondaryHeading: {
     position: 'absolute',
@@ -38,6 +41,7 @@ const styles = {
     display: 'block',
     color: 'var(--secondary-color)',
     fontFamily: 'var(--secondary-font)',
+    zIndex: '-1',
     [sizes.up('sm')]: {
       top: '26%',
       left: '70%',

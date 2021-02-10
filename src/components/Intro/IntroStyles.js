@@ -15,6 +15,10 @@ const styles = {
     [sizes.up('lg')]: {
       flexDirection: 'row',
       justifyContent: 'space-between',
+      width: '80%',
+    },
+    [sizes.up('xl')]: {
+      width: '70%',
     },
   },
   text: {

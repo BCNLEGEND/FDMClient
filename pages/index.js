@@ -3,11 +3,10 @@ import Intro from '../src/components/Intro/Intro';
 import Services from '../src/components/Services/Services';
 import GuardiesCalendar from '../src/components/Calendar/Calendar';
 import Team from '../src/components/Team/Team';
-import Footer from '../src/components/Footer/Footer';
 
 import styles from '../styles/Home.module.css';
 
-function Home() {
+function Home({ now }) {
   return (
     <div className={styles.container}>
       <Header />

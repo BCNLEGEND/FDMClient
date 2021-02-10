@@ -9,6 +9,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 import styles from './UserProfileMenuStyles';
+import text from './UserProfileText';
 import { LanguageContext } from '../../../../context/language';
 import { UserContext } from '../../../../context/user';
 
@@ -48,18 +49,18 @@ function UserProfileMenu(props) {
       >
         <MenuItem onClick={handleClose} className={classes.link}>
           <Link href="/user/profile" passHref>
-            Mi Perfil
+            {text[language].profile}
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose} className={classes.link}>
           <Link href="/" passHref>
-            Mis Encargos
+            {text[language].orders}
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose} className={classes.link}>
           <ExitToAppIcon className={classes.icon} />
           <Link href="/" passHref>
-            Logout
+            {text[language].logout}
           </Link>
         </MenuItem>
       </Menu>

@@ -13,6 +13,16 @@ const styles = {
       top: '30%',
       left: '77%',
     },
+    [sizes.up('lg')]: {
+      left: '79%',
+    },
+    [sizes.up('xl')]: {
+      left: '80%',
+    },
+    [sizes.up('xxl')]: {
+      top: '28%',
+      left: '81%',
+    },
   },
   heading: {
     position: 'absolute',

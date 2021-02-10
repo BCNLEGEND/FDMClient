@@ -10,7 +10,7 @@ const text = {
     home: 'Inicio',
     service: 'Servicios',
     team: 'Equipo',
-    contact: 'Contacte¡o',
+    contact: 'Contacto',
     emergencies: 'Guardias',
   },
   en: {

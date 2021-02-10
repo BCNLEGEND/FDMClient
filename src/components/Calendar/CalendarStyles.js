@@ -2,13 +2,17 @@ import sizes from '../../utils/mediaSizes';
 const styles = {
   root: {
     margin: '0 auto',
+    padding: '0 var(--size-s)',
     paddingTop: 'var(--size-m)',
-    width: '90%',
+    width: '100%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     [sizes.up('sm')]: {
+      width: '90%',
+    },
+    [sizes.up('lg')]: {
       width: '80%',
     },
   },
@@ -17,7 +21,7 @@ const styles = {
     fontFamily: 'var(--secondary-font)',
     fontSize: 'var(--size-xs)',
     alignSelf: 'flex-start',
-    width: '70%',
+    width: '100%',
     textAlign: 'left',
   },
   calendar: {
@@ -25,6 +29,9 @@ const styles = {
   },
   '.DayPicker-wrapper': {
     width: '90% !important',
+    [sizes.up('lg')]: {
+      width: '80%',
+    },
   },
   '.DayPicker': {
     width: '90%',

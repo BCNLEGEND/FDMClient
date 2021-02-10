@@ -11,8 +11,20 @@ import { LanguageContext } from '../../../context/language';
 
 import styles from './LanguageMenuStyles';
 
+const text = {
+  ca: {
+    lang: 'Llenguatge',
+  },
+  es: {
+    lang: 'Idioma',
+  },
+  en: {
+    lang: 'Language',
+  },
+};
+
 function LanguageMenu(props) {
-  const { changeLanguage } = useContext(LanguageContext);
+  const { language, changeLanguage } = useContext(LanguageContext);
   const { classes } = props;
   const isBreakPoint = useMediaQuery(bp.lg);
 
@@ -29,11 +41,16 @@ function LanguageMenu(props) {
         onChange={handleChange}
         displayEmpty
         className={classes.select}
+        inputProps={{
+          classes: {
+            icon: classes.icon,
+          },
+        }}
       >
         <MenuItem value="" disabled className={classes.item}>
           {isBreakPoint ? (
             <div className={classes.item}>
-              <TranslateIcon /> <p>Language</p>
+              <TranslateIcon /> <p>{text[language].lang}</p>
             </div>
           ) : (
             <TranslateIcon />

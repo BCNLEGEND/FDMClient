@@ -1,9 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
+import { withStyles } from '@material-ui/core/styles';
+import styles from './LogoStyles';
 
-function Logo() {
+function Logo(props) {
+  const { classes } = props;
   return (
-    <div>
+    <div className={classes.root}>
       <Image
         src="/media/img/FDM_logo_white.png"
         alt="Logo Farmàcia del Mar"
@@ -15,4 +18,4 @@ function Logo() {
   );
 }
 
-export default Logo;
+export default withStyles(styles)(Logo);
