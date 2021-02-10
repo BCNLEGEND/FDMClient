@@ -1,36 +1,34 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Image from 'next/image';
 import styles from './IntroStyles';
+import text from './IntroText';
+import { LanguageContext } from '../../context/language';
 
 function Intro(props) {
   const { classes } = props;
+  const { language } = useContext(LanguageContext);
   return (
     <section className={classes.root}>
       <div className={classes.text}>
         <h2 className={classes.header}>
-          <span className={classes.headerMain}>FARMÀCIA INTEGRATIVA,</span>
-          <span className={classes.headerSub}>
-            "I que vol dir això d'Integrativa"?
-          </span>
+          <span className={classes.headerMain}>{text[language].title}</span>
+          <span className={classes.headerSub}>{text[language].question}</span>
         </h2>
         <p className={classes.textContent}>
-          A la Farmàcia del Mar d'Arenys de Mar, tractem la salut de les
-          persones de manera global. Es a dir, ens interessem per totes les
-          causes que originen el seu malestar i aconsellem la solucio mès
-          apropiada i <span className={classes.callout}>personalitzada</span>{' '}
-          per aquesta persona, donant prioritat, sempre que sigui possible, als{' '}
-          <span className={classes.callout}>productes naturals</span> ja sigui
-          mitjansant suplementacio ortomolucular, fitoteràpia, olis essencials,
-          etc. que combinats o no amb els{' '}
-          <span className={classes.callout}>medicaments tradicionals</span>,
-          milloren i estitueixen la salut del pacient.
+          {text[language].text01}{' '}
+          <span className={classes.callout}>{text[language].callout01}</span>{' '}
+          {text[language].text02}{' '}
+          <span className={classes.callout}>{text[language].callout02}</span>{' '}
+          {text[language].text03}{' '}
+          <span className={classes.callout}>{text[language].callout03}</span>{' '}
+          {text[language].text04}
         </p>
 
         <p className={classes.qoute}>
-          "En definitiva, <span className={classes.callout}>fusionem</span>{' '}
-          ambdues eines per donar sempre el millor consell fent emfasi a la
-          prevenciò de les malalties."
+          {text[language].quote01}{' '}
+          <span className={classes.callout}>{text[language].callout04}</span>{' '}
+          {text[language].quote02}
         </p>
       </div>
       <div className={classes.img}>
