@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Image from 'next/image';
 import { withStyles } from '@material-ui/core/styles';
 import styles from './TeamStyles';
 
-import { team } from './TeamData';
+import { LanguageContext } from '../../context/language';
+
+import { team, text } from './TeamData';
 
 function Team(props) {
   const { classes } = props;
-  const html = team.cat.map((p) => (
+  const { language } = useContext(LanguageContext);
+
+  const html = team.map((p) => (
     <div key={p.id} className={classes.container}>
       <div className={classes.imgContainer}>
         <Image
@@ -20,14 +24,14 @@ function Team(props) {
       </div>
       <div className={classes.nameContainer}>
         <h3 className={classes.name}>{p.firstName}</h3>
-        <p className={classes.title}>{p.title}</p>
+        <p className={classes.title}>{p.title[language]}</p>
       </div>
     </div>
   ));
 
   return (
     <section className={classes.root}>
-      <h2 className={classes.sectionTitle}>El nostre Equip: </h2>
+      <h2 className={classes.sectionTitle}>{text[language]}</h2>
       <div className={classes.sectionContainer}>{html}</div>
     </section>
   );
