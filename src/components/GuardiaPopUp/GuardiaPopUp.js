@@ -31,7 +31,7 @@ function GuardiaPopUp(props) {
               <use href="/media/svg/sprite.svg#icon-whatsapp" />
             </svg>
           </a>
-          <a className={classes.text} href="https://wa.me/34686023519">
+          <a className={classes.textwa} href="https://wa.me/34686023519">
             +34 686 02 35 19
           </a>
         </div>

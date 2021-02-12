@@ -15,14 +15,18 @@ const styles = {
     alignItems: 'center',
   },
   heading: {
-    width: '55%',
+    width: '60%',
+    margin: '0 auto',
     textTransform: 'uppercase',
   },
   text: {
-    width: '55%',
+    width: '60%',
+    margin: '0 auto',
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',
+  },
+  textwa: {
     textDecoration: 'none',
     '&:visited': {
       color: 'var(--primary-color)',
