@@ -60,10 +60,10 @@ function LanguageMenu(props) {
           Cat
         </MenuItem>
         <MenuItem value="es" className={classes.item}>
-          🇪🇸 Esp
+          Esp
         </MenuItem>
         <MenuItem value="en" className={classes.item}>
-          🇬🇧 Eng
+          Eng
         </MenuItem>
       </Select>
     </FormControl>

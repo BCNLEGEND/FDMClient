@@ -15,7 +15,7 @@ function Navbar(props) {
       <SimpleMenu />
       <Logo />
       <LanguageMenu />
-      <NavUserProfileMenu />
+      {/* <NavUserProfileMenu /> */}
     </nav>
   );
 }

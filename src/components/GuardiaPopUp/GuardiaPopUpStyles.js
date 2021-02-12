@@ -23,12 +23,15 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',
+    textDecoration: 'none',
+    '&:visited': {
+      color: 'var(--primary-color)',
+    },
   },
   icon: {
     fill: 'var(--primary-color)',
     height: 'var(--size-xs)',
     width: 'var(--size-xs)',
-
     marginRight: 'var(--size-xs)',
   },
 };

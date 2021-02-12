@@ -29,10 +29,14 @@ function FooterContent(props) {
           <div className={classes.text}>+34 937 92 14 71</div>
         </div>
         <div className={classes.container}>
-          <svg className={classes.icon}>
-            <use href="/media/svg/sprite.svg#icon-whatsapp" />
-          </svg>
-          <div className={classes.text}>+34 686 02 35 19</div>
+          <a href="https://wa.me/34686023519">
+            <svg className={classes.icon}>
+              <use href="/media/svg/sprite.svg#icon-whatsapp" />
+            </svg>
+          </a>
+          <a className={classes.text} href="https://wa.me/34686023519">
+            +34 686 02 35 19
+          </a>
         </div>
         <div className={classes.container}>
           <svg className={classes.icon}>

@@ -54,6 +54,12 @@ const styles = {
     flexDirection: 'column',
     justifyItems: 'center',
   },
+  text: {
+    textDecoration: 'none',
+    '&:visited': {
+      color: 'var(--primary-color)',
+    },
+  },
   map: {
     width: '45%',
     height: '100%',

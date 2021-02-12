@@ -7,7 +7,7 @@ import GuardiaPopUp from '../src/components/GuardiaPopUp/GuardiaPopUp';
 
 import styles from '../styles/Home.module.css';
 
-function Home({ now }) {
+function Home() {
   return (
     <div className={styles.container}>
       <GuardiaPopUp />
