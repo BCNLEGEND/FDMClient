@@ -1,7 +1,12 @@
 import sizes from '../../utils/mediaSizes';
+const currentHour = new Date().getHours();
+const currentDay = new Date().getDay();
+const openHour = currentHour > 9 && currentHour < 21;
+const open = currentDay !== 0 && openHour;
+
 const styles = {
   root: {
-    width: '90%',
+    width: '100%',
     margin: '0 auto',
     display: 'flex',
     flexDirection: 'column',
@@ -44,7 +49,15 @@ const styles = {
     height: 'var(--size-xs)',
     width: 'var(--size-xs)',
     marginRight: 'var(--size-xxs)',
-    // marginLeft: 'var(--size-s)',
+    [sizes.up('sm')]: {
+      marginLeft: 'var(--size-xxs)',
+    },
+  },
+  icon2: {
+    fill: open ? 'var(--secondary-color)' : 'var(--primary-color)',
+    height: 'var(--size-xs)',
+    width: 'var(--size-xs)',
+    marginRight: 'var(--size-xxs)',
     [sizes.up('sm')]: {
       marginLeft: 'var(--size-xxs)',
     },
@@ -59,6 +72,9 @@ const styles = {
     '&:visited': {
       color: 'var(--primary-color)',
     },
+  },
+  text2: {
+    color: open ? 'var(--secondary-color)' : 'var(--primary-color)',
   },
   map: {
     width: '45%',

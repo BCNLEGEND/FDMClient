@@ -9,16 +9,9 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    [sizes.up('sm')]: {
-      width: ' 90%',
-    },
     [sizes.up('lg')]: {
       flexDirection: 'row',
       justifyContent: 'space-between',
-      width: '80%',
-    },
-    [sizes.up('xl')]: {
-      width: '70%',
     },
   },
   text: {
@@ -37,14 +30,12 @@ const styles = {
   textContent: {
     marginTop: 'var(--size-xxs)',
     textAlign: 'justify',
-    fontSize: '1.3rem',
   },
   callout: {
     color: 'var(--secondary-color)',
   },
   qoute: {
     fontStyle: 'italic',
-    fontSize: '1.3rem',
     marginTop: 'var(--size-xs)',
     padding: 'var(--size-xxs) var(--size-xs)',
     paddingBottom: 'var(--size-xxs)',
@@ -56,10 +47,9 @@ const styles = {
     width: '60%',
     margin: 'var(--size-s) auto',
     [sizes.up('lg')]: {
-      width: '30%',
+      width: '40%',
     },
   },
-  image: {},
 };
 
 export default styles;

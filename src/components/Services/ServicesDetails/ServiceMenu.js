@@ -26,7 +26,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box p={3}>
-          <Typography>{children}</Typography>
+          <div>{children}</div>
         </Box>
       )}
     </div>
@@ -56,12 +56,12 @@ const useStyles = makeStyles((theme) => ({
     padding: '0 var(--size-s)',
     paddingTop: 'var(--size-m)',
     margin: 'auto auto',
-    [sizes.up('lg')]: {
-      width: '96%',
-    },
-    [sizes.up('xl')]: {
-      width: '70%',
-    },
+    // [sizes.up('lg')]: {
+    //   width: '96%',
+    // },
+    // [sizes.up('xl')]: {
+    //   width: '70%',
+    // },
   },
 
   tabs: {
@@ -102,6 +102,7 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     marginTop: 'var(--size-s)',
+    margin: '0 auto',
     width: '50%',
     borderRadius: 'var(--size-xxs)',
     overflow: 'hidden',
@@ -126,7 +127,9 @@ export default function ServiceTabs() {
 
   return (
     <div className={classes.root}>
-      <h2 className={classes.title}>{text[language].title}</h2>
+      <Typography variant="h5" component="h2" className={classes.title}>
+        {text[language].title}
+      </Typography>
       <div className={classes.tabContainer}>
         <Tabs
           orientation={isBreakPoint ? 'horizontal' : 'vertical'}
@@ -145,89 +148,88 @@ export default function ServiceTabs() {
         </Tabs>
         <div className={classes.tabPanelContainer}>
           <TabPanel value={value} index={0} className={classes.text}>
-            <div className={classes.text}>
-              <p>{text[language].fito.text}</p>
-              {isBreakPoint ? (
-                <div className={classes.img}>
-                  <Image
-                    src={`/media/img/${text[language].fito.img}`}
-                    layout="responsive"
-                    width={400}
-                    height={300}
-                  />
-                </div>
-              ) : (
-                ''
-              )}
-            </div>
+            <Typography variant="body1">{text[language].fito.text}</Typography>
+            {isBreakPoint ? (
+              <div className={classes.img}>
+                <Image
+                  src={`/media/img/${text[language].fito.img}`}
+                  layout="responsive"
+                  alt={text[language].fito.title}
+                  width={400}
+                  height={300}
+                />
+              </div>
+            ) : (
+              ''
+            )}
           </TabPanel>
           <TabPanel value={value} index={1} className={classes.text}>
-            <div className={classes.text}>
-              <p>{text[language].olis.text}</p>
-              {isBreakPoint ? (
-                <div className={classes.img}>
-                  <Image
-                    src={`/media/img/${text[language].olis.img}`}
-                    layout="responsive"
-                    width={400}
-                    height={300}
-                  />
-                </div>
-              ) : (
-                ''
-              )}
-            </div>
+            <Typography variant="body1">{text[language].olis.text}</Typography>
+            {isBreakPoint ? (
+              <div className={classes.img}>
+                <Image
+                  src={`/media/img/${text[language].olis.img}`}
+                  alt={text[language].olis.title}
+                  layout="responsive"
+                  width={400}
+                  height={300}
+                />
+              </div>
+            ) : (
+              ''
+            )}
           </TabPanel>
           <TabPanel value={value} index={2} className={classes.text}>
-            <div className={classes.text}>
-              <p>{text[language].flors.text}</p>
-              {isBreakPoint ? (
-                <div className={classes.img}>
-                  <Image
-                    src={`/media/img/${text[language].flors.img}`}
-                    layout="responsive"
-                    width={400}
-                    height={300}
-                  />
-                </div>
-              ) : (
-                ''
-              )}
-            </div>
+            <Typography variant="body1">{text[language].flors.text}</Typography>
+            {isBreakPoint ? (
+              <div className={classes.img}>
+                <Image
+                  src={`/media/img/${text[language].flors.img}`}
+                  alt={text[language].flors.title}
+                  layout="responsive"
+                  width={400}
+                  height={300}
+                />
+              </div>
+            ) : (
+              ''
+            )}
           </TabPanel>
           <TabPanel value={value} index={3} className={classes.text}>
-            <div className={classes.text}>
-              <p>{text[language].suplements.text}</p>
-              {isBreakPoint ? (
-                <div className={classes.img}>
-                  <Image
-                    src={`/media/img/${text[language].suplements.img}`}
-                    layout="responsive"
-                    width={400}
-                    height={300}
-                  />
-                </div>
-              ) : (
-                ''
-              )}
-            </div>
+            <Typography variant="body1">
+              {text[language].suplements.text}
+            </Typography>
+            {isBreakPoint ? (
+              <div className={classes.img}>
+                <Image
+                  src={`/media/img/${text[language].suplements.img}`}
+                  alt={text[language].suplements.title}
+                  layout="responsive"
+                  width={400}
+                  height={300}
+                />
+              </div>
+            ) : (
+              ''
+            )}
           </TabPanel>
           <TabPanel value={value} index={4} className={classes.text}>
-            <div className={classes.text}>
-              <p>{text[language].consells.text}</p>
-              {isBreakPoint ? (
-                <div className={classes.img}>
-                  <Image
-                    src={`/media/img/${text[language].consells.img}`}
-                    layout="responsive"
-                    width={400}
-                    height={300}
-                  />
-                </div>
-              ) : (
-                ''
-              )}
-            </div>
+            <Typography variant="body1">
+              {text[language].consells.text}
+            </Typography>
+            {isBreakPoint ? (
+              <div className={classes.img}>
+                <Image
+                  src={`/media/img/${text[language].consells.img}`}
+                  alt={text[language].consells.title}
+                  layout="responsive"
+                  width={400}
+                  height={300}
+                />
+              </div>
+            ) : (
+              ''
+            )}
           </TabPanel>
         </div>
       </div>

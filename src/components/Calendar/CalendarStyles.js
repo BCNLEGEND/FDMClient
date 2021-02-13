@@ -9,17 +9,10 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    [sizes.up('sm')]: {
-      width: '90%',
-    },
-    [sizes.up('lg')]: {
-      width: '80%',
-    },
   },
   heading: {
     color: 'var(--secondary-color)',
     fontFamily: 'var(--secondary-font)',
-    fontSize: 'var(--size-xs)',
     alignSelf: 'flex-start',
     width: '100%',
     textAlign: 'left',

@@ -1,9 +1,9 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 import { withStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 import styles from './CalendarStyles';
-import { MONTHS, WEEKDAYS_LONG, WEEKDAYS_SHORT } from '../../utils/localeCA';
 import { useMediaQuery } from '../../utils/useMediaQuery';
 import { bp } from '../../utils/breakpoints';
 import text from './CalendarText';
@@ -40,7 +40,9 @@ function GuardiesCalendar(props) {
 
   return (
     <section className={classes.root}>
-      <h3 className={classes.heading}>{text[language].title}</h3>
+      <Typography variant="h4" component="h2" className={classes.heading}>
+        {text[language].title}
+      </Typography>
       <DayPicker
         disabledDays={{ daysOfWeek: [0] }}
         initialMonth={new Date()}

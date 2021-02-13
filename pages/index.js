@@ -1,24 +1,19 @@
-import Header from '../src/components/Header/Header';
-import Intro from '../src/components/Intro/Intro';
-import Services from '../src/components/Services/Services';
-import GuardiesCalendar from '../src/components/Calendar/Calendar';
-import Team from '../src/components/Team/Team';
+import React from 'react';
+import Homepage from '../src/components/Homepage/Homepage';
 import GuardiaPopUp from '../src/components/GuardiaPopUp/GuardiaPopUp';
-
-import styles from '../styles/Home.module.css';
+import Header from '../src/components/Header/Header';
 
 function Home() {
   return (
-    <div className={styles.container}>
-      <GuardiaPopUp />
-      <Header />
-      <main className={styles.main}>
-        <Intro />
-        <Services />
-        <Team />
-        <GuardiesCalendar />
-      </main>
-    </div>
+    <main>
+      <header>
+        <GuardiaPopUp />
+        <Header />
+      </header>
+      <section>
+        <Homepage />
+      </section>
+    </main>
   );
 }
 

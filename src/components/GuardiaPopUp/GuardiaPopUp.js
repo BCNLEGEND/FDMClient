@@ -18,7 +18,7 @@ function GuardiaPopUp(props) {
   return (
     <div className={isGuardia ? `${classes.root}` : `${classes.hidden}`}>
       <div className={classes.container}>
-        <h2 className={classes.heading}>🚨🚨 Estem de Guardìa 🚨🚨</h2>
+        <h2 className={classes.heading}>🚨 Estem de Guardìa 🚨</h2>
         <div className={classes.text}>
           <svg className={classes.icon}>
             <use href="/media/svg/sprite.svg#icon-phone" />

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import Image from 'next/image';
 import { withStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 import styles from './TeamStyles';
 
 import { LanguageContext } from '../../context/language';
@@ -23,15 +24,21 @@ function Team(props) {
         />
       </div>
       <div className={classes.nameContainer}>
-        <h3 className={classes.name}>{p.firstName}</h3>
-        <p className={classes.title}>{p.title[language]}</p>
+        <Typography variant="h5" component="h3" className={classes.name}>
+          {p.firstName}
+        </Typography>
+        <Typography variant="subtitle2" className={classes.title}>
+          {p.title[language]}
+        </Typography>
       </div>
     </div>
   ));
 
   return (
     <section className={classes.root}>
-      <h2 className={classes.sectionTitle}>{text[language]}</h2>
+      <Typography variant="h5" component="h2" className={classes.sectionTitle}>
+        {text[language]}
+      </Typography>
       <div className={classes.sectionContainer}>{html}</div>
     </section>
   );

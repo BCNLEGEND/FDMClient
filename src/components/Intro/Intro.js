@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 import Image from 'next/image';
 import styles from './IntroStyles';
 import text from './IntroText';
@@ -11,11 +12,11 @@ function Intro(props) {
   return (
     <section className={classes.root}>
       <div className={classes.text}>
-        <h2 className={classes.header}>
+        <Typography variant="h5" component="h2" className={classes.header}>
           <span className={classes.headerMain}>{text[language].title}</span>
           <span className={classes.headerSub}>{text[language].question}</span>
-        </h2>
-        <p className={classes.textContent}>
+        </Typography>
+        <Typography variant="body1" className={classes.textContent}>
           {text[language].text01}{' '}
           <span className={classes.callout}>{text[language].callout01}</span>{' '}
           {text[language].text02}{' '}
@@ -23,13 +24,13 @@ function Intro(props) {
           {text[language].text03}{' '}
           <span className={classes.callout}>{text[language].callout03}</span>{' '}
           {text[language].text04}
-        </p>
+        </Typography>
 
-        <p className={classes.qoute}>
+        <Typography variant="subtitle2" className={classes.qoute} gutterBottom>
           {text[language].quote01}{' '}
           <span className={classes.callout}>{text[language].callout04}</span>{' '}
           {text[language].quote02}
-        </p>
+        </Typography>
       </div>
       <div className={classes.img}>
         <Image

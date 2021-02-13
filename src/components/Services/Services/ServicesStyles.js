@@ -1,4 +1,4 @@
-import sizes from '../../utils/mediaSizes';
+import sizes from '../../../utils/mediaSizes';
 
 const styles = {
   root: {
@@ -15,7 +15,7 @@ const styles = {
     [sizes.up('lg')]: {
       flexDirection: 'row',
       justifyContent: 'space-between',
-      width: '80%',
+      width: '100%',
     },
     [sizes.up('xl')]: {
       width: '70%',
@@ -29,20 +29,23 @@ const styles = {
   },
   paragraph: {
     textAlign: 'justify',
-    fontSize: '1.3rem',
+    // fontSize: '1.3rem',
     marginTop: 'var(--size-xxs)',
     marginBottom: 'var(--size-xxs)',
   },
   list: {
+    '& > li': {
+      display: 'flex',
+      justifyContent: 'flex-start',
+      marginLeft: 'var(--size-s)',
+    },
     '& li:before': {
       content: "'👉'",
-      display: 'inline-block',
-      width: 'var(--size-xs)',
+      width: 'var(--size-xxs)',
     },
   },
   listItem: {
-    fontSize: '1.1rem',
-    paddingLeft: 'var(--size-s)',
+    paddingLeft: 'var(--size-xxs)',
   },
   imgContainer: {
     paddingTop: 'var(--size-m)',

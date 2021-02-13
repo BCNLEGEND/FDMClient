@@ -9,15 +9,6 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    [sizes.up('sm')]: {
-      width: ' 90%',
-    },
-    [sizes.up('lg')]: {
-      width: '80%',
-    },
-    [sizes.up('xl')]: {
-      width: '70%',
-    },
   },
   sectionTitle: {
     color: 'var(--primary-color)',
@@ -52,7 +43,6 @@ const styles = {
     },
     [sizes.up('md')]: {
       width: '29%',
-      // margin: 'var(--size-xxs)',
     },
   },
   imgContainer: {
@@ -74,12 +64,8 @@ const styles = {
     width: '50%',
     zIndex: 25,
   },
-  name: {
-    fontSize: 'var(--size-xs)',
-  },
   title: {
-    fontSize: 'var(--size-xxs)',
-    color: 'var(--primary-color-ligth)',
+    color: 'var(--primary-color)',
   },
 };
 
