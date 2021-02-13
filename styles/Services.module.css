@@ -1,9 +1,0 @@
-.main {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.heading {
-  margin-top: var(--size-m);
-  color: var(--primary-color);
-}
