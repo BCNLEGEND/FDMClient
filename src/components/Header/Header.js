@@ -1,16 +1,15 @@
 import React, { useContext } from 'react';
-import { withStyles } from '@material-ui/core/styles';
 import Image from 'next/image';
 import { useMediaQuery } from '../../utils/useMediaQuery';
 import { bp } from '../../utils/breakpoints';
-import styles from './HeaderStyles';
+import useStyles from './HeaderStyles';
 import Typewriter from '../Typewriter/Typewriter';
 import { LanguageContext } from '../../context/language';
 import text from './HeaderText';
 
-function header(props) {
+function header() {
   const { language } = useContext(LanguageContext);
-  const { classes } = props;
+  const classes = useStyles();
   const isBreakPoint = useMediaQuery(bp.lg);
   return (
     <header className={classes.header}>
@@ -54,4 +53,4 @@ function header(props) {
   );
 }
 
-export default withStyles(styles)(header);
+export default header;

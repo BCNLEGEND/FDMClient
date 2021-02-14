@@ -1,4 +1,5 @@
-const styles = {
+import { makeStyles } from '@material-ui/core/styles';
+const useStyles = makeStyles({
   iconBtn: {
     color: 'var(--white-color)',
     height: 'var(--size-xs)',
@@ -11,6 +12,6 @@ const styles = {
       color: 'var(--primary-color)',
     },
   },
-};
+});
 
-export default styles;
+export default useStyles;

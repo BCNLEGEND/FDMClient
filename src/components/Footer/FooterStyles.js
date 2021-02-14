@@ -1,10 +1,11 @@
 import sizes from '../../utils/mediaSizes';
+import { makeStyles } from '@material-ui/core/styles';
 const currentHour = new Date().getHours();
 const currentDay = new Date().getDay();
 const openHour = currentHour > 9 && currentHour < 21;
 const open = currentDay !== 0 && openHour;
 
-const styles = {
+const useStyles = makeStyles({
   root: {
     width: '100%',
     margin: '0 auto',
@@ -80,6 +81,6 @@ const styles = {
     width: '45%',
     height: '100%',
   },
-};
+});
 
-export default styles;
+export default useStyles;

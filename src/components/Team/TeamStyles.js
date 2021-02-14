@@ -1,6 +1,7 @@
+import { makeStyles } from '@material-ui/core/styles';
 import sizes from '../../utils/mediaSizes';
 
-const styles = {
+const useStyles = makeStyles({
   root: {
     padding: '0 var(--size-s)',
     paddingTop: 'var(--size-m)',
@@ -67,6 +68,6 @@ const styles = {
   title: {
     color: 'var(--primary-color)',
   },
-};
+});
 
-export default styles;
+export default useStyles;

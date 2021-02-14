@@ -1,16 +1,15 @@
 import React, { useContext, useState } from 'react';
-import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import ProfilePrimary from './ProfilePrimary';
 import ProfileMenu from './ProfileMenu';
 
 import { UserContext } from '../../../context/user';
 
-import { styles } from './ProfileStyles';
+import useStyles from './ProfileStyles';
 
-function Profile(props) {
+function Profile() {
   const { user, loggedIn } = useContext(UserContext);
-  const { classes } = props;
+  const classes = useStyles();
   return (
     <div>
       <Paper className={classes.paper}>
@@ -22,20 +21,4 @@ function Profile(props) {
   );
 }
 
-export default withStyles(styles)(Profile);
-
-// firstName;
-// lastName;
-// email;
-// birthday;
-// gender;
-// tel;
-// mobile;
-// dni;
-// cip;
-// streetName;
-// streetNumber;
-// postalcode;
-// city;
-
-// photo;
+export default Profile;

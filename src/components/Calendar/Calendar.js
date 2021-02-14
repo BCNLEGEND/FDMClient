@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
-import { withStyles } from '@material-ui/core/styles';
+
 import Typography from '@material-ui/core/Typography';
-import styles from './CalendarStyles';
+import useStyles from './CalendarStyles';
 import { useMediaQuery } from '../../utils/useMediaQuery';
 import { bp } from '../../utils/breakpoints';
 import text from './CalendarText';
@@ -26,7 +26,7 @@ function GuardiesCalendar(props) {
       backgroundColor: 'white',
     },
   };
-  const { classes } = props;
+  const classes = useStyles();
   const { language } = useContext(LanguageContext);
   const isBreakpointMd = useMediaQuery(bp.md);
   const isBreakpointLg = useMediaQuery(bp.lg);
@@ -61,4 +61,4 @@ function GuardiesCalendar(props) {
   );
 }
 
-export default withStyles(styles)(GuardiesCalendar);
+export default GuardiesCalendar;

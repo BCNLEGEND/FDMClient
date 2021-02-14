@@ -1,14 +1,13 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import styles from './FooterStyles';
+import useStyles from './FooterStyles';
 import { useMediaQuery } from '../../utils/useMediaQuery';
 import { bp } from '../../utils/breakpoints';
 import FooterMap from '../Map/FooterMap';
 
-function FooterContent(props) {
+function FooterContent() {
   const isBreakpoint = useMediaQuery(bp.md);
-  const { classes } = props;
+  const classes = useStyles();
   return (
     <div className={classes.content}>
       <div className={classes.address}>
@@ -71,4 +70,4 @@ function FooterContent(props) {
   );
 }
 
-export default withStyles(styles)(FooterContent);
+export default FooterContent;

@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { withStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
@@ -9,7 +8,7 @@ import { bp } from '../../../utils/breakpoints';
 
 import { LanguageContext } from '../../../context/language';
 
-import styles from './LanguageMenuStyles';
+import useStyles from './LanguageMenuStyles';
 
 const text = {
   ca: {
@@ -23,9 +22,9 @@ const text = {
   },
 };
 
-function LanguageMenu(props) {
+function LanguageMenu() {
   const { language, changeLanguage } = useContext(LanguageContext);
-  const { classes } = props;
+  const classes = useStyles();
   const isBreakPoint = useMediaQuery(bp.lg);
 
   const handleChange = (e) => {
@@ -70,4 +69,4 @@ function LanguageMenu(props) {
   );
 }
 
-export default withStyles(styles)(LanguageMenu);
+export default LanguageMenu;

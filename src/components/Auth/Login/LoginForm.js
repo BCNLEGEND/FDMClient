@@ -3,19 +3,21 @@ import axios from 'axios';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import { withStyles } from '@material-ui/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
 import { UserContext } from '../../../context/user';
-import styles from './LoginFormStyles';
+import { LanguageContext } from '../../../context/language';
+import useStyles from './LoginFormStyles';
+import text from './LoginFormText';
 
 function LoginForm(props) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const { changeUser, toggleLoggedIn } = useContext(UserContext);
+  const { language } = useContext(LanguageContext);
   const router = useRouter();
-  const { classes } = props;
+  const classes = useStyles();
 
   const handleChange = (e) => {
     if (e.target.name === 'password') {
@@ -51,13 +53,13 @@ function LoginForm(props) {
 
   return (
     <form className={classes.form} onSubmit={handleSubmit}>
-      <h2 className={classes.heading}>Already regitered? Please login:</h2>
+      <h2 className={classes.heading}>{text[language].title}</h2>
       <TextField
         value={username}
         type="email"
         name="username"
         id="username"
-        label="User Email"
+        label={text[language].email}
         variant="outlined"
         onChange={handleChange}
         className={classes.text}
@@ -68,7 +70,7 @@ function LoginForm(props) {
         type="password"
         name="password"
         id="password"
-        label="Password"
+        label={text[language].pass}
         variant="outlined"
         onChange={handleChange}
         className={classes.text}
@@ -80,13 +82,15 @@ function LoginForm(props) {
         color="primary"
         className={classes.btn}
       >
-        Login
+        {text[language].login}
       </Button>
       <Link href="/" passHref>
-        <p className={classes.forgot}>Forgot your password? click here</p>
+        <p className={classes.forgot}>
+          {text[language].forgot} <a>{text[language].click}</a>
+        </p>
       </Link>
     </form>
   );
 }
 
-export default withStyles(styles)(LoginForm);
+export default LoginForm;

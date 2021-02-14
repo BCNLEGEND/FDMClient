@@ -1,15 +1,12 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
-import GuardiaPopUp from '../GuardiaPopUp/GuardiaPopUp';
-import Header from '../Header/Header';
 import Intro from '../Intro/Intro';
 import Services from '../Services/Services/Services';
 import Team from '../Team/Team';
 import GuardiesCalendar from '../Calendar/Calendar';
-import styles from './HomepageStyles';
+import useStyles from './HomepageStyles';
 
-function Homepage(props) {
-  const { classes } = props;
+function Homepage() {
+  const classes = useStyles();
   return (
     <main className={classes.root}>
       <section>
@@ -22,4 +19,4 @@ function Homepage(props) {
   );
 }
 
-export default withStyles(styles)(Homepage);
+export default Homepage;

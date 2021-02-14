@@ -1,4 +1,5 @@
-const styles = {
+import { makeStyles } from '@material-ui/core/styles';
+const useStyles = makeStyles({
   link: {
     textTransform: 'uppercase',
     '& > a': {
@@ -6,6 +7,6 @@ const styles = {
       color: 'var(--primary-color)',
     },
   },
-};
+});
 
-export default styles;
+export default useStyles;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/styles';
-import { styles } from './TypewriterStyles';
+import styles from './TypewriterStyles';
 
 class Typer extends Component {
   _isMounted = false;

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import DayPicker from 'react-day-picker';
-import { withStyles } from '@material-ui/core/styles';
 import 'react-day-picker/lib/style.css';
-import styles from './CalendarStyles';
+import useStyles from './CalendarStyles';
 import { MONTHS, WEEKDAYS_LONG, WEEKDAYS_SHORT } from '../../utils/localeCA';
 
 import { calendarDates } from '../../utils/Guardies';
@@ -22,7 +21,7 @@ function GuardiesCalendar(props) {
       backgroundColor: 'white',
     },
   };
-  const { classes } = props;
+  const classes = useStyles();
   return (
     <section className={classes.root}>
       <h3 className={classes.heading}>Estem de Guardià</h3>
@@ -43,4 +42,4 @@ function GuardiesCalendar(props) {
   );
 }
 
-export default withStyles(styles)(GuardiesCalendar);
+export default GuardiesCalendar;

@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import Link from 'next/link';
-import { withStyles } from '@material-ui/core/styles';
 
 import IconButton from '@material-ui/core/IconButton';
 import Avatar from '@material-ui/core/Avatar';
@@ -8,13 +7,13 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
-import styles from './UserProfileMenuStyles';
+import useStyles from './UserProfileMenuStyles';
 import text from './UserProfileText';
 import { LanguageContext } from '../../../../context/language';
 import { UserContext } from '../../../../context/user';
 
-function UserProfileMenu(props) {
-  const { classes } = props;
+function UserProfileMenu() {
+  const classes = useStyles();
   const { language } = useContext(LanguageContext);
   const { user } = useContext(UserContext);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -68,4 +67,4 @@ function UserProfileMenu(props) {
   );
 }
 
-export default withStyles(styles)(UserProfileMenu);
+export default UserProfileMenu;

@@ -1,6 +1,7 @@
+import { makeStyles } from '@material-ui/core/styles';
 import sizes from '../../../utils/mediaSizes';
 
-const styles = {
+const useStyles = makeStyles({
   form: {
     width: '9%',
     margin: '0 var(--size-xs)',
@@ -33,6 +34,6 @@ const styles = {
   icon: {
     fill: 'var(--white-color)',
   },
-};
+});
 
-export default styles;
+export default useStyles;

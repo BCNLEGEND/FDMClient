@@ -1,5 +1,4 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import DeleteIcon from '@material-ui/icons/Delete';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
@@ -7,10 +6,10 @@ import EditIcon from '@material-ui/icons/Edit';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 
-import { styles } from './ProfileStyles';
+import useStyles from './ProfileStyles';
 
-function ProfileMenu(props) {
-  const { classes } = props;
+function ProfileMenu() {
+  const classes = useStyles();
   return (
     <div className={classes.menu}>
       <Button
@@ -59,4 +58,4 @@ function ProfileMenu(props) {
   );
 }
 
-export default withStyles(styles)(ProfileMenu);
+export default ProfileMenu;

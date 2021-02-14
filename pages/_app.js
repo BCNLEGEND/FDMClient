@@ -8,7 +8,6 @@ import '../styles/globals.css';
 import theme from '../src/theme/theme';
 
 import Navbar from '../src/components/Navbar/Navbar';
-import Footer from '../src/components/Footer/Footer';
 import { UserProvider } from '../src/context/user';
 import { LanguageProvider } from '../src/context/language';
 
@@ -95,7 +94,6 @@ export default function MyApp({ Component, pageProps }) {
           <Navbar />
           <Component {...pageProps} />
           <CrispWithNoSSR />
-          <Footer />
         </ThemeProvider>
       </UserProvider>
     </LanguageProvider>

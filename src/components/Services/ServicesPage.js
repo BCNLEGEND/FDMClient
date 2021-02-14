@@ -1,13 +1,12 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import styles from './ServicePageStyles';
+import useStyles from './ServicePageStyles';
 import Services from './Services/Services';
 import ServiceTabs from './ServicesDetails/ServiceMenu';
 import BasicServices from './BasicServices/BasicServices';
 
-function ServicesPage(props) {
-  const { classes } = props;
+function ServicesPage() {
+  const classes = useStyles();
   return (
     <section className={classes.root}>
       <Typography variant="h3" component="h1" className={classes.heading}>
@@ -20,4 +19,4 @@ function ServicesPage(props) {
   );
 }
 
-export default withStyles(styles)(ServicesPage);
+export default ServicesPage;

@@ -1,16 +1,15 @@
 import React, { useContext } from 'react';
-import { withStyles } from '@material-ui/core/styles';
 import Image from 'next/image';
 import TextField from '@material-ui/core/TextField';
 import Divider from '@material-ui/core/Divider';
 
 import { UserContext } from '../../../context/user';
 
-import { styles } from './ProfileStyles';
+import useStyles from './ProfileStyles';
 
-function ProfilePrimary(props) {
+function ProfilePrimary() {
   const { user } = useContext(UserContext);
-  const { classes } = props;
+  const classes = useStyles();
   return (
     <form className={classes.root}>
       <div className={classes.container}>
@@ -47,4 +46,4 @@ function ProfilePrimary(props) {
   );
 }
 
-export default withStyles(styles)(ProfilePrimary);
+export default ProfilePrimary;

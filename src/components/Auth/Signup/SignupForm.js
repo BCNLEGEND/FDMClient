@@ -2,21 +2,24 @@ import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
 
-import { withStyles } from '@material-ui/styles';
 import Button from '@material-ui/core/Button';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 
 import { UserContext } from '../../../context/user';
-import styles from './SignupFormStyles';
+import { LanguageContext } from '../../../context/language';
+import useStyles from './SignupFormStyles';
+import text from './SignupFormText';
 
 function SignupForm(props) {
   const router = useRouter();
   const { changeUser, toggleLoggedIn } = useContext(UserContext);
+  const { language } = useContext(LanguageContext);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
+  const classes = useStyles();
 
   useEffect(() => {
     ValidatorForm.addValidationRule('isPasswordMatch', (value) => {
@@ -96,17 +99,17 @@ function SignupForm(props) {
       router.push('/');
     }
   };
-  const { classes } = props;
+
   return (
     <ValidatorForm className={classes.form} onSubmit={handleSubmit}>
-      <h2 className={classes.header}>New? Please Signup:</h2>
+      <h2 className={classes.header}>{text[language].title}</h2>
       <div className={classes.nameContainer}>
         <TextValidator
           value={firstName}
           type="text"
           name="firstName"
           id="firstName"
-          label="First Name"
+          label={text[language].firstName}
           variant="outlined"
           className={classes.name}
           onChange={handleChange}
@@ -119,7 +122,7 @@ function SignupForm(props) {
           type="text"
           name="lastName"
           id="lastName"
-          label="Last Name"
+          label={text[language].lastName}
           variant="outlined"
           className={classes.name}
           onChange={handleChange}
@@ -133,7 +136,7 @@ function SignupForm(props) {
         type="email"
         name="email"
         id="email"
-        label="User Email"
+        label={text[language].email}
         variant="outlined"
         className={classes.text}
         onChange={handleChange}
@@ -146,7 +149,7 @@ function SignupForm(props) {
         type="password"
         name="password"
         id="passwordSignup"
-        label="Password"
+        label={text[language].pass}
         variant="outlined"
         className={classes.text}
         onChange={handleChange}
@@ -162,7 +165,7 @@ function SignupForm(props) {
         type="password"
         name="passwordConfirm"
         id="passwordConfirm"
-        label="Confirm Password"
+        label={text[language].passConfirm}
         variant="outlined"
         className={classes.text}
         onChange={handleChange}
@@ -176,10 +179,10 @@ function SignupForm(props) {
         color="primary"
         className={classes.btn}
       >
-        Signup
+        {text[language].signup}
       </Button>
     </ValidatorForm>
   );
 }
 
-export default withStyles(styles)(SignupForm);
+export default SignupForm;

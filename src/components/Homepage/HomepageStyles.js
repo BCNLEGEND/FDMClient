@@ -1,6 +1,7 @@
+import { makeStyles } from '@material-ui/core/styles';
 import sizes from '../../utils/mediaSizes';
 
-const styles = {
+const useStyles = makeStyles({
   root: {
     width: '100%',
     margin: '0 auto',
@@ -11,9 +12,9 @@ const styles = {
       width: '80%',
     },
     [sizes.up('xl')]: {
-      width: '70%',
+      width: '80%',
     },
   },
-};
+});
 
-export default styles;
+export default useStyles;

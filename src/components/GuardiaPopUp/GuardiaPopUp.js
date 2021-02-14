@@ -1,10 +1,9 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
-import styles from './GuardiaPopUpStyles';
+import useStyles from './GuardiaPopUpStyles';
 import { calendarDates } from '../../utils/Guardies';
 
-function GuardiaPopUp(props) {
-  const { classes } = props;
+function GuardiaPopUp() {
+  const classes = useStyles();
   const today = new Date().toDateString();
   let yesterday = new Date(today);
   yesterday = yesterday.setDate(yesterday.getDate() - 1);
@@ -46,4 +45,4 @@ function GuardiaPopUp(props) {
   );
 }
 
-export default withStyles(styles)(GuardiaPopUp);
+export default GuardiaPopUp;

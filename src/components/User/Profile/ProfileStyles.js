@@ -1,4 +1,6 @@
-export const styles = {
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
   paper: {
     height: '80vh',
     width: '80%',
@@ -55,4 +57,6 @@ export const styles = {
     width: '60%',
     backgroundColor: 'var(--secondary-color)',
   },
-};
+});
+
+export default useStyles;

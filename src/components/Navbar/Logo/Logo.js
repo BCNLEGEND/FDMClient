@@ -1,10 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import { withStyles } from '@material-ui/core/styles';
-import styles from './LogoStyles';
+import useStyles from './LogoStyles';
 
-function Logo(props) {
-  const { classes } = props;
+function Logo() {
+  const classes = useStyles();
   return (
     <div className={classes.root}>
       <Image
@@ -18,4 +17,4 @@ function Logo(props) {
   );
 }
 
-export default withStyles(styles)(Logo);
+export default Logo;

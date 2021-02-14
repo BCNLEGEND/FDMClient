@@ -1,4 +1,6 @@
-const styles = {
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
   hidden: {
     display: 'none',
   },
@@ -38,6 +40,6 @@ const styles = {
     width: 'var(--size-xs)',
     marginRight: 'var(--size-xs)',
   },
-};
+});
 
-export default styles;
+export default useStyles;

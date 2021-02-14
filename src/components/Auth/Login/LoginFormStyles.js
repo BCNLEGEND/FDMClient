@@ -1,12 +1,14 @@
-const styles = {
+import { makeStyles } from '@material-ui/core/styles';
+const useStyles = makeStyles({
   form: {
-    width: '80%',
+    width: '90%',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
   },
   heading: {
     color: 'var(--primary-color)',
+    alignSelf: 'flex-start',
   },
   text: {
     marginTop: '2rem',
@@ -27,6 +29,6 @@ const styles = {
     textDecoration: 'none',
     textAlign: 'center',
   },
-};
+});
 
-export default styles;
+export default useStyles;

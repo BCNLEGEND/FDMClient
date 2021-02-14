@@ -1,9 +1,8 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
-import styles from './FooterStyles';
+import useStyles from './FooterStyles';
 
-function Copy(props) {
-  const { classes } = props;
+function Copy() {
+  const classes = useStyles();
   return (
     <div className={classes.copy}>
       <div>© 2021 Farmàcia del Mar</div>
@@ -12,4 +11,4 @@ function Copy(props) {
   );
 }
 
-export default withStyles(styles)(Copy);
+export default Copy;

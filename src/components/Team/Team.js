@@ -1,15 +1,14 @@
 import React, { useContext } from 'react';
 import Image from 'next/image';
-import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import styles from './TeamStyles';
+import useStyles from './TeamStyles';
 
 import { LanguageContext } from '../../context/language';
 
 import { team, text } from './TeamData';
 
-function Team(props) {
-  const { classes } = props;
+function Team() {
+  const classes = useStyles();
   const { language } = useContext(LanguageContext);
 
   const html = team.map((p) => (
@@ -44,4 +43,4 @@ function Team(props) {
   );
 }
 
-export default withStyles(styles)(Team);
+export default Team;

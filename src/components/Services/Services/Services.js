@@ -1,14 +1,13 @@
 import React, { useContext } from 'react';
 import Image from 'next/image';
-import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import styles from './ServicesStyles';
+import useStyles from './ServicesStyles';
 
 import text from '../ServicesText';
 import { LanguageContext } from '../../../context/language';
 
-function Services(props) {
-  const { classes } = props;
+function Services() {
+  const classes = useStyles();
   const { language } = useContext(LanguageContext);
   return (
     <section className={classes.root}>
@@ -41,4 +40,4 @@ function Services(props) {
     </section>
   );
 }
-export default withStyles(styles)(Services);
+export default Services;

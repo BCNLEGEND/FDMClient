@@ -1,6 +1,7 @@
+import { makeStyles } from '@material-ui/core/styles';
 import sizes from '../../utils/mediaSizes';
 
-const styles = {
+const useStyles = makeStyles({
   header: {
     width: '100vw',
     display: 'flex',
@@ -54,6 +55,6 @@ const styles = {
     zIndex: -10,
     clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0 100%);',
   },
-};
+});
 
-export default styles;
+export default useStyles;

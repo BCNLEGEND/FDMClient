@@ -1,5 +1,7 @@
+import { makeStyles } from '@material-ui/core/styles';
 import sizes from '../../utils/mediaSizes';
-const styles = {
+
+const useStyles = makeStyles({
   root: {
     margin: '0 auto',
     padding: '0 var(--size-s)',
@@ -39,6 +41,6 @@ const styles = {
   '.DayPicker-NavButton': {
     top: '0.5rem',
   },
-};
+});
 
-export default styles;
+export default useStyles;

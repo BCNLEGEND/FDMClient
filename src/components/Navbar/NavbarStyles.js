@@ -1,6 +1,7 @@
+import { makeStyles } from '@material-ui/core/styles';
 import sizes from '../../utils/mediaSizes';
 
-const styles = {
+const useStyles = makeStyles({
   root: {
     padding: '0 var(--size-xs)',
     display: 'flex',
@@ -14,6 +15,6 @@ const styles = {
       height: '64px',
     },
   },
-};
+});
 
-export default styles;
+export default useStyles;

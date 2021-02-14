@@ -1,5 +1,6 @@
 import sizes from '../../utils/mediaSizes';
 import { bp } from '../../utils/breakpoints';
+
 const styles = {
   typeContainer: {
     display: 'flex',
@@ -63,4 +64,4 @@ const styles = {
   },
 };
 
-export { styles };
+export default styles;

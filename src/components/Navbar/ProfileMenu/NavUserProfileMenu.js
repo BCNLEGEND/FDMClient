@@ -1,13 +1,12 @@
 import React, { useContext } from 'react';
 import Link from 'next/link';
-import { withStyles } from '@material-ui/core/styles';
 import PersonIcon from '@material-ui/icons/Person';
 import { UserContext } from '../../../context/user';
 import UserProfileMenu from './UserProfileMenu/UserProfileMenu';
-import styles from './NavUserProfileMenuStyles';
+import useStyles from './NavUserProfileMenuStyles';
 
-function NavUserProfileMenu(props) {
-  const { classes } = props;
+function NavUserProfileMenu() {
+  const classes = useStyles();
   const { loggedIn } = useContext(UserContext);
 
   return (
@@ -25,4 +24,4 @@ function NavUserProfileMenu(props) {
   );
 }
 
-export default withStyles(styles)(NavUserProfileMenu);
+export default NavUserProfileMenu;

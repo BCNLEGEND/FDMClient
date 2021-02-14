@@ -5,16 +5,15 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import { withStyles } from '@material-ui/core/styles';
 
 import { LanguageContext } from '../../../context/language';
-import styles from './SimpleMenuStyles';
+import useStyles from './SimpleMenuStyles';
 import text from './SimpleMenuText';
 
-function SimpleMenu(props) {
+function SimpleMenu() {
   const { language } = useContext(LanguageContext);
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const { classes } = props;
+  const classes = useStyles();
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -71,4 +70,4 @@ function SimpleMenu(props) {
   );
 }
 
-export default withStyles(styles)(SimpleMenu);
+export default SimpleMenu;

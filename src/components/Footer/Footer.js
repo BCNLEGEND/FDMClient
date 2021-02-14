@@ -1,11 +1,10 @@
 import React from 'react';
 import Copy from './Copy';
 import FooterContent from './FooterContent';
-import { withStyles } from '@material-ui/core/styles';
-import styles from './FooterStyles';
+import useStyles from './FooterStyles';
 
-function Footer(props) {
-  const { classes } = props;
+function Footer() {
+  const classes = useStyles();
   return (
     <footer className={classes.root}>
       <FooterContent />
@@ -14,4 +13,4 @@ function Footer(props) {
   );
 }
 
-export default withStyles(styles)(Footer);
+export default Footer;

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import { withStyles } from '@material-ui/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Divider from '@material-ui/core/Divider';
 import Paper from '@material-ui/core/Paper';
@@ -8,23 +7,7 @@ import Paper from '@material-ui/core/Paper';
 import SignupForm from './Signup/SignupForm';
 import LoginForm from './Login/LoginForm';
 
-const styles = {
-  container: {
-    margin: 'var(--size-s) 0',
-    paddingTop: 'var(--size-xxs)',
-    height: '115vh',
-    display: 'flex',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-  },
-  authContainer: {
-    width: '80%',
-    display: 'flex',
-    flexDirection: 'column-reverse',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-};
+import useStyles from './AuthStyles';
 
 class Auth extends Component {
   constructor(props) {
@@ -39,7 +22,8 @@ class Auth extends Component {
   };
 
   render() {
-    const { routerProps, isLoggedIn, classes } = this.props;
+    const { routerProps, isLoggedIn } = this.props;
+    const classes = useStyles();
     const { isLoading } = this.state;
     return (
       <Paper elevation={3} className={classes.container}>
@@ -65,4 +49,4 @@ class Auth extends Component {
   }
 }
 
-export default withStyles(styles)(Auth);
+export default Auth;
