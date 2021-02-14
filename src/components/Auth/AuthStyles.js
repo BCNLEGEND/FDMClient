@@ -1,7 +1,6 @@
-import { makeStyles } from '@material-ui/core/styles';
 import sizes from '../../utils/mediaSizes';
 
-const useStyles = makeStyles({
+const styles = {
   container: {
     width: '90%',
     margin: '0 auto',
@@ -28,6 +27,6 @@ const useStyles = makeStyles({
       flexDirection: 'row',
     },
   },
-});
+};
 
-export default useStyles;
+export default styles;

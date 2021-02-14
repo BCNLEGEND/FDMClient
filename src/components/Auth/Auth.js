@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 
 import CircularProgress from '@material-ui/core/CircularProgress';
+import { withStyles } from '@material-ui/core/styles';
 import Divider from '@material-ui/core/Divider';
 import Paper from '@material-ui/core/Paper';
 
 import SignupForm from './Signup/SignupForm';
 import LoginForm from './Login/LoginForm';
 
-import useStyles from './AuthStyles';
+import styles from './AuthStyles';
 
 class Auth extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class Auth extends Component {
 
   render() {
     const { routerProps, isLoggedIn } = this.props;
-    const classes = useStyles();
+    const { classes } = this.props;
     const { isLoading } = this.state;
     return (
       <Paper elevation={3} className={classes.container}>
@@ -49,4 +50,4 @@ class Auth extends Component {
   }
 }
 
-export default Auth;
+export default withStyles(styles)(Auth);
