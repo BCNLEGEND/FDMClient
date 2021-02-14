@@ -18,9 +18,6 @@ const useStyles = makeStyles({
       justifyContent: 'space-between',
       width: '100%',
     },
-    [sizes.up('xl')]: {
-      width: '70%',
-    },
   },
   text: {
     color: 'var(--primary-color)',
