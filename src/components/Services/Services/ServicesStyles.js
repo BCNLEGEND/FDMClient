@@ -47,7 +47,7 @@ const useStyles = makeStyles({
   },
   imgContainer: {
     // paddingTop: 'var(--size-m)',
-    width: '90%',
+    width: '100vw',
     [sizes.up('lg')]: {
       width: '45%',
     },

@@ -32,7 +32,7 @@ const useStyles = makeStyles({
 
   container: {
     paddingTop: 'var(--size-xs)',
-    width: '100%',
+    width: '90%',
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
@@ -43,12 +43,10 @@ const useStyles = makeStyles({
       margin: 'var(--size-xxs)',
     },
     [sizes.up('md')]: {
-      width: '29%',
+      // width: '40%',
     },
   },
   imgContainer: {
-    backgroundImage:
-      'linear-gradient(to right bottom, var(--primary-color-light), transparent)',
     position: 'relative',
     padding: 'var(--size-xs)',
     width: '100%',
