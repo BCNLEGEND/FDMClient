@@ -12,7 +12,7 @@ const useStyles = makeStyles({
   },
   primaryHeading: {
     position: 'absolute',
-    top: '16%',
+    top: '10%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 'fit-content',
@@ -32,7 +32,7 @@ const useStyles = makeStyles({
   },
   secondaryHeading: {
     position: 'absolute',
-    top: '32%',
+    top: '28%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 'fit-content',

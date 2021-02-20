@@ -5,7 +5,7 @@ const styles = {
   typeContainer: {
     display: 'flex',
     position: 'absolute',
-    top: '35%',
+    top: '32%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: '100%',
@@ -37,7 +37,7 @@ const styles = {
   typingText: {
     position: 'absolute',
     top: '40%',
-    left: '88%',
+    left: '90%',
     transform: 'translate(-50%, -50%)',
     fontStyle: 'italic',
     fontFamily: 'var(--primary-font-light)',
