@@ -6,7 +6,7 @@ const styles = {
     display: 'flex',
     position: 'absolute',
     top: '35%',
-    left: '58%',
+    left: '50%',
     transform: 'translate(-50%, -50%)',
     width: '100%',
     color: 'var(--primary-color)',
