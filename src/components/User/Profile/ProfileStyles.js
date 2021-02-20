@@ -1,28 +1,54 @@
 import { makeStyles } from '@material-ui/core/styles';
+import { red } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
   paper: {
-    height: '80vh',
+    position: 'relative',
+    height: '85vh',
     width: '80%',
     margin: '0 auto',
     marginTop: 'var(--size-s)',
     color: 'var(--primary-color)',
   },
+  heading: {
+    paddingTop: 'var(--size-s)',
+    paddingLeft: 'var(--size-xs)',
+  },
   root: {
     paddingTop: 'var(--size-xs)',
+    height: '35vh',
     width: '90%',
     margin: '0 auto',
   },
   container: {
     display: 'flex',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     alignItems: 'center',
   },
-  name: {
+  imgContainer: {
+    width: '35%',
+    textAlign: 'center',
+  },
+  profileContainer: {
+    width: '60%',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+  },
+  name: {
+    marginTop: 'var(--size-xxs)',
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
+  },
+  personalData: {
+    marginTop: 'var(--size-xxs)',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  address: {
+    textAlign: 'right',
   },
   text: {
     marginTop: 'var(--size-xxs)',
@@ -33,29 +59,26 @@ const useStyles = makeStyles({
     width: '100%',
   },
   menu: {
-    marginTop: 'var(--size-xs)',
+    position: 'absolute',
+    bottom: '0',
+    left: '0',
+    width: '100%',
     display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center',
   },
-  btnDefault: {
-    marginTop: 'var(--size-xxs)',
-    width: '60%',
+  iconbtn: {
+    color: 'var(--primary-color)',
   },
-  btn: {
-    marginTop: 'var(--size-xxs)',
-    width: '60%',
-    backgroundColor: 'var(--primary-color)',
+  icon: {
+    height: 'var(--size-s)',
+    width: 'var(--size-s)',
+    color: 'var(--primary-color)',
   },
-  btnDelete: {
-    marginTop: 'var(--size-xxs)',
-    width: '60%',
-  },
-  btnShop: {
-    marginTop: 'var(--size-xxs)',
-    width: '60%',
-    backgroundColor: 'var(--secondary-color)',
+  iconDlt: {
+    height: 'var(--size-s)',
+    width: 'var(--size-s)',
+    color: red.A400,
   },
 });
 

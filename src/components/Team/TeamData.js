@@ -1,16 +1,5 @@
 export const team = [
   {
-    id: 1,
-    firstName: 'Silvia',
-    lastName: 'Ametlla Pallì',
-    title: {
-      ca: 'Farmacèutica Titular',
-      es: 'Farmacéutica Titular',
-      en: 'Owner',
-    },
-    img: 'team01.png',
-  },
-  {
     id: 2,
     firstName: 'Patricia',
     lastName: 'Pinto Morales',
@@ -44,16 +33,27 @@ export const team = [
     img: 'team04.png',
   },
   {
-    id: 5,
-    firstName: 'Ingrid',
-    lastName: 'Sanchez Martinez',
+    id: 1,
+    firstName: 'Silvia',
+    lastName: 'Ametlla Pallì',
     title: {
-      ca: 'Estudiante de Farmàcia',
-      es: 'Estudiante de Farmacia',
-      en: 'Pharmacy Student',
+      ca: 'Farmacèutica Titular',
+      es: 'Farmacéutica Titular',
+      en: 'Owner',
     },
-    img: 'team05.png',
+    img: 'team01.png',
   },
+  // {
+  //   id: 5,
+  //   firstName: 'Ingrid',
+  //   lastName: 'Sanchez Martinez',
+  //   title: {
+  //     ca: 'Estudiante de Farmàcia',
+  //     es: 'Estudiante de Farmacia',
+  //     en: 'Pharmacy Student',
+  //   },
+  //   img: 'team05.png',
+  // },
 ];
 
 export const text = {

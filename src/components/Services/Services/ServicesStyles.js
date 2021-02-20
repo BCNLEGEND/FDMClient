@@ -46,10 +46,10 @@ const useStyles = makeStyles({
     paddingLeft: 'var(--size-xxs)',
   },
   imgContainer: {
-    paddingTop: 'var(--size-m)',
-    width: '60%',
+    // paddingTop: 'var(--size-m)',
+    width: '90%',
     [sizes.up('lg')]: {
-      width: '30%',
+      width: '45%',
     },
   },
 });

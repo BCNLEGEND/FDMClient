@@ -20,8 +20,8 @@ function header() {
             objectFit="contain"
             width="100"
             height="67"
-            src="/media/img/FDM_Header.jpg"
-            alt="Farmàcia del Mar beach foto"
+            src="/media/img/FDM_Header_01.png"
+            alt="Farmàcia del Mar foto"
             className={classes.image}
             priority="true"
           />

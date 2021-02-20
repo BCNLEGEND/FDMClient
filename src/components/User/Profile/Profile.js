@@ -13,7 +13,7 @@ function Profile() {
   return (
     <div>
       <Paper className={classes.paper}>
-        <h1>Your Saved Profile:</h1>
+        <h1 className={classes.heading}>Your Saved Profile:</h1>
         <ProfilePrimary />
         <ProfileMenu />
       </Paper>

@@ -47,8 +47,13 @@ const useStyles = makeStyles({
     },
   },
   imgContainer: {
+    backgroundImage:
+      'linear-gradient(to right bottom, var(--primary-color-light), transparent)',
     position: 'relative',
-    width: '60%',
+    padding: 'var(--size-xs)',
+    width: '100%',
+    height: '100%',
+    borderRadius: '50%',
     [sizes.up('sm')]: {
       width: '100%',
     },

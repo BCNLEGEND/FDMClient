@@ -13,8 +13,8 @@ function Services() {
     <section className={classes.root}>
       <div className={classes.imgContainer}>
         <Image
-          src="/media/img/FDM_service.png"
-          width={200}
+          src="/media/img/services.jpg"
+          width={300}
           height={200}
           layout="responsive"
           alt="Servicios Farmàcia"

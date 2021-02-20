@@ -40,7 +40,7 @@ export default function MyApp({ Component, pageProps }) {
           ></meta>
           <meta
             property="og:description"
-            content="A la Farmàcia del Mar, també coneguda com Farmàcia Sílvia Ametlla Pallí en Arenys de Mar, el nostre principal objectiu és estar Sempre a prop teu"
+            content="A la Farmàcia del Mar en Arenys de Mar, també coneguda com Farmàcia Sílvia Ametlla Pallí, el nostre principal objectiu és estar Sempre a prop teu"
           />
           <title>Farmàcia del mar » Arenys de Mar » Sempre a prop teu</title>
           <link rel="icon" href="/favivon.ico" />
