@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
+import sizes from '../../utils/mediaSizes';
 
 const useStyles = makeStyles({
   root: {
@@ -35,6 +36,18 @@ const useStyles = makeStyles({
       marginRight: 'var(--size-xxs)',
       marginLeft: 'var(--size-s)',
     },
+    [sizes.up('md')]: {
+      paddingLeft: 'var(--size-s)',
+    },
+    [sizes.up('lg')]: {
+      paddingLeft: 'var(--size-m)',
+    },
+  },
+  img: {
+    width: '100%',
+    margin: '0 auto',
+    display: 'flex',
+    justifyContent: 'center',
   },
 });
 export default useStyles;

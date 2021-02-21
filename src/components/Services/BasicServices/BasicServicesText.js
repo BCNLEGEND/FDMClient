@@ -18,6 +18,10 @@ const text = {
       title: 'Ortopèdia',
       icon: 'ortho',
     },
+    rent: {
+      title: 'Lloguer de cadira de rodes i caminadors',
+      icon: 'ortho',
+    },
     formulas: {
       title: 'Fòrmules Magistrals',
       icon: 'formulas',

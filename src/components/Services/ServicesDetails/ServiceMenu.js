@@ -89,8 +89,8 @@ export default function ServiceTabs() {
                     src={`/media/img/${text[language].fito.img}`}
                     layout="responsive"
                     alt={text[language].fito.title}
-                    width={100}
-                    height={100}
+                    width={400}
+                    height={300}
                   />
                 </div>
               ) : (

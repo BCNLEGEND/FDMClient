@@ -53,6 +53,8 @@ const useStyles = makeStyles({
     marginTop: 'var(--size-s)',
     margin: '0 auto',
     width: '50%',
+    borderRadius: '30px',
+    overflow: 'hidden',
   },
   tabPanelContainer: {
     width: '100%',

@@ -10,6 +10,8 @@ import GroupIcon from '@material-ui/icons/Group';
 import AccessibleIcon from '@material-ui/icons/Accessible';
 import SpeedIcon from '@material-ui/icons/Speed';
 import HearingIcon from '@material-ui/icons/Hearing';
+import HealingIcon from '@material-ui/icons/Healing';
+import LocalPharmacyIcon from '@material-ui/icons/LocalPharmacy';
 import CardGiftcardIcon from '@material-ui/icons/CardGiftcard';
 import ChildFriendlyIcon from '@material-ui/icons/ChildFriendly';
 import FaceIcon from '@material-ui/icons/Face';
@@ -73,7 +75,7 @@ function BasicServices() {
                   <Typography variant="h6" component="h3">
                     {text['ca'].ortho.title}
                   </Typography>
-                  <AccessibleIcon className={classes.icon} />
+                  <HealingIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
                   {text['ca'].ortho.subtitle}
@@ -83,11 +85,21 @@ function BasicServices() {
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
+                    {text['ca'].rent.title}
+                  </Typography>
+                  <AccessibleIcon className={classes.icon} />
+                </div>
+                <Typography variant="body1">
+                  {text['ca'].rent.subtitle}
+                </Typography>
+              </div>
+              <Divider />
+              <div className={classes.singleServiceContainer}>
+                <div className={classes.singleService}>
+                  <Typography variant="h6" component="h3">
                     {text['ca'].formulas.title}
                   </Typography>
-                  <svg className={classes.icon}>
-                    <use href="/media/svg/sprite.svg#icon-access_time" />
-                  </svg>
+                  <LocalPharmacyIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
                   {text['ca'].formulas.subtitle}
@@ -208,7 +220,7 @@ function BasicServices() {
                   <Typography variant="h6" component="h3">
                     {text['ca'].ortho.title}
                   </Typography>
-                  <AccessibleIcon className={classes.icon} />
+                  <HealingIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
                   {text['ca'].ortho.subtitle}
@@ -218,11 +230,21 @@ function BasicServices() {
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
+                    {text['ca'].rent.title}
+                  </Typography>
+                  <AccessibleIcon className={classes.icon} />
+                </div>
+                <Typography variant="body1">
+                  {text['ca'].rent.subtitle}
+                </Typography>
+              </div>
+              <Divider />
+              <div className={classes.singleServiceContainer}>
+                <div className={classes.singleService}>
+                  <Typography variant="h6" component="h3">
                     {text['ca'].formulas.title}
                   </Typography>
-                  <svg className={classes.icon}>
-                    <use href="/media/svg/sprite.svg#icon-access_time" />
-                  </svg>
+                  <LocalPharmacyIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
                   {text['ca'].formulas.subtitle}

@@ -22,12 +22,11 @@ const useStyles = makeStyles({
   text: {
     color: 'var(--primary-color)',
     [sizes.up('lg')]: {
-      width: '55%',
+      width: '60%',
     },
   },
   paragraph: {
     textAlign: 'justify',
-    // fontSize: '1.3rem',
     marginTop: 'var(--size-xxs)',
     marginBottom: 'var(--size-xxs)',
   },

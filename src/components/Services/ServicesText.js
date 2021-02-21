@@ -1,28 +1,32 @@
 const text = {
   ca: {
-    title: 'Els nostres serveis i teràpies integratives:',
+    title:
+      "Vols millorar la teva qualitat de vida? Què t'oferim a la Farmàcia del Mar?",
     text:
-      'La nostra Naturòpata Integrativa et pot ajudar i acompanyar a millorar la teva salut amb un projecta de vida per aconseguir que et sentis be amb el teu cos, la teva ment i l’entorn que te envolta:',
+      "T'ajudem i acompanyem a millorar la teva salut com a projecte de vida per aconseguir que et sentis bé amb el teu cos, la teva ment i l’entorn que t'envolta:",
     bulletpoints: [
-      'a reconduir el teu diagnòstic mèdic,',
-      'a estabilitzar els nivells de sucre,',
-      'a canviar d’hàbits per equilibrar el teu pes,',
-      'a marcar noves pautes d’estil de vida,',
-      'a fer un detox (desintoxicació) al teus cos,',
-      'i altres necessitats personals...',
+      "Analitzem els teus hàbits dietètics i t'aconsellem en el procés de baixar o guanyar pes,",
+      "T'ajudem en situacions comuns que t'afecten com: l'estrenyiment, males digestions, cames cansades, hemorroides, transtorns de la son, caiguda del cabell, càndides i molts altres malestars que ens passen habitualment",
+      'Tractem les emocions: estrés, ansietat, fatiga, pors, ...',
+      'Mesurem i reconduim nivells lleugerament alterats de sucre, colesterol, triglicèrids, vitamines, etc',
+      "T'acompanyem i recolzem en el procés de deixar de fumar,",
+      "Preparem mescles personalitzats d'herbes ja que disposem de més de 60 plantes ",
+      'Organitzem sessions individuals de dermocosmètica, salut femenina, etc',
     ],
   },
   es: {
-    title: 'Nuestras servicios y terapias integrativas:',
+    title:
+      'Quieres mejorar tu calidad de vida? Qué te ofrecemos en la Farmacia del Mar?',
     text:
-      'Nuestra Naturópata Integrativa te puede ayudar y acompañar a mejorar tu salud con un proyecta de vida para conseguir que te sientas bien con tu cuerpo, tu mente y el entorno que te rodea:',
+      'Te ayudamos y acompañamos a mejorar tu salud como proyecto de vida para conseguir que te sientas bien con tu cuerpo, tu mente y el entorno que te rodea:',
     bulletpoints: [
-      'reconducir tu diagnóstico médico,',
-      'a estabilizar los niveles de azúcar,',
-      'a cambiar de hábitos para equilibrar tu peso,',
-      'marcar nuevas pautas de estilo de vida,',
-      'a hacer un detox (desintoxicación) en tus cuerpo,',
-      'y otras necesidades personales ...',
+      'Analizamos tus hábitos dietéticos y te aconsejamos en el proceso de bajar o ganar peso,',
+      'Te ayudamos en situaciones comunes que nos afectan como: estrañimiento, malas digestiones, piernas cansadas, hemorroides, transtornos del sueño, caída de pelo, cándidas y muchos otros malestares que nos pasan habitualmente,',
+      'Tratamos las emociones: estrés, ansiedad, fatiga, miedos,...,',
+      'Medimos y estabilizamos niveles ligeramente alterados se azúcar, colesterol, triglicéridos, vitaminas, etc,',
+      'Te acompañamos y apoyamos en el proceso de dejar de fumar,',
+      'Preparamos mezclas personalizadas de hierbas ya que disponemos de más de 60 plantas, ',
+      'Organizamos sesiones individuales de dermosmética, salud femenina, etc ',
     ],
   },
   en: {

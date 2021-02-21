@@ -6,13 +6,22 @@ const styles = {
     justifyContent: 'flex-start',
     color: 'var(--primary-color)',
     margin: '0 auto',
-    width: '52%',
+    width: '45%',
     marginTop: '-1rem',
+    [sizes.up('sm')]: {
+      width: '33%',
+    },
+    [sizes.up('md')]: {
+      width: '45%',
+    },
     [sizes.up('lg')]: {
       width: '50%',
     },
     [sizes.up('xl')]: {
-      width: '55%',
+      width: '48%',
+    },
+    [sizes.up('xxl')]: {
+      width: '50%',
     },
   },
   heading: {

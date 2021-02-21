@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import Calendar from '../Calendar/CalendarFull';
+import Image from 'next/image';
 import Typography from '@material-ui/core/Typography';
 
 import { LanguageContext } from '../../context/language';
@@ -27,6 +28,9 @@ function EmergenciesPage(props) {
         el nostre principal objectiu és estar{' '}
         <span className={classes.span}>"Sempre a prop teu"</span>
       </Typography>
+      <div className={classes.img}>
+        <Image src="/media/img/guardia01.png" width={600} height={180} />
+      </div>
       <Typography
         variant="h5"
         component="h2"

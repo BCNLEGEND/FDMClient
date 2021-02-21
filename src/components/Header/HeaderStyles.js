@@ -33,10 +33,10 @@ const useStyles = makeStyles({
       borderRadius: '30px',
     },
     [sizes.up('xl')]: {
-      width: '40%',
+      width: '50%',
     },
     [sizes.up('xxl')]: {
-      width: '35%',
+      width: '40%',
     },
   },
   primaryHeading: {
