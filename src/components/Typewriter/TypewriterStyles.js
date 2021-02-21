@@ -6,7 +6,7 @@ const styles = {
     justifyContent: 'flex-start',
     color: 'var(--primary-color)',
     margin: '0 auto',
-    width: '45%',
+    width: '52%',
     marginTop: '-1rem',
     [sizes.up('lg')]: {
       width: '50%',
