@@ -31,7 +31,6 @@ const useStyles = makeStyles({
   },
 
   container: {
-    paddingTop: 'var(--size-xs)',
     width: '90%',
     position: 'relative',
     display: 'flex',
@@ -42,8 +41,11 @@ const useStyles = makeStyles({
       width: '40%',
       margin: 'var(--size-xxs)',
     },
-    [sizes.up('md')]: {
-      // width: '40%',
+    [sizes.up('lg')]: {
+      width: '30%',
+    },
+    [sizes.up('xl')]: {
+      width: '20%',
     },
   },
   imgContainer: {
@@ -61,7 +63,8 @@ const useStyles = makeStyles({
     padding: 'var(--size-xxs) var(--size-xxs)',
     borderRadius: '3px',
     color: 'var(--primary-color)',
-    backgroundColor: 'rgba(255,255,255,0.6)',
+    backgroundColor: 'rgba(255,255,255,0.2)',
+    backdropFilter: 'blur(.2rem)',
     position: 'absolute',
     bottom: 0,
     left: '50%',
@@ -70,6 +73,15 @@ const useStyles = makeStyles({
   },
   title: {
     color: 'var(--primary-color)',
+  },
+  aprop: {
+    paddingTop: 'var(--size-xs)',
+    fontFamily: 'var(--secondary-font)',
+    fontSize: 'var(--size-s)',
+    color: 'var(--secondary-color)',
+    [sizes.up('sm')]: {
+      fontSize: 'var(--size-m)',
+    },
   },
 });
 

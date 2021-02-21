@@ -7,6 +7,7 @@ const styles = {
     margin: 'auto auto',
   },
   map: {
+    color: 'var(--primary-color)',
     position: 'absolute',
     top: 0,
     right: 0,

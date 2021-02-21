@@ -79,20 +79,24 @@ export default function ServiceTabs() {
         </Tabs>
         <div className={classes.tabPanelContainer}>
           <TabPanel value={value} index={0} className={classes.text}>
-            <Typography variant="body1">{text[language].fito.text}</Typography>
-            {isBreakPoint ? (
-              <div className={classes.img}>
-                <Image
-                  src={`/media/img/${text[language].fito.img}`}
-                  layout="responsive"
-                  alt={text[language].fito.title}
-                  width={400}
-                  height={300}
-                />
-              </div>
-            ) : (
-              ''
-            )}
+            <div className={classes.textContainer}>
+              <Typography variant="body1">
+                {text[language].fito.text}
+              </Typography>
+              {isBreakPoint ? (
+                <div className={classes.img}>
+                  <Image
+                    src={`/media/img/${text[language].fito.img}`}
+                    layout="responsive"
+                    alt={text[language].fito.title}
+                    width={100}
+                    height={100}
+                  />
+                </div>
+              ) : (
+                ''
+              )}
+            </div>
           </TabPanel>
           <TabPanel value={value} index={1} className={classes.text}>
             <Typography variant="body1">{text[language].olis.text}</Typography>

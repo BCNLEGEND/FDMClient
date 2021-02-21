@@ -4,7 +4,7 @@ import sizes from '../../../utils/mediaSizes';
 const useStyles = makeStyles({
   form: {
     width: '9%',
-    margin: '0 var(--size-xs)',
+    // margin: '0 var(--size-xxs)',
     [sizes.up('lg')]: {
       width: '14%',
     },

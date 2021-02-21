@@ -3,7 +3,7 @@ import sizes from '../../utils/mediaSizes';
 
 const useStyles = makeStyles({
   root: {
-    padding: '0 var(--size-xs)',
+    padding: ' 0 var(--size-xs)',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',

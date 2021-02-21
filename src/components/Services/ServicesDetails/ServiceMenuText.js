@@ -5,7 +5,7 @@ const text = {
       title: 'Fitoteràpia',
       text:
         'Lús de la poderosa qualitat curativa de la fitoteràpia, és avui en dia un dels camins per millorar la salut de forma natural i efectiva. Preparem les barrejas de plantes adequades i personalitzades, per a estabilitzar els nivells de sucre, colesterol, triglicèrids , tensió arteriaL, desintoxicar el teu cos , etc..... El rigor i constancia de la persona juntament amb el compromís i seguiment per part nostra, comparta aconseguir els objectius.',
-      img: 'service01.jpg',
+      img: 'service01_new.png',
     },
     olis: {
       title: 'Olis Essencials',

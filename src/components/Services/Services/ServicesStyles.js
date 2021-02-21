@@ -49,7 +49,8 @@ const useStyles = makeStyles({
     // paddingTop: 'var(--size-m)',
     width: '100vw',
     [sizes.up('lg')]: {
-      width: '45%',
+      width: '50%',
+      padding: '0 var(--size-xxs)',
     },
   },
 });

@@ -38,6 +38,9 @@ function Team() {
       <Typography variant="h5" component="h2" className={classes.sectionTitle}>
         {text[language]}
       </Typography>
+      <Typography variant="h5" component="h3" className={classes.aprop}>
+        Sempre a prop teu
+      </Typography>
       <div className={classes.sectionContainer}>{html}</div>
     </section>
   );

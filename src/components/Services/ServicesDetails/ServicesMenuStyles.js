@@ -44,19 +44,15 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     alignItems: 'center',
     [sizes.up('lg')]: {
-      width: '90%',
+      width: '80%',
       margin: 'auto',
+      flexDirection: 'row',
     },
   },
   img: {
     marginTop: 'var(--size-s)',
     margin: '0 auto',
     width: '50%',
-    borderRadius: 'var(--size-xxs)',
-    overflow: 'hidden',
-  },
-  '.MuiTabs-flexContainer': {
-    justifyContent: 'center',
   },
   tabPanelContainer: {
     width: '100%',

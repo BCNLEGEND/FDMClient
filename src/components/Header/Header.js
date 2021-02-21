@@ -42,13 +42,15 @@ function header() {
           </video>
         </div>
       )}
-      <h1>
-        <span className={classes.primaryHeading}>Farmàcia del Mar</span>
-        <span className={classes.secondaryHeading}>
-          {text[language].subtitle}
-        </span>
-        <Typewriter />
-      </h1>
+      <div className={classes.headingContainer}>
+        <h1>
+          <span className={classes.primaryHeading}>Farmàcia del Mar</span>
+          <span className={classes.secondaryHeading}>
+            {text[language].subtitle}
+          </span>
+          <Typewriter />
+        </h1>
+      </div>
     </header>
   );
 }
