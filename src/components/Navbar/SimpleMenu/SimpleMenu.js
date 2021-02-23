@@ -50,11 +50,11 @@ function SimpleMenu() {
             {text[language].service}
           </Link>
         </MenuItem>
-        <MenuItem onClick={handleClose} className={classes.link}>
+        {/* <MenuItem onClick={handleClose} className={classes.link}>
           <Link href="/team" passHref>
             {text[language].team}
           </Link>
-        </MenuItem>
+        </MenuItem> */}
         <MenuItem onClick={handleClose} className={classes.link}>
           <Link href="/contact" passHref>
             {text[language].contact}
