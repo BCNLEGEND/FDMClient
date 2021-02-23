@@ -65,6 +65,42 @@ const useStyles = makeStyles({
     zIndex: -10,
     clipPath: 'polygon(0 0, 100% 0, 100% 80%, 0 90%);',
   },
+  iconContainer: {
+    position: 'absolute',
+    top: '75%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: '10%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: 'var(--primary-color)',
+    zIndex: 100,
+    animation: `1.5s $hide infinite`,
+  },
+  iconMouse: {
+    height: 'var(--size-xs)',
+    width: 'var(--size-xs)',
+  },
+  iconArrow: {
+    marginTop: '-.5rem',
+    height: 'var(--size-xs)',
+    width: 'var(--size-xs)',
+  },
+  iconArrowII: {
+    marginTop: '-1.5rem',
+    height: 'var(--size-xs)',
+    width: 'var(--size-xs)',
+  },
+  '@keyframes hide': {
+    '0%': {
+      opacity: '0',
+    },
+    '100%': {
+      opacity: '1',
+    },
+  },
 });
 
 export default useStyles;

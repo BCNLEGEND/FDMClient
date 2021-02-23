@@ -12,7 +12,7 @@ const text = {
   es: {
     heading: 'con',
     dataText: [
-      'Fitoterápia',
+      'Fitoterapia',
       'Aceites Esenciales',
       'Flors de Bach',
       'Suplementos',

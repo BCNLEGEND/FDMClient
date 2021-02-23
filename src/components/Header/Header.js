@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { useMediaQuery } from '../../utils/useMediaQuery';
 import { bp } from '../../utils/breakpoints';
 import useStyles from './HeaderStyles';
+import MouseIcon from '@material-ui/icons/Mouse';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import Typewriter from '../Typewriter/Typewriter';
 import { LanguageContext } from '../../context/language';
 import text from './HeaderText';
@@ -11,6 +13,7 @@ function header() {
   const { language } = useContext(LanguageContext);
   const classes = useStyles();
   const isBreakPoint = useMediaQuery(bp.lg);
+  const isBreakPointXl = useMediaQuery(bp.xl);
   return (
     <header className={classes.header}>
       {!isBreakPoint ? (
@@ -27,20 +30,31 @@ function header() {
           />
         </div>
       ) : (
-        <div className={classes.background}>
-          <video
-            className={classes.bgVideo__content}
-            autoPlay
-            loop
-            muted
-            width="100%"
-          >
-            <source
-              src="https://assets.mixkit.co/videos/preview/mixkit-sea-waves-hitting-the-sandy-seashore-1953-large.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
+        <>
+          <div className={classes.background}>
+            <video
+              className={classes.bgVideo__content}
+              autoPlay
+              loop
+              muted
+              width="100%"
+            >
+              <source
+                src="https://assets.mixkit.co/videos/preview/mixkit-sea-waves-hitting-the-sandy-seashore-1953-large.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          {isBreakPointXl ? (
+            <div className={classes.iconContainer}>
+              <MouseIcon className={classes.iconMouse} />
+              <KeyboardArrowDownIcon className={classes.iconArrow} />
+              <KeyboardArrowDownIcon className={classes.iconArrowII} />
+            </div>
+          ) : (
+            ''
+          )}
+        </>
       )}
       <div className={classes.headingContainer}>
         <h1>

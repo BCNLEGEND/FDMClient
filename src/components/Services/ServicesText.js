@@ -3,30 +3,26 @@ const text = {
     title:
       "Vols millorar la teva qualitat de vida? Què t'oferim a la Farmàcia del Mar?",
     text:
-      "T'ajudem i acompanyem a millorar la teva salut com a projecte de vida per aconseguir que et sentis bé amb el teu cos, la teva ment i l’entorn que t'envolta:",
+      "T'ajudem i acompanyem a millorar la teva salut com a projecte de vida per aconseguir que et sentis bé amb el teu cos, la teva ment i l’entorn que t'envolta. Cada un de nosaltres som únics i tenim unes necessitats individuals, per això ens centrarem en tu i en aconsellar-te sobre els 5 pilars essencials de la salut:",
     bulletpoints: [
-      "Analitzem els teus hàbits dietètics i t'aconsellem en el procés de baixar o guanyar pes,",
-      "T'ajudem en situacions comuns que t'afecten com: l'estrenyiment, males digestions, cames cansades, hemorroides, transtorns de la son, caiguda del cabell, càndides i molts altres malestars que ens passen habitualment",
-      'Tractem les emocions: estrés, ansietat, fatiga, pors, ...',
-      'Mesurem i reconduim nivells lleugerament alterats de sucre, colesterol, triglicèrids, vitamines, etc',
-      "T'acompanyem i recolzem en el procés de deixar de fumar,",
-      "Preparem mescles personalitzats d'herbes ja que disposem de més de 60 plantes ",
-      'Organitzem sessions individuals de dermocosmètica, salut femenina, etc',
+      'Desintoxicació dels 5 emuntoris (fetge, ronyó, pell, sang, pulmons i intestí) ,',
+      'Reestructuració biològica: equilibri del pH i de la flora bacteriana',
+      'Correcta nutrició: aport de nutrients essencials, antioxidants, dieta hipotòxica ',
+      'Consciència corporal',
+      'Integració del cos físic, emocional i energètic,',
     ],
   },
   es: {
     title:
       'Quieres mejorar tu calidad de vida? Qué te ofrecemos en la Farmacia del Mar?',
     text:
-      'Te ayudamos y acompañamos a mejorar tu salud como proyecto de vida para conseguir que te sientas bien con tu cuerpo, tu mente y el entorno que te rodea:',
+      'Te ayudamos y acompañamos a mejorar tu salud como proyecto de vida para conseguir que te sientas bien con tu cuerpo, tu mente y el entorno que te rodea. Cada uno de nosotros somos únicos y tenemos necesidades individuales, por esta razón nos centramos en ti y en aconsejarte sobre los 5 pilares esenciales de la salud:',
     bulletpoints: [
-      'Analizamos tus hábitos dietéticos y te aconsejamos en el proceso de bajar o ganar peso,',
-      'Te ayudamos en situaciones comunes que nos afectan como: estrañimiento, malas digestiones, piernas cansadas, hemorroides, transtornos del sueño, caída de pelo, cándidas y muchos otros malestares que nos pasan habitualmente,',
-      'Tratamos las emociones: estrés, ansiedad, fatiga, miedos,...,',
-      'Medimos y estabilizamos niveles ligeramente alterados se azúcar, colesterol, triglicéridos, vitaminas, etc,',
-      'Te acompañamos y apoyamos en el proceso de dejar de fumar,',
-      'Preparamos mezclas personalizadas de hierbas ya que disponemos de más de 60 plantas, ',
-      'Organizamos sesiones individuales de dermosmética, salud femenina, etc ',
+      'Desintoxicación de los 5 emuntorios (hígado, riñón, piel, sangre, pulmones e intestino),',
+      'Reestructuración biológica: equilibrio del pH y de la flora bacteriana,',
+      'Correcta nutrición: aporte de nuestrientes esenciales, antioxidantes, dieta hipotóxica',
+      'Consciencia corporal,',
+      'Integración del cuerpo físico, emocional y energético',
     ],
   },
   en: {

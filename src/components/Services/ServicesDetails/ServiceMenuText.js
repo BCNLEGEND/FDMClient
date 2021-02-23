@@ -1,61 +1,61 @@
 const text = {
   ca: {
-    title: 'Els nostres serveis integrativas:',
+    title: 'Els nostres serveis integratius:',
     fito: {
       title: 'Fitoteràpia',
       text:
-        "L'ús de la poderosa qualitat curativa de la fitoteràpia, és avui en dia un dels camins per millorar la salut de forma natural i efectiva. Preparem les barrejas de plantes adequades i personalitzades, per a estabilitzar els nivells de sucre, colesterol, triglicèrids , tensió arteriaL, desintoxicar el teu cos , etc..... El rigor i constancia de la persona juntament amb el compromís i seguiment per part nostra, comparta aconseguir els objectius.",
+        'La Fitoteràpia és la ciència que estudia les plantes amb finalitat terapèutica, tenint com a objectiu la prevenció, l\'atenuació o la curació de l\'estat patològic. Les plantes medicinals són la "mare" dels fàrmacs, en els que els seus principis actius es basen pràcticament tots els medicaments utilitzats antigament i avui dia. "Vis medicatrix naturae" (el poder curatiu de la naturalesa) va dir Hipòcrates.',
       img: 'service01.jpg',
     },
     olis: {
-      title: 'Olis Essencials',
+      title: 'Aromateràpia',
       text:
-        'Concentrats d’origen vegetal que s’extreuen de certes plantes, arrels, fulles, arbres, ...mitjançant les tècniques de vapor, premsat, …,per adquirir les propietats específiques naturals. Dins la Aromaterapia els olis son utilitzats amb la finalitat terapèutica, i s’utilitzen diluïts en altres elements, com olis, aigua, etc… Aconsellem a les persones que volen un tractament natural el Oli Essencial apropiat, com bactericida, antibiòtic natural, antiinflamatori, relaxant, antisèptic, regenerador cel·lular, tonificant, etc…',
+        "Els olis esencials són extractes de plantes aromàtiques o dels òrgans d'aquestes plantes que s'obtenen per destilació al vapor. L'Aromateràpia és l'ús d'aquests olis essencials que utilitzats per diferents vies d'administració i forma, ofereixen i proporcionen tractaments preventius, curatius o complementaris per curar moltes dolències, millorar la salut i el benestar de la persona. ",
       img: 'service02.jpg',
     },
     flors: {
       title: 'Flors de Bach',
       text:
-        'Les essències naturals de flors utilitzades per tractar diversos sintomes i situacions emocionals que afecten al ser Humà , fa que millori el estat vibracional de la persona.Previa consulta amb profunditat per explaiar el vostre malestar, elaborem adecuadament les flors , per aconseguir millorar la por, soledat, estrés, concentració, depressió, obsessions, energía, . ... etc.',
+        "El nostre estat mental té un efecte directe i molt poderós sobre la nostra salut física. L'ús d'essències florals per tractar diversos símptomes i situacions emocionals que afecten a l'ésser humà com per exemple: pors, obsessions, estrés, ..., fa que millori l'estat vibracional de la persona. A la Farmàcia del Mar realitzem consulta personalitzada i en profunditat per tal d'elaborar el preparat més adequat de Flors i adhoc al client. ",
       img: 'service03.jpg',
     },
     suplements: {
-      title: 'Suplements',
+      title: 'Ortomolecular',
       text:
-        'Sent fidels i conseqüents a la nostra filosofia de que ens considerem una Farmàcia Integrativa, i que tractem la salut de manera global, aconsellem qualsevol tractament dels exposats i també tots el Suplements Nutricionals Naturals que fagin falta, sempre respectan els desitjos de la nostre clientela. Millorar de forma natural el colesterol, hipertensió, manca de vitamines, postoperatorios, osteopatía, sucre, tremolor essencial, etc…, sha eviten molts efectes colaterals a llarg termini.',
+        "La nutrició ortomolecular fa referència a l'ús dels nutrients necessaris pel correcte funcionament de les cèl-lules del nostre organisme. Per a que hi hagi un equilibri orgànic són de gran importància mol-lècules com les vitamines, els aminoàcids, els àcids grassos, els oligoelements, etc... que quan detectem mancances o excesos, ens serviran per tractar i prevenir malalties. Sempre vist des d'una perspectiva individual.",
       img: 'service04.jpg',
     },
     consells: {
-      title: 'Consels',
+      title: 'Consulta',
       text:
         'Sempre donem el millor consell de qualsevol teràpia anterior i també del consell dietètic i nutricional, que complementats , ajuden i acompanyen a millorar la teva salut, amb un projecte de vida per aconseguir que et sentis bé amb el teu cos, la teva ment, i el teu entorn. Totes les terapies integratives que apliquem van focalitzades per aconseguir estar “sempre a prop teu” i obtenir : + salut, +benestar, +comfort emocional, per ser +feliç.',
       img: 'service05.jpg',
     },
   },
   es: {
-    title: 'Nuestros servicios integrativas:',
+    title: 'Nuestros servicios integrativos:',
     fito: {
-      title: 'fitoterapia',
+      title: 'Fitoterapia',
       text:
-        'El uso de la poderosa calidad curativa de la fitoterapia, es hoy en día uno de los caminos para mejorar la salud de forma natural y efectiva. Preparamos las mezclas de plantas adecuadas y personalizadas, para estabilizar los niveles de azúcar, colesterol, triglicéridos, tensión arterial, desintoxicar tu cuerpo, etc ..... El rigor y constancia de la persona junto con el compromiso y seguimiento por parte nuestra, comparte conseguir los objetivos.',
+        'La Fitoterapia es la ciencia que estudia las plantas con finalidad terapéutica, teniendo como foco la prevención, atenuación o curación de un estado patológico. Las plantas medicinales son la "madre" de los fármacos, en sus principios activos se basan prácticamente todos los medicamentos utilizados antiguamente y hoy en día. "Vis medicatrix naturae" (el poder curativo de la naturaleza) dijo Hipócrates. ',
       img: 'service01.jpg',
     },
     olis: {
-      title: 'Aceites Esenciales',
+      title: 'Aromaterapia',
       text:
-        'Concentrados de origen vegetal que se extraen de ciertas plantas, raíces, hojas, árboles, ... mediante las técnicas de vapor, prensado, ..., para adquirir las propiedades específicas naturales. Dentro de la Aromaterapia los aceites son utilizados con la finalidad terapéutica, y se utilizan diluidos en otros elementos, como aceites, agua, etc ... Aconsejamos a las personas que quieren un tratamiento natural el Aceite Esencial apropiado, como bactericida, antibiótico natural, antiinflamatorio, relajante, antiséptico, regenerador celular, tonificante, etc ...',
+        'Los aceites esenciales son extractos de plantas aromáticas o de los órganos de estas plantas que se obtienen por destilación al vapor. La Aromaterapia es el uso de estos aceites esenciales, que utilizados por diferentes vias de administración y forma, ofrecen y proporcionan tratamientos preventivos, curativos o complentarios para curar muchas dolencias, mejorar la salud y el bienestar de la persona.',
       img: 'service02.jpg',
     },
     flors: {
       title: 'Flors de Bach',
       text:
-        'Las esencias naturales de flores utilizadas para tratar diversos síntomas y situaciones emocionales que afectan al ser humano, hace que mejore el estado vibracional de la persona.Previa consulta con profundidad para explaiar su malestar, elaboramos adecuadamente las flores, para conseguir mejorar el miedo, soledad, estrés, concentración, depresión, obsesiones, energía,. ... etc.',
+        'Nuestro estado mental tiene un efecto directo y muy poderoso sobre nuestra salud física. El empleo de esencias florales para tratar diversos síntomas y situaciones emocionales que afectan al ser humano como por ejemplo: los miedos, las obsesiones, el estrés, ... hace que mejore el estado vibracional de la persona. En la Farmacia del Mar realizamos consulta personalizada y en profundidad para elaborar el preparado más adecuado de Flores y adhoc al cliente. ',
       img: 'service03.jpg',
     },
     suplements: {
-      title: 'Suplementos',
+      title: 'Ortomolecular',
       text:
-        'Siendo fieles y consecuentes en nuestra filosofía de que nos consideramos una Farmacia Integrativa, y que tratamos la salud de manera global, aconsejamos cualquier tratamiento de los expuestos y también todos los Suplementos Nutricionales Naturales que hagan falta, siempre respectan los deseos de nuestra clientela. Mejorar de forma natural el colesterol, hipertensión, falta de vitaminas, postoperatorios, osteopatía, azúcar, temblor esencial, etc ..., se ha evitan muchos efectos colaterales a largo plazo.',
+        'La nutrición ortomolecular hace referencia al empleo de nutrientes necesarios para el correcto funcionamiento de las células de nuestro organismo. Para que haya un equilibrio orgánico son de gran importancia moléculas como las vitaminas, los aminoácidos, los ácidos grasos, los oligoelementos, etc... que cuando detectemos niveles bajos o excesos, nos servirán para tratar y prevenir enfermedades. Siempre visto desde una perspectiva individual.',
       img: 'service04.jpg',
     },
     consells: {
@@ -68,7 +68,7 @@ const text = {
   en: {
     title: 'Our integrative services:',
     fito: {
-      title: 'phytotherapy',
+      title: 'Phytotherapy',
       text:
         'The use of the powerful healing quality of phytotherapy is today one of the ways to improve health naturally and effectively. We prepare the appropriate and personalized mixtures of plants, to stabilize the levels of sugar, cholesterol, triglycerides, blood pressure, detoxify your body, etc ..... The rigor and perseverance of the person along with the commitment and monitoring by ours, share to achieve the goals.',
       img: 'service01.jpg',

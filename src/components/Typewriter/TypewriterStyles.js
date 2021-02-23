@@ -6,7 +6,7 @@ const styles = {
     justifyContent: 'flex-start',
     color: 'var(--primary-color)',
     margin: '0 auto',
-    width: '45%',
+    width: '49%',
     marginTop: '-1rem',
     [sizes.up('sm')]: {
       width: '33%',
@@ -15,7 +15,7 @@ const styles = {
       width: '45%',
     },
     [sizes.up('lg')]: {
-      width: '50%',
+      width: '53%',
     },
     [sizes.up('xl')]: {
       width: '48%',
