@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
+import sizes from '../../utils/mediaSizes';
 
 const useStyles = makeStyles({
   hidden: {
@@ -13,20 +14,29 @@ const useStyles = makeStyles({
     color: 'var(--primary-color)',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
     alignItems: 'center',
+    [sizes.up('lg')]: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'flex-start',
+    },
   },
   heading: {
-    width: '60%',
-    margin: '0 auto',
+    width: 'fit-content',
+    margin: '0 var(--size-xxs)',
     textTransform: 'uppercase',
+    // textAlign: 'center',
   },
   text: {
-    width: '60%',
-    margin: '0 auto',
+    width: 'fit-content',
+    margin: '0 var(--size-xxs)',
     display: 'flex',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'center',
+    [sizes.up('lg')]: {
+      justifyContent: 'space-between',
+    },
   },
   textwa: {
     textDecoration: 'none',
@@ -39,6 +49,7 @@ const useStyles = makeStyles({
     height: 'var(--size-xs)',
     width: 'var(--size-xs)',
     marginRight: 'var(--size-xs)',
+    textAlign: 'center',
   },
 });
 

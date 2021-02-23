@@ -1,4 +1,4 @@
-const text = {
+export const text = {
   ca: {
     subtitle: 'Sempre a prop teu',
   },

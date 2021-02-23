@@ -70,25 +70,25 @@ const text = {
     fito: {
       title: 'Phytotherapy',
       text:
-        'The use of the powerful healing quality of phytotherapy is today one of the ways to improve health naturally and effectively. We prepare the appropriate and personalized mixtures of plants, to stabilize the levels of sugar, cholesterol, triglycerides, blood pressure, detoxify your body, etc ..... The rigor and perseverance of the person along with the commitment and monitoring by ours, share to achieve the goals.',
+        'Phytotherapy is the science that studies plants for therapeutic purposes, focusing on the prevention, attenuation or cure of a pathological state. Medicinal plants are the "mother" of all medicine, their active principles are the base for practically all medicines used in the past and today. "Vis medicatrix naturae" (the healing power of nature) Hippocrates said.',
       img: 'service01.jpg',
     },
     olis: {
-      title: 'Essential Oils',
+      title: 'Aromatherapy',
       text:
-        'Concentrates of plant origin that are extracted from certain plants, roots, leaves, trees, ... using the techniques of steam, pressing,…, to acquire the specific natural properties. In Aromatherapy oils are used for therapeutic purposes, and are used diluted in other elements, such as oils, water, etc.… We advise people who want a natural treatment the appropriate Essential Oil, such as bactericide, natural antibiotic, anti-inflammatory, relaxing, antiseptic, cell regenerating, toning, etc.…',
+        'Essential oils are extracts of aromatic plants or the organs of these plants that are obtained by steam distillation. Aromatherapy is the use of these essential oils, which used by different routes of administration and forms, offer and provide preventive, curative or complementary treatments to cure many ailments, and improve the health and well-being of the person.',
       img: 'service02.jpg',
     },
     flors: {
       title: 'Flors de Bach',
       text:
-        'The natural essences of flowers used to treat various symptoms and emotional situations that affect the human being, makes it improve the vibrational state of the person. After deep consultation to explain your discomfort, we properly prepare the flowers, to improve fear, loneliness, stress, concentration, depression, obsessions, energy,. ... etc.',
+        'Our mental state has a direct and very powerful effect on our physical health. The use of flower essences to treat various symptoms and emotional situations that affect the human being, such as: fears, obsessions, stress, ... improves the vibrational state of the person. At "Farmacia del Mar" we carry out personalized and in-depth consultation to prepare the most appropriate preparation of Flowers and ad hoc for the client.',
       img: 'service03.jpg',
     },
     suplements: {
-      title: 'Supplements',
+      title: 'Orthomolecular',
       text:
-        'Being faithful and consistent with our philosophy that we consider ourselves an Integrative Pharmacy, and that we treat health globally, we advise any treatment of the above and also all the Natural Nutritional Supplements that are needed, always respect the wishes of our customers. Naturally improving cholesterol, hypertension, lack of vitamins, postoperative, osteopathy, sugar, essential tremor, etc.…, many long-term side effects are avoided.',
+        'Orthomolecular nutrition refers to the use of nutrients necessary for the proper functioning of the cells of our body. For there to be an organic balance, molecules such as vitamins, amino acids, fatty acids, oligo-elements, etc ... are of great importance. When we detect low or excess levels, they will help us to treat and prevent diseases. Always seen from an individual perspective.',
       img: 'service04.jpg',
     },
     consells: {

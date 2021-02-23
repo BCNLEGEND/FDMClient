@@ -20,6 +20,10 @@ const useStyles = makeStyles({
     color: 'var(--primary-color)',
     padding: '0 var(--size-s)',
   },
+  image: {
+    width: '60%',
+    margin: '0 auto',
+  },
 });
 
 export default useStyles;

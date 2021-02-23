@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -18,17 +18,19 @@ import FaceIcon from '@material-ui/icons/Face';
 
 import { useMediaQuery } from '../../../utils/useMediaQuery';
 import { bp } from '../../../utils/breakpoints';
+import { LanguageContext } from '../../../context/language';
 
 import useStyles from './BasicServicesStyles';
-import text from './BasicServicesText';
+import { text, title } from './BasicServicesText';
 
 function BasicServices() {
   const classes = useStyles();
   const isBreakpoint = useMediaQuery(bp.lg);
+  const { language } = useContext(LanguageContext);
   return (
     <section className={classes.root}>
       <Typography variant="h5" component="h2">
-        Nostres serveis basics:
+        {title[language]}
       </Typography>
       {isBreakpoint ? (
         <div className={classes.cardContainer}>
@@ -37,72 +39,72 @@ function BasicServices() {
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].tabac.title}
+                    {text[language].tabac.title}
                   </Typography>
                   <SmokeFreeIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
-                  {text['ca'].tabac.subtitle}
+                  {text[language].tabac.subtitle}
                 </Typography>
               </div>
               <Divider />
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].spd.title}
+                    {text[language].spd.title}
                   </Typography>
                   <LocalHospitalIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
-                  {text['ca'].spd.subtitle}
+                  {text[language].spd.subtitle}
                 </Typography>
               </div>
               <Divider />
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].sessions.title}
+                    {text[language].sessions.title}
                   </Typography>
                   <GroupIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
-                  {text['ca'].sessions.subtitle}
+                  {text[language].sessions.subtitle}
                 </Typography>
               </div>
               <Divider />
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].ortho.title}
+                    {text[language].ortho.title}
                   </Typography>
                   <HealingIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
-                  {text['ca'].ortho.subtitle}
+                  {text[language].ortho.subtitle}
                 </Typography>
               </div>
               <Divider />
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].rent.title}
+                    {text[language].rent.title}
                   </Typography>
                   <AccessibleIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
-                  {text['ca'].rent.subtitle}
+                  {text[language].rent.subtitle}
                 </Typography>
               </div>
               <Divider />
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].formulas.title}
+                    {text[language].formulas.title}
                   </Typography>
                   <LocalPharmacyIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
-                  {text['ca'].formulas.subtitle}
+                  {text[language].formulas.subtitle}
                 </Typography>
               </div>
             </CardContent>
@@ -112,12 +114,12 @@ function BasicServices() {
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].measure.title}
+                    {text[language].measure.title}
                   </Typography>
                   <SpeedIcon className={classes.icon} />
                 </div>
                 <ul>
-                  {text['ca'].measure.listItems.map((el, i) => (
+                  {text[language].measure.listItems.map((el, i) => (
                     <Typography key={i} variant="body1">
                       {el}
                     </Typography>
@@ -128,48 +130,48 @@ function BasicServices() {
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].forats.title}
+                    {text[language].forats.title}
                   </Typography>
                   <HearingIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
-                  {text['ca'].forats.subtitle}
+                  {text[language].forats.subtitle}
                 </Typography>
               </div>
               <Divider />
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].regals.title}
+                    {text[language].regals.title}
                   </Typography>
                   <CardGiftcardIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
-                  {text['ca'].regals.subtitle}
+                  {text[language].regals.subtitle}
                 </Typography>
               </div>
               <Divider />
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].babies.title}
+                    {text[language].babies.title}
                   </Typography>
                   <ChildFriendlyIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
-                  {text['ca'].babies.subtitle}
+                  {text[language].babies.subtitle}
                 </Typography>
               </div>
               <Divider />
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].cosmetics.title}
+                    {text[language].cosmetics.title}
                   </Typography>
                   <FaceIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
-                  {text['ca'].cosmetics.subtitle}
+                  {text[language].cosmetics.subtitle}
                 </Typography>
               </div>
             </CardContent>
@@ -182,84 +184,84 @@ function BasicServices() {
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].tabac.title}
+                    {text[language].tabac.title}
                   </Typography>
                   <SmokeFreeIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
-                  {text['ca'].tabac.subtitle}
+                  {text[language].tabac.subtitle}
                 </Typography>
               </div>
               <Divider />
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].spd.title}
+                    {text[language].spd.title}
                   </Typography>
                   <LocalHospitalIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
-                  {text['ca'].spd.subtitle}
+                  {text[language].spd.subtitle}
                 </Typography>
               </div>
               <Divider />
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].sessions.title}
+                    {text[language].sessions.title}
                   </Typography>
                   <GroupIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
-                  {text['ca'].sessions.subtitle}
+                  {text[language].sessions.subtitle}
                 </Typography>
               </div>
               <Divider />
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].ortho.title}
+                    {text[language].ortho.title}
                   </Typography>
                   <HealingIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
-                  {text['ca'].ortho.subtitle}
+                  {text[language].ortho.subtitle}
                 </Typography>
               </div>
               <Divider />
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].rent.title}
+                    {text[language].rent.title}
                   </Typography>
                   <AccessibleIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
-                  {text['ca'].rent.subtitle}
+                  {text[language].rent.subtitle}
                 </Typography>
               </div>
               <Divider />
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].formulas.title}
+                    {text[language].formulas.title}
                   </Typography>
                   <LocalPharmacyIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
-                  {text['ca'].formulas.subtitle}
+                  {text[language].formulas.subtitle}
                 </Typography>
               </div>
               <Divider />
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].measure.title}
+                    {text[language].measure.title}
                   </Typography>
                   <SpeedIcon className={classes.icon} />
                 </div>
                 <ul>
-                  {text['ca'].measure.listItems.map((el, i) => (
+                  {text[language].measure.listItems.map((el, i) => (
                     <Typography key={i} variant="body1">
                       {el}
                     </Typography>
@@ -270,48 +272,48 @@ function BasicServices() {
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].forats.title}
+                    {text[language].forats.title}
                   </Typography>
                   <HearingIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
-                  {text['ca'].forats.subtitle}
+                  {text[language].forats.subtitle}
                 </Typography>
               </div>
               <Divider />
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].regals.title}
+                    {text[language].regals.title}
                   </Typography>
                   <CardGiftcardIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
-                  {text['ca'].regals.subtitle}
+                  {text[language].regals.subtitle}
                 </Typography>
               </div>
               <Divider />
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].babies.title}
+                    {text[language].babies.title}
                   </Typography>
                   <ChildFriendlyIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
-                  {text['ca'].babies.subtitle}
+                  {text[language].babies.subtitle}
                 </Typography>
               </div>
               <Divider />
               <div className={classes.singleServiceContainer}>
                 <div className={classes.singleService}>
                   <Typography variant="h6" component="h3">
-                    {text['ca'].cosmetics.title}
+                    {text[language].cosmetics.title}
                   </Typography>
                   <FaceIcon className={classes.icon} />
                 </div>
                 <Typography variant="body1">
-                  {text['ca'].cosmetics.subtitle}
+                  {text[language].cosmetics.subtitle}
                 </Typography>
               </div>
             </CardContent>

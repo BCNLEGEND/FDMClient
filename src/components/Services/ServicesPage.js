@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Image from 'next/image';
 import Typography from '@material-ui/core/Typography';
 import useStyles from './ServicePageStyles';
@@ -8,14 +8,18 @@ import BasicServices from './BasicServices/BasicServices';
 
 import { useMediaQuery } from '../../utils/useMediaQuery';
 import { bp } from '../../utils/breakpoints';
+import { LanguageContext } from '../../context/language';
+
+import { title } from './ServicesText';
 
 function ServicesPage() {
   const classes = useStyles();
   const isBreakPoint = useMediaQuery(bp.lg);
+  const { language } = useContext(LanguageContext);
   return (
     <section className={classes.root}>
       <Typography variant="h3" component="h1" className={classes.heading}>
-        Els nostres serveis:
+        {title[language]}
       </Typography>
       <Services />
       <ServiceTabs />
@@ -34,16 +38,17 @@ function ServicesPage() {
         ''
       )}
       <BasicServices />
-      <Image
-        layout="responsive"
-        objectFit="contain"
-        width="67"
-        height="100"
-        src="/media/img/services02.png"
-        alt="Farmàcia del Mar foto"
-        className={classes.image}
-        priority="true"
-      />
+      <div className={classes.image}>
+        <Image
+          layout="responsive"
+          objectFit="contain"
+          width="67"
+          height="100"
+          src="/media/img/services02.png"
+          alt="Farmàcia del Mar foto"
+          priority="true"
+        />
+      </div>
     </section>
   );
 }

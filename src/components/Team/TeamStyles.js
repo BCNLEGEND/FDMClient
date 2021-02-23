@@ -68,7 +68,7 @@ const useStyles = makeStyles({
     position: 'absolute',
     bottom: 0,
     left: '50%',
-    width: '50%',
+    width: '70%',
     zIndex: 25,
   },
   title: {

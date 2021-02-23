@@ -6,6 +6,7 @@ import useStyles from './TeamStyles';
 import { LanguageContext } from '../../context/language';
 
 import { team, text } from './TeamData';
+import { text as txt } from '../Header/HeaderText';
 
 function Team() {
   const classes = useStyles();
@@ -39,7 +40,7 @@ function Team() {
         {text[language]}
       </Typography>
       <Typography variant="h5" component="h3" className={classes.aprop}>
-        Sempre a prop teu
+        {txt[language].subtitle}
       </Typography>
       <div className={classes.sectionContainer}>{html}</div>
     </section>

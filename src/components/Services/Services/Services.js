@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Typography from '@material-ui/core/Typography';
 import useStyles from './ServicesStyles';
 
-import text from '../ServicesText';
+import { text } from '../ServicesText';
 import { LanguageContext } from '../../../context/language';
 import { useMediaQuery } from '../../../utils/useMediaQuery';
 import { bp } from '../../../utils/breakpoints';

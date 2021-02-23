@@ -28,7 +28,7 @@ export const team = [
     title: {
       ca: 'Naturòpata i experta en dietotèrapia',
       es: 'Naturópata y experta en dietoterapia',
-      en: 'Naturopath',
+      en: 'Naturopath and expert in diet therapy',
     },
     img: 'team04.png',
   },
@@ -39,7 +39,7 @@ export const team = [
     title: {
       ca: 'Farmacèutica Titular',
       es: 'Farmacéutica Titular',
-      en: 'Owner',
+      en: 'Principle Pharmacict',
     },
     img: 'team01.png',
   },

@@ -38,11 +38,11 @@ const text = {
     title: 'INTEGRATIVE PHARMACY,',
     question: 'What does that mean, to be Integrative?',
     text01:
-      "At Farmàcia del Mar in Arenys de Mar, we treat people's health in a global way. That is, we are interested in all the causes that cause their discomfort and we advise the most appropriate and",
-    text02: 'solution for this person, giving priority, whenever possible, to',
+      "At Farmacia del Mar in Arenys de Mar, we treat people's health in a global way. That is, we are interested in all the causes that cause their discomfort, whether physical or emotional, and we advise the most appropriate and  ",
+    text02: 'solution for this person, giving priority, whenever possible, to ',
     text03:
-      'either through orthomolecular supplementation, phytotherapy, essential oils, etc. . which combined or not with',
-    text04: ', improve and institute the health of the client.',
+      'either through oligo-elements, orthomolucular supplementation, herbal medicine, essential oils, etc. that combined or not with',
+    text04: ", improve and restore the client's health.",
     callout01: 'personalized',
     callout02: 'natural products',
     callout03: 'traditional medicines',
