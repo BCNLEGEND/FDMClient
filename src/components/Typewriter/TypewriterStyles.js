@@ -6,7 +6,7 @@ const styles = {
     justifyContent: 'flex-start',
     color: 'var(--primary-color)',
     margin: '0 auto',
-    width: '55%',
+    width: '49%',
     marginTop: '-1rem',
     [sizes.up('sm')]: {
       width: '33%',
@@ -34,10 +34,13 @@ const styles = {
     fontStyle: 'italic',
     fontFamily: 'var(--primary-font-light)',
     '&:after': {
-      content: '""',
-      borderRight: '0.2rem solid var(--primary-color)',
-      height: '3%',
-      animation: '0.5s type infinite',
+      [sizes.up('md')]: {
+        width: '45%',
+        content: '""',
+        borderRight: '0.2rem solid var(--primary-color)',
+        height: '3%',
+        animation: '0.5s type infinite',
+      },
     },
     // },
   },
