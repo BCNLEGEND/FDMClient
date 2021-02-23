@@ -2,12 +2,14 @@ import React, { useContext } from 'react';
 import Calendar from '../Calendar/CalendarFull';
 import Image from 'next/image';
 import Typography from '@material-ui/core/Typography';
-
+import AdditionalPharmacies from './AdditionalPharmacies';
 import { LanguageContext } from '../../context/language';
 import { calendarDates } from '../../utils/Guardies';
 
 import useStyles from './EmergenciesPageStyles';
 import text from '../Calendar/CalendarText';
+import { pageText } from './EmergenciesPageText';
+import { text as title } from '../Header/HeaderText';
 
 function EmergenciesPage(props) {
   const classes = useStyles();
@@ -17,38 +19,37 @@ function EmergenciesPage(props) {
   return (
     <section className={classes.root}>
       <Typography
-        variant="h5"
+        variant="h3"
         component="h1"
         className={classes.primaryHeading}
       >
-        Calendari de Guàrdies:
+        {pageText[language].title}
       </Typography>
       <Typography variant="body1" className={classes.paragraph}>
-        A la Farmàcia del Mar, també coneguda com Farmàcia Sílvia Ametlla Pallí,
-        el nostre principal objectiu és estar{' '}
-        <span className={classes.span}>"Sempre a prop teu"</span>
+        {pageText[language].subTitle}
+        <Typography variant="h5" component="h2" className={classes.span}>
+          {`"${title[language].subtitle}"`}
+        </Typography>
       </Typography>
       <div className={classes.img}>
         <Image src="/media/img/guardia01.png" width={600} height={180} />
       </div>
       <Typography
-        variant="h5"
-        component="h2"
+        variant="h4"
+        component="h3"
         className={classes.secondaryHeading}
       >
         {`${currentMonth} ${now.getFullYear()}`}
       </Typography>
       <Typography variant="body1" className={classes.paragraph}>
-        La Farmàcia del Mar està dins la roda de torns de Guàrdies d’Arenys de
-        Mar. Durant el mes de {currentMonth} ens pertoquen els següents dies de
-        Guàrdies:
+        {pageText[language].text01} {currentMonth} {pageText[language].text02}
       </Typography>
       <ul>
         {calendarDates.map(
           (date) =>
             date.getMonth() === now.getMonth() && (
               <Typography
-                variant="body2"
+                variant="body1"
                 className={classes.listItem}
                 key={date.getTime()}
               >{`${
@@ -59,6 +60,7 @@ function EmergenciesPage(props) {
       </ul>
 
       <Calendar />
+      <AdditionalPharmacies />
     </section>
   );
 }

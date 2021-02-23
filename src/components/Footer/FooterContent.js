@@ -27,7 +27,7 @@ function FooterContent() {
             <use href="/media/svg/sprite.svg#icon-phone" />
           </svg>
           <Typography variant="body1" className={classes.text}>
-            +34 937 92 14 71
+            +34 93 792 14 71
           </Typography>
         </div>
         <div className={classes.container}>
@@ -38,7 +38,7 @@ function FooterContent() {
           </a>
           <Typography variant="body1" className={classes.text}>
             <a className={classes.text} href="https://wa.me/34686023519">
-              +34 686 02 35 19
+              +34 68 602 35 19
             </a>
           </Typography>
         </div>

@@ -40,7 +40,7 @@ function GuardiesCalendar(props) {
 
   return (
     <section className={classes.root}>
-      <Typography variant="h4" component="h2" className={classes.heading}>
+      <Typography variant="h4" component="h3" className={classes.heading}>
         {text[language].title}
       </Typography>
       <DayPicker

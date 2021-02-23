@@ -15,9 +15,10 @@ const useStyles = makeStyles({
   heading: {
     color: 'var(--secondary-color)',
     fontFamily: 'var(--secondary-font)',
+    fontSize: 'var(--size-xs)',
+    fontWeight: 400,
     alignSelf: 'flex-start',
     width: '100%',
-    textAlign: 'left',
   },
   calendar: {
     color: 'var(--primary-color)',

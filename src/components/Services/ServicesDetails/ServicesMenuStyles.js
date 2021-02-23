@@ -14,7 +14,10 @@ const useStyles = makeStyles({
   },
 
   tabs: {
-    width: 'auto',
+    width: '35%',
+    [sizes.up('lg')]: {
+      width: 'fit-content',
+    },
   },
   title: {
     color: 'var(--secondary-color)',
@@ -23,7 +26,7 @@ const useStyles = makeStyles({
     alignSelf: 'flex-start',
   },
   tabContainer: {
-    margin: 'var(--size-xs)',
+    margin: 'var(--size-xxs)',
     width: '100%',
     flexGrow: 1,
     display: 'flex',
