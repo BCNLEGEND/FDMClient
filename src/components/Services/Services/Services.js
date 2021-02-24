@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import Image from 'next/image';
 import Typography from '@material-ui/core/Typography';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 import useStyles from './ServicesStyles';
 
 import { text } from '../ServicesText';
@@ -40,15 +42,15 @@ function Services() {
         <Typography variant="body1" className={classes.paragraph}>
           {text[language].text}
         </Typography>
-        <ul className={classes.list}>
+        <List className={classes.list}>
           {text[language].bulletpoints.map((el, i) => (
-            <li key={i} className={classes.li}>
+            <ListItem key={i} className={classes.li}>
               <Typography variant="body1" className={classes.listItem}>
                 {el}
               </Typography>
-            </li>
+            </ListItem>
           ))}
-        </ul>
+        </List>
       </div>
     </section>
   );

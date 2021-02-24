@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 import Box from '@material-ui/core/Box';
 import { useMediaQuery } from '../../../utils/useMediaQuery';
 import { bp } from '../../../utils/breakpoints';
@@ -152,6 +154,13 @@ export default function ServiceTabs() {
             <Typography variant="body1">
               {text[language].consells.text}
             </Typography>
+            <List className={classes.list}>
+              {text[language].consells.bullets.map((el, i) => (
+                <ListItem key={i} className={classes.listItem}>
+                  <Typography variant="body1">{el}</Typography>
+                </ListItem>
+              ))}
+            </List>
             {isBreakPoint ? (
               <div className={classes.img}>
                 <Image

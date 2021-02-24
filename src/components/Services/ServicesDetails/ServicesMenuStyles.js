@@ -62,6 +62,20 @@ const useStyles = makeStyles({
   tabPanelContainer: {
     width: '100%',
   },
+  list: {
+    '& > li': {
+      display: 'flex',
+      justifyContent: 'flex-start',
+      [sizes.up('lg')]: {
+        marginLeft: 'var(--size-s)',
+      },
+    },
+    '& li:before': {
+      content: "'👍'",
+      width: 'var(--size-xxs)',
+      marginRight: 'var(--size-xxs)',
+    },
+  },
 });
 
 export default useStyles;
