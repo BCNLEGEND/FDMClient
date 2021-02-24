@@ -85,9 +85,11 @@ export default function MyApp({ Component, pageProps }) {
           />
           <link rel="manifest" href="/farmaciadelmar.webmanifest"></link>
           <link
-            href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css"
             rel="stylesheet"
-          />
+            href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css"
+            media="none"
+            onload="if(media!=='all')media='all'"
+          ></link>
         </Head>
         <ThemeProvider theme={theme}>
           <CssBaseline />
