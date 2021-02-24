@@ -45,11 +45,11 @@ export default function MyApp({ Component, pageProps }) {
           <title>Farmàcia del mar » Arenys de Mar » Sempre a prop teu</title>
           <link rel="icon" href="/favivon.ico" />
           <link rel="canonical" href="https://farmaciadelmar.com/" />
-          <meta property="og:locale" content="en_US" />
+          <meta property="og:locale" content="ca_ES" />
           <meta property="og:type" content="website" />
           <meta
             property="og:title"
-            content="Farmàcia del mar &raquo; Arenys de Mar &raquo; Sempre a prop teu"
+            content="Farmàcia del mar en Arenys de Mar - Sempre a prop teu"
           />
           <meta
             property="og:description"
@@ -90,6 +90,12 @@ export default function MyApp({ Component, pageProps }) {
             media="none"
             onload="if(media!=='all')media='all'"
           ></link>
+          <link
+            rel="preload"
+            href="/media/fonts/lovetime_clean-webfont.woff2"
+            as="font"
+            crossorigin="anonymous"
+          />
         </Head>
         <ThemeProvider theme={theme}>
           <CssBaseline />
