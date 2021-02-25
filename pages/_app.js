@@ -36,7 +36,7 @@ export default function MyApp({ Component, pageProps }) {
           ></meta>
           <meta
             name="Description"
-            content="A la Farmàcia del Mar, també coneguda com Farmàcia Sílvia Ametlla Pallí en Arenys de Mar, el nostre principal objectiu és estar Sempre a prop teu"
+            content="A la Farmàcia del Mar en Arenys de Mar, també coneguda com Farmàcia Sílvia Ametlla Pallí, el nostre principal objectiu és estar Sempre a prop teu"
           ></meta>
           <meta
             property="og:description"
@@ -44,7 +44,7 @@ export default function MyApp({ Component, pageProps }) {
           />
           <title>Farmàcia del mar » Arenys de Mar » Sempre a prop teu</title>
           <link rel="icon" href="/favivon.ico" />
-          <link rel="canonical" href="https://farmaciadelmar.com/" />
+          <link rel="canonical" href="https://www.farmaciadelmar.com" />
           <meta property="og:locale" content="ca_ES" />
           <meta property="og:type" content="website" />
           <meta
@@ -53,9 +53,9 @@ export default function MyApp({ Component, pageProps }) {
           />
           <meta
             property="og:description"
-            content='A la Farmàcia del Mar, també coneguda com Farmàcia Sílvia Ametlla Pallí, el nostre principal objectiu és estar "Sempre a prop teu"'
+            content='A la Farmàcia del Mar en Arenys de Mar, també coneguda com Farmàcia Sílvia Ametlla Pallí, el nostre principal objectiu és estar Sempre a prop teu"'
           />
-          <meta property="og:url" content="https://farmaciadelmar.com/" />
+          <meta property="og:url" content="https://www.farmaciadelmar.com" />
           <meta property="og:site_name" content="Farmàcia del Mar" />
           <meta
             property="article:publisher"

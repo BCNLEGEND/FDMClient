@@ -134,7 +134,7 @@ select {
   --primary-color-light: #5b87da;
   --secondary-color: #3fae2a;
   --white-color: #fff;
-  --size-xxs: 1rem;
+  --size-xxs: 1.2rem;
   --size-xs: 2rem;
   --size-s: 3rem;
   --size-m: 5rem;
@@ -148,7 +148,7 @@ select {
 }
 
 .MuiTypography-body1 {
-  font-size: 1.1rem;
+  font-size: var(--size-xxs) !important;
   font-family: var(--primary-font) !important;
 }
 

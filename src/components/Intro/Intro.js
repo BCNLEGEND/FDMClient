@@ -34,7 +34,7 @@ function Intro() {
       <div className={classes.img}>
         <Image
           layout="responsive"
-          width="100"
+          width="102"
           height="100"
           src="/media/img/ETI_round.png"
           alt="Terapias Integrativa"
