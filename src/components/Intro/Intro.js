@@ -25,7 +25,7 @@ function Intro() {
           {text[language].text04}
         </Typography>
 
-        <Typography variant="subtitle2" className={classes.qoute} gutterBottom>
+        <Typography variant="body1" className={classes.qoute} gutterBottom>
           {text[language].quote01}{' '}
           <span className={classes.callout}>{text[language].callout04}</span>{' '}
           {text[language].quote02}

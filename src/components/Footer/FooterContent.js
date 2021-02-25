@@ -31,11 +31,9 @@ function FooterContent() {
           </Typography>
         </div>
         <div className={classes.container}>
-          <a href="https://wa.me/34686023519">
-            <svg className={classes.icon}>
-              <use href="/media/svg/sprite.svg#icon-whatsapp" />
-            </svg>
-          </a>
+          <svg className={classes.icon}>
+            <use href="/media/svg/sprite.svg#icon-whatsapp" />
+          </svg>
           <Typography variant="body1" className={classes.text}>
             <a className={classes.text} href="https://wa.me/34686023519">
               +34 68 602 35 19

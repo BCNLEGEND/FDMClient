@@ -27,7 +27,7 @@ function Team() {
         <Typography variant="h5" component="h3" className={classes.name}>
           {p.firstName}
         </Typography>
-        <Typography variant="subtitle2" className={classes.title}>
+        <Typography variant="body2" className={classes.title}>
           {p.title[language]}
         </Typography>
       </div>
