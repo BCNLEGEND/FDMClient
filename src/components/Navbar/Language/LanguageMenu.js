@@ -36,6 +36,7 @@ function LanguageMenu() {
       <Select
         labelId="language menu"
         id="Language Menu"
+        aria-label="language-menu"
         value=""
         onChange={handleChange}
         displayEmpty

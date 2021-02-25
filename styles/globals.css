@@ -110,18 +110,21 @@ select {
   font-family: 'Nexa light';
   src: url('../src/media/fonts/nexa_light-webfont.woff') format('woff');
   src: url('../src/media/fonts/nexa_light-webfont.woff2') format('woff');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Nexa bold';
   src: url('../src/media/fonts/nexa_bold-webfont.woff') format('woff');
   src: url('../src/media/fonts/nexa_bold-webfont.woff2') format('woff');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Lovetime clean';
   src: url('../src/media/fonts/lovetime_clean-webfont.woff') format('woff');
   src: url('../src/media/fonts/lovetime_clean-webfont.woff2') format('woff');
+  font-display: swap;
 }
 
 /****************************************************************/

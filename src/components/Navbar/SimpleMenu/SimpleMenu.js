@@ -28,6 +28,7 @@ function SimpleMenu() {
       <IconButton
         aria-controls="simple-menu"
         aria-haspopup="true"
+        aria-label="navigation-menu"
         onClick={handleClick}
         color="inherit"
       >
