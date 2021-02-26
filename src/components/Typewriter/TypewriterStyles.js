@@ -34,7 +34,7 @@ const styles = {
     fontStyle: 'italic',
     fontFamily: 'var(--primary-font-light)',
     '&:after': {
-      [sizes.up('md')]: {
+      [sizes.up('xl')]: {
         width: '45%',
         content: '""',
         borderRight: '0.2rem solid var(--primary-color)',
