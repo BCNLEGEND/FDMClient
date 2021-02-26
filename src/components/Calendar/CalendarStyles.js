@@ -37,7 +37,7 @@ const useStyles = makeStyles({
     color: 'var(--primary-color)',
   },
   '.DayPicker-NavButton--next, .DayPicker-NavButton--prev': {
-    fontSize: '1.5rem',
+    fontSize: '3rem',
   },
   '.DayPicker-NavButton': {
     top: '0.5rem',

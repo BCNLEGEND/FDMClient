@@ -45,10 +45,26 @@ const useStyles = makeStyles({
     justifyContent: 'flex-start',
     alignItems: 'center',
   },
+  containerSocial: {
+    padding: '0 var(--size-xxs)',
+    marginTop: 'var(--size-xxs)',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   icon: {
     fill: 'var(--primary-color)',
     height: 'var(--size-xs)',
     width: 'var(--size-xs)',
+    marginRight: 'var(--size-xxs)',
+    [sizes.up('sm')]: {
+      marginLeft: 'var(--size-xxs)',
+    },
+  },
+  iconSocial: {
+    fill: 'var(--primary-color)',
+    height: 'var(--size-s)',
+    width: 'var(--size-s)',
     marginRight: 'var(--size-xxs)',
     [sizes.up('sm')]: {
       marginLeft: 'var(--size-xxs)',

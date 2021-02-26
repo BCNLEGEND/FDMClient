@@ -1,5 +1,8 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import Divider from '@material-ui/core/Divider';
 import useStyles from './FooterStyles';
 import { useMediaQuery } from '../../utils/useMediaQuery';
 import { bp } from '../../utils/breakpoints';
@@ -55,6 +58,20 @@ function FooterContent() {
           <Typography variant="body1" className={classes.text2}>
             dll a ds: 9:00 h - 21:00 h
           </Typography>
+        </div>
+        <div className={classes.containerSocial}>
+          <a
+            href="https://www.facebook.com/FarmaciadelmarArenys/"
+            aria-label="Facebook"
+          >
+            <FacebookIcon className={classes.iconSocial} />
+          </a>
+          <a
+            href="https://www.instagram.com/farmaciadelmar/"
+            aria-label="Instagram"
+          >
+            <InstagramIcon className={classes.iconSocial} />
+          </a>
         </div>
       </div>
       {isBreakpoint ? (
