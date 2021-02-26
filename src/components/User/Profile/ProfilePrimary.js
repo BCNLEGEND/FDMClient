@@ -1,7 +1,10 @@
 import React, { useContext } from 'react';
 import Image from 'next/image';
 import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
+import AllInboxIcon from '@material-ui/icons/AllInbox';
+import IconButton from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import Badge from '@material-ui/core/Badge';
 import EditIcon from '@material-ui/icons/Edit';
@@ -13,7 +16,6 @@ import useStyles from './ProfileStyles';
 function ProfilePrimary() {
   const { user } = useContext(UserContext);
   const classes = useStyles();
-  console.log(user);
   return (
     <section className={classes.root}>
       <div className={classes.container}>
@@ -57,6 +59,26 @@ function ProfilePrimary() {
       </div>
       <Divider />
       <div className={classes.personalData}>
+        {user.dni ? (
+          <div className={classes.name}>
+            <Typography variant="body2">DNI/ NIE: </Typography>
+            <Typography variant="h5" component="h2">
+              {user.dni}
+            </Typography>
+          </div>
+        ) : (
+          ''
+        )}
+        {user.cip ? (
+          <div className={classes.name}>
+            <Typography variant="body2">CIP: </Typography>
+            <Typography variant="h5" component="h2">
+              {user.cip}
+            </Typography>
+          </div>
+        ) : (
+          ''
+        )}
         {user.birthday ? (
           <div className={classes.name}>
             <Typography variant="body2">Birthday: </Typography>
@@ -120,39 +142,20 @@ function ProfilePrimary() {
           ''
         )}
       </div>
-      {/* <TextField
-          disabled
-          id="firstName"
-          label="First Name"
-          defaultValue={user.firstName}
-          className={classes.text}
-          variant="outlined"
-        />
-        <TextField
-          disabled
-          id="lastName"
-          label="Last Name"
-          defaultValue={user.lastName}
-          className={classes.text}
-          variant="outlined"
-        />
-        <TextField
-          disabled
-          id="birthday"
-          label="birthday"
-          defaultValue={user.birthday}
-          className={classes.text}
-          variant="outlined"
-        /> */}
-
-      {/* <TextField
-        disabled
-        id="email"
-        label="Email Address"
-        defaultValue={user.email}
-        className={classes.mail}
-        variant="outlined"
-      /> */}
+      <div className={classes.additionalMenu}>
+        <IconButton aria-label="add order" className={classes.iconbtn}>
+          <LocalHospitalIcon className={classes.icon} />
+          <Typography variant="body1">Health Profile</Typography>
+        </IconButton>
+        <IconButton aria-label="add order" className={classes.iconbtn}>
+          <AllInboxIcon className={classes.icon} />
+          <Typography variant="body1">My Orders</Typography>
+        </IconButton>
+        <IconButton aria-label="add order" className={classes.iconbtn}>
+          <AddShoppingCartIcon className={classes.icon} />
+          <Typography variant="body1">Place an order</Typography>
+        </IconButton>
+      </div>
     </section>
   );
 }

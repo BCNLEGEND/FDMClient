@@ -80,6 +80,12 @@ const useStyles = makeStyles({
     width: 'var(--size-s)',
     color: red.A400,
   },
+  additionalMenu: {
+    margin: 'var(--size-m) auto',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+  },
 });
 
 export default useStyles;
