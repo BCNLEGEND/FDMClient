@@ -9,7 +9,7 @@ const useStyles = makeStyles({
       width: '14%',
     },
     [sizes.up('xl')]: {
-      width: '150px',
+      width: '190px',
     },
   },
   label: {

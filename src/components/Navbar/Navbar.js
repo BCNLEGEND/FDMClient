@@ -14,7 +14,7 @@ function Navbar() {
       <SimpleMenu />
       <Logo />
       <LanguageMenu />
-      <NavUserProfileMenu />
+      {/* <NavUserProfileMenu /> */}
     </nav>
   );
 }
