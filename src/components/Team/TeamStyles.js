@@ -45,7 +45,7 @@ const useStyles = makeStyles({
       width: '30%',
     },
     [sizes.up('xl')]: {
-      width: '20%',
+      width: '17%',
     },
   },
   imgContainer: {
