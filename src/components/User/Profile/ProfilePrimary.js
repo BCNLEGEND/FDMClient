@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Typography from '@material-ui/core/Typography';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
@@ -149,7 +150,9 @@ function ProfilePrimary() {
         </IconButton>
         <IconButton aria-label="add order" className={classes.iconbtn}>
           <AllInboxIcon className={classes.icon} />
-          <Typography variant="body1">My Orders</Typography>
+          <Link href="/user/my-orders">
+            <Typography variant="body1">My Orders</Typography>
+          </Link>
         </IconButton>
         <IconButton aria-label="add order" className={classes.iconbtn}>
           <AddShoppingCartIcon className={classes.icon} />

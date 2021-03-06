@@ -52,7 +52,7 @@ function UserProfileMenu() {
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose} className={classes.link}>
-          <Link href="/" passHref>
+          <Link href="/user/my-orders" passHref>
             {text[language].orders}
           </Link>
         </MenuItem>

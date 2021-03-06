@@ -87,7 +87,6 @@ function SignupForm(props) {
           passwordConfirm,
         }
       );
-      console.log(res);
       localStorage.setItem('jwt', res.data.token);
       changeUser(res.data.data.user);
       toggleLoggedIn();
