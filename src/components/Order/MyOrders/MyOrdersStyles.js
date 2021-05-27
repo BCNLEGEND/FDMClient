@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   root: {
-    margin: 'var(--size-m) var(--size-xxs)',
+    margin: 'var(--size-xxs) var(--size-xxs)',
     color: 'var(--primary-color)',
   },
   paper: {

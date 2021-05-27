@@ -43,8 +43,15 @@ function LoginForm(props) {
       localStorage.setItem('jwt', res.data.token);
       changeUser(res.data.data.user);
       toggleLoggedIn(true);
-      props.toggleLoading();
-      router.push('/user/profile');
+      if (res.data.data.user.role === 'user') {
+        router.push('/user/profile');
+      }
+      if (
+        res.data.data.user.role === 'staff' ||
+        res.data.data.user.role === 'admin'
+      ) {
+        router.push('/admin/dashboard');
+      }
     } catch (err) {
       console.log(err);
       // router.push('/login/error');

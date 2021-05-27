@@ -1,11 +1,13 @@
 import React from 'react';
-import Orders from '../../src/components/User/Orders/Orders';
+import MyOrders from '../../src/components/Order/MyOrders/MyOrders';
 import { OrderProvider } from '../../src/context/order';
 
 export default function orders() {
   return (
     <OrderProvider>
-      <Orders />
+      <main>
+        <MyOrders />
+      </main>
     </OrderProvider>
   );
 }

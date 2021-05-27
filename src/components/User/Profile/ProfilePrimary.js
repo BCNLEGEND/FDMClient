@@ -144,19 +144,21 @@ function ProfilePrimary() {
         )}
       </div>
       <div className={classes.additionalMenu}>
-        <IconButton aria-label="add order" className={classes.iconbtn}>
+        <IconButton aria-label="Health profile" className={classes.iconbtn}>
           <LocalHospitalIcon className={classes.icon} />
           <Typography variant="body1">Health Profile</Typography>
         </IconButton>
-        <IconButton aria-label="add order" className={classes.iconbtn}>
+        <IconButton aria-label="my orders" className={classes.iconbtn}>
           <AllInboxIcon className={classes.icon} />
-          <Link href="/user/my-orders">
+          <Link href="/orders/my-orders">
             <Typography variant="body1">My Orders</Typography>
           </Link>
         </IconButton>
         <IconButton aria-label="add order" className={classes.iconbtn}>
           <AddShoppingCartIcon className={classes.icon} />
-          <Typography variant="body1">Place an order</Typography>
+          <Link href="../orders/new-order">
+            <Typography variant="body1">Place an order</Typography>
+          </Link>
         </IconButton>
       </div>
     </section>
@@ -164,14 +166,3 @@ function ProfilePrimary() {
 }
 
 export default ProfilePrimary;
-
-// tel
-// mobile
-// dni
-// cip
-// photo
-// position
-// streetName
-// streetNumber
-// postalcode
-// city
