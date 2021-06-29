@@ -4,6 +4,8 @@ import { useState, useContext, useEffect } from 'react';
 
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
 
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 
@@ -21,6 +23,8 @@ export default function SignupForm(props) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
+  const [acceptDatos, setAcceptDatos] = useState(false);
+  const [acceptMKT, setAcceptMKT] = useState(false);
   const classes = useStyles();
 
   useEffect(() => {
@@ -49,6 +53,19 @@ export default function SignupForm(props) {
   }, []);
 
   useEffect(() => error && toast.error(error));
+
+  const html = (
+    <p class="datos">
+      He leído y acepto la{' '}
+      <a href="legal/datos">política de protección de datos</a>.
+    </p>
+  );
+
+  const html2 = (
+    <p class="datos">
+      Acepto recibir communicaciones por parte de Farmacìa del Mar.
+    </p>
+  );
 
   const resetState = () => {
     setFirstName('');
@@ -79,13 +96,19 @@ export default function SignupForm(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    register({
-      firstName,
-      lastName,
-      email,
-      password,
-      passwordConfirm,
-    });
+    if (acceptDatos) {
+      register({
+        firstName,
+        lastName,
+        email,
+        password,
+        passwordConfirm,
+        acceptDatos,
+        acceptMKT,
+      });
+    } else {
+      toast.error('Please accept our Privacy Policy!');
+    }
   };
 
   return (
@@ -165,6 +188,28 @@ export default function SignupForm(props) {
             autoFocus={false}
           />
         </div>
+        <FormControlLabel
+          control={
+            <Checkbox
+              checked={acceptDatos}
+              onChange={() => setAcceptDatos(!acceptDatos)}
+              name="checkedB"
+              color="primary"
+            />
+          }
+          label={html}
+        />
+        <FormControlLabel
+          control={
+            <Checkbox
+              checked={acceptMKT}
+              onChange={() => setAcceptMKT(!acceptMKT)}
+              name="checkedB"
+              color="primary"
+            />
+          }
+          label={html2}
+        />
         <Button
           type="submit"
           variant="contained"

@@ -10,6 +10,7 @@ export default async (req, res) => {
       email,
       password,
       passwordConfirm,
+      acceptDatos,
     } = req.body.newUser;
     const apiRes = await axios.post(`${API_URL}users/signup`, {
       firstName,
@@ -17,6 +18,8 @@ export default async (req, res) => {
       email,
       password,
       passwordConfirm,
+      acceptDatos,
+      acceptMKT,
     });
     const data = await apiRes.data;
 

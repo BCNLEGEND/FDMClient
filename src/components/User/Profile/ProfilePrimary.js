@@ -42,21 +42,15 @@ export default function ProfilePrimary() {
         <div className={classes.profileContainer}>
           <div className={classes.name}>
             <Typography variant="body2">First Name: </Typography>
-            <Typography variant="h5" component="h2">
-              {user.firstName}
-            </Typography>
+            <Typography variant="body1">{user.firstName}</Typography>
           </div>
           <div className={classes.name}>
             <Typography variant="body2">Last Name: </Typography>
-            <Typography variant="h5" component="h2">
-              {user.lastName}
-            </Typography>
+            <Typography variant="body1">{user.lastName}</Typography>
           </div>
           <div className={classes.name}>
             <Typography variant="body2">email: </Typography>
-            <Typography variant="h5" component="h2">
-              {user.email}
-            </Typography>
+            <Typography variant="body1">{user.email}</Typography>
           </div>
         </div>
       </div>

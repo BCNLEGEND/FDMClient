@@ -196,3 +196,8 @@ select {
   height: var(--size-s);
   margin-right: var(--size-xxs);
 }
+
+.datos {
+  font-size: 0.8rem;
+  color: grey;
+}

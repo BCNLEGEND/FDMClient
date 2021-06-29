@@ -4,14 +4,14 @@ import { red } from '@material-ui/core/colors';
 const useStyles = makeStyles({
   paper: {
     position: 'relative',
-    height: '85vh',
+    height: '100%',
     width: '80%',
     margin: '0 auto',
-    marginTop: 'var(--size-s)',
+    marginTop: 'var(--size-xxs)',
     color: 'var(--primary-color)',
   },
   heading: {
-    paddingTop: 'var(--size-s)',
+    paddingTop: 'var(--size-xxs)',
     paddingLeft: 'var(--size-xs)',
   },
   root: {
@@ -21,6 +21,7 @@ const useStyles = makeStyles({
     margin: '0 auto',
   },
   container: {
+    margin: 'var(--size-xxs) var(--size-xs)',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -32,10 +33,10 @@ const useStyles = makeStyles({
   profileContainer: {
     width: '60%',
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row',
   },
   name: {
-    marginTop: 'var(--size-xxs)',
+    margin: 'var(--size-xxs) var(--size-xxs)',
     width: '100%',
     display: 'flex',
     flexDirection: 'row',

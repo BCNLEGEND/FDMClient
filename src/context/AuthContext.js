@@ -95,7 +95,6 @@ export const AuthProvider = ({ children }) => {
       setUser(null);
       setLoggedIn(false);
       router.push('/');
-      router.reload();
     }
   };
 
@@ -104,7 +103,6 @@ export const AuthProvider = ({ children }) => {
     try {
       const res = await axios.get(`${NEXT_API}user`);
       const data = await res.data.user;
-      console.log(res);
       if (res.statusText === 'OK') {
         setUser(data);
         setLoggedIn(true);
