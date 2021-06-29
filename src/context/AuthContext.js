@@ -13,6 +13,8 @@ export const AuthProvider = ({ children }) => {
   const [loggedIn, setLoggedIn] = useState(false);
   const router = useRouter();
 
+  useEffect(() => checkUserLoggedIn(), []);
+
   //   Register User
   const register = async (newUser) => {
     try {
@@ -88,14 +90,30 @@ export const AuthProvider = ({ children }) => {
   };
   // Logout User
   const logout = async () => {
-    console.log('Logout');
+    const res = await axios.get(`${NEXT_API}logout`);
+    if (res.statusText === 'OK') {
+      setUser(null);
+      setLoggedIn(false);
+      router.push('/');
+      router.reload();
+    }
   };
 
   // Check if user is logged in
   const checkUserLoggedIn = async (user) => {
-    console.log('Check');
+    try {
+      const res = await axios.get(`${NEXT_API}user`);
+      const data = await res.data.user;
+      console.log(res);
+      if (res.statusText === 'OK') {
+        setUser(data);
+        setLoggedIn(true);
+      }
+    } catch (err) {
+      setUser(null);
+      setLoggedIn(false);
+    }
   };
-
   return (
     <AuthContext.Provider
       value={{ user, error, register, login, logout, loggedIn }}

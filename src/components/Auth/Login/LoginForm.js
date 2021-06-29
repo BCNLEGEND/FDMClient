@@ -105,12 +105,14 @@ export default function LoginForm(props) {
               </Button>
               <Link href="/" passHref>
                 <p className={classes.forgot}>
-                  {text[language].forgot} <a>{text[language].click}</a>
+                  {text[language].forgot}{' '}
+                  <a className={classes.link}>{text[language].click}</a>
                 </p>
               </Link>
               <Link href="/account/register" passHref>
                 <p className={classes.register}>
-                  {text[language].register} <a>{text[language].click}</a>
+                  {text[language].register}{' '}
+                  <a className={classes.link}>{text[language].click}</a>
                 </p>
               </Link>
             </form>

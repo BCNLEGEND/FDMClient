@@ -69,6 +69,9 @@ const useStyles = makeStyles({
     textDecoration: 'none',
     textAlign: 'center',
   },
+  link: {
+    cursor: 'pointer',
+  },
 });
 
 export default useStyles;
