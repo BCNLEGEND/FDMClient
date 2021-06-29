@@ -1,4 +1,6 @@
-import React, { useState, useContext } from 'react';
+// React Import
+import { useState, useContext } from 'react';
+// Material UI imports
 import Paper from '@material-ui/core/Paper';
 import { DataGrid } from '@material-ui/data-grid';
 import Typography from '@material-ui/core/Typography';
@@ -11,8 +13,11 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
+// Context imports
+
 import { OrderContext } from '../../context/order';
 
+// Structure the columns of the datagrid
 const columns = [
   {
     field: 'encarrec',
@@ -52,8 +57,11 @@ const columns = [
   { field: 'comments', headerName: 'Comments', width: 250 },
 ];
 
+// React component definition
 export default function ActiveOrders() {
+  // Getting order context
   const { order } = useContext(OrderContext);
+  // Setting State
   const [editOrder, setEditOrder] = useState(undefined);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [firstName, setFirstName] = useState('');
@@ -67,7 +75,9 @@ export default function ActiveOrders() {
   const [coupon, setCoupon] = useState(false);
   const [status, setStatus] = useState('confirmed');
   const [comments, setComments] = useState('');
+  // Filtering all orders only to have the open orders
   const openOrders = order.filter((order) => order.activeOrder);
+  // Creating Array with all open orders and having the correct date format.
   const allOpenOrders = openOrders.map((order, i) => {
     const date = new Date(order.newDate);
     return {
@@ -79,8 +89,8 @@ export default function ActiveOrders() {
     };
   });
 
+  // Updating the state of the component
   const handleChange = (e) => {
-    console.log(e);
     editOrder[0][e.target.name] = e.target.value;
     switch (e.target.name) {
       case 'firstName':
@@ -119,6 +129,7 @@ export default function ActiveOrders() {
     }
   };
 
+  // Resetting stat to original values
   const resetState = () => {
     setDescription('');
     setEncarrec();
@@ -133,12 +144,13 @@ export default function ActiveOrders() {
     setStatus('confirmed');
   };
 
+  //Closing the dialog window and resetting state
   const handleClose = () => {
     setDialogOpen(undefined);
     resetState();
     setDialogOpen(false);
   };
-
+  //Double clicking the data grid row to open the specific open Order
   const handleRowDoubleClick = (e) => {
     setDialogOpen(true);
     const selectedOrder = allOpenOrders.filter(
@@ -157,8 +169,10 @@ export default function ActiveOrders() {
     setStatus(selectedOrder[0].status);
   };
 
+  // Editing the selected order
   const handleEdit = () => {};
 
+  // Selceting values for editing True and False
   const boolean = [
     {
       value: true,
@@ -170,6 +184,7 @@ export default function ActiveOrders() {
     },
   ];
 
+  // Seelcitng values for Order status
   const statusOptions = [
     {
       value: 'new',

@@ -1,11 +1,11 @@
 import React from 'react';
-import Auth from '../src/components/Auth/Auth';
+import LoginForm from '@/components/Auth/Login/LoginForm';
 
 function Login() {
   return (
     <main>
       <section>
-        <Auth />
+        <LoginForm />
       </section>
     </main>
   );

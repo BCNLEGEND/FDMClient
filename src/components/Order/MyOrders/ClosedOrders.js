@@ -9,7 +9,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import RepeatIcon from '@material-ui/icons/Repeat';
 
-import { OrderContext } from '../../../context/order';
+import { OrderContext } from '@/context/order';
 import text from '../../Calendar/CalendarText';
 
 export default function ClosedOrders() {

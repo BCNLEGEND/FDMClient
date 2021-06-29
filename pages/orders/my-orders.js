@@ -1,8 +1,8 @@
 import React from 'react';
-import MyOrders from '../../src/components/Order/MyOrders/MyOrders';
-import { OrderProvider } from '../../src/context/order';
+import MyOrders from '@/components/Order/MyOrders/MyOrders';
+import { OrderProvider } from '@/context/order';
 
-export default function orders() {
+export default function Orders() {
   return (
     <OrderProvider>
       <main>

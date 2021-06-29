@@ -7,9 +7,11 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import '../styles/globals.css';
 import theme from '../src/theme/theme';
 
-import Navbar from '../src/components/Navbar/Navbar';
-import { UserProvider } from '../src/context/user';
-import { LanguageProvider } from '../src/context/language';
+import Navbar from '@/components/Navbar/Navbar';
+
+// Context imports
+import { AuthProvider } from '@/context/AuthContext';
+import { LanguageProvider } from '@/context/language';
 
 const CrispWithNoSSR = dynamic(
   () => import('../src/components/CrispChat/Crisp'),
@@ -27,8 +29,8 @@ export default function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <LanguageProvider>
-      <UserProvider>
+    <AuthProvider>
+      <LanguageProvider>
         <Head>
           <meta
             name="viewport"
@@ -88,13 +90,13 @@ export default function MyApp({ Component, pageProps }) {
             rel="stylesheet"
             href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css"
             media="none"
-            onload="if(media!=='all')media='all'"
+            onLoad="if(media!=='all')media='all'"
           ></link>
           <link
             rel="preload"
             href="/media/fonts/lovetime_clean-webfont.woff2"
             as="font"
-            crossorigin="anonymous"
+            crossOrigin="anonymous"
           />
         </Head>
         <ThemeProvider theme={theme}>
@@ -103,8 +105,8 @@ export default function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
           <CrispWithNoSSR />
         </ThemeProvider>
-      </UserProvider>
-    </LanguageProvider>
+      </LanguageProvider>
+    </AuthProvider>
   );
 }
 

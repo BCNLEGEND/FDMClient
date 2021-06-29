@@ -1,21 +1,26 @@
+// React Imports
 import React, { useContext } from 'react';
+// Nextjs Imports
 import Link from 'next/link';
-
+// Material UI Imports
 import IconButton from '@material-ui/core/IconButton';
 import Avatar from '@material-ui/core/Avatar';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
+// Styles imports
 import useStyles from './UserProfileMenuStyles';
+// Text Imports
 import text from './UserProfileText';
-import { LanguageContext } from '../../../../context/language';
-import { UserContext } from '../../../../context/user';
+// Context imports
+import { LanguageContext } from '@/context/language';
+import AuthContext from '@/context/AuthContext';
 
-function UserProfileMenu() {
+export default function UserProfileMenu() {
   const classes = useStyles();
   const { language } = useContext(LanguageContext);
-  const { user } = useContext(UserContext);
+  const { user, admin, staff } = useContext(AuthContext);
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -39,7 +44,7 @@ function UserProfileMenu() {
           className={classes.iconBtn}
         />
       </IconButton>
-      {user.role === 'user' ? (
+      {!admin && !staff ? (
         <Menu
           id="simple-menu"
           anchorEl={anchorEl}
@@ -47,27 +52,6 @@ function UserProfileMenu() {
           open={Boolean(anchorEl)}
           onClose={handleClose}
         >
-          <MenuItem onClick={handleClose} className={classes.link}>
-            <Link href="/user/profile" passHref>
-              {text[language].profile}
-            </Link>
-          </MenuItem>
-          <MenuItem onClick={handleClose} className={classes.link}>
-            <Link href="/orders/my-orders" passHref>
-              {text[language].orders}
-            </Link>
-          </MenuItem>
-          <MenuItem onClick={handleClose} className={classes.link}>
-            <Link href="/orders/new-order" passHref>
-              {text[language].neworder}
-            </Link>
-          </MenuItem>
-          <MenuItem onClick={handleClose} className={classes.link}>
-            <ExitToAppIcon className={classes.icon} />
-            <Link href="/" passHref>
-              {text[language].logout}
-            </Link>
-          </MenuItem>
           <MenuItem onClick={handleClose} className={classes.link}>
             <Link href="/user/profile" passHref>
               {text[language].profile}
@@ -118,5 +102,3 @@ function UserProfileMenu() {
     </div>
   );
 }
-
-export default UserProfileMenu;

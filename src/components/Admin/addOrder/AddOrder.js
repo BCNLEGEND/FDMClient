@@ -1,8 +1,8 @@
 import React, { useEffect, useContext, useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
-import { ApiUrl } from '../../../utils/api';
-import { UserContext } from '../../../context/user';
+import { API_URL } from '@/utils/api';
+import AuthContext from '@/context/AuthContext';
 
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
@@ -25,10 +25,10 @@ export default function AddOrder() {
   const [status, setStatus] = useState('confirmed');
   const [comments, setComments] = useState('');
 
-  const { user, loggedIn } = useContext(UserContext);
+  const { user, loggedIn } = useContext(AuthContext);
 
   const router = useRouter();
-  const api = ApiUrl;
+  const api = API_URL;
 
   user.role === 'admin' || user.role === 'staff'
     ? useEffect(() => router.push('/admin/addOrder'), [])
@@ -126,6 +126,7 @@ export default function AddOrder() {
       console.log(res.data);
       setDescription(res.data.nombre);
     } catch (e) {
+      // @todo - handle error and insert toastify allert box
       console.log(e);
     }
   };

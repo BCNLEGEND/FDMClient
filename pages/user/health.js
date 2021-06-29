@@ -1,7 +1,6 @@
-import React from 'react';
-import Health from '../../src/components/User/Health/Health';
+import Health from '@/components/User/Health/Health';
 
-export default function health() {
+export default function Health() {
   return (
     <div>
       <Health />

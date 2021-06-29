@@ -1,19 +1,19 @@
-import React, { useEffect, useContext } from 'react';
+import { useEffect, useContext } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
-import { UserContext } from '../../context/user';
-import { OrderContext } from '../../context/order';
-import { ApiUrl } from '../../utils/api';
+import AuthContext from '@/context/AuthContext';
+import { OrderContext } from '@/context/order';
+import { API_URL } from '@/utils/api';
 
 import AllActiveOrders from './AllActiveOrders';
 
 export default function AdminDashboard() {
-  const { user, loggedIn } = useContext(UserContext);
+  const { loggedIn, admin } = useContext(AuthContext);
   const { changeOrder } = useContext(OrderContext);
   const router = useRouter();
-  const api = ApiUrl;
+  const api = API_URL;
 
-  user.role === 'admin' || user.role === 'staff'
+  admin
     ? useEffect(async () => {
         const token = localStorage.getItem('jwt');
         try {

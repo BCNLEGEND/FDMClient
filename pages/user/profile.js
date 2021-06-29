@@ -1,10 +1,9 @@
-import React from 'react';
-import Profile from '../../src/components/User/Profile/Profile';
+import UserProfile from '@/components/User/Profile/UserProfile';
 
-export default function profile() {
+export default function Profile() {
   return (
     <div>
-      <Profile />
+      <UserProfile />
     </div>
   );
 }

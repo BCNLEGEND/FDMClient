@@ -1,18 +1,26 @@
-import React, { useContext } from 'react';
+// React Imports
+import { useState, useContext } from 'react';
+// Nextjs Imports
 import Link from 'next/link';
 
+// Material UI Imports
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
-import { LanguageContext } from '../../../context/language';
+//  Context Imports
+import { LanguageContext } from '@/context/language';
+
+// Styles Imports
 import useStyles from './SimpleMenuStyles';
+
+// Text Imports
 import text from './SimpleMenuText';
 
-function SimpleMenu() {
+export default function SimpleMenu() {
   const { language } = useContext(LanguageContext);
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
   const classes = useStyles();
 
   const handleClick = (event) => {
@@ -70,5 +78,3 @@ function SimpleMenu() {
     </div>
   );
 }
-
-export default SimpleMenu;

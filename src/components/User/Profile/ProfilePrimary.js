@@ -1,6 +1,8 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
+
 import Typography from '@material-ui/core/Typography';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
@@ -10,12 +12,12 @@ import Divider from '@material-ui/core/Divider';
 import Badge from '@material-ui/core/Badge';
 import EditIcon from '@material-ui/icons/Edit';
 
-import { UserContext } from '../../../context/user';
+import AuthContext from '@/context/AuthContext';
 
 import useStyles from './ProfileStyles';
 
-function ProfilePrimary() {
-  const { user } = useContext(UserContext);
+export default function ProfilePrimary() {
+  const { user } = useContext(AuthContext);
   const classes = useStyles();
   return (
     <section className={classes.root}>
@@ -164,5 +166,3 @@ function ProfilePrimary() {
     </section>
   );
 }
-
-export default ProfilePrimary;

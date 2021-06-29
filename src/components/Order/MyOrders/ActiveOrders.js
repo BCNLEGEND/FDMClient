@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import useStyles from './MyOrdersStyles';
 
 import Card from '@material-ui/core/Card';
@@ -13,7 +13,7 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 
 import text from '../../Calendar/CalendarText';
 
-import { OrderContext } from '../../../context/order';
+import { OrderContext } from '@/context/order';
 
 export default function ActiveOrders() {
   const { order } = useContext(OrderContext);

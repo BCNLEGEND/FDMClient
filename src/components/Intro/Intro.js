@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import Typography from '@material-ui/core/Typography';
 import Image from 'next/image';
 import useStyles from './IntroStyles';
 import text from './IntroText';
-import { LanguageContext } from '../../context/language';
+import { LanguageContext } from '@/context/language';
 
-function Intro() {
+export default function Intro() {
   const classes = useStyles();
   const { language } = useContext(LanguageContext);
   return (
@@ -44,5 +44,3 @@ function Intro() {
     </section>
   );
 }
-
-export default Intro;

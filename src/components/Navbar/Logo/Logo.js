@@ -1,8 +1,7 @@
-import React from 'react';
 import Image from 'next/image';
 import useStyles from './LogoStyles';
 
-function Logo() {
+export default function Logo() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -16,5 +15,3 @@ function Logo() {
     </div>
   );
 }
-
-export default Logo;

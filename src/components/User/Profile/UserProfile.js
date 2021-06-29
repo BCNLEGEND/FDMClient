@@ -1,11 +1,10 @@
-import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import ProfilePrimary from './ProfilePrimary';
 import ProfileMenu from './ProfileMenu';
 
 import useStyles from './ProfileStyles';
 
-function Profile() {
+export default function UserProfile() {
   const classes = useStyles();
   return (
     <div>
@@ -17,5 +16,3 @@ function Profile() {
     </div>
   );
 }
-
-export default Profile;

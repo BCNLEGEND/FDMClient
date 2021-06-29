@@ -1,8 +1,7 @@
-import React from 'react';
-import AddOrder from '../../src/components/Admin/addOrder/AddOrder';
-import { OrderProvider } from '../../src/context/order';
+import AddOrder from '@/components/Admin/addOrder/AddOrder';
+import { OrderProvider } from '@/context/order';
 
-export default function dashboard() {
+export default function AddOrder() {
   return (
     <OrderProvider>
       <main>

@@ -1,8 +1,7 @@
-import React from 'react';
-import AdminDashboard from '../../src/components/Admin/AdminDashboard';
-import { OrderProvider } from '../../src/context/order';
+import AdminDashboard from '@/components/Admin/AdminDashboard';
+import { OrderProvider } from '@/context/order';
 
-export default function dashboard() {
+export default function Dashboard() {
   return (
     <OrderProvider>
       <main>

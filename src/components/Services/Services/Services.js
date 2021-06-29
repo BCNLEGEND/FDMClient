@@ -1,16 +1,20 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
+
 import Image from 'next/image';
+
 import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
+
 import useStyles from './ServicesStyles';
-
 import { text } from '../ServicesText';
-import { LanguageContext } from '../../../context/language';
-import { useMediaQuery } from '../../../utils/useMediaQuery';
-import { bp } from '../../../utils/breakpoints';
 
-function Services() {
+import { LanguageContext } from '@/context/language';
+import { useMediaQuery } from '@/utils/useMediaQuery';
+
+import { bp } from '@/utils/breakpoints';
+
+export default function Services() {
   const classes = useStyles();
   const { language } = useContext(LanguageContext);
   const isBreakPoint = useMediaQuery(bp.lg);
@@ -55,4 +59,3 @@ function Services() {
     </section>
   );
 }
-export default Services;

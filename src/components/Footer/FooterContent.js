@@ -1,14 +1,12 @@
-import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import Divider from '@material-ui/core/Divider';
 import useStyles from './FooterStyles';
-import { useMediaQuery } from '../../utils/useMediaQuery';
-import { bp } from '../../utils/breakpoints';
+import { useMediaQuery } from '@/utils/useMediaQuery';
+import { bp } from '@/utils/breakpoints';
 import FooterMap from '../Map/FooterMap';
 
-function FooterContent() {
+export default function FooterContent() {
   const isBreakpoint = useMediaQuery(bp.md);
   const classes = useStyles();
   return (
@@ -84,5 +82,3 @@ function FooterContent() {
     </div>
   );
 }
-
-export default FooterContent;

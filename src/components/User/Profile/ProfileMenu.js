@@ -1,4 +1,3 @@
-import React from 'react';
 import IconButton from '@material-ui/core/Button';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
@@ -6,7 +5,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 
 import useStyles from './ProfileStyles';
 
-function ProfileMenu() {
+export default function ProfileMenu() {
   const classes = useStyles();
   return (
     <div className={classes.menu}>
@@ -23,5 +22,3 @@ function ProfileMenu() {
     </div>
   );
 }
-
-export default ProfileMenu;

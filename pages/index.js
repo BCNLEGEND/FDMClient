@@ -1,8 +1,7 @@
-import React from 'react';
-import Homepage from '../src/components/Homepage/Homepage';
-import GuardiaPopUp from '../src/components/GuardiaPopUp/GuardiaPopUp';
-import Header from '../src/components/Header/Header';
-import Footer from '../src/components/Footer/Footer';
+import Homepage from '@/components/Homepage/Homepage';
+import GuardiaPopUp from '@/components/GuardiaPopUp/GuardiaPopUp';
+import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
 
 function Home() {
   return (

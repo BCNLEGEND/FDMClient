@@ -1,12 +1,12 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import TranslateIcon from '@material-ui/icons/Translate';
-import { useMediaQuery } from '../../../utils/useMediaQuery';
-import { bp } from '../../../utils/breakpoints';
+import { useMediaQuery } from '@/utils/useMediaQuery';
+import { bp } from '@/utils/breakpoints';
 
-import { LanguageContext } from '../../../context/language';
+import { LanguageContext } from '@/context/language';
 
 import useStyles from './LanguageMenuStyles';
 
@@ -22,7 +22,7 @@ const text = {
   },
 };
 
-function LanguageMenu() {
+export default function LanguageMenu() {
   const { language, changeLanguage } = useContext(LanguageContext);
   const classes = useStyles();
   const isBreakPoint = useMediaQuery(bp.lg);
@@ -69,5 +69,3 @@ function LanguageMenu() {
     </FormControl>
   );
 }
-
-export default LanguageMenu;
