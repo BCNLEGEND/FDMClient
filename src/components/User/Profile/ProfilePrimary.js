@@ -55,6 +55,7 @@ export default function ProfilePrimary() {
         </div>
       </div>
       <Divider />
+      {/* 
       <div className={classes.personalData}>
         {user.dni ? (
           <div className={classes.name}>
@@ -156,7 +157,7 @@ export default function ProfilePrimary() {
             <Typography variant="body1">Place an order</Typography>
           </Link>
         </IconButton>
-      </div>
+      </div> */}
     </section>
   );
 }

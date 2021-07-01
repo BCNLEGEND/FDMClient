@@ -1,13 +1,15 @@
 import { makeStyles } from '@material-ui/core/styles';
+import sizes from '@/utils/mediaSizes';
 import { red } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
   paper: {
     position: 'relative',
-    height: '100%',
+    height: '85vh',
     width: '80%',
     margin: '0 auto',
     marginTop: 'var(--size-xxs)',
+    padding: 'var(--size-xxs) 0',
     color: 'var(--primary-color)',
   },
   heading: {
@@ -15,31 +17,14 @@ const useStyles = makeStyles({
     paddingLeft: 'var(--size-xs)',
   },
   root: {
-    paddingTop: 'var(--size-xs)',
+    // paddingTop: 'var(--size-xs)',
     height: '35vh',
     width: '90%',
     margin: '0 auto',
   },
   container: {
-    margin: 'var(--size-xxs) var(--size-xs)',
+    margin: '0 var(--size-xs)',
     display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  imgContainer: {
-    width: '35%',
-    textAlign: 'center',
-  },
-  profileContainer: {
-    width: '60%',
-    display: 'flex',
-    flexDirection: 'row',
-  },
-  name: {
-    margin: 'var(--size-xxs) var(--size-xxs)',
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },

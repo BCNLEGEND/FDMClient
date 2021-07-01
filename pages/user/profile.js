@@ -1,9 +1,9 @@
-import UserProfile from '@/components/User/Profile/UserProfile';
+import Dashboard from '@/components/User/Dashboard/Dashboard';
 
 export default function Profile() {
   return (
     <div>
-      <UserProfile />
+      <Dashboard />
     </div>
   );
 }
