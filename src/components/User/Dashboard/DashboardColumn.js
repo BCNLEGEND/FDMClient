@@ -2,25 +2,51 @@ import ProfileHeader from '../Profile/ProfileHeader';
 import Button from '@material-ui/core/Button';
 import useStyles from './DashboardStyles';
 
-export default function DashboardColumn() {
+export default function DashboardColumn(props) {
   const classes = useStyles();
+
+  const onClick = (e) => {
+    props.clickHandler(e.target.innerText.toLowerCase());
+  };
+
   return (
     <div className={classes.column}>
       <ProfileHeader />
       <div className={classes.btnGroup}>
-        <Button className={classes.btn} variant="contained" color="primary">
+        <Button
+          onClick={onClick}
+          className={classes.btn}
+          variant="contained"
+          color="primary"
+        >
           Profile
         </Button>
-        <Button className={classes.btn} variant="contained" color="primary">
+        <Button
+          onClick={onClick}
+          className={classes.btn}
+          variant="contained"
+          color="primary"
+        >
           Health
         </Button>
-        <Button className={classes.btn} variant="contained" color="primary">
+        <Button
+          onClick={onClick}
+          className={classes.btn}
+          variant="contained"
+          color="primary"
+        >
           Services
         </Button>
-        <Button className={classes.btn} variant="contained" color="primary">
+        <Button
+          onClick={onClick}
+          className={classes.btn}
+          variant="contained"
+          color="primary"
+        >
           Orders
         </Button>
         <Button
+          onClick={onClick}
           className={classes.btnReset}
           variant="contained"
           color="secondary"

@@ -1,17 +1,19 @@
+import { useState, useContext } from 'react';
 import DashboardColumn from './DashboardColumn';
-import SalesGraph from '../../Admin/salesDashboard/SalesGraph';
+import UserProfile from '../Profile/UserProfile';
 import Paper from '@material-ui/core/Paper';
 import useStyles from './DashboardStyles';
 
 export default function Dashboard() {
   const classes = useStyles();
+  const [content, setContent] = useState('profile');
 
   return (
     <main className={classes.page}>
-      <DashboardColumn />
+      <DashboardColumn clickHandler={setContent} />
       <section className={classes.mainContent}>
         <Paper className={classes.paper}>
-          <SalesGraph />
+          {content === 'profile' && <UserProfile />}
         </Paper>
       </section>
     </main>

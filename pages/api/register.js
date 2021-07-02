@@ -11,6 +11,7 @@ export default async (req, res) => {
       password,
       passwordConfirm,
       acceptDatos,
+      acceptMKT,
     } = req.body.newUser;
     const apiRes = await axios.post(`${API_URL}users/signup`, {
       firstName,

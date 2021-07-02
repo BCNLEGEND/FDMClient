@@ -19,6 +19,9 @@ const useStyles = makeStyles({
     width: '90%',
   },
   paper: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
     margin: '0 auto',
     width: '90%',
     height: '87vh',

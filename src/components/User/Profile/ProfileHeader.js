@@ -35,8 +35,6 @@ export default function ProfileHeader() {
         <Typography variant="body1">{user.firstName}</Typography>
         <Typography variant="body1">{user.lastName}</Typography>
         <Typography variant="body2">{user.email}</Typography>
-        {user.tel && <Typography variant="body2">{user.tel}</Typography>}
-        {user.mobile && <Typography variant="body2">{user.mobile}</Typography>}
       </div>
     </div>
   );
