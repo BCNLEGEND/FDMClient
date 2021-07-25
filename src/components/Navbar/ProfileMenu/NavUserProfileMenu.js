@@ -1,27 +1,26 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import Link from 'next/link';
 import PersonIcon from '@material-ui/icons/Person';
-import { UserContext } from '../../../context/user';
 import UserProfileMenu from './UserProfileMenu/UserProfileMenu';
 import useStyles from './NavUserProfileMenuStyles';
 
-function NavUserProfileMenu() {
+import AuthContext from '@/context/AuthContext';
+
+export default function NavUserProfileMenu() {
   const classes = useStyles();
-  const { loggedIn } = useContext(UserContext);
+  const { loggedIn } = useContext(AuthContext);
 
   return (
     <div className={classes.root}>
-      {loggedIn ? (
-        <UserProfileMenu />
-      ) : (
+      {!loggedIn ? (
         <div>
-          <Link href="/login" passHref>
+          <Link href="/account/login" passHref>
             <PersonIcon className={classes.iconBtn} />
           </Link>
         </div>
+      ) : (
+        <UserProfileMenu />
       )}
     </div>
   );
 }
-
-export default NavUserProfileMenu;

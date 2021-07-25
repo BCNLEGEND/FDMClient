@@ -24,9 +24,9 @@ app
   .then(() => {
     const server = express();
 
-    if (isDevelopment) {
-      server.use('/api', createProxyMiddleware(apiPaths['/api']));
-    }
+    // if (isDevelopment) {
+    //   server.use('/api', createProxyMiddleware(apiPaths['/api']));
+    // }
 
     server.all('*', (req, res) => {
       return handle(req, res);
@@ -38,5 +38,5 @@ app
     });
   })
   .catch((err) => {
-    console.log('Error:::::', err);
+    console.log('Error:', err);
   });

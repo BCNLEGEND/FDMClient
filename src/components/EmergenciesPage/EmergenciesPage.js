@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import Calendar from '../Calendar/CalendarFull';
 import Image from 'next/image';
 import Typography from '@material-ui/core/Typography';
 import AdditionalPharmacies from './AdditionalPharmacies';
-import { LanguageContext } from '../../context/language';
-import { calendarDates } from '../../utils/Guardies';
+import { LanguageContext } from '@/context/language';
+import { calendarDates } from '@/utils/Guardies';
 
 import useStyles from './EmergenciesPageStyles';
 import text from '../Calendar/CalendarText';

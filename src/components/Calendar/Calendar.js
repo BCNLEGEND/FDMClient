@@ -1,17 +1,18 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 
 import Typography from '@material-ui/core/Typography';
 import useStyles from './CalendarStyles';
-import { useMediaQuery } from '../../utils/useMediaQuery';
-import { bp } from '../../utils/breakpoints';
 import text from './CalendarText';
 
-import { LanguageContext } from '../../context/language';
-import { calendarDates } from '../../utils/Guardies';
+import { useMediaQuery } from '@/utils/useMediaQuery';
+import { bp } from '@/utils/breakpoints';
+import { calendarDates } from '@/utils/Guardies';
 
-function GuardiesCalendar(props) {
+import { LanguageContext } from '@/context/language';
+
+export default function GuardiesCalendar(props) {
   const modifiers = {
     sundays: { daysOfWeek: [0] },
     guardies: calendarDates,
@@ -60,5 +61,3 @@ function GuardiesCalendar(props) {
     </section>
   );
 }
-
-export default GuardiesCalendar;

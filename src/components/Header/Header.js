@@ -1,12 +1,19 @@
-import React, { useContext } from 'react';
+// React Imports
+import { useContext } from 'react';
+// Nextjs Imports
 import Image from 'next/image';
-import { useMediaQuery } from '../../utils/useMediaQuery';
-import { bp } from '../../utils/breakpoints';
+// Media quesries Imports
+import { useMediaQuery } from '@/utils/useMediaQuery';
+import { bp } from '@/utils/breakpoints';
+// Styling imports
 import useStyles from './HeaderStyles';
+// Material UI Imports
 import MouseIcon from '@material-ui/icons/Mouse';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import Typewriter from '../Typewriter/Typewriter';
-import { LanguageContext } from '../../context/language';
+// Context Imports
+import { LanguageContext } from '@/context/language';
+// Text Imports
 import text from './HeaderText';
 
 function header() {

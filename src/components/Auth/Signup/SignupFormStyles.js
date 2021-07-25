@@ -1,21 +1,40 @@
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
+  container: {
+    width: '85%',
+    heigth: '85%',
+    margin: '0 auto',
+    padding: '1rem auto',
+  },
   form: {
     width: '90%',
+    margin: '0 auto',
+    marginTop: 'var(--size-xxs)',
+    height: '88vh',
     display: 'flex',
     flexDirection: 'column',
-    marginTop: 'var(--size-s)',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   header: {
     color: 'var(--primary-color)',
   },
   nameContainer: {
+    width: '100%',
     display: 'flex',
-    justifyContent: 'space-between',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 'var(--size-s)',
   },
   name: {
-    marginTop: '2rem',
     width: '100%',
+  },
+  inputContainer: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   text: {
     marginTop: '2rem',
@@ -24,7 +43,7 @@ const useStyles = makeStyles({
   btn: {
     marginTop: '2rem',
     backgroundColor: 'var(--primary-color-light)',
-    width: '50%',
+    width: '25%',
     alignSelf: 'center',
     '&:hover': {
       backgroundColor: 'var(--secondary-color)',

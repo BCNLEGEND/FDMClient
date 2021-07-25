@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
 import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 import useStyles from './CalendarStyles';
-import { MONTHS, WEEKDAYS_LONG, WEEKDAYS_SHORT } from '../../utils/localeCA';
 
-import { calendarDates } from '../../utils/Guardies';
+import { MONTHS, WEEKDAYS_LONG, WEEKDAYS_SHORT } from '@/utils/localeCA';
+import { calendarDates } from '@/utils/Guardies';
 
-function GuardiesCalendar(props) {
+export default function GuardiesCalendar(props) {
   const modifiers = {
     sundays: { daysOfWeek: [0] },
     guardies: calendarDates,
@@ -41,5 +40,3 @@ function GuardiesCalendar(props) {
     </section>
   );
 }
-
-export default GuardiesCalendar;

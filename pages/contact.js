@@ -1,8 +1,7 @@
-import React from 'react';
-import Map from '../src/components/Map/Map';
-import Footer from '../src/components/Footer/Footer';
+import Map from '@/components/Map/Map';
+import Footer from '@/components/Footer/Footer';
 
-export default function contact() {
+export default function Contact() {
   return (
     <>
       <main>

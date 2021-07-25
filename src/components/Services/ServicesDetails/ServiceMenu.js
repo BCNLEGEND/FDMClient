@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
+
 import Image from 'next/image';
+
 import PropTypes from 'prop-types';
 
 import Tabs from '@material-ui/core/Tabs';
@@ -8,12 +10,15 @@ import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Box from '@material-ui/core/Box';
-import { useMediaQuery } from '../../../utils/useMediaQuery';
-import { bp } from '../../../utils/breakpoints';
+
+import { useMediaQuery } from '@/utils/useMediaQuery';
+import { bp } from '@/utils/breakpoints';
+
 import text from './ServiceMenuText';
 
 import useStyles from './ServicesMenuStyles';
-import { LanguageContext } from '../../../context/language';
+
+import { LanguageContext } from '@/context/language';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;

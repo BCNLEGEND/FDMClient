@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
+
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Divider from '@material-ui/core/Divider';
-
 import SmokeFreeIcon from '@material-ui/icons/SmokeFree';
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
 import GroupIcon from '@material-ui/icons/Group';
@@ -16,14 +16,14 @@ import CardGiftcardIcon from '@material-ui/icons/CardGiftcard';
 import ChildFriendlyIcon from '@material-ui/icons/ChildFriendly';
 import FaceIcon from '@material-ui/icons/Face';
 
-import { useMediaQuery } from '../../../utils/useMediaQuery';
-import { bp } from '../../../utils/breakpoints';
-import { LanguageContext } from '../../../context/language';
+import { useMediaQuery } from '@/utils/useMediaQuery';
+import { bp } from '@/utils/breakpoints';
+import { LanguageContext } from '@/context/language';
 
 import useStyles from './BasicServicesStyles';
 import { text, title } from './BasicServicesText';
 
-function BasicServices() {
+export default function BasicServices() {
   const classes = useStyles();
   const isBreakpoint = useMediaQuery(bp.lg);
   const { language } = useContext(LanguageContext);
@@ -323,5 +323,3 @@ function BasicServices() {
     </section>
   );
 }
-
-export default BasicServices;

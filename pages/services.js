@@ -1,8 +1,7 @@
-import React from 'react';
-import ServicesPage from '../src/components/Services/ServicesPage';
-import Footer from '../src/components/Footer/Footer';
+import ServicesPage from '@/components/Services/ServicesPage';
+import Footer from '@/components/Footer/Footer';
 
-export default function services() {
+export default function Services() {
   return (
     <>
       <main>

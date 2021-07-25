@@ -1,8 +1,7 @@
-import React from 'react';
 import useStyles from './GuardiaPopUpStyles';
-import { calendarDates } from '../../utils/Guardies';
+import { calendarDates } from '@/utils/Guardies';
 
-function GuardiaPopUp() {
+export default function GuardiaPopUp() {
   const classes = useStyles();
   const today = new Date().toDateString();
   let yesterday = new Date(today);
@@ -44,5 +43,3 @@ function GuardiaPopUp() {
     </div>
   );
 }
-
-export default GuardiaPopUp;

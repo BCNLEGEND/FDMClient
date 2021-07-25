@@ -1,6 +1,4 @@
-import React from 'react';
-
-export default function team() {
+export default function Team() {
   return (
     <div>
       <h1>This will be the new teams page</h1>

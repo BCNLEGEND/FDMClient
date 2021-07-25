@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import Image from 'next/image';
 import Typography from '@material-ui/core/Typography';
 import useStyles from './ServicePageStyles';
@@ -6,9 +6,9 @@ import Services from './Services/Services';
 import ServiceTabs from './ServicesDetails/ServiceMenu';
 import BasicServices from './BasicServices/BasicServices';
 
-import { useMediaQuery } from '../../utils/useMediaQuery';
-import { bp } from '../../utils/breakpoints';
-import { LanguageContext } from '../../context/language';
+import { useMediaQuery } from '@/utils/useMediaQuery';
+import { bp } from '@/utils/breakpoints';
+import { LanguageContext } from '@/context/language';
 
 import { title } from './ServicesText';
 
