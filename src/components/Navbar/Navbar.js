@@ -13,7 +13,7 @@ export default function Navbar() {
       <SimpleMenu />
       <Logo />
       <LanguageMenu />
-      {/* <NavUserProfileMenu /> */}
+      <NavUserProfileMenu />
     </nav>
   );
 }

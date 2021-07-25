@@ -50,20 +50,21 @@ export default function UserProfileMenu() {
               className={classes.iconBtn}
             />
           </IconButton>
-          {!admin && !staff ? (
-            <Menu
-              id="simple-menu"
-              anchorEl={anchorEl}
-              keepMounted
-              open={Boolean(anchorEl)}
-              onClose={handleClose}
-            >
-              <MenuItem onClick={handleClose} className={classes.link}>
-                <Link href="/user/dashboard" passHref>
-                  {text[language].dashboard}
-                </Link>
-              </MenuItem>
-              <MenuItem onClick={handleClose} className={classes.link}>
+          {
+            !admin && !staff ? (
+              <Menu
+                id="simple-menu"
+                anchorEl={anchorEl}
+                keepMounted
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handleClose} className={classes.link}>
+                  <Link href="/user/dashboard" passHref>
+                    {text[language].dashboard}
+                  </Link>
+                </MenuItem>
+                {/* <MenuItem onClick={handleClose} className={classes.link}>
                 <Link href="/orders/my-orders" passHref>
                   {text[language].orders}
                 </Link>
@@ -72,45 +73,47 @@ export default function UserProfileMenu() {
                 <Link href="/orders/new-order" passHref>
                   {text[language].neworder}
                 </Link>
-              </MenuItem>
-              <MenuItem onClick={userLogout} className={classes.link}>
-                <ExitToAppIcon className={classes.icon} />
-                <Link href="/" passHref>
-                  {text[language].logout}
-                </Link>
-              </MenuItem>
-            </Menu>
-          ) : (
-            <Menu
-              id="simple-menu"
-              anchorEl={anchorEl}
-              keepMounted
-              open={Boolean(anchorEl)}
-              onClose={handleClose}
-            >
-              <MenuItem onClick={handleClose} className={classes.link}>
-                <Link href="/admin/dashboard" passHref>
-                  Dashboard
-                </Link>
-              </MenuItem>
-              <MenuItem onClick={handleClose} className={classes.link}>
-                <Link href="/admin/addOrder" passHref>
-                  Add Order
-                </Link>
-              </MenuItem>
-              <MenuItem onClick={handleClose} className={classes.link}>
-                <Link href="/admin/editOrder" passHref>
-                  Edit Order
-                </Link>
-              </MenuItem>
-              <MenuItem onClick={userLogout} className={classes.link}>
-                <ExitToAppIcon className={classes.icon} />
-                <Link href="#" passHref>
-                  {text[language].logout}
-                </Link>
-              </MenuItem>
-            </Menu>
-          )}
+              </MenuItem> */}
+                <MenuItem onClick={userLogout} className={classes.link}>
+                  <ExitToAppIcon className={classes.icon} />
+                  <Link href="/" passHref>
+                    {text[language].logout}
+                  </Link>
+                </MenuItem>
+              </Menu>
+            ) : (
+              <></>
+            )
+            //   <Menu
+            //     id="simple-menu"
+            //     anchorEl={anchorEl}
+            //     keepMounted
+            //     open={Boolean(anchorEl)}
+            //     onClose={handleClose}
+            //   >
+            //     <MenuItem onClick={handleClose} className={classes.link}>
+            //       <Link href="/admin/dashboard" passHref>
+            //         Dashboard
+            //       </Link>
+            //     </MenuItem>
+            //     <MenuItem onClick={handleClose} className={classes.link}>
+            //       <Link href="/admin/addOrder" passHref>
+            //         Add Order
+            //       </Link>
+            //     </MenuItem>
+            //     <MenuItem onClick={handleClose} className={classes.link}>
+            //       <Link href="/admin/editOrder" passHref>
+            //         Edit Order
+            //       </Link>
+            //     </MenuItem>
+            //     <MenuItem onClick={userLogout} className={classes.link}>
+            //       <ExitToAppIcon className={classes.icon} />
+            //       <Link href="#" passHref>
+            //         {text[language].logout}
+            //       </Link>
+            //     </MenuItem>
+            //   </Menu>
+          }
         </div>
       )}
     </>
