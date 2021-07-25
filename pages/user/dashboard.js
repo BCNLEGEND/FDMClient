@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Dashboard from '@/components/user/Dashboard/Dashboard';
+import Dashboard from '@/components/User/Dashboard/Dashboard';
 import AuthContext from '@/context/AuthContext';
 
 export default function userDashboard() {
