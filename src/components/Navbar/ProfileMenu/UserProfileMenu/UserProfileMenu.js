@@ -59,8 +59,8 @@ export default function UserProfileMenu() {
               onClose={handleClose}
             >
               <MenuItem onClick={handleClose} className={classes.link}>
-                <Link href="/user/profile" passHref>
-                  {text[language].profile}
+                <Link href="/user/dashboard" passHref>
+                  {text[language].dashboard}
                 </Link>
               </MenuItem>
               <MenuItem onClick={handleClose} className={classes.link}>
@@ -75,7 +75,7 @@ export default function UserProfileMenu() {
               </MenuItem>
               <MenuItem onClick={userLogout} className={classes.link}>
                 <ExitToAppIcon className={classes.icon} />
-                <Link href="#" passHref>
+                <Link href="/" passHref>
                   {text[language].logout}
                 </Link>
               </MenuItem>

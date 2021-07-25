@@ -14,17 +14,14 @@ const useStyles = makeStyles({
     height: '93vh',
     backgroundColor: 'rgba(93, 137, 218,0.1)',
   },
-  mainContent: {
-    margin: 'var(--size-xxs) auto',
-    width: '90%',
-  },
   paper: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    margin: '0 auto',
+    margin: 'var(--size-xxs) auto',
+    padding: '0 var(--size-xxs)',
     width: '90%',
-    height: '87vh',
+    height: '90%',
   },
   btnGroup: {
     height: '100%',
@@ -34,12 +31,14 @@ const useStyles = makeStyles({
     justifyContent: 'center',
   },
   btn: {
-    margin: 'var(--size-xs) auto',
-    width: '65%',
+    fontSize: '.75rem',
+    margin: 'var(--size-xxs) auto',
+    width: '75%',
   },
   btnReset: {
-    margin: 'var(--size-xs) auto',
-    width: '65%',
+    fontSize: '.75rem',
+    margin: 'var(--size-xxs) auto',
+    width: '75%',
     backgroundColor: 'var(--tertiary-color)',
   },
 });

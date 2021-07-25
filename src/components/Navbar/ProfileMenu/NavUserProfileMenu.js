@@ -12,14 +12,14 @@ export default function NavUserProfileMenu() {
 
   return (
     <div className={classes.root}>
-      {loggedIn ? (
-        <UserProfileMenu />
-      ) : (
+      {!loggedIn ? (
         <div>
           <Link href="/account/login" passHref>
             <PersonIcon className={classes.iconBtn} />
           </Link>
         </div>
+      ) : (
+        <UserProfileMenu />
       )}
     </div>
   );

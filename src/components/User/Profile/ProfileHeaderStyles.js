@@ -11,8 +11,8 @@ const useStyles = makeStyles({
     color: 'var(--primary-color)',
   },
   imgContainer: {
-    maxWidth: '350px',
-    maxHeight: '350px',
+    minWidth: '50px',
+    minHeight: '50px',
   },
   badge: {
     cursor: 'pointer',

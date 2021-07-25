@@ -1,6 +1,4 @@
 import { makeStyles } from '@material-ui/core/styles';
-import sizes from '@/utils/mediaSizes';
-import { red } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
   root: {
@@ -13,21 +11,16 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
   },
-  address: {
-    textAlign: 'right',
-  },
-  text: {
-    marginTop: 'var(--size-xxs)',
-  },
-  mail: {
-    marginTop: 'var(--size-xxs)',
-    marginBottom: 'var(--size-xxs)',
-    width: '100%',
+  noProfile: {
+    margin: 'var(--size-l) auto',
   },
   name: {
     display: 'flex',
     justifyContent: 'space-between',
-    margin: 'var(--size-xxs) 0',
+    margin: '.25rem 0',
+  },
+  address: {
+    textAlign: 'right',
   },
   checkboxGroup: {
     width: '100%',
@@ -35,14 +28,13 @@ const useStyles = makeStyles({
     alignItems: 'center',
     justifyContent: 'space-between',
   },
+  switch: {},
   profileEdit: {
     marginTop: 'var(--size-s)',
     display: 'flex',
     justifyContent: 'center',
   },
-  noProfile: {
-    margin: 'var(--size-l) auto',
-  },
+  button: {},
 });
 
 export default useStyles;

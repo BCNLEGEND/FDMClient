@@ -34,7 +34,8 @@ export const AuthProvider = ({ children }) => {
       if (res.statusText === 'OK') {
         setUser(data);
         setLoggedIn(true);
-        router.push('/user/profile');
+        localStorage.setItem('user', JSON.stringify(data));
+        router.push('/user/dashboard');
       }
     } catch (err) {
       setError('We are sorry, something went wrong, please try again. ');
@@ -64,10 +65,10 @@ export const AuthProvider = ({ children }) => {
       if (res.statusText === 'OK') {
         setUser(data);
         setLoggedIn(true);
-
+        localStorage.setItem('user', JSON.stringify(data));
         // Define routing and user type
         if (data.role === 'user') {
-          router.push('/user/profile');
+          router.push('/user/dashboard');
         } else if (data.role === 'staff') {
           router.push('/admin/dashboard');
           setStaff(true);
@@ -91,15 +92,14 @@ export const AuthProvider = ({ children }) => {
   // Logout User
   const logout = async () => {
     const res = await axios.get(`${NEXT_API}logout`);
-    if (res.statusText === 'OK') {
-      setUser(null);
-      setLoggedIn(false);
-      router.push('/');
-    }
+    setUser(null);
+    setLoggedIn(false);
+    localStorage.removeItem('user');
+    router.reload('/');
   };
 
   // Check if user is logged in
-  const checkUserLoggedIn = async (user) => {
+  const checkUserLoggedIn = async () => {
     try {
       const res = await axios.get(`${NEXT_API}user`);
       const data = await res.data.user;
@@ -112,9 +112,46 @@ export const AuthProvider = ({ children }) => {
       setLoggedIn(false);
     }
   };
+
+  const updateUserDetails = async (updatedUser) => {
+    try {
+      const res = await axios.patch(
+        `${NEXT_API}update-user`,
+        {
+          updatedUser,
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+
+      const data = await res.data.user;
+
+      if (res.statusText === 'OK') {
+        setUser(data);
+        setLoggedIn(true);
+        localStorage.setItem('user', JSON.stringify(data));
+        router.push('/user/dashboard');
+      }
+    } catch (err) {
+      setError('We are sorry, something went wrong, please try again. ');
+      setError(null);
+    }
+  };
+
   return (
     <AuthContext.Provider
-      value={{ user, error, register, login, logout, loggedIn }}
+      value={{
+        user,
+        error,
+        register,
+        login,
+        logout,
+        loggedIn,
+        updateUserDetails,
+      }}
     >
       {children}
     </AuthContext.Provider>

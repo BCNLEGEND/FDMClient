@@ -35,7 +35,23 @@ export default function DashboardColumn(props) {
           variant="contained"
           color="primary"
         >
-          Services
+          Book a Service
+        </Button>
+        <Button
+          onClick={onClick}
+          className={classes.btn}
+          variant="contained"
+          color="primary"
+        >
+          My Services
+        </Button>
+        <Button
+          onClick={onClick}
+          className={classes.btn}
+          variant="contained"
+          color="primary"
+        >
+          My Prescribtions
         </Button>
         <Button
           onClick={onClick}

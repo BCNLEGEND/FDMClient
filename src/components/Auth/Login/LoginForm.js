@@ -20,7 +20,7 @@ export default function LoginForm(props) {
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const { language } = useContext(LanguageContext);
-  const { login, error } = useContext(AuthContext);
+  const { loggedIn, login, error } = useContext(AuthContext);
 
   const router = useRouter();
   const classes = useStyles();
@@ -52,9 +52,6 @@ export default function LoginForm(props) {
 
       setEmail('');
       setPassword('');
-      // toggleLoading();
-      // changeUser(res.data.data.user);
-      // toggleLoggedIn(true);
     } catch (err) {
       // toggleLoading();
       // router.push('/login/error');
@@ -63,62 +60,66 @@ export default function LoginForm(props) {
 
   return (
     <Paper elevation={3} className={classes.container}>
-      <div className={classes.formContainer}>
-        <ToastContainer />
-        {isLoading && <CircularProgress />}
-        <div className={classes.authContainer}>
-          {!isLoading && (
-            <form className={classes.form} onSubmit={handleSubmit}>
-              <div className={classes.headingBox}>
-                <PersonIcon />
-                <h2 className={classes.heading}>{text[language].title}</h2>
-              </div>
-              <TextField
-                value={email}
-                type="email"
-                name="email"
-                id="email"
-                label={text[language].email}
-                variant="outlined"
-                onChange={handleChange}
-                className={classes.text}
-                autoFocus={false}
-              />
-              <TextField
-                value={password}
-                type="password"
-                name="password"
-                id="password"
-                label={text[language].pass}
-                variant="outlined"
-                onChange={handleChange}
-                className={classes.text}
-                autoFocus={false}
-              />
-              <Button
-                type="submit"
-                variant="contained"
-                color="primary"
-                className={classes.btn}
-              >
-                {text[language].login}
-              </Button>
-              <Link href="/" passHref>
-                <p className={classes.forgot}>
-                  {text[language].forgot}{' '}
-                  <a className={classes.link}>{text[language].click}</a>
-                </p>
-              </Link>
-              <Link href="/account/register" passHref>
-                <p className={classes.register}>
-                  {text[language].register}{' '}
-                  <a className={classes.link}>{text[language].click}</a>
-                </p>
-              </Link>
-            </form>
-          )}
+      {loggedIn ? (
+        <CircularProgress />
+      ) : (
+        <div className={classes.formContainer}>
+          <ToastContainer />
+          {isLoading && <CircularProgress />}
+          <div className={classes.authContainer}>
+            {!isLoading && (
+              <form className={classes.form} onSubmit={handleSubmit}>
+                <div className={classes.headingBox}>
+                  <PersonIcon />
+                  <h2 className={classes.heading}>{text[language].title}</h2>
+                </div>
+                <TextField
+                  value={email}
+                  type="email"
+                  name="email"
+                  id="email"
+                  label={text[language].email}
+                  variant="outlined"
+                  onChange={handleChange}
+                  className={classes.text}
+                  autoFocus={false}
+                />
+                <TextField
+                  value={password}
+                  type="password"
+                  name="password"
+                  id="password"
+                  label={text[language].pass}
+                  variant="outlined"
+                  onChange={handleChange}
+                  className={classes.text}
+                  autoFocus={false}
+                />
+                <Button
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                  className={classes.btn}
+                >
+                  {text[language].login}
+                </Button>
+                <Link href="/" passHref>
+                  <p className={classes.forgot}>
+                    {text[language].forgot}{' '}
+                    <a className={classes.link}>{text[language].click}</a>
+                  </p>
+                </Link>
+                <Link href="/account/register" passHref>
+                  <p className={classes.register}>
+                    {text[language].register}{' '}
+                    <a className={classes.link}>{text[language].click}</a>
+                  </p>
+                </Link>
+              </form>
+            )}
+          </div>
         </div>
-      </div>
+      )}
     </Paper>
   );
 }
