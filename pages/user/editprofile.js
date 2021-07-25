@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import EditProfile from '@/components/user/EditProfile/EditProfile';
+import EditProfile from '@/components/User/EditProfile/EditProfile';
 import AuthContext from '@/context/AuthContext';
 
 export default function editprofile() {
