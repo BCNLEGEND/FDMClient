@@ -27,7 +27,7 @@ export default async (req, res) => {
     if (data.status === 'success') {
       res.setHeader(
         'Set-Cookie',
-        cookie.serialize('token', data.token, {
+        cookie.serialize('JWT_token', data.token, {
           httpOnly: true,
           secure: process.env.NODE_ENV !== 'development',
           maxAge: 60 * 60 * 24 * 7, // 1 week

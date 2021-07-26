@@ -31,7 +31,7 @@ export const AuthProvider = ({ children }) => {
       );
       const data = await res.data.user;
 
-      if (res.statusText === 'OK') {
+      if (res.status === 200) {
         setUser(data);
         setLoggedIn(true);
         localStorage.setItem('user', JSON.stringify(data));
@@ -62,7 +62,7 @@ export const AuthProvider = ({ children }) => {
       const data = await res.data.user;
 
       // If Response OK store data and determine which type of user
-      if (res.statusText === 'OK') {
+      if (res.status === 200) {
         setUser(data);
         setLoggedIn(true);
         localStorage.setItem('user', JSON.stringify(data));
