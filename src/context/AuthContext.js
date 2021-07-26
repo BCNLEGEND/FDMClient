@@ -97,6 +97,7 @@ export const AuthProvider = ({ children }) => {
       if (res.status === 200) {
         setUser(null);
         setLoggedIn(false);
+        // localStorage.removeItem('user');
         // router.reload('/');
       }
     } catch (err) {
