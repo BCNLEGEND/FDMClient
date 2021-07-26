@@ -103,11 +103,17 @@ export const AuthProvider = ({ children }) => {
   // Check if user is logged in
   const checkUserLoggedIn = async () => {
     try {
-      const res = await axios.get(`${NEXT_API}user`);
-      const data = await res.data.user;
-      if (res.statusText === 'OK') {
-        setUser(data);
+      const user = JSON.parse(localStorage.getItem('user'));
+      if (user) {
+        setUser(user);
         setLoggedIn(true);
+      } else {
+        const res = await axios.get(`${NEXT_API}user`);
+        const data = await res.data.user;
+        if (res.statusText === 'OK') {
+          setUser(data);
+          setLoggedIn(true);
+        }
       }
     } catch (err) {
       setUser(null);
