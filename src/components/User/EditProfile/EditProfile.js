@@ -24,7 +24,9 @@ import AuthContext from '@/context/AuthContext';
 import useStyles from './EditProfileStyles';
 
 export default function userProfile() {
-  const { user, updateUserDetails } = useContext(AuthContext);
+  const { user, updateUserDetails, checkUserLoggedIn } = useContext(
+    AuthContext
+  );
   const [firstName, setFirstName] = useState(user.firstName);
   const [lastName, setLastName] = useState(user.lastName);
   const [email, setEmail] = useState(user.email);
@@ -366,4 +368,11 @@ export default function userProfile() {
       </Paper>
     </section>
   );
+}
+
+export async function getServerSideProps(context) {
+  checkUserLoggedIn();
+  return {
+    props: {}, // will be passed to the page component as props
+  };
 }
