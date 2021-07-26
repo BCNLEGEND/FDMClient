@@ -62,6 +62,8 @@ export const AuthProvider = ({ children }) => {
       const data = await res.data.user;
 
       // If Response OK store data and determine which type of user
+      console.log(res);
+
       if (res.status === 200) {
         setUser(data);
         setLoggedIn(true);
