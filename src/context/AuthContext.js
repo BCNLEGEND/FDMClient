@@ -98,7 +98,7 @@ export const AuthProvider = ({ children }) => {
         setUser(null);
         setLoggedIn(false);
         localStorage.removeItem('user');
-        router.reload('/');
+        // router.reload('/');
       }
     } catch (err) {
       setError('We are sorry, something went wrong, please try again. ');
