@@ -23,10 +23,8 @@ import AuthContext from '@/context/AuthContext';
 
 import useStyles from './EditProfileStyles';
 
-export default function userProfile() {
-  const { user, updateUserDetails, checkUserLoggedIn } = useContext(
-    AuthContext
-  );
+export default function userProfile({ user }) {
+  const { updateUserDetails } = useContext(AuthContext);
   const [firstName, setFirstName] = useState(user.firstName);
   const [lastName, setLastName] = useState(user.lastName);
   const [email, setEmail] = useState(user.email);
@@ -45,11 +43,11 @@ export default function userProfile() {
 
   const classes = useStyles();
 
-  useEffect(() => {
-    if (!user) {
-      router.push('/account/login');
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   if (!user) {
+  //     router.push('/account/login');
+  //   }
+  // }, [user]);
 
   const handleBirthdayChange = (date) => {
     setBirthday(date);
@@ -368,11 +366,4 @@ export default function userProfile() {
       </Paper>
     </section>
   );
-}
-
-export async function getServerSideProps(context) {
-  checkUserLoggedIn();
-  return {
-    props: {}, // will be passed to the page component as props
-  };
 }
