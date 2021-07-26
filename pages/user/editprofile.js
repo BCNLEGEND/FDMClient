@@ -3,8 +3,8 @@ import { useRouter } from 'next/router';
 import EditProfile from '@/components/User/EditProfile/EditProfile';
 import AuthContext from '@/context/AuthContext';
 
-export default function editprofile({ user }) {
-  const { loggedIn } = useContext(AuthContext);
+export default function editprofile() {
+  const { user, loggedIn } = useContext(AuthContext);
   const router = useRouter();
 
   useEffect(() => {
@@ -15,10 +15,8 @@ export default function editprofile({ user }) {
 }
 
 export async function getServerSideProps(context) {
-  const user = JSON.parse(localStorage.getItem('user'));
-  if (!user) {
-    router.push('/account/login');
-  }
+  const { checkUserLoggedIn } = useContext(AuthContext);
+  checkUserLoggedIn();
   return {
     props: { user }, // will be passed to the page component as props
   };
