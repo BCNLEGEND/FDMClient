@@ -6,7 +6,7 @@ export default async (req, res) => {
   try {
     if (req.method === 'POST') {
       const { email, password } = req.body;
-
+      console.log(`${API_URL}users/login`);
       const apiRes = await axios.post(`${API_URL}users/login`, {
         email,
         password,
