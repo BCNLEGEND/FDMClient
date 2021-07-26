@@ -22,6 +22,8 @@ export default async (req, res) => {
     );
     res.status(200).json({ message: 'success' });
   } else {
-    res.status(401).json(err);
+    res
+      .status(401)
+      .json({ message: 'Something went wrong please try again later' });
   }
 };
