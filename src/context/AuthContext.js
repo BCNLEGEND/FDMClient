@@ -34,7 +34,6 @@ export const AuthProvider = ({ children }) => {
       if (res.status === 200) {
         setUser(data);
         setLoggedIn(true);
-        localStorage.setItem('user', JSON.stringify(data));
         router.push('/user/dashboard');
       }
     } catch (err) {
@@ -66,7 +65,6 @@ export const AuthProvider = ({ children }) => {
       if (res.status === 200) {
         setUser(data);
         setLoggedIn(true);
-        localStorage.setItem('user', JSON.stringify(data));
         // Define routing and user type
         if (data.role === 'user') {
           router.push('/user/dashboard');
@@ -97,7 +95,6 @@ export const AuthProvider = ({ children }) => {
       if (res.status === 200) {
         setUser(null);
         setLoggedIn(false);
-        localStorage.removeItem('user');
         router.reload('/');
       }
     } catch (err) {
@@ -109,21 +106,15 @@ export const AuthProvider = ({ children }) => {
   // Check if user is logged in
   const checkUserLoggedIn = async () => {
     try {
-      const user = JSON.parse(localStorage.getItem('user'));
-      if (user) {
-        setUser(user);
+      const res = await axios.get(`${NEXT_API}user`);
+      const data = await res.data.user;
+      if (res.statusText === 'OK') {
+        setUser(data);
         setLoggedIn(true);
-      } else {
-        const res = await axios.get(`${NEXT_API}user`);
-        const data = await res.data.user;
-        if (res.statusText === 'OK') {
-          setUser(data);
-          setLoggedIn(true);
-        }
       }
     } catch (err) {
-      setUser(null);
-      setLoggedIn(false);
+      setError('You are not authorized to access this page, please login!');
+      setError(null);
     }
   };
 
@@ -146,7 +137,6 @@ export const AuthProvider = ({ children }) => {
       if (res.statusText === 'OK') {
         setUser(data);
         setLoggedIn(true);
-        localStorage.setItem('user', JSON.stringify(data));
         router.push('/user/dashboard');
       }
     } catch (err) {

@@ -1,23 +1,30 @@
-import { useContext, useEffect } from 'react';
-import { useRouter } from 'next/router';
+import { useContext } from 'react';
 import EditProfile from '@/components/User/EditProfile/EditProfile';
 import AuthContext from '@/context/AuthContext';
 
-export default function editprofile() {
-  const { user, loggedIn } = useContext(AuthContext);
-  const router = useRouter();
+import Grid from '@material-ui/core/Grid';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
-  useEffect(() => {
-    !loggedIn && router.push('/account/login');
-  }, [loggedIn]);
+export default function editProfile() {
+  const { loggedIn } = useContext(AuthContext);
 
-  return <EditProfile user={user} />;
-}
-
-export async function getServerSideProps(context) {
-  const { checkUserLoggedIn } = useContext(AuthContext);
-  checkUserLoggedIn();
-  return {
-    props: { user }, // will be passed to the page component as props
-  };
+  return (
+    <>
+      {!loggedIn ? (
+        <Grid
+          container
+          justifyContent="center"
+          alignItems="center"
+          direction="column"
+          className="loaderContainer"
+        >
+          <Grid item xs={12}>
+            <CircularProgress />
+          </Grid>
+        </Grid>
+      ) : (
+        <EditProfile />
+      )}
+    </>
+  );
 }

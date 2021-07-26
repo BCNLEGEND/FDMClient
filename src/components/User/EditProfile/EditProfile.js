@@ -1,4 +1,5 @@
 import { useState, useContext, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -23,8 +24,8 @@ import AuthContext from '@/context/AuthContext';
 
 import useStyles from './EditProfileStyles';
 
-export default function userProfile({ user }) {
-  const { updateUserDetails } = useContext(AuthContext);
+export default function EditProfile() {
+  const { user, updateUserDetails } = useContext(AuthContext);
   const [firstName, setFirstName] = useState(user.firstName);
   const [lastName, setLastName] = useState(user.lastName);
   const [email, setEmail] = useState(user.email);
@@ -36,18 +37,13 @@ export default function userProfile({ user }) {
   const [cip, setCip] = useState(user.cip);
   const [streetName, setStreetName] = useState(user.streetName);
   const [streetNumber, setStreetNumber] = useState(user.streetNumber);
-  const [postalCode, setPostalCode] = useState(user.postalCode);
+  const [postalcode, setPostalcode] = useState(user.postalcode);
   const [city, setCity] = useState(user.city);
   const [acceptDatos, setAcceptDatos] = useState(user.acceptDatos);
   const [acceptMKT, setAcceptMKT] = useState(user.acceptMKT);
+  const router = useRouter();
 
   const classes = useStyles();
-
-  // useEffect(() => {
-  //   if (!user) {
-  //     router.push('/account/login');
-  //   }
-  // }, [user]);
 
   const handleBirthdayChange = (date) => {
     setBirthday(date);
@@ -85,8 +81,8 @@ export default function userProfile({ user }) {
       case 'streetNumber':
         setStreetNumber(e.target.value);
         break;
-      case 'postalCode':
-        setPostalCode(e.target.value);
+      case 'postalcode':
+        setPostalcode(e.target.value);
         break;
       case 'city':
         setCity(e.target.value);
@@ -108,7 +104,7 @@ export default function userProfile({ user }) {
       cip,
       streetName,
       streetNumber,
-      postalCode,
+      postalcode,
       city,
       acceptDatos,
       acceptMKT,
@@ -126,11 +122,7 @@ export default function userProfile({ user }) {
       >
         <Grid item xs={12}>
           <Link href="/user/dashboard">
-            <Button
-              variant="outlinned"
-              color="primary"
-              className={classes.button}
-            >
+            <Button color="primary" className={classes.button}>
               <ArrowBackIosIcon fontSize="small" /> Go Back
             </Button>
           </Link>
@@ -293,11 +285,11 @@ export default function userProfile({ user }) {
             </Grid>
             <Grid item xs={12} md={3}>
               <TextField
-                id="postalCode"
-                name="postalCode"
+                id="postalcode"
+                name="postalcode"
                 type="text"
-                label="postalCode"
-                value={postalCode}
+                label="postalcode"
+                value={postalcode}
                 onChange={handleChange}
               />
             </Grid>

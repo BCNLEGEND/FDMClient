@@ -1,5 +1,5 @@
-import { useState, useContext, useEffect } from 'react';
-import { useRouter } from 'next/router';
+import { useState } from 'react';
+
 import DashboardColumn from './DashboardColumn';
 import UserProfile from '../Profile/UserProfile';
 import UserHealthProfile from '../Health/UserHealthProfile';
@@ -11,14 +11,6 @@ import AuthContext from '@/context/AuthContext';
 export default function Dashboard() {
   const classes = useStyles();
   const [content, setContent] = useState('profile');
-  const { user } = useContext(AuthContext);
-  const router = useRouter();
-
-  useEffect(() => {
-    if (!user) {
-      router.push('/account/login');
-    }
-  }, [user]);
 
   return (
     <main className={classes.page}>

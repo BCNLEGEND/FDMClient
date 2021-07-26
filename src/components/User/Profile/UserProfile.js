@@ -108,7 +108,7 @@ export default function userProfile() {
                     {user.streetName} {user.streetNumber}
                   </Typography>
                   <Typography variant="h6" component="h2">
-                    {user.postalCode}
+                    {user.postalcode}
                   </Typography>
                   <Typography variant="h6" component="h2">
                     {user.city}
