@@ -7,10 +7,11 @@ export default async (req, res) => {
     const apiRes = await axios.get(`${API_URL}users/logout`);
     const data = await apiRes.data;
     // Destroy cookie
+    console.log(data);
     if (data.status === 'success') {
       res.setHeader(
         'Set-Cookie',
-        cookie.serialize('JWT_token', '', {
+        cookie.serialize('JWT_token', ' ', {
           httpOnly: true,
           secure: process.env.NODE_ENV !== 'development',
           expires: new Date(0), // in the past
