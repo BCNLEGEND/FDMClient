@@ -3,6 +3,7 @@ import axios from 'axios';
 import cookie from 'cookie';
 
 export default async (req, res) => {
+  console.log(req);
   const apiRes = await axios.get(`${API_URL}users/logout`);
   const data = await apiRes.data;
   // Destroy cookie
