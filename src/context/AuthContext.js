@@ -62,7 +62,6 @@ export const AuthProvider = ({ children }) => {
       const data = await res.data.user;
 
       // If Response OK store data and determine which type of user
-      console.log(res);
 
       if (res.status === 200) {
         setUser(data);
@@ -93,11 +92,18 @@ export const AuthProvider = ({ children }) => {
   };
   // Logout User
   const logout = async () => {
-    const res = await axios.get(`${NEXT_API}logout`);
-    setUser(null);
-    setLoggedIn(false);
-    localStorage.removeItem('user');
-    router.reload('/');
+    try {
+      const res = await axios.get(`${NEXT_API}logout`);
+      if (res.status === 200) {
+        setUser(null);
+        setLoggedIn(false);
+        localStorage.removeItem('user');
+        router.reload('/');
+      }
+    } catch (err) {
+      setError('We are sorry, something went wrong, please try again. ');
+      setError(null);
+    }
   };
 
   // Check if user is logged in
