@@ -7,7 +7,7 @@ export default async (req, res) => {
   const data = await apiRes.data;
   // Destroy cookie
   console.log(apiRes);
-  if (data.status === 'success') {
+  if (data.status === 304) {
     localStorage.removeItem('user');
     res.setHeader(
       'Set-Cookie',
