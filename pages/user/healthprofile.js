@@ -1,20 +1,19 @@
 import { useContext, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Dashboard from '@/components/User/Dashboard/Dashboard';
-import AuthContext from '@/context/AuthContext';
-
 import Grid from '@material-ui/core/Grid';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import UserHealthProfile from '@/components/User/Health/UserHealthProfile';
+import AuthContext from '@/context/AuthContext';
 
-export default function userDashboard() {
-  const { loggedIn } = useContext(AuthContext);
+const healthprofile = () => {
   const router = useRouter();
+  const { loggedIn } = useContext(AuthContext);
 
   useEffect(() => {
     if (!loggedIn) {
       router.push('/account/login');
     }
-  }, []);
+  }, [loggedIn]);
 
   return (
     <>
@@ -31,8 +30,12 @@ export default function userDashboard() {
           </Grid>
         </Grid>
       ) : (
-        <Dashboard />
+        <main>
+          <UserHealthProfile />
+        </main>
       )}
     </>
   );
-}
+};
+
+export default healthprofile;

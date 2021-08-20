@@ -12,6 +12,7 @@ export default async (req, res) => {
 
   try {
     const {
+      photo,
       firstName,
       lastName,
       email,
@@ -29,8 +30,9 @@ export default async (req, res) => {
       acceptMKT,
     } = req.body.updatedUser;
     const apiRes = await axios.patch(
-      `${API_URL}users/updateMe`,
+      `${API_URL}/users/updateMe`,
       {
+        photo,
         firstName,
         lastName,
         email,

@@ -1,10 +1,14 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
+import { IMG_API } from '@/utils/api';
 
 import Image from 'next/image';
+
+import FileUploadDialog from './FileUploadDialog';
 
 import Typography from '@material-ui/core/Typography';
 import Badge from '@material-ui/core/Badge';
 import EditIcon from '@material-ui/icons/Edit';
+import Grid from '@material-ui/core/Grid';
 
 import AuthContext from '@/context/AuthContext';
 
@@ -13,16 +17,36 @@ import useStyles from './ProfileHeaderStyles';
 export default function ProfileHeader() {
   const { user } = useContext(AuthContext);
   const classes = useStyles();
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (value) => {
+    setOpen(false);
+  };
+
   return (
-    <div className={classes.headerContainer}>
+    <Grid
+      style={{ marginBottom: '1rem' }}
+      container
+      item
+      xs={12}
+      spacing={2}
+      direction="row"
+      justifyContent="space-around"
+      alignItems="center"
+    >
+      <FileUploadDialog open={open} onClose={handleClose} />
       {user && (
         <>
-          <div className={classes.imgContainer}>
+          <Grid item xs={4}>
             <Badge
               color="primary"
               className={classes.badge}
               // @TODO Define Edit profile photo Onclick event
-              onClick={() => console.log('Edit btn Clicked')}
+              onClick={handleClickOpen}
               badgeContent={<EditIcon />}
               overlap="circle"
               anchorOrigin={{
@@ -31,18 +55,19 @@ export default function ProfileHeader() {
               }}
             >
               <Image
-                src={`/media/users/${user.photo}`}
-                height={100}
-                width={100}
+                src={`${IMG_API}${user.photo}`}
+                height={80}
+                width={80}
+                className={classes.img}
               />
             </Badge>
-          </div>
-          <div className={classes.profileContainer}>
-            <Typography variant="body1">{user.firstName}</Typography>
-            <Typography variant="body1">{user.lastName}</Typography>
-          </div>
+          </Grid>
+          <Grid item xs={8}>
+            <Typography variant="h5">{user.firstName}</Typography>
+            <Typography variant="h5">{user.lastName}</Typography>
+          </Grid>
         </>
       )}
-    </div>
+    </Grid>
   );
 }

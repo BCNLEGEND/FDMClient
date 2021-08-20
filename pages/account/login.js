@@ -9,7 +9,7 @@ function Login() {
   const router = useRouter();
 
   useEffect(() => {
-    loggedIn && router.push('/user/dashboard');
+    loggedIn && router.push('/user/profile');
   }, [loggedIn]);
 
   return (

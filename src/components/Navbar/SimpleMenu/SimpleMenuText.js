@@ -5,6 +5,7 @@ const text = {
     team: 'Equip',
     contact: 'Contacte',
     emergencies: 'Guardiès',
+    photocontest: 'Concurs Fotogràfic',
   },
   es: {
     home: 'Inicio',
@@ -12,6 +13,7 @@ const text = {
     team: 'Equipo',
     contact: 'Contacto',
     emergencies: 'Guardias',
+    photocontest: 'Concurso de Fotografia',
   },
   en: {
     home: 'Home',
@@ -19,6 +21,7 @@ const text = {
     team: 'Team',
     contact: 'Contact',
     emergencies: 'Emergencies',
+    photocontest: 'Photo Contest',
   },
 };
 

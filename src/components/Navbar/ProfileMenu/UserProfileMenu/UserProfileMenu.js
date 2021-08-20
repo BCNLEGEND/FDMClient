@@ -1,5 +1,6 @@
 // React Imports
 import React, { useContext } from 'react';
+import { IMG_API } from '@/utils/api';
 // Nextjs Imports
 import Link from 'next/link';
 // Material UI Imports
@@ -46,7 +47,7 @@ export default function UserProfileMenu() {
             color="inherit"
           >
             <Avatar
-              src={`/media/users/${user.photo}`}
+              src={`${IMG_API}${user.photo}`}
               className={classes.iconBtn}
             />
           </IconButton>
@@ -60,8 +61,8 @@ export default function UserProfileMenu() {
                 onClose={handleClose}
               >
                 <MenuItem onClick={handleClose} className={classes.link}>
-                  <Link href="/user/dashboard" passHref>
-                    {text[language].dashboard}
+                  <Link href="/user/profile" passHref>
+                    {text[language].profile}
                   </Link>
                 </MenuItem>
                 {/* <MenuItem onClick={handleClose} className={classes.link}>

@@ -74,6 +74,11 @@ export default function SimpleMenu() {
             {text[language].emergencies}
           </Link>
         </MenuItem>
+        <MenuItem onClick={handleClose} className={classes.link}>
+          <Link href="/photocontests" passHref>
+            {text[language].photocontest}
+          </Link>
+        </MenuItem>
       </Menu>
     </div>
   );

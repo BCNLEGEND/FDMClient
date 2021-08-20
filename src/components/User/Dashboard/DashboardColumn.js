@@ -1,6 +1,11 @@
 import ProfileHeader from '../Profile/ProfileHeader';
 import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 import useStyles from './DashboardStyles';
+
+import Link from 'next/link';
+
+import Grid from '@material-ui/core/Grid';
 
 export default function DashboardColumn(props) {
   const classes = useStyles();
@@ -10,66 +15,80 @@ export default function DashboardColumn(props) {
   };
 
   return (
-    <div className={classes.column}>
+    <Grid container spacing={4} direction="column" alignItems="center">
       <ProfileHeader />
-      <div className={classes.btnGroup}>
-        <Button
-          onClick={onClick}
-          className={classes.btn}
-          variant="contained"
-          color="primary"
+      <Grid item xs={12}>
+        <ButtonGroup
+          orientation="vertical"
+          aria-label="User profile button group"
         >
-          Profile
-        </Button>
-        <Button
-          onClick={onClick}
-          className={classes.btn}
-          variant="contained"
-          color="primary"
-        >
-          Health
-        </Button>
-        <Button
-          onClick={onClick}
-          className={classes.btn}
-          variant="contained"
-          color="primary"
-        >
-          Book a Service
-        </Button>
-        <Button
-          onClick={onClick}
-          className={classes.btn}
-          variant="contained"
-          color="primary"
-        >
-          My Services
-        </Button>
-        <Button
-          onClick={onClick}
-          className={classes.btn}
-          variant="contained"
-          color="primary"
-        >
-          My Prescribtions
-        </Button>
-        <Button
-          onClick={onClick}
-          className={classes.btn}
-          variant="contained"
-          color="primary"
-        >
-          Orders
-        </Button>
-        <Button
-          onClick={onClick}
-          className={classes.btnReset}
-          variant="contained"
-          color="secondary"
-        >
-          Reset Password
-        </Button>
-      </div>
-    </div>
+          <Link href="/user/profile">
+            <Button className={classes.btn} variant="contained" color="primary">
+              Profile
+            </Button>
+          </Link>
+          <Link href="/user/healthprofile">
+            <Button
+              onClick={onClick}
+              className={classes.btn}
+              variant="contained"
+              color="primary"
+            >
+              Health
+            </Button>
+          </Link>
+          <Link href="/user/healthprofile">
+            <Button
+              onClick={onClick}
+              className={classes.btn}
+              variant="contained"
+              color="primary"
+            >
+              Book a Service
+            </Button>
+          </Link>
+          <Link href="/user/healthprofile">
+            <Button
+              onClick={onClick}
+              className={classes.btn}
+              variant="contained"
+              color="primary"
+            >
+              My Services
+            </Button>
+          </Link>
+          <Link href="/user/healthprofile">
+            <Button
+              onClick={onClick}
+              className={classes.btn}
+              variant="contained"
+              color="primary"
+            >
+              My Prescribtions
+            </Button>
+          </Link>
+          <Link href="/user/healthprofile">
+            <Button
+              onClick={onClick}
+              className={classes.btn}
+              variant="contained"
+              color="primary"
+            >
+              Orders
+            </Button>
+          </Link>
+          <Link href="/user/healthprofile">
+            <Button
+              onClick={onClick}
+              className={classes.btnReset}
+              variant="contained"
+              color="secondary"
+            >
+              Reset Password
+            </Button>
+          </Link>
+        </ButtonGroup>
+      </Grid>
+    </Grid>
   );
 }

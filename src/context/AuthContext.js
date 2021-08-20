@@ -34,7 +34,7 @@ export const AuthProvider = ({ children }) => {
       if (res.status === 200) {
         setUser(data);
         setLoggedIn(true);
-        router.push('/user/dashboard');
+        router.push('/user/profile');
       }
     } catch (err) {
       setError('We are sorry, something went wrong, please try again. ');
@@ -67,7 +67,7 @@ export const AuthProvider = ({ children }) => {
         setLoggedIn(true);
         // Define routing and user type
         if (data.role === 'user') {
-          router.push('/user/dashboard');
+          router.push('/user/profile');
         } else if (data.role === 'staff') {
           router.push('/admin/dashboard');
           setStaff(true);
@@ -137,7 +137,7 @@ export const AuthProvider = ({ children }) => {
       if (res.statusText === 'OK') {
         setUser(data);
         setLoggedIn(true);
-        router.push('/user/dashboard');
+        router.push('/user/profile');
       }
     } catch (err) {
       setError('We are sorry, something went wrong, please try again. ');

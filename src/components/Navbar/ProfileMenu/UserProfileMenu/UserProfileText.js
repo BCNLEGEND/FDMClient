@@ -1,18 +1,18 @@
 const text = {
   ca: {
-    dashboard: 'Dashboard',
+    profile: 'Prefil',
     orders: 'Mis encargos',
-    neworder: 'Nou encargo',
+    neworder: 'Nou encarg',
     logout: 'Logout',
   },
   es: {
-    dashboard: 'Dashboard',
+    profile: 'Perfil',
     orders: 'Mis encargos',
     neworder: 'Neuvo encargo',
     logout: 'Logout',
   },
   en: {
-    dashboard: 'Dashboard',
+    profile: 'Profile',
     orders: 'My reservations',
     neworder: 'New order',
     logout: 'Logout',

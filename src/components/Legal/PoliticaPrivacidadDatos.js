@@ -1,45 +1,48 @@
 import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
 import useStyles from './LegalStyles';
 
 export default function PoliticaPrivacidadDatos() {
   const classes = useStyles();
   return (
     <Paper className={classes.container}>
-      <div>
-        <p>
-          <strong>
-            <u>POLÍTICA DE PRIVACIDAD DE DATOS</u>
-          </strong>
+      <div style={{ color: 'var(--primary-color)' }}>
+        <Typography variant="h4" component="h1">
+          POLÍTICA DE PRIVACIDAD DE DATOS
+        </Typography>
+        <Typography variant="h5" component="h2">
+          Responsable del Tratamiento
+        </Typography>
+        <p style={{ margin: 'var(--size-xxs) 0' }}>
+          <Typography variant="body2">
+            La empresa responsable del tratamiento de sus datos en virtud de
+            esta Política de privacidad es:
+          </Typography>
+          <Typography variant="body2" style={{ margin: 'var(--size-xxs) 0' }}>
+            Silvia Ametlla Pallì
+            <br />
+            NIF: 36525647Z
+            <br />
+            Domicilio: C. d'Avall, 18 &#8211; 083350 Arenys de Mar (Barcelona)
+            <br />
+            Dirección de correo electrónico:{' '}
+            <a href="mailto:salut@farmaciadelmar.com">
+              salut@farmaciadelmar.com
+            </a>
+            <br />
+            Web:{' '}
+            <a href="http://www.farmaciadelmar.com">www.farmaciadelmar.com</a>
+            <br />
+            Teléfono: 937921471
+          </Typography>
+          <p>Datos de la actividad profesional reglada:</p>
+          <ul>
+            <li>Colegio Profesional: Colegio de Farmacéuticos de Barcelona</li>
+            <li>Nº Colegiado: XXXXXX</li>
+            <li>Título académico oficial: Licenciado en farmacia</li>
+            <li>Estado UE de expedición: España</li>
+          </ul>
         </p>
-        <p>
-          <strong>Responsable del Tratamiento</strong>
-        </p>
-        <p>
-          La empresa responsable del tratamiento de sus datos en virtud de esta
-          Política de privacidad es:
-        </p>
-        <p>
-          Silvia Ametlla Pallì
-          <br />
-          NIF: 36525647Z
-          <br />
-          Domicilio: C. d'Avall, 18 &#8211; 083350 Arenys de Mar (Barcelona)
-          <br />
-          Dirección de correo electrónico:{' '}
-          <a href="mailto:salut@farmaciadelmar.com">salut@farmaciadelmar.com</a>
-          <br />
-          Web:{' '}
-          <a href="http://www.farmaciadelmar.com">www.farmaciadelmar.com</a>
-          <br />
-          Teléfono: 937921471
-        </p>
-        <p>Datos de la actividad profesional reglada:</p>
-        <ul>
-          <li>Colegio Profesional: Colegio de Farmacéuticos de Barcelona</li>
-          <li>Nº Colegiado: XXXXXX</li>
-          <li>Título académico oficial: Licenciado en farmacia</li>
-          <li>Estado UE de expedición: España</li>
-        </ul>
         <p>
           Silvia Ametlla Pallì reconoce la importancia de proteger su
           información personal y está comprometido a tratarla con
@@ -52,9 +55,8 @@ export default function PoliticaPrivacidadDatos() {
           formularios situados en la web.
         </p>
         <p>&nbsp;</p>
-        <p>
-          <strong>Datos Personales </strong>
-        </p>
+        <Typography variant="h6">Datos Personales</Typography>
+        <p>&nbsp;</p>
         <p>
           Un dato personal es la información que le identifica o le hace
           identificable. A través de la web, en las casillas establecidas al
@@ -75,185 +77,230 @@ export default function PoliticaPrivacidadDatos() {
           diciembre.
         </p>
         <p>&nbsp;</p>
-        <p>
-          <strong>Finalidad, duración y legitimación del tratamiento</strong>
-        </p>
-        <p>
+        <Typography variant="h6">
+          Finalidad, duración y legitimación del tratamiento
+        </Typography>
+        <p>&nbsp;</p>
+        <Typography variant="subtitle1">
           Los datos que el usuario nos proporcione los trataremos con las
           siguientes finalidades:
-        </p>
+        </Typography>
         <ul>
           <li>
-            Atender la solicitud o petición realizada por el usuario a través
-            del <strong>formulario de contacto </strong>situado en la web.
-            Recogemos y tratamos los datos personales del usuario para poder
-            tramitar y gestionar su solicitud, una consulta o cualquier petición
-            que realiza a través de dicho formulario. Estos datos los
-            conservaremos durante el tiempo necesario para dar cumplimiento a su
-            petición y durante el tiempo establecido por la ley con una duración
-            mínima de 3 años.
+            <Typography variant="body2">
+              Atender la solicitud o petición realizada por el usuario a través
+              del <strong>formulario de contacto </strong>situado en la web.
+              Recogemos y tratamos los datos personales del usuario para poder
+              tramitar y gestionar su solicitud, una consulta o cualquier
+              petición que realiza a través de dicho formulario. Estos datos los
+              conservaremos durante el tiempo necesario para dar cumplimiento a
+              su petición y durante el tiempo establecido por la ley con una
+              duración mínima de 3 años.
+            </Typography>
+            <p>&nbsp;</p>
+            <Typography variant="body2">
+              <em>
+                La base de legitimación del tratamiento de los datos será el
+                consentimiento que otorga el usuario al seleccionar la casilla
+                de aceptación de nuestra política de privacidad antes de enviar
+                la petición. El usuario tiene derecho a revocar su
+                consentimiento en cualquier momento sin que ello afecte a la
+                licitud del tratamiento basado en el consentimiento previo a su
+                retirada.
+              </em>
+            </Typography>
           </li>
-        </ul>
-        <p>
-          La base de legitimación del tratamiento de los datos será el
-          consentimiento que otorga el usuario al seleccionar la casilla de
-          aceptación de nuestra política de privacidad antes de enviar la
-          petición. El usuario tiene derecho a revocar su consentimiento en
-          cualquier momento sin que ello afecte a la licitud del tratamiento
-          basado en el consentimiento previo a su retirada.
-        </p>
-        <ul>
+          <p>&nbsp;</p>
           <li>
-            Enviar <strong>boletines y newsletters</strong> sobre productos de
-            Silvia Ametlla Pallì. Bajo el consentimiento del usuario recogemos y
-            tratamos sus datos personales para poder enviarle información sobre
-            nuestros productos y servicios. Estos datos los conservaremos
-            mientras el usuario no revoque su consentimiento al tratamiento de
-            los mismos y durante el tiempo establecido por la ley con una
-            duración mínima de 3 años.
+            <Typography variant="body2">
+              Enviar <strong>boletines y newsletters</strong> sobre productos de
+              Silvia Ametlla Pallì. Bajo el consentimiento del usuario recogemos
+              y tratamos sus datos personales para poder enviarle información
+              sobre nuestros productos y servicios. Estos datos los
+              conservaremos mientras el usuario no revoque su consentimiento al
+              tratamiento de los mismos y durante el tiempo establecido por la
+              ley con una duración mínima de 3 años.
+            </Typography>
+            <p>&nbsp;</p>
+            <Typography variant="body2">
+              <em>
+                La base de legitimación del tratamiento de los datos será el
+                consentimiento que otorga el usuario al seleccionar la casilla
+                de aceptación de nuestra política de privacidad antes de
+                suscribirse a la newsletter en formulario habilitado a tal
+                efecto en la web. El usuario tiene derecho a revocar su
+                consentimiento en cualquier momento sin que ello afecte a la
+                licitud del tratamiento basado en el consentimiento previo a su
+                retirada.
+              </em>
+            </Typography>
           </li>
-        </ul>
-        <p>
-          La base de legitimación del tratamiento de los datos será el
-          consentimiento que otorga el usuario al seleccionar la casilla de
-          aceptación de nuestra política de privacidad antes de suscribirse a la
-          newsletter en formulario habilitado a tal efecto en la web. El usuario
-          tiene derecho a revocar su consentimiento en cualquier momento sin que
-          ello afecte a la licitud del tratamiento basado en el consentimiento
-          previo a su retirada.
-        </p>
-        <ul>
+          <p>&nbsp;</p>
           <li>
-            Dar de alta como “usuario registrado” a través{' '}
-            <strong>del formulario de registro</strong> situado en la web y que
-            permitirá al usuario acceder a su área privada de servicios e
-            informarle de nuestras actividades, pudiéndole remitir por cualquier
-            medio electrónico comunicaciones comerciales de las novedades de
-            nuestros servicios. Estos datos los conservaremos mientras el
-            usuario no solicite su baja del registro y durante el tiempo
-            establecido por la ley con una duración mínima de 3 años.
+            <Typography variant="body2">
+              Dar de alta como “usuario registrado” a través{' '}
+              <strong>del formulario de registro</strong> situado en la web y
+              que permitirá al usuario acceder a su área privada de servicios e
+              informarle de nuestras actividades, pudiéndole remitir por
+              cualquier medio electrónico comunicaciones comerciales de las
+              novedades de nuestros servicios. Estos datos los conservaremos
+              mientras el usuario no solicite su baja del registro y durante el
+              tiempo establecido por la ley con una duración mínima de 3 años.
+            </Typography>
+            <p>&nbsp;</p>
+            <Typography variant="body2">
+              <em>
+                La base de legitimación del tratamiento de los datos será el
+                consentimiento que otorga el usuario al registrarse a través del
+                formulario de registro y seleccionar la casilla de aceptación de
+                nuestra política de privacidad antes de enviar su solicitud. El
+                usuario tiene derecho a revocar su consentimiento en cualquier
+                momento sin que ello afecte a la licitud del tratamiento basado
+                en el consentimiento previo a su retirada.
+              </em>
+            </Typography>
           </li>
-        </ul>
-        <p>
-          La base de legitimación del tratamiento de los datos será el
-          consentimiento que otorga el usuario al registrarse a través del
-          formulario de registro y seleccionar la casilla de aceptación de
-          nuestra política de privacidad antes de enviar su solicitud. El
-          usuario tiene derecho a revocar su consentimiento en cualquier momento
-          sin que ello afecte a la licitud del tratamiento basado en el
-          consentimiento previo a su retirada.
-        </p>
-        <ul>
+          <p>&nbsp;</p>
           <li>
-            Atender y gestionar la compra realizada por el usuario a través{' '}
-            <strong>del formulario de compra</strong> situado en la web.
-            Recogemos y tratamos los datos personales del usuario para poder
-            procesar el pedido y posterior pago de los productos y servicios que
-            se ofrecen en la web. Estos datos los conservaremos durante el
-            tiempo que dure la relación contractual entre las partes y durante
-            el tiempo establecido por la ley para el cumplimiento de las
-            obligaciones fiscales.
+            <Typography variant="body2">
+              Atender y gestionar la compra realizada por el usuario a través{' '}
+              <strong>del formulario de compra</strong> situado en la web.
+              Recogemos y tratamos los datos personales del usuario para poder
+              procesar el pedido y posterior pago de los productos y servicios
+              que se ofrecen en la web. Estos datos los conservaremos durante el
+              tiempo que dure la relación contractual entre las partes y durante
+              el tiempo establecido por la ley para el cumplimiento de las
+              obligaciones fiscales.
+            </Typography>
+            <p>&nbsp;</p>
+            <Typography variant="body2">
+              <em>
+                La base de legitimación del tratamiento de los datos será la
+                ejecución de un contrato de compraventa en el que el interesado
+                es parte. En caso que el usuario no facilite sus datos
+                personales no se podrá gestionar su compra, no pudiendo prestar
+                el servicio solicitado.
+              </em>
+            </Typography>
           </li>
-        </ul>
-        <p>
-          La base de legitimación del tratamiento de los datos será la ejecución
-          de un contrato de compraventa en el que el interesado es parte. En
-          caso que el usuario no facilite sus datos personales no se podrá
-          gestionar su compra, no pudiendo prestar el servicio solicitado.
-        </p>
-        <ul>
+          <p>&nbsp;</p>
           <li>
-            Atender la consulta realizada por el usuario a través del{' '}
-            <strong>formulario de consulta online</strong>situado en la web.
-            Recogemos y tratamos los datos personales del usuario para poder
-            tramitar y gestionar la consulta que realiza a través de dicho
-            formulario. Estos datos los conservaremos durante el tiempo
-            necesario para dar cumplimiento a su petición y durante el tiempo
-            establecido por la ley con una duración mínima de 3 años.
+            <Typography variant="body2">
+              Atender la consulta realizada por el usuario a través del{' '}
+              <strong>formulario de consulta online</strong>situado en la web.
+              Recogemos y tratamos los datos personales del usuario para poder
+              tramitar y gestionar la consulta que realiza a través de dicho
+              formulario. Estos datos los conservaremos durante el tiempo
+              necesario para dar cumplimiento a su petición y durante el tiempo
+              establecido por la ley con una duración mínima de 3 años.
+            </Typography>
+            <p>&nbsp;</p>
+            <Typography variant="body2">
+              <em>
+                La base de legitimación del tratamiento de los datos será el
+                consentimiento que otorga el usuario al seleccionar la casilla
+                de aceptación de nuestra política de privacidad antes de enviar
+                la consulta. El usuario tiene derecho a revocar su
+                consentimiento en cualquier momento sin que ello afecte a la
+                licitud del tratamiento basado en el consentimiento previo a su
+                retirada.
+              </em>
+            </Typography>
           </li>
-        </ul>
-        <p>
-          La base de legitimación del tratamiento de los datos será el
-          consentimiento que otorga el usuario al seleccionar la casilla de
-          aceptación de nuestra política de privacidad antes de enviar la
-          consulta. El usuario tiene derecho a revocar su consentimiento en
-          cualquier momento sin que ello afecte a la licitud del tratamiento
-          basado en el consentimiento previo a su retirada.
-        </p>
-        <ul>
+          <p>&nbsp;</p>
           <li>
-            Atender y gestionar el encargo realizado por el usuario a través{' '}
-            <strong>del formulario de encargo express</strong> situado en la
-            web. Recogemos y tratamos los datos personales del usuario para
-            poder procesar el encargo de los productos que se ofrecen en la web.
-            Estos datos los conservaremos durante el tiempo que dure la relación
-            contractual entre las partes y durante el tiempo establecido por la
-            ley con una duración mínima de 3 años.
+            <Typography variant="body2">
+              Atender y gestionar el encargo realizado por el usuario a través{' '}
+              <strong>del formulario de encargo express</strong> situado en la
+              web. Recogemos y tratamos los datos personales del usuario para
+              poder procesar el encargo de los productos que se ofrecen en la
+              web. Estos datos los conservaremos durante el tiempo que dure la
+              relación contractual entre las partes y durante el tiempo
+              establecido por la ley con una duración mínima de 3 años.
+            </Typography>
+            <p>&nbsp;</p>
+            <Typography variant="body2">
+              <em>
+                La base de legitimación del tratamiento de los datos será la
+                ejecución de un contrato o precontrato en el que el interesado
+                es parte. En caso que el usuario no facilite sus datos
+                personales no se podrá gestionar su encargo, no pudiendo prestar
+                el servicio solicitado.
+              </em>
+            </Typography>
           </li>
-        </ul>
-        <p>
-          La base de legitimación del tratamiento de los datos será la ejecución
-          de un contrato o precontrato en el que el interesado es parte. En caso
-          que el usuario no facilite sus datos personales no se podrá gestionar
-          su encargo, no pudiendo prestar el servicio solicitado.
-        </p>
-        <ul>
+          <p>&nbsp;</p>
           <li>
-            Gestionar la <strong>solicitud de una cita</strong>a través de los
-            datos recopilados en el formulario habilitado a tal efecto en la
-            web. Recogemos y tratamos estos datos para poder atender la petición
-            de cita. Estos datos los conservaremos durante el tiempo necesario
-            para dar cumplimiento a su petición y durante el tiempo establecido
-            por la ley con una duración mínima de 3 años.
+            <Typography variant="body2">
+              Gestionar la <strong>solicitud de una cita</strong>a través de los
+              datos recopilados en el formulario habilitado a tal efecto en la
+              web. Recogemos y tratamos estos datos para poder atender la
+              petición de cita. Estos datos los conservaremos durante el tiempo
+              necesario para dar cumplimiento a su petición y durante el tiempo
+              establecido por la ley con una duración mínima de 3 años.
+            </Typography>
+            <p>&nbsp;</p>
+            <Typography variant="body2">
+              <em>
+                La base de legitimación del tratamiento de los datos será el
+                consentimiento que otorga el usuario a través de la
+                cumplimentación del formulario de solicitud habilitado para tal
+                efecto en la web y, seleccionando la casilla de aceptación de
+                nuestra política de privacidad. El usuario tiene derecho a
+                revocar su consentimiento en cualquier momento sin que ello
+                afecte a la licitud del tratamiento basado en el consentimiento
+                previo a su retirada
+              </em>
+            </Typography>
           </li>
-        </ul>
-        <p>
-          La base de legitimación del tratamiento de los datos será el
-          consentimiento que otorga el usuario a través de la cumplimentación
-          del formulario de solicitud habilitado para tal efecto en la web y,
-          seleccionando la casilla de aceptación de nuestra política de
-          privacidad. El usuario tiene derecho a revocar su consentimiento en
-          cualquier momento sin que ello afecte a la licitud del tratamiento
-          basado en el consentimiento previo a su retirada
-        </p>
-        <ul>
+          <p>&nbsp;</p>
           <li>
-            Mejorar su experiencia al navegar por la web. Estos datos los
-            conservaremos mientras el usuario no revoque su consentimiento al
-            tratamiento de los mismos eliminando las cookies y durante el tiempo
-            establecido por la ley con una duración mínima de 3 años.
+            <Typography variant="body2">
+              Mejorar su experiencia al navegar por la web. Estos datos los
+              conservaremos mientras el usuario no revoque su consentimiento al
+              tratamiento de los mismos eliminando las cookies y durante el
+              tiempo establecido por la ley con una duración mínima de 3 años.
+            </Typography>
+            <p>&nbsp;</p>
+            <Typography variant="body2">
+              <em>
+                La base de legitimación para mejorar su experiencia al navegar
+                por la web es el consentimiento que otorga el usuario al aceptar
+                las cookies. El usuario tiene derecho a revocar su
+                consentimiento en cualquier momento sin que ello afecte a la
+                licitud del tratamiento basado en el consentimiento previo a su
+                retirada.
+              </em>
+            </Typography>
           </li>
-        </ul>
-        <p>
-          La base de legitimación para mejorar su experiencia al navegar por la
-          web es el consentimiento que otorga el usuario al aceptar las cookies.
-          El usuario tiene derecho a revocar su consentimiento en cualquier
-          momento sin que ello afecte a la licitud del tratamiento basado en el
-          consentimiento previo a su retirada.
-        </p>
-        <ul>
+          <p>&nbsp;</p>
           <li>
-            Gestionar nuestras <strong>redes sociales</strong> y enviarle
-            información sobre nuestras actividades y productos. Estos datos los
-            conservaremos mientras el usuario no revoque su consentimiento al
-            tratamiento de los mismos y durante el tiempo establecido por la ley
-            con una duración mínima de 3 años.
+            <Typography variant="body2">
+              Gestionar nuestras <strong>redes sociales</strong> y enviarle
+              información sobre nuestras actividades y productos. Estos datos
+              los conservaremos mientras el usuario no revoque su consentimiento
+              al tratamiento de los mismos y durante el tiempo establecido por
+              la ley con una duración mínima de 3 años.
+            </Typography>
+            <p>&nbsp;</p>
+            <Typography variant="body2">
+              <em>
+                La base legítima para gestionar nuestras redes sociales y
+                enviarle nuestras actividades y novedades, es el consentimiento
+                que nos otorga para ello. El usuario tiene derecho a revocar su
+                consentimiento en cualquier momento sin que ello afecte a la
+                licitud del tratamiento basado en el consentimiento previo a su
+                retirada.
+              </em>
+            </Typography>
           </li>
         </ul>
-        <p>
-          La base legítima para gestionar nuestras redes sociales y enviarle
-          nuestras actividades y novedades, es el consentimiento que nos otorga
-          para ello. El usuario tiene derecho a revocar su consentimiento en
-          cualquier momento sin que ello afecte a la licitud del tratamiento
-          basado en el consentimiento previo a su retirada.
-        </p>
         <p>&nbsp;</p>
-        <p>
-          <strong>
-            Cesión o comunicación de datos personales y transferencias
-            internacionales
-          </strong>
-        </p>
+        <Typography variant="h6">
+          Cesión o comunicación de datos personales y transferencias
+          internacionales
+        </Typography>
+        <p>&nbsp;</p>
         <p>
           Sus datos no se comunicarán ni serán cedidos a terceros salvo que
           exista alguna obligación legal o aquellos prestadores vinculados al
@@ -265,9 +312,8 @@ export default function PoliticaPrivacidadDatos() {
           obtener su consentimiento.
         </p>
         <p>&nbsp;</p>
-        <p>
-          <strong>Actualización de datos </strong>
-        </p>
+        <Typography variant="h6">Actualización de datos</Typography>
+        <p>&nbsp;</p>
         <p>
           Es importante que para que podamos mantener los datos personales
           actualizados, el usuario nos informe siempre que haya habido alguna
@@ -281,9 +327,8 @@ export default function PoliticaPrivacidadDatos() {
           comunicar cualquier modificación.
         </p>
         <p>&nbsp;</p>
-        <p>
-          <strong>Datos de Terceros</strong>
-        </p>
+        <Typography variant="h6">Datos de Terceros</Typography>
+        <p>&nbsp;</p>
         <p>
           Si el usuario facilita datos de terceras personas para cualquier
           finalidad a Silvia Ametlla Pallì, garantiza que ha obtenido estos
@@ -301,9 +346,8 @@ export default function PoliticaPrivacidadDatos() {
           envío de la información.
         </p>
         <p>&nbsp;</p>
-        <p>
-          <strong>Uso de las contraseñas</strong>
-        </p>
+        <Typography variant="h6">Uso de las contraseñas</Typography>
+        <p>&nbsp;</p>
         <p>
           Para poder acceder al Área Privada, el USUARIO deberá “Iniciar Sesión”
           e incluir la dirección del correo electrónico y contraseña generada en
@@ -324,9 +368,8 @@ export default function PoliticaPrivacidadDatos() {
           inmediata cancelación.
         </p>
         <p>&nbsp;</p>
-        <p>
-          <strong>Derechos de los interesados</strong>
-        </p>
+        <Typography variant="h6">Derechos de los interesados</Typography>
+        <p>&nbsp;</p>
         <p>
           Tiene derecho a acceder a sus datos y a obtener confirmación sobre su
           tratamiento, así como una copia de los datos personales objeto de
@@ -349,9 +392,10 @@ export default function PoliticaPrivacidadDatos() {
           <a href="http://www.aepd.es">www.aepd.es</a>.
         </p>
         <p>&nbsp;</p>
-        <p>
-          <strong>Tratamiento de datos de Menores de edad</strong>
-        </p>
+        <Typography variant="h6">
+          Tratamiento de datos de Menores de edad
+        </Typography>
+        <p>&nbsp;</p>
         <p>
           Quien facilita los datos a través de los formularios de esta web y
           acepta su tratamiento declara ser mayor de 14 años, quedando prohibido
@@ -364,9 +408,8 @@ export default function PoliticaPrivacidadDatos() {
           falseando su identidad.
         </p>
         <p>&nbsp;</p>
-        <p>
-          <strong>Redes sociales</strong>
-        </p>
+        <Typography variant="h6">Redes sociales</Typography>
+        <p>&nbsp;</p>
         <p>
           El objeto de las herramientas como Facebook, Twitter, Instagram, etc.
           u otras redes sociales es dar visibilidad y difusión a las actividades
@@ -386,9 +429,8 @@ export default function PoliticaPrivacidadDatos() {
           derecho a bloquear o denunciar el perfil autor de estos mensajes.
         </p>
         <p>&nbsp;</p>
-        <p>
-          <strong>Tratamiento de Cookies</strong>
-        </p>
+        <Typography variant="h6">Tratamiento de Cookies</Typography>
+        <p>&nbsp;</p>
         <p>
           Una cookie es un pequeño archivo que se descarga y almacena en el
           ordenador del usuario cuando este accede a una página web. Las Cookies
@@ -406,9 +448,10 @@ export default function PoliticaPrivacidadDatos() {
           </a>
           .
         </p>
-        <p>
-          <em>Fecha de actualización: 29/06/2021</em>
-        </p>
+        <p>&nbsp;</p>
+        <Typography variant="subtitle2">
+          Fecha de actualización: 20/08/2021
+        </Typography>
       </div>
     </Paper>
   );

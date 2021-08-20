@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from 'react';
+import { useState, useContext } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
@@ -27,6 +27,7 @@ import useStyles from './EditProfileStyles';
 export default function EditProfile() {
   const { user, updateUserDetails } = useContext(AuthContext);
   const [firstName, setFirstName] = useState(user.firstName);
+  const [photo, setPhoto] = useState(user.photo);
   const [lastName, setLastName] = useState(user.lastName);
   const [email, setEmail] = useState(user.email);
   const [birthday, setBirthday] = useState(user.birthday);
@@ -93,6 +94,7 @@ export default function EditProfile() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const updatedUser = {
+      photo,
       firstName,
       lastName,
       email,
@@ -121,7 +123,7 @@ export default function EditProfile() {
         justifyContent="space-evenly"
       >
         <Grid item xs={12}>
-          <Link href="/user/dashboard">
+          <Link href="/user/profile">
             <Button color="primary" className={classes.button}>
               <ArrowBackIosIcon fontSize="small" /> Go Back
             </Button>

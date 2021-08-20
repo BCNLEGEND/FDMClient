@@ -3,16 +3,10 @@ import sizes from '@/utils/mediaSizes';
 
 const useStyles = makeStyles({
   page: {
+    marginTop: '4rem',
     display: 'flex',
     width: '100%',
     height: '100%',
-  },
-  column: {
-    display: 'flex',
-    flexDirection: 'column',
-    width: '15%',
-    height: '93vh',
-    backgroundColor: 'rgba(93, 137, 218,0.1)',
   },
   paper: {
     display: 'flex',
@@ -21,7 +15,7 @@ const useStyles = makeStyles({
     margin: 'var(--size-xxs) auto',
     padding: '0 var(--size-xxs)',
     width: '90%',
-    height: '90%',
+    height: '85vh',
   },
   btnGroup: {
     height: '100%',
@@ -32,13 +26,10 @@ const useStyles = makeStyles({
   },
   btn: {
     fontSize: '.75rem',
-    margin: 'var(--size-xxs) auto',
-    width: '75%',
+    margin: '.25rem 0',
   },
   btnReset: {
     fontSize: '.75rem',
-    margin: 'var(--size-xxs) auto',
-    width: '75%',
     backgroundColor: 'var(--tertiary-color)',
   },
 });

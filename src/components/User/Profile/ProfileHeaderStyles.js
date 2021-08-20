@@ -14,6 +14,9 @@ const useStyles = makeStyles({
     minWidth: '50px',
     minHeight: '50px',
   },
+  img: {
+    borderRadius: '50%',
+  },
   badge: {
     cursor: 'pointer',
   },

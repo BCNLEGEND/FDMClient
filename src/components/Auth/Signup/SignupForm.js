@@ -57,7 +57,7 @@ export default function SignupForm(props) {
   const html = (
     <p class="datos">
       He leído y acepto la{' '}
-      <a href="legal/datos">política de protección de datos</a>.
+      <a href="/legal/datos">política de protección de datos</a>.
     </p>
   );
 
