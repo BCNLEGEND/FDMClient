@@ -21,11 +21,14 @@ import Switch from '@material-ui/core/Switch';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
 import AuthContext from '@/context/AuthContext';
+import { LanguageContext } from '@/context/language';
 
 import useStyles from './EditProfileStyles';
+import text from './EditProfileText';
 
 export default function EditProfile() {
   const { user, updateUserDetails } = useContext(AuthContext);
+  const { language } = useContext(LanguageContext);
   const [firstName, setFirstName] = useState(user.firstName);
   const [photo, setPhoto] = useState(user.photo);
   const [lastName, setLastName] = useState(user.lastName);
@@ -125,7 +128,7 @@ export default function EditProfile() {
         <Grid item xs={12}>
           <Link href="/user/profile">
             <Button color="primary" className={classes.button}>
-              <ArrowBackIosIcon fontSize="small" /> Go Back
+              <ArrowBackIosIcon fontSize="small" /> {text[language].back}
             </Button>
           </Link>
         </Grid>
@@ -143,7 +146,7 @@ export default function EditProfile() {
                 required
                 id="firstName"
                 name="firstName"
-                label="first Name"
+                label={text[language].firstName}
                 value={firstName}
                 onChange={handleChange}
               />
@@ -153,7 +156,7 @@ export default function EditProfile() {
                 required
                 id="lastName"
                 name="lastName"
-                label="last Name"
+                label={text[language].lastName}
                 value={lastName}
                 onChange={handleChange}
               />
@@ -171,7 +174,7 @@ export default function EditProfile() {
                 id="email"
                 name="email"
                 type="text"
-                label="email"
+                label="Email"
                 value={email}
                 onChange={handleChange}
               />
@@ -181,7 +184,7 @@ export default function EditProfile() {
                 id="tel"
                 name="tel"
                 type="text"
-                label="tel"
+                label="Tel"
                 value={tel}
                 onChange={handleChange}
               />
@@ -191,7 +194,7 @@ export default function EditProfile() {
                 id="mobile"
                 name="mobile"
                 type="text"
-                label="mobile"
+                label={text[language].mob}
                 value={mobile}
                 onChange={handleChange}
               />
@@ -209,7 +212,7 @@ export default function EditProfile() {
                   id="birthday"
                   name="birthday"
                   format="dd/MM/yyyy"
-                  label="Birthday"
+                  label={text[language].bday}
                   value={birthday}
                   onChange={handleBirthdayChange}
                 />
@@ -217,7 +220,7 @@ export default function EditProfile() {
             </Grid>
             <Grid item xs={12} md={6}>
               <FormControl className={classes.formControl}>
-                <InputLabel id="gender">Gender</InputLabel>
+                <InputLabel id="gender">{text[language].gender}</InputLabel>
                 <Select
                   labelId="gender"
                   id="gender"
@@ -225,9 +228,8 @@ export default function EditProfile() {
                   value={gender}
                   onChange={handleChange}
                 >
-                  <MenuItem value={'male'}>Male</MenuItem>
-                  <MenuItem value={'female'}>Female</MenuItem>
-                  <MenuItem value={'undefined'}>Undefined</MenuItem>
+                  <MenuItem value={'male'}>{text[language].male}</MenuItem>
+                  <MenuItem value={'female'}>{text[language].female}</MenuItem>
                 </Select>
               </FormControl>
             </Grid>
@@ -270,7 +272,7 @@ export default function EditProfile() {
                 id="streetName"
                 name="streetName"
                 type="text"
-                label="streetName"
+                label={text[language].streetName}
                 value={streetName}
                 onChange={handleChange}
               />
@@ -280,7 +282,7 @@ export default function EditProfile() {
                 id="streetNumber"
                 name="streetNumber"
                 type="number"
-                label="streetNumber"
+                label={text[language].streetNumber}
                 value={streetNumber}
                 onChange={handleChange}
               />
@@ -290,7 +292,7 @@ export default function EditProfile() {
                 id="postalcode"
                 name="postalcode"
                 type="text"
-                label="postalcode"
+                label={text[language].pCode}
                 value={postalcode}
                 onChange={handleChange}
               />
@@ -300,7 +302,7 @@ export default function EditProfile() {
                 id="city"
                 name="city"
                 type="text"
-                label="city"
+                label={text[language].city}
                 value={city}
                 onChange={handleChange}
               />
@@ -352,7 +354,7 @@ export default function EditProfile() {
                 startIcon={<EditIcon />}
                 onClick={handleSubmit}
               >
-                Update Profile
+                {text[language].update}
               </Button>
             </Grid>
           </Grid>

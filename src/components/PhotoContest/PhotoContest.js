@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import { IMG_API } from '@/utils/api';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -9,9 +10,13 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { LanguageContext } from '../../context/language';
+
+import text from './PhotoContestText';
 
 const PhotoContest = () => {
   const classes = useStyles();
+  const { language } = useContext(LanguageContext);
 
   return (
     <section className={classes.root}>
@@ -29,7 +34,7 @@ const PhotoContest = () => {
                 variant="h4"
                 component="h2"
               >
-                Photo Contest 2020
+                {text[language].contest} 2020
               </Typography>
               <Image
                 src={`${IMG_API}/uploads/photos/2020/a3156850-9a9e-4fb1-9d0e-6f59ae40e7ca.JPG`}
@@ -40,7 +45,7 @@ const PhotoContest = () => {
             </CardContent>
             <CardActions>
               <Link href="/photocontests/2020">
-                <Button size="large">See all photos</Button>
+                <Button size="large">{text[language].all}</Button>
               </Link>
             </CardActions>
           </Card>
@@ -54,7 +59,7 @@ const PhotoContest = () => {
                 variant="h4"
                 component="h2"
               >
-                Photo Contest 2019
+                {text[language].contest} 2019
               </Typography>
               <Image
                 src={`${IMG_API}/uploads/photos/2019/photocontest2019.JPEG`}
@@ -65,7 +70,7 @@ const PhotoContest = () => {
             </CardContent>
             <CardActions>
               <Link href="/photocontests/2019">
-                <Button size="large">See all photos</Button>
+                <Button size="large">{text[language].all}</Button>
               </Link>
             </CardActions>
           </Card>

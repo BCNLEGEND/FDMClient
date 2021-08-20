@@ -1,4 +1,5 @@
 import { IMG_API } from '@/utils/api';
+import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Image from 'next/image';
@@ -17,13 +18,21 @@ const Photo = ({ photo, fullPhoto }) => {
             layout="responsive"
           />
           {!fullPhoto && (
-            <div style={{ margin: '1rem 0' }}>
-              <Typography variant="h6">{photo.title && photo.title}</Typography>
-              <Typography variant="body1">{photo.votes} ❤️</Typography>
-              <Typography variant="body2">
-                {photo.firstName} {photo.lastName}
-              </Typography>
-            </div>
+            <Grid container spacing={2} style={{ margin: '1rem 0' }}>
+              <Grid item xs={12}>
+                <Typography variant="h6">
+                  {photo.title && photo.title}
+                </Typography>
+              </Grid>
+              <Grid item xs={9}>
+                <Typography variant="body2">
+                  {photo.firstName} {photo.lastName}
+                </Typography>
+              </Grid>
+              <Grid item xs={3}>
+                <Typography variant="body1">{photo.votes} ❤️</Typography>
+              </Grid>
+            </Grid>
           )}
         </CardContent>
       </Card>
