@@ -245,7 +245,7 @@ export default function EditProfile() {
                 id="dni"
                 name="dni"
                 type="text"
-                label="dni"
+                label="DNI/ NIE"
                 value={dni}
                 onChange={handleChange}
               />

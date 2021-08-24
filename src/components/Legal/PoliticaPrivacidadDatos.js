@@ -443,7 +443,7 @@ export default function PoliticaPrivacidadDatos() {
           El usuario tiene la opción de impedir la generación de cookies,
           mediante la selección de la correspondiente opción en su programa de
           navegador. Puede obtener más información leyendo nuestra{' '}
-          <a href="https://farmaciadelmar.com/legal/cookies/">
+          <a href="/legal/cookies/">
             <u>Política de Cookies</u>
           </a>
           .

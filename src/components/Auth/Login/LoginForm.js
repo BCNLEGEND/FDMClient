@@ -103,6 +103,7 @@ export default function LoginForm(props) {
                 >
                   {text[language].login}
                 </Button>
+                {/* @TODO develop this so that this goes to Password reset page */}
                 <Link href="/" passHref>
                   <p className={classes.forgot}>
                     {text[language].forgot}{' '}

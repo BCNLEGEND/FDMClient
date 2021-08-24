@@ -12,13 +12,17 @@ import Switch from '@material-ui/core/Switch';
 import Paper from '@material-ui/core/Paper';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
-import AuthContext, { checkUserLoggedIn } from '@/context/AuthContext';
+import AuthContext from '@/context/AuthContext';
 
 import useStyles from './UserProfileStyles';
 import ProfileHeader from './ProfileHeader';
 
+import text from './UserProfileText';
+import { LanguageContext } from '@/context/language';
+
 export default function userProfile() {
   const { user } = useContext(AuthContext);
+  const { language } = useContext(LanguageContext);
   const classes = useStyles();
   return (
     <section className={classes.root}>
@@ -31,7 +35,7 @@ export default function userProfile() {
         <Grid item xs={12}>
           <Link href="/">
             <Button color="primary" className={classes.button}>
-              <ArrowBackIosIcon fontSize="small" /> Go Back
+              <ArrowBackIosIcon fontSize="small" /> {text[language].back}
             </Button>
           </Link>
         </Grid>
@@ -62,7 +66,7 @@ export default function userProfile() {
                 )}
               {user.dni && (
                 <Grid item className={classes.name}>
-                  <Typography variant="body2">DNI/ NIE: </Typography>
+                  <Typography variant="body2">{text[language].id}: </Typography>
                   <Typography variant="h6" component="h2">
                     {user.dni}
                   </Typography>
@@ -70,7 +74,9 @@ export default function userProfile() {
               )}
               {user.cip && (
                 <Grid item className={classes.name}>
-                  <Typography variant="body2">CIP: </Typography>
+                  <Typography variant="body2">
+                    {text[language].CIP}:{' '}
+                  </Typography>
                   <Typography variant="h6" component="h2">
                     {user.cip}
                   </Typography>
@@ -78,7 +84,9 @@ export default function userProfile() {
               )}
               {user.birthday && (
                 <Grid item className={classes.name}>
-                  <Typography variant="body2">Birthday: </Typography>
+                  <Typography variant="body2">
+                    {text[language].bday}:{' '}
+                  </Typography>
                   <Typography variant="h6" component="h2">
                     {new Date(user.birthday).getDate()} -{' '}
                     {new Date(user.birthday).getMonth() + 1} -{' '}
@@ -88,7 +96,9 @@ export default function userProfile() {
               )}
               {user.gender && (
                 <Grid item className={classes.name}>
-                  <Typography variant="body2">Gender:</Typography>
+                  <Typography variant="body2">
+                    {text[language].gender}:
+                  </Typography>
                   <Typography variant="h6" component="h2">
                     {user.gender}
                   </Typography>
@@ -97,7 +107,7 @@ export default function userProfile() {
               <Divider />
               {user.tel && (
                 <Grid item className={classes.name}>
-                  <Typography variant="body2">Telephone:</Typography>
+                  <Typography variant="body2">{text[language].tel}:</Typography>
                   <Typography variant="h6" component="h2">
                     {user.tel}
                   </Typography>
@@ -105,7 +115,7 @@ export default function userProfile() {
               )}
               {user.mobile && (
                 <Grid item className={classes.name}>
-                  <Typography variant="body2">Mobile:</Typography>
+                  <Typography variant="body2">{text[language].mob}:</Typography>
                   <Typography variant="h6" component="h2">
                     {user.mobile}
                   </Typography>
@@ -113,7 +123,9 @@ export default function userProfile() {
               )}
               {user.email && (
                 <Grid item className={classes.name}>
-                  <Typography variant="body2">Email:</Typography>
+                  <Typography variant="body2">
+                    {text[language].email}:
+                  </Typography>
                   <Typography variant="h6" component="h2">
                     {user.email}
                   </Typography>
@@ -122,7 +134,9 @@ export default function userProfile() {
               <Divider />
               {user.streetName && (
                 <Grid item className={classes.name}>
-                  <Typography variant="body2">Address:</Typography>
+                  <Typography variant="body2">
+                    {text[language].address}:
+                  </Typography>
                   <div className={classes.address}>
                     <Typography variant="h6" component="h2">
                       {user.streetName} {user.streetNumber}
@@ -159,7 +173,7 @@ export default function userProfile() {
                     className={classes.button}
                     startIcon={<EditIcon />}
                   >
-                    Edit Profile
+                    {text[language].editProfile}
                   </Button>
                 </Link>
               </Grid>

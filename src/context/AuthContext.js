@@ -11,9 +11,15 @@ export const AuthProvider = ({ children }) => {
   const [staff, setStaff] = useState(false);
   const [error, setError] = useState(null);
   const [loggedIn, setLoggedIn] = useState(false);
+  const [cookies, setCookies] = useState(false);
   const router = useRouter();
 
   useEffect(() => checkUserLoggedIn(), []);
+
+  //   Accept cookies
+  const acceptCookies = () => {
+    setCookies(true);
+  };
 
   //   Register User
   const register = async (newUser) => {
@@ -65,6 +71,7 @@ export const AuthProvider = ({ children }) => {
       if (res.status === 200) {
         setUser(data);
         setLoggedIn(true);
+        setCookies(true);
         // Define routing and user type
         if (data.role === 'user') {
           router.push('/user/profile');
@@ -95,6 +102,7 @@ export const AuthProvider = ({ children }) => {
       if (res.status === 200) {
         setUser(null);
         setLoggedIn(false);
+        setCookies(false);
         router.reload('/');
       }
     } catch (err) {
@@ -111,6 +119,7 @@ export const AuthProvider = ({ children }) => {
       if (res.statusText === 'OK') {
         setUser(data);
         setLoggedIn(true);
+        setCookies(true);
       }
     } catch (err) {
       setError('You are not authorized to access this page, please login!');
@@ -148,6 +157,8 @@ export const AuthProvider = ({ children }) => {
   return (
     <AuthContext.Provider
       value={{
+        acceptCookies,
+        cookies,
         user,
         error,
         register,

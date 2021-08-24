@@ -6,9 +6,12 @@ import Button from '@material-ui/core/Button';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
 import Dialog from '@material-ui/core/Dialog';
+import text from './UserProfileText';
+import { LanguageContext } from '@/context/language';
 
 function FileUploadDialog(props) {
   const { user, updateUserDetails } = useContext(AuthContext);
+  const { language } = useContext(LanguageContext);
   const { onClose, selectedValue, open } = props;
 
   const handleClose = () => {
@@ -40,7 +43,7 @@ function FileUploadDialog(props) {
 
   return (
     <Dialog onClose={handleClose} open={open}>
-      <DialogTitle>Select your image:</DialogTitle>
+      <DialogTitle>{text[language].editPhotoText}</DialogTitle>
       <DialogContent>
         <form type="submit">
           <input

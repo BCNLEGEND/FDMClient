@@ -17,7 +17,7 @@ const photocontest = (props) => {
         <section style={{ width: '80%', margin: '2rem auto' }}>
           <Link href={`/photocontests`}>
             <Button color="primary">
-              <ArrowBackIosIcon fontSize="small" /> Go Back
+              <ArrowBackIosIcon fontSize="small" /> Enrere
             </Button>
           </Link>
           <Typography
