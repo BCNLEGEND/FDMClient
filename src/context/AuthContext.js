@@ -70,17 +70,15 @@ export const AuthProvider = ({ children }) => {
 
       if (res.status === 200) {
         setUser(data);
+        setStaff(data.role === 'staff' ? true : false);
+        setAdmin(data.role === 'admin' ? true : false);
         setLoggedIn(true);
         setCookies(true);
         // Define routing and user type
-        if (data.role === 'user') {
+        if (data.role === 'staff' || data.role === 'admin') {
+          router.push('/admin');
+        } else {
           router.push('/user/profile');
-        } else if (data.role === 'staff') {
-          router.push('/admin/dashboard');
-          setStaff(true);
-        } else if (data.role === 'admin') {
-          router.push('/admin/dashboard');
-          setAdmin(true);
         }
       }
       // if Error set Error state so message show up at front end to inform client
@@ -103,6 +101,8 @@ export const AuthProvider = ({ children }) => {
         setUser(null);
         setLoggedIn(false);
         setCookies(false);
+        setAdmin(false);
+        setStaff(false);
         router.reload('/');
       }
     } catch (err) {
@@ -117,6 +117,8 @@ export const AuthProvider = ({ children }) => {
       const res = await axios.get(`${NEXT_API}user`);
       const data = await res.data.user;
       if (res.statusText === 'OK') {
+        setStaff(data.role === 'staff' ? true : false);
+        setAdmin(data.role === 'admin' ? true : false);
         setUser(data);
         setLoggedIn(true);
         setCookies(true);
@@ -158,6 +160,8 @@ export const AuthProvider = ({ children }) => {
     <AuthContext.Provider
       value={{
         acceptCookies,
+        admin,
+        staff,
         cookies,
         user,
         error,
