@@ -9,12 +9,18 @@ function Login() {
   const router = useRouter();
 
   useEffect(() => {
-    loggedIn && router.push('/user/profile');
+    if (!loggedIn) {
+      return;
+    } else {
+      router.push('/user/profile');
+    }
   }, [loggedIn]);
 
   return (
     <main>
-      <section>{!loggedIn && <LoginForm />}</section>
+      <section>
+        <LoginForm />
+      </section>
     </main>
   );
 }

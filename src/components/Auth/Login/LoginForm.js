@@ -2,7 +2,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState, useContext, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 import PersonIcon from '@material-ui/icons/Person';
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -14,18 +13,24 @@ import { LanguageContext } from '@/context/language';
 import AuthContext from '@/context/AuthContext';
 import useStyles from './LoginFormStyles';
 import text from './LoginFormText';
+import ForgotPassword from '../ForgotPassword/ForgotPassword';
 
 export default function LoginForm(props) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [forgot, setForgot] = useState(false);
   const { language } = useContext(LanguageContext);
-  const { loggedIn, login, error } = useContext(AuthContext);
+  const { loggedIn, login, error, success, passwordResetRequest } = useContext(
+    AuthContext
+  );
 
-  const router = useRouter();
   const classes = useStyles();
 
-  useEffect(() => error && toast.error(error));
+  useEffect(
+    () => (error && toast.error(error)) || (success && toast.success(success)),
+    [error, success]
+  );
 
   // @todo - check if this function will stay or that I will take it out
   // const toggleLoading = () => {
@@ -42,85 +47,92 @@ export default function LoginForm(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // @todo - clean up the below code
-    try {
-      // toggleLoading();
-      login({
-        email,
-        password,
-      });
-
-      setEmail('');
-      setPassword('');
-    } catch (err) {
-      // toggleLoading();
-      // router.push('/login/error');
-    }
+    login({
+      email,
+      password,
+    });
+    setEmail('');
+    setPassword('');
   };
 
   return (
-    <Paper elevation={3} className={classes.container}>
-      {loggedIn ? (
-        <CircularProgress />
-      ) : (
-        <div className={classes.formContainer}>
-          <ToastContainer />
-          {isLoading && <CircularProgress />}
-          <div className={classes.authContainer}>
-            {!isLoading && (
-              <form className={classes.form} onSubmit={handleSubmit}>
-                <div className={classes.headingBox}>
-                  <PersonIcon />
-                  <h2 className={classes.heading}>{text[language].title}</h2>
-                </div>
-                <TextField
-                  value={email}
-                  type="email"
-                  name="email"
-                  id="email"
-                  label={text[language].email}
-                  variant="outlined"
-                  onChange={handleChange}
-                  className={classes.text}
-                  autoFocus={false}
-                />
-                <TextField
-                  value={password}
-                  type="password"
-                  name="password"
-                  id="password"
-                  label={text[language].pass}
-                  variant="outlined"
-                  onChange={handleChange}
-                  className={classes.text}
-                  autoFocus={false}
-                />
-                <Button
-                  type="submit"
-                  variant="contained"
-                  color="primary"
-                  className={classes.btn}
-                >
-                  {text[language].login}
-                </Button>
-                {/* @TODO develop this so that this goes to Password reset page */}
-                <Link href="/" passHref>
+    <>
+      {forgot && (
+        <ForgotPassword
+          setForgot={setForgot}
+          handleChange={handleChange}
+          email={email}
+          passwordResetRequest={passwordResetRequest}
+        />
+      )}
+      <Paper elevation={3} className={classes.container}>
+        {loggedIn ? (
+          <CircularProgress />
+        ) : (
+          <div className={classes.formContainer}>
+            <ToastContainer />
+            {isLoading && <CircularProgress />}
+            <div className={classes.authContainer}>
+              {!isLoading && (
+                <form className={classes.form} onSubmit={handleSubmit}>
+                  <div className={classes.headingBox}>
+                    <PersonIcon />
+                    <h2 className={classes.heading}>{text[language].title}</h2>
+                  </div>
+                  <TextField
+                    value={email}
+                    type="email"
+                    name="email"
+                    id="email"
+                    label={text[language].email}
+                    variant="outlined"
+                    onChange={handleChange}
+                    className={classes.text}
+                    autoFocus={false}
+                  />
+                  <TextField
+                    value={password}
+                    type="password"
+                    name="password"
+                    id="password"
+                    label={text[language].pass}
+                    variant="outlined"
+                    onChange={handleChange}
+                    className={classes.text}
+                    autoFocus={false}
+                  />
+                  <Button
+                    type="submit"
+                    variant="contained"
+                    color="primary"
+                    className={classes.btn}
+                  >
+                    {text[language].login}
+                  </Button>
+                  {/* @TODO develop this so that this goes to Password reset page */}
                   <p className={classes.forgot}>
                     {text[language].forgot}{' '}
-                    <a className={classes.link}>{text[language].click}</a>
+                    <Button
+                      className={classes.link}
+                      onClick={() => setForgot(true)}
+                      size="small"
+                      style={{ color: '#ccc' }}
+                    >
+                      {text[language].click}
+                    </Button>
                   </p>
-                </Link>
-                <Link href="/account/register" passHref>
-                  <p className={classes.register}>
-                    {text[language].register}{' '}
-                    <a className={classes.link}>{text[language].click}</a>
-                  </p>
-                </Link>
-              </form>
-            )}
+                  <Link href="/account/register" passHref>
+                    <p className={classes.register}>
+                      {text[language].register}{' '}
+                      <a className={classes.link}>{text[language].click}</a>
+                    </p>
+                  </Link>
+                </form>
+              )}
+            </div>
           </div>
-        </div>
-      )}
-    </Paper>
+        )}
+      </Paper>
+    </>
   );
 }

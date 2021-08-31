@@ -25,7 +25,7 @@ const photocontest = (props) => {
             variant="h3"
             component="h1"
           >
-            Participants del concurs 2020:
+            Participants del concurs {photos[0].year}:
           </Typography>
           <Grid container spacing={2}>
             {photos.map((photo) => (

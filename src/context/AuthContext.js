@@ -10,6 +10,7 @@ export const AuthProvider = ({ children }) => {
   const [admin, setAdmin] = useState(false);
   const [staff, setStaff] = useState(false);
   const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
   const [loggedIn, setLoggedIn] = useState(false);
   const [cookies, setCookies] = useState(false);
   const router = useRouter();
@@ -156,6 +157,60 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const passwordResetRequest = async (email) => {
+    try {
+      const res = await axios.post(
+        `${NEXT_API}forgot-password`,
+        {
+          email,
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+
+      if (res.statusText === 'OK') {
+        setSuccess('We sent you an Email with, your password reset request!');
+        setSuccess(null);
+      }
+    } catch (err) {
+      setError(
+        'No user with this email was found, please verify email address'
+      );
+      setError(null);
+    }
+  };
+
+  const passwordReset = async (request) => {
+    const { token, password, passwordConfirm } = request;
+    try {
+      const res = await axios.post(
+        `${NEXT_API}reset-password`,
+        {
+          token,
+          password,
+          passwordConfirm,
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+
+      if (res.statusText === 'OK') {
+        setSuccess("You're password was succesfully reset! Please login!");
+        router.push('/account/login');
+        setSuccess(null);
+      }
+    } catch (err) {
+      setError('Sorry something wend wrong! Please try again later!');
+      setError(null);
+    }
+  };
+
   return (
     <AuthContext.Provider
       value={{
@@ -165,11 +220,14 @@ export const AuthProvider = ({ children }) => {
         cookies,
         user,
         error,
+        success,
         register,
         login,
         logout,
         loggedIn,
         updateUserDetails,
+        passwordResetRequest,
+        passwordReset,
       }}
     >
       {children}

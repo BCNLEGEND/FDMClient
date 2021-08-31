@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 
 const Photo = ({ photo, fullPhoto }) => {
   return (
-    <Link href={`/photocontests/2020/${photo._id}`}>
+    <Link href={`/photocontests/${photo.year}/${photo._id}`}>
       <Card>
         <CardContent>
           <Image

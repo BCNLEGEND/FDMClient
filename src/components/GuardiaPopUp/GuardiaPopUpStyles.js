@@ -7,10 +7,17 @@ const useStyles = makeStyles({
   },
   root: {
     width: '100vw',
+    [sizes.up('lg')]: {
+      position: 'absolute',
+      top: '10',
+      left: '0',
+      backgroundColor: 'rgba(255,255,255,.5)',
+      zIndex: '100',
+    },
   },
+
   container: {
     padding: 'var(--size-xxs) var(--size-xxs)',
-    backgroundColor: 'var(--white-color)',
     color: 'var(--primary-color)',
     display: 'flex',
     flexDirection: 'column',
