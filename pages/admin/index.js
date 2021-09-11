@@ -11,7 +11,6 @@ const Admin = () => {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
   const { loggedIn, staff, admin } = useContext(AuthContext);
-  console.log(staff, admin);
 
   useEffect(() => {
     if (!loggedIn) {
