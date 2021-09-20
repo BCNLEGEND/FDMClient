@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Link from 'next/link';
 import { NEXT_API } from '@/utils/api';
+import { API_URL } from '@/utils/api';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
@@ -42,7 +43,7 @@ const photocontest = (props) => {
 };
 
 export async function getStaticPaths() {
-  const res = await axios.get(`${NEXT_API}allphotos`);
+  const res = await axios.get(`${API_URL}photos`);
   const photos = await res.data.photos;
 
   const paths = photos.map((photo) => ({
