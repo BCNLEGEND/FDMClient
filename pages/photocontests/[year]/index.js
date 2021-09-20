@@ -58,17 +58,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const year = params.year;
-  const res = await axios.post(
-    `${NEXT_API}photos`,
-    { year },
-    {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }
-  );
+  const res = await axios.get(`${API_URL}photos/${year}`);
 
-  const photos = await res.data.photos;
+  const photos = await res.data;
 
   if (!photos) {
     return {
