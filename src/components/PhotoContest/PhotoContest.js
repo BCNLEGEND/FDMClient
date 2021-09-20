@@ -62,7 +62,7 @@ const PhotoContest = () => {
                 {text[language].contest} 2019
               </Typography>
               <Image
-                src={`${IMG_API}/uploads/photos/2019/photocontest2019.JPEG`}
+                src={`${IMG_API}/uploads/photos/2019/photocontest2019.jpeg`}
                 width="50"
                 height="50"
                 layout="responsive"
