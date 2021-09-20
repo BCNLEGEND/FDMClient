@@ -70,17 +70,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { id, year } = params;
-  const res = await axios.post(
-    `${NEXT_API}photo`,
-    { id, year },
-    {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }
-  );
+  const res = await axios.get(`${API_URL}photos/${year}/${id}`);
 
-  const photo = await res.data.photo;
+  const photo = await res.data;
 
   if (!photo) {
     return {
