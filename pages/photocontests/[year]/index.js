@@ -44,7 +44,7 @@ const photocontest = (props) => {
 
 export async function getStaticPaths() {
   const res = await axios.get(`${API_URL}photos`);
-  const photos = await res.data.photos;
+  const photos = await res.data;
 
   const paths = photos.map((photo) => ({
     params: { year: String(photo.year) },
