@@ -12,7 +12,7 @@ export default async (req, res) => {
       //   acceptDatos,
       //   acceptMKT,
     } = req.body.newOrder;
-    const apiRes = await axios.post(`${API_URL}/orders/create`, {
+    const apiRes = await axios.post(`${API_URL}orders/create`, {
       //   firstName,
       //   lastName,
       //   email,

@@ -4,7 +4,7 @@ import axios from 'axios';
 export default async (req, res) => {
   try {
     const { email } = req.body;
-    const apiRes = await axios.post(`${API_URL}/users/forgotPassword`, {
+    const apiRes = await axios.post(`${API_URL}users/forgotPassword`, {
       email,
       headers: {
         'Content-Type': 'application/json',

@@ -9,7 +9,7 @@ export default async (req, res) => {
     return;
   }
 
-  const apiRes = await axios.get(`${API_URL}/users/me`, {
+  const apiRes = await axios.get(`${API_URL}users/me`, {
     headers: { authorization: `Bearer ${JWT_token}` },
   });
 

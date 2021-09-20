@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export default async (req, res) => {
   const apiRes = await axios.get(
-    `${API_URL}/photos/${req.body.year}/${req.body.id}`
+    `${API_URL}photos/${req.body.year}/${req.body.id}`
   );
   const photo = await apiRes.data;
 

@@ -13,7 +13,7 @@ export default async (req, res) => {
       acceptDatos,
       acceptMKT,
     } = req.body.newUser;
-    const apiRes = await axios.post(`${API_URL}/users/signup`, {
+    const apiRes = await axios.post(`${API_URL}users/signup`, {
       firstName,
       lastName,
       email,

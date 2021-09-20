@@ -5,7 +5,7 @@ import cookie from 'cookie';
 export default async (req, res) => {
   try {
     if (req.method === 'GET') {
-      const apiRes = await axios.get(`${API_URL}/users/logout`);
+      const apiRes = await axios.get(`${API_URL}users/logout`);
       const data = await apiRes.data;
 
       if (data.status === 'success') {
