@@ -1,5 +1,9 @@
 module.exports = {
   images: {
-    domains: ['localhost', 'cima.aemps.es'],
+    domains: [
+      'https://api-farmacia-del-mar.herokuapp.com',
+      'localhost',
+      'cima.aemps.es',
+    ],
   },
 };
