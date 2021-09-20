@@ -11,6 +11,7 @@ export const OrderProvider = ({ children }) => {
   const [searchResults, setSearchResults] = useState([{}]);
   const [newOrders, setNewOrders] = useState([{}]);
   const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
   const router = useRouter();
 
   //   Register User
@@ -56,6 +57,26 @@ export const OrderProvider = ({ children }) => {
     }
   };
 
+  const createNewOrder = async (newOrder) => {
+    try {
+      const res = await axios.post(
+        `${NEXT_API}createneworder`,
+        { newOrder },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+      setSucces('Order successfully created!');
+    } catch (err) {
+      setError(
+        'Something went wrong, we were not able create the order, please try again. '
+      );
+      setError(null);
+    }
+  };
+
   return (
     <OrderContext.Provider
       value={{
@@ -63,6 +84,8 @@ export const OrderProvider = ({ children }) => {
         allOrders,
         newOrders,
         error,
+        success,
+        createNewOrder,
         getAllOrders,
         getNewOrders,
       }}

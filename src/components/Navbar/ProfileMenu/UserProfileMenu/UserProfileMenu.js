@@ -100,7 +100,7 @@ export default function UserProfileMenu() {
                 </Link>
               </MenuItem>
               <MenuItem onClick={handleClose} className={classes.link}>
-                <Link href="/admin/neworder" passHref>
+                <Link href="/admin/createorder" passHref>
                   Place New Order
                 </Link>
               </MenuItem>

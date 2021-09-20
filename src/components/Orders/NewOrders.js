@@ -136,7 +136,7 @@ const NewOrders = () => {
           </Link>
         </Grid>
         <Grid item xs={6} align="center">
-          <Link href="/admin/neworder">
+          <Link href="/admin/createorder">
             <Button>
               <AddCircleOutlineIcon size="large" color="secondary" />
               <Typography
