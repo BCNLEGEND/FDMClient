@@ -18,7 +18,7 @@ const IndividualPhoto = (props, params) => {
           <Grid item xs={12}>
             <Link href={`/photocontests/${photo.year}`}>
               <Button color="primary">
-                <ArrowBackIosIcon fontSize="small" /> Go Back
+                <ArrowBackIosIcon fontSize="small" /> Enrere
               </Button>
             </Link>
           </Grid>

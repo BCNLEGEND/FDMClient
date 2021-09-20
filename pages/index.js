@@ -22,7 +22,7 @@ function Home() {
       <main>
         <header>
           <GuardiaPopUp />
-          {!cookies && <CookieBanner setCookies={acceptCookies} />}
+          {/* {!cookies && <CookieBanner setCookies={acceptCookies} />} */}
           <Header />
         </header>
         <section>
