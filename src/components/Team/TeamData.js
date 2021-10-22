@@ -33,17 +33,6 @@ export const team = [
     img: 'team04.png',
   },
   {
-    id: 5,
-    firstName: 'Ingrid',
-    lastName: 'Sanchez Martinez',
-    title: {
-      ca: 'Estudiante de Farmàcia',
-      es: 'Estudiante de Farmacia',
-      en: 'Pharmacy Student',
-    },
-    img: 'team05.png',
-  },
-  {
     id: 1,
     firstName: 'Sílvia',
     lastName: 'Ametlla Pallí',

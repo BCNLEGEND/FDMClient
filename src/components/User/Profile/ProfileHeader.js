@@ -42,7 +42,7 @@ export default function ProfileHeader() {
       justifyContent="space-around"
       alignItems="center"
     >
-      <FileUploadDialog open={open} onClose={handleClose} />
+      <FileUploadDialog open={open} onClose={handleClose} type="user" />
       {user && (
         <>
           <Grid item xs={4}>

@@ -11,7 +11,7 @@ const text = {
     address: 'Direcciò',
     editPhoto: 'Canvia Foto',
     editProfile: 'Canvia Perfìl',
-    editPhotoText: 'Sisplau, Escull el seu now foto de perfìl:',
+    editPhotoText: 'Sisplau, Escull el seu nou foto de perfìl:',
   },
   es: {
     back: 'Atras',

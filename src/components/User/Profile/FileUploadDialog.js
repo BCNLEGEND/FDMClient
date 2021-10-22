@@ -12,7 +12,7 @@ import { LanguageContext } from '@/context/language';
 function FileUploadDialog(props) {
   const { user, updateUserDetails } = useContext(AuthContext);
   const { language } = useContext(LanguageContext);
-  const { onClose, selectedValue, open } = props;
+  const { type, onClose, selectedValue, open, setImage } = props;
 
   const handleClose = () => {
     onClose();
@@ -30,11 +30,18 @@ function FileUploadDialog(props) {
         },
       };
       const { data } = await axios.post(
-        `${API_URL}/userupload`,
+        type == 'user'
+          ? `${API_URL}/userupload`
+          : `${API_URL}photocontestupload`,
         formData,
         config
       );
-      updateUserDetails({ ...user, photo: data });
+      if (type == 'user') {
+        updateUserDetails({ ...user, photo: data });
+      }
+      if (type == 'photoContest') {
+        setImage(data);
+      }
       onClose();
     } catch (error) {
       console.log(error);
