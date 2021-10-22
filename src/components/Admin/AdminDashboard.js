@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 import { UserContext } from '../../context/user';
 import { OrderContext } from '../../context/order';
-import { ApiUrl } from '../../utils/api';
+import { API_URL } from '../../utils/api';
 
 import AllActiveOrders from './AllActiveOrders';
 
@@ -11,7 +11,7 @@ export default function AdminDashboard() {
   const { user, loggedIn } = useContext(UserContext);
   const { changeOrder } = useContext(OrderContext);
   const router = useRouter();
-  const api = ApiUrl;
+  const api = API_URL;
 
   user.role === 'admin' || user.role === 'staff'
     ? useEffect(async () => {

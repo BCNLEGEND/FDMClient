@@ -10,7 +10,7 @@ import BackspaceIcon from '@material-ui/icons/Backspace';
 
 import useStyles from './NewOrderStyles';
 import { Typography, Link } from '@material-ui/core';
-import { ApiUrl } from '../../../utils/api';
+import { API_URL } from '../../../utils/api';
 
 export default function NewOrder() {
   const classes = useStyles();
@@ -19,7 +19,7 @@ export default function NewOrder() {
   const [qty, setQty] = useState();
   const [comments, setComments] = useState('');
   const router = useRouter();
-  const api = ApiUrl;
+  const api = API_URL;
 
   const handleChange = (e) => {
     switch (e.target.name) {
