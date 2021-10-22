@@ -31,8 +31,8 @@ function FileUploadDialog(props) {
       };
       const { data } = await axios.post(
         type == 'user'
-          ? `${API_URL}/userupload`
-          : `${API_URL}/photocontestupload`,
+          ? `${API_URL}userupload`
+          : `${API_URL}photocontestupload`,
         formData,
         config
       );
@@ -50,7 +50,7 @@ function FileUploadDialog(props) {
 
   return (
     <Dialog onClose={handleClose} open={open}>
-      <DialogTitle>{text[language].editPhotoText}</DialogTitle>
+      <DialogTitle>{type == 'user' ? text[language].editPhotoText : text[language].contestText} </DialogTitle>
       <DialogContent>
         <form type="submit">
           <input

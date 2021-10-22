@@ -12,6 +12,7 @@ const text = {
     editPhoto: 'Canvia Foto',
     editProfile: 'Canvia Perfìl',
     editPhotoText: 'Sisplau, Escull el seu nou foto de perfìl:',
+    contestText: 'Sisplau, Escull la foto:'
   },
   es: {
     back: 'Atras',
@@ -26,6 +27,7 @@ const text = {
     editPhoto: 'Cambiar Foto',
     editProfile: 'Cambiar Perfil',
     editPhotoText: 'Por favor, seleciona su nuevo foto de peril:',
+    contestText: 'Por favor, seleciona su foto:',
   },
   en: {
     back: 'Go Back',
@@ -40,6 +42,7 @@ const text = {
     editPhoto: 'Edit Photo',
     editProfile: 'Edit Profile',
     editPhotoText: 'Please, Select your new  profile image:',
+    contestText: 'Please, Select your image:'
   },
 };
 
