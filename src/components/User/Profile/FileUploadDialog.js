@@ -32,7 +32,7 @@ function FileUploadDialog(props) {
       const { data } = await axios.post(
         type == 'user'
           ? `${API_URL}/userupload`
-          : `${API_URL}photocontestupload`,
+          : `${API_URL}/photocontestupload`,
         formData,
         config
       );

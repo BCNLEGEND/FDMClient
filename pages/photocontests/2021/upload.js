@@ -74,7 +74,6 @@ const Upload = () => {
         }
       );
       setSucces('Photo successfully uploaded!');
-      console.log(res);
     } catch (err) {
       setError(
         'Something went wrong, we were not able to upload your photo, please try again. '
