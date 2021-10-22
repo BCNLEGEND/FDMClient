@@ -1,14 +1,14 @@
 import React, { useEffect, useContext } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
-import { UserContext } from '../../context/user';
-import { OrderContext } from '../../context/order';
-import { API_URL } from '../../utils/api';
+import { UserContext } from '@/context/user';
+import { OrderContext } from '@/context/order';
+import { API_URL } from '@/utils/api';
 
 import AllActiveOrders from './AllActiveOrders';
 
 export default function AdminDashboard() {
-  const { user, loggedIn } = useContext(UserContext);
+  const { user, loggedIn } = useContext(AuthContext);
   const { changeOrder } = useContext(OrderContext);
   const router = useRouter();
   const api = API_URL;
@@ -23,10 +23,13 @@ export default function AdminDashboard() {
           changeOrder(res.data.data.data);
         } catch (err) {
           console.log(err);
-          // router.push('/login/error');
         }
       }, [])
-    : useEffect(() => !loggedIn && router.push('/login'), []);
+    : useEffect(
+        () =>
+          router.push('/user/profile'),
+        []
+      );
 
   return (
     <div>

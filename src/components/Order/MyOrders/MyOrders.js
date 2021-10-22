@@ -6,15 +6,15 @@ import { useRouter } from 'next/router';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
-import { UserContext } from '../../../context/user';
-import { OrderContext } from '../../../context/order';
-import { API_URL } from '../../../utils/api';
+import AuthContext from '@/context/AuthContext';
+import OrderContext from '@/context/OrderContext';
+import { API_URL } from '@/utils/api';
 
 import ActiveOrders from './ActiveOrders';
 import ClosedOrders from './ClosedOrders';
 
 export default function MyOrders() {
-  const { loggedIn } = useContext(UserContext);
+  const { loggedIn } = useContext(AuthContext);
   const { changeOrder } = useContext(OrderContext);
   const classes = useStyles();
   const router = useRouter();

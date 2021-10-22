@@ -1,5 +1,5 @@
 import React from 'react';
-import NewOrder from '../../src/components/Order/NewOrder/NewOrder';
+import NewOrder from '@/components/Order/NewOrder/NewOrder';
 
 export default function newOrder() {
   return (

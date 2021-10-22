@@ -39,7 +39,6 @@ import { OrderContext } from '../../context/order';
 export default function ActiveOrders() {
   const { order } = useContext(OrderContext);
   const openOrders = order.filter((order) => order.activeOrder);
-  console.log(openOrders);
   const allOpenOrders = openOrders.map((order, i) => {
     const date = new Date(order.newDate);
     return {
