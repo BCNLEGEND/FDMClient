@@ -34,7 +34,7 @@ const columns = [
   { field: 'comments', headerName: 'Comments', width: 250 },
 ];
 
-import { OrderContext } from '../../context/order';
+import OrderContext from '@/context/OrderContext';
 
 export default function ActiveOrders() {
   const { order } = useContext(OrderContext);
