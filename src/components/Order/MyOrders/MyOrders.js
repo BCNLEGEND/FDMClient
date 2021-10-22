@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 
 import { UserContext } from '../../../context/user';
 import { OrderContext } from '../../../context/order';
-import { ApiUrl } from '../../../utils/api';
+import { API_URL } from '../../../utils/api';
 
 import ActiveOrders from './ActiveOrders';
 import ClosedOrders from './ClosedOrders';
@@ -18,7 +18,7 @@ export default function MyOrders() {
   const { changeOrder } = useContext(OrderContext);
   const classes = useStyles();
   const router = useRouter();
-  const api = ApiUrl;
+  const api = API_URL;
 
   // 0. check if user is loggedin ?
   // 0.1 If not redirect to login page.
