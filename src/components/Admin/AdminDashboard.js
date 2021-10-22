@@ -1,8 +1,8 @@
 import React, { useEffect, useContext } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
-import { UserContext } from '@/context/user';
-import { OrderContext } from '@/context/order';
+import AuthContext from '@/context/AuthContext';
+import OrderContext from '@/context/OrderContext';
 import { API_URL } from '@/utils/api';
 
 import AllActiveOrders from './AllActiveOrders';
