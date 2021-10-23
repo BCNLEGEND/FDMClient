@@ -67,7 +67,7 @@ const calendar = () => {
             </Typography>
           </Grid>
           <Grid item xs={5}>
-            <Link href="/photocontests/2021/upload">
+            <Link href="/photocontests/participate/upload">
               <Button variant="contained" color="secondary">
                 Participe
               </Button>

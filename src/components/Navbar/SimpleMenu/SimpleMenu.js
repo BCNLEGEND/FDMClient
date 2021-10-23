@@ -79,6 +79,11 @@ export default function SimpleMenu() {
             {text[language].photocontest}
           </Link>
         </MenuItem>
+        <MenuItem onClick={handleClose} className={classes.linkGlow}>
+          <Link href="/photocontests/participate" passHref>
+            {text[language].participate}
+          </Link>
+        </MenuItem>
       </Menu>
     </div>
   );

@@ -12,6 +12,13 @@ const useStyles = makeStyles({
       color: 'var(--primary-color)',
     },
   },
+  linkGlow: {
+    textTransform: 'uppercase',
+    '& > a': {
+      textDecoration: 'none',
+      color: 'var(--secondary-color)',
+    },
+  },
 });
 
 export default useStyles;

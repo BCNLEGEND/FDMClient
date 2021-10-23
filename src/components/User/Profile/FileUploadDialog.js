@@ -12,7 +12,7 @@ import { LanguageContext } from '@/context/language';
 function FileUploadDialog(props) {
   const { user, updateUserDetails } = useContext(AuthContext);
   const { language } = useContext(LanguageContext);
-  const { type, onClose, selectedValue, open, setImage } = props;
+  const { type, onClose, selectedValue, open, setImage, setLoading } = props;
 
   const handleClose = () => {
     onClose();
@@ -20,6 +20,8 @@ function FileUploadDialog(props) {
 
   const uploadHandler = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    onClose();
     const file = e.target.files[0];
     const formData = new FormData();
     formData.append('image', file);

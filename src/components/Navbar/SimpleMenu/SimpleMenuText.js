@@ -6,6 +6,7 @@ const text = {
     contact: 'Contacte',
     emergencies: 'Guardiès',
     photocontest: 'Concurs Fotogràfic',
+    participate: 'Concurs 2021',
   },
   es: {
     home: 'Inicio',
@@ -14,6 +15,7 @@ const text = {
     contact: 'Contacto',
     emergencies: 'Guardias',
     photocontest: 'Concurso de Fotografia',
+    participate: 'Concurso 2021',
   },
   en: {
     home: 'Home',
@@ -22,6 +24,7 @@ const text = {
     contact: 'Contact',
     emergencies: 'Emergencies',
     photocontest: 'Photo Contest',
+    participate: 'Contest 2021',
   },
 };
 

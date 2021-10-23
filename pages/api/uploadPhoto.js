@@ -13,7 +13,6 @@ export default async (req, res) => {
   });
 
   const photo = await apiRes.data;
-  console.log(photo);
   if ((apiRes.data.statusText = 'success')) {
     res.status(200).json({ photo });
   } else {

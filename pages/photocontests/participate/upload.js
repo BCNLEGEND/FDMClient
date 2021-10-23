@@ -1,8 +1,8 @@
-import { useState, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import { NEXT_API } from '@/utils/api';
 import { API_URL } from '@/utils/api';
 import axios from 'axios';
-
+import { ToastContainer, toast } from 'react-toastify';
 import Link from 'next/link';
 import Image from 'next/image';
 import Grid from '@material-ui/core/Grid';
@@ -22,6 +22,7 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import InsertPhotoIcon from '@material-ui/icons/InsertPhoto';
 import PersonIcon from '@material-ui/icons/Person';
 import FileUploadDialog from '@/components/User/Profile/FileUploadDialog';
+import { CircularProgress } from '@material-ui/core';
 
 const Upload = () => {
   const [firstName, setFirstName] = useState('');
@@ -31,7 +32,8 @@ const Upload = () => {
   const [mobile, setMobile] = useState('');
   const [title, setTitle] = useState('');
   const [open, setOpen] = useState(false);
-  const [succes, setSucces] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(null);
   const [error, setError] = useState(null);
 
   const handleChange = (e) => {
@@ -73,7 +75,7 @@ const Upload = () => {
           },
         }
       );
-      setSucces('Photo successfully uploaded!');
+      setSuccess('Photo successfully uploaded!');
     } catch (err) {
       setError(
         'Something went wrong, we were not able to upload your photo, please try again. '
@@ -93,8 +95,18 @@ const Upload = () => {
     setTitle('');
   };
 
+  useEffect(() => {
+    setLoading(false);
+  }, [image]);
+
+  useEffect(
+    () => (error && toast.error(error)) || (success && toast.success(success)),
+    [error, success]
+  );
+
   return (
     <main>
+      <ToastContainer />
       <section
         style={{
           color: 'var(--primary-color)',
@@ -102,7 +114,7 @@ const Upload = () => {
           margin: '2rem auto',
         }}
       >
-        <Link href={`/photocontests/2021`}>
+        <Link href={`/photocontests/participate`}>
           <Button color="primary">
             <ArrowBackIosIcon fontSize="small" /> Enrere
           </Button>
@@ -177,7 +189,9 @@ const Upload = () => {
                 />
               </Grid>
               <Grid item xs={12} md={6}>
-                {image ? (
+                {loading ? (
+                  <CircularProgress />
+                ) : image ? (
                   <Image
                     width={120}
                     height={90}
@@ -186,7 +200,7 @@ const Upload = () => {
                 ) : (
                   <IconButton onClick={handleClickOpen} color="secondary">
                     <InsertPhotoIcon />
-                    Upload Photo
+                    Seleciona la teva foto
                   </IconButton>
                 )}
               </Grid>
@@ -198,7 +212,7 @@ const Upload = () => {
                     color="secondary"
                   >
                     <InsertPhotoIcon />
-                    Participa
+                    Confirma la teva participació
                   </IconButton>
                 </Grid>
               )}
@@ -273,6 +287,7 @@ const Upload = () => {
                 open={open}
                 onClose={handleClose}
                 setImage={setImage}
+                setLoading={setLoading}
               />
             </Grid>
           </form>
