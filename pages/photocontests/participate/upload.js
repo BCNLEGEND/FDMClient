@@ -36,6 +36,15 @@ const Upload = () => {
   const [success, setSuccess] = useState(null);
   const [error, setError] = useState(null);
 
+  useEffect(() => {
+    setLoading(false);
+  }, [image]);
+
+  useEffect(
+    () => (error && toast.error(error)) || (success && toast.success(success)),
+    [error, success]
+  );
+
   const handleChange = (e) => {
     switch (e.target.name) {
       case 'firstName':
@@ -95,18 +104,8 @@ const Upload = () => {
     setTitle('');
   };
 
-  useEffect(() => {
-    setLoading(false);
-  }, [image]);
-
-  useEffect(
-    () => (error && toast.error(error)) || (success && toast.success(success)),
-    [error, success]
-  );
-
   return (
     <main>
-      <ToastContainer />
       <section
         style={{
           color: 'var(--primary-color)',
@@ -126,6 +125,7 @@ const Upload = () => {
             padding: 'var(--size-xxs)',
           }}
         >
+          <ToastContainer />
           <form>
             <Grid container spacing={4}>
               <Grid item xs={12}>
