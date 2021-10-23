@@ -9,13 +9,13 @@ import CookieBanner from '@/components/Legal/CookieBanner';
 function Home() {
   const { cookies, acceptCookies } = useContext(AuthContext);
 
-  useEffect(() => {
-    window.addEventListener('scroll', (e) => {
-      if (e.path[1].pageYOffset > 100) {
-        acceptCookies(true);
-      }
-    });
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener('scroll', (e) => {
+  //     if (e.path[1].pageYOffset > 100) {
+  //       acceptCookies(true);
+  //     }
+  //   });
+  // }, []);
 
   return (
     <>
