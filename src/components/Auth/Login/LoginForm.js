@@ -1,5 +1,5 @@
 import { ToastContainer, toast } from 'react-toastify';
-import 'pages/2021/node_modules/react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
 import { useState, useContext, useEffect } from 'react';
 import Link from 'next/link';
 

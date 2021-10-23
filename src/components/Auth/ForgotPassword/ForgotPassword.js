@@ -1,5 +1,4 @@
 import React from 'react';
-import 'pages/2021/node_modules/react-toastify/dist/ReactToastify.css';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 

@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import AuthContext from '@/context/AuthContext';
 
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
