@@ -1,6 +1,6 @@
 import { useState, useContext } from 'react';
-import { IMG_API } from '@/utils/api';
 import { NEXT_API } from '@/utils/api';
+import { API_URL } from '@/utils/api';
 import axios from 'axios';
 
 import Link from 'next/link';
@@ -178,7 +178,11 @@ const Upload = () => {
               </Grid>
               <Grid item xs={12} md={6}>
                 {image ? (
-                  <Image width={120} height={90} src={`${IMG_API}${image}`} />
+                  <Image
+                    width={120}
+                    height={90}
+                    src={`${API_URL}photocontestupload/${image}`}
+                  />
                 ) : (
                   <IconButton onClick={handleClickOpen} color="secondary">
                     <InsertPhotoIcon />

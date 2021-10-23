@@ -36,10 +36,12 @@ function FileUploadDialog(props) {
         formData,
         config
       );
+
       if (type == 'user') {
         updateUserDetails({ ...user, photo: data });
       }
       if (type == 'photoContest') {
+        console.log(data);
         setImage(data);
       }
       onClose();
@@ -50,7 +52,11 @@ function FileUploadDialog(props) {
 
   return (
     <Dialog onClose={handleClose} open={open}>
-      <DialogTitle>{type == 'user' ? text[language].editPhotoText : text[language].contestText} </DialogTitle>
+      <DialogTitle>
+        {type == 'user'
+          ? text[language].editPhotoText
+          : text[language].contestText}{' '}
+      </DialogTitle>
       <DialogContent>
         <form type="submit">
           <input
