@@ -26,7 +26,7 @@ const calendar = () => {
           margin: '2rem auto',
         }}
       >
-        <Link href={`/photocontests`}>
+        <Link href={`/`}>
           <Button color="primary">
             <ArrowBackIosIcon fontSize="small" /> Enrere
           </Button>
@@ -67,7 +67,7 @@ const calendar = () => {
             </Typography>
           </Grid>
           <Grid item xs={5}>
-            <Link href="/photocontests/participate/upload">
+            <Link href="/2021/upload">
               <Button variant="contained" color="secondary">
                 Participe
               </Button>

@@ -114,7 +114,7 @@ const Upload = () => {
           margin: '2rem auto',
         }}
       >
-        <Link href={`/photocontests/participate`}>
+        <Link href={`/2021`}>
           <Button color="primary">
             <ArrowBackIosIcon fontSize="small" /> Enrere
           </Button>
