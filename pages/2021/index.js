@@ -16,7 +16,7 @@ import ContactMailIcon from '@material-ui/icons/ContactMail';
 import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 import PersonIcon from '@material-ui/icons/Person';
 
-const consurs = () => {
+const concurs = () => {
   return (
     <main>
       <section
