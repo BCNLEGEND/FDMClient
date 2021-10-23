@@ -3,6 +3,7 @@ import { NEXT_API } from '@/utils/api';
 import { API_URL } from '@/utils/api';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import Grid from '@material-ui/core/Grid';
