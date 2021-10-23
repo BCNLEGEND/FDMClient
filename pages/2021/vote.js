@@ -26,7 +26,21 @@ const photocontest = (props) => {
             variant="h3"
             component="h1"
           >
-            Participants del concurs 2021:
+            Voting is not yet possible!
+          </Typography>
+          <Typography
+            style={{ color: 'var(--primary-color)', margin: '1rem 0' }}
+            variant="h3"
+            component="h1"
+          >
+            La votacion no esta abierto todavia!
+          </Typography>
+          <Typography
+            style={{ color: 'var(--primary-color)', margin: '1rem 0' }}
+            variant="h3"
+            component="h1"
+          >
+            No pots votar encara!
           </Typography>
           <Grid container spacing={2}>
             {photos.map((photo) => (

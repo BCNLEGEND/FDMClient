@@ -16,7 +16,7 @@ import ContactMailIcon from '@material-ui/icons/ContactMail';
 import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 import PersonIcon from '@material-ui/icons/Person';
 
-const calendar = () => {
+const consurs = () => {
   return (
     <main>
       <section
@@ -45,10 +45,11 @@ const calendar = () => {
           </Grid>
           <Grid item xs={12}>
             <Typography variant="body1">
-              Us animem a participar en el 3ª concurs fotogràfic de la Farmàcia
+              Us animem a participar en el 3️⃣ª concurs fotogràfic de la Farmàcia
               del Mar. L'objectiu del concurs és aconseguir una magnifica
               collecció de fotografies, els fotografies guanyadores formaran
-              part del calendari "Salut i Benestar" 2022 de la Farmàcia del Mar.
+              part del calendari "Salut i Benestar" 202️⃣2️⃣ de la Farmàcia del
+              Mar.
             </Typography>
             <Typography variant="body1">
               Aquest calendari l'obsequiramen durant les properes Festes
@@ -113,16 +114,16 @@ const calendar = () => {
             </Typography>
           </Grid>
           <Grid item container xs={12} spacing={1}>
-            <Grid item xs={2}>
+            <Grid item xs={12} s={2}>
               <Typography variant="body1">Participants:</Typography>
             </Grid>
             <Grid item xs={10}>
               <Typography variant="body2">
-                Podrà participar qualsevol persona amb un màxim de 3 fotos
+                Podrà participar qualsevol persona amb un màxim de 3️⃣ fotos
                 enviades per persona.
               </Typography>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={12} s={2}>
               <Typography variant="body1">Temàtica:</Typography>
             </Grid>
             <Grid item xs={10}>
@@ -131,13 +132,13 @@ const calendar = () => {
                 Benestar".
               </Typography>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={12} s={2}>
               <Typography variant="body1">Qualitat:</Typography>
             </Grid>
             <Grid item xs={10}>
               <Typography variant="body2">
-                Només s’acceptaran imatges amb alta resolució i suficient per
-                ser reproduïdes a tamany DIN A4 en format horitzontal.
+                Només s’acceptaran 📷 amb alta resolució i suficient per ser
+                reproduïdes a tamany DIN A4 en format horitzontal.
               </Typography>
               <List>
                 <ListItem>
@@ -183,13 +184,16 @@ const calendar = () => {
                 </ListItem>
               </List>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={12} s={2}>
               <Typography variant="body1">Enviament:</Typography>
             </Grid>
             <Grid item xs={10}>
               <Typography variant="body2">
-                La fotografia s’haurà d’enviar a través del correu electrònic
-                concurs@farmaciadelmar.com, indicant:
+                La fotografia s’haurà d’enviar a través nostre web:{' '}
+                <a href="https://www.farmaciadelmar.com/2021">
+                  www.farmaciadelmar.com/2021
+                </a>{' '}
+                o del correu electrònic concurs@farmaciadelmar.com, indicant:
               </Typography>
               <List>
                 <ListItem>
@@ -242,42 +246,44 @@ const calendar = () => {
                 a salut@farmaciadelmar.com.
               </Typography>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={12} s={2}>
               <Typography variant="body1">Termini:</Typography>
             </Grid>
             <Grid item xs={10}>
               <Typography variant="body2">
-                El plaç màxim per enviar fotografies, finalitzarà el dia 5 de
-                Novembre del 2021 a les 24:00 hores. Els guanyadors del concurs
-                s’anunciaran el dia 23 de Novembre del 2021 mitjançant nota de
-                manera individua a cada un dels premiats via
+                El plaç màxim per enviar fotografies, finalitzarà el dia 5️⃣ de
+                Novembre del 202️⃣1️⃣ a les 24:00 hores 🕛. Els guanyadors del
+                concurs s’anunciaran el dia 2️⃣3️⃣ de Novembre del 202️⃣1️⃣
+                mitjançant nota de manera individua a cada un dels premiats via
                 mail/whatsapp/telèfon, segons ens ho hagi demanat. L’entrega del
-                calendari es realitzarà a partir del 15 de Desembre de 2021.
+                calendari es realitzarà a partir del 1️⃣5️⃣ de Desembre de 202️⃣1️⃣.
               </Typography>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={12} s={2}>
               <Typography variant="body1">Votacions:</Typography>
             </Grid>
             <Grid item xs={10}>
               <Typography variant="body2">
                 Les votacions es realitzaran a través de la pàgina web
-                www.farmaciadelmar.com o presencialment a la Farmàcia on es
-                penjaran les fotografies.
+                <a href="https://www.farmaciadelmar.com/2021/vote">
+                  www.farmaciadelmar.com/2021/vote
+                </a>{' '}
+                o presencialment a la Farmàcia on es penjaran les fotografies.
               </Typography>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={12} s={2}>
               <Typography variant="body1">Guanyadors:</Typography>
             </Grid>
             <Grid item xs={10}>
               <Typography variant="body2">
-                Les 12 fotografies (rebudes dins el termini i la qualitat
+                Les 1️⃣2️⃣ fotografies (rebudes dins el termini i la qualitat
                 sol·licitada) que siguin més votades i d'autor diferents, seran
-                les 12 imatges que il·lustraran els 12 mesos de l’any 2021 del
-                calendari de la Farmàcia del Mar 2021. Els 12 autors seran
-                obsequiats amb un regal.
+                les 1️⃣2️⃣ imatges que il·lustraran els 1️⃣2️⃣ mesos de l’any 2022
+                del calendari de la Farmàcia del Mar 202️⃣2️⃣. Els 1️⃣2️⃣ autors
+                seran obsequiats amb un 🎁.
               </Typography>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={12} s={2}>
               <Typography variant="body1">Drets d’Imatge:</Typography>
             </Grid>
             <Grid item xs={10}>
@@ -289,7 +295,7 @@ const calendar = () => {
                 fotografia.
               </Typography>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={12} s={2}>
               <Typography variant="body1">
                 Dades de caràcter personal:
               </Typography>
@@ -315,7 +321,7 @@ const calendar = () => {
                 responsable de tractament.
               </Typography>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={12} s={2}>
               <Typography variant="body1">Acceptació:</Typography>
             </Grid>
             <Grid item xs={10}>
@@ -332,4 +338,4 @@ const calendar = () => {
   );
 };
 
-export default calendar;
+export default concurs;
