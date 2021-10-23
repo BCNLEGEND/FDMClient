@@ -45,11 +45,11 @@ const concurs = () => {
           </Grid>
           <Grid item xs={12}>
             <Typography variant="body1">
-              Us animem a participar en el 3️⃣ª concurs fotogràfic de la Farmàcia
-              del Mar. L'objectiu del concurs és aconseguir una magnifica
-              collecció de fotografies, els fotografies guanyadores formaran
-              part del calendari "Salut i Benestar" 202️⃣2️⃣ de la Farmàcia del
-              Mar.
+              Us animem a participar en el 3️⃣ ª concurs fotogràfic de la
+              Farmàcia del Mar. L'objectiu del concurs és aconseguir una
+              magnifica collecció de fotografies, els fotografies guanyadores
+              formaran part del calendari "Salut i Benestar" 202️⃣2️⃣ de la
+              Farmàcia del Mar.
             </Typography>
             <Typography variant="body1">
               Aquest calendari l'obsequiramen durant les properes Festes
@@ -67,14 +67,14 @@ const concurs = () => {
               Tu ets protagonista!
             </Typography>
           </Grid>
-          <Grid item xs={5}>
+          <Grid item xs={12} sm={5}>
             <Link href="/2021/upload">
               <Button variant="contained" color="secondary">
                 Participe
               </Button>
             </Link>
           </Grid>
-          <Grid item xs={5}>
+          <Grid item xs={12} sm={5}>
             <a href="#bases" style={{ textDecoration: 'none' }}>
               <Button variant="outlined" color="primary">
                 Bases del concurs
@@ -114,7 +114,7 @@ const concurs = () => {
             </Typography>
           </Grid>
           <Grid item container xs={12} spacing={1}>
-            <Grid item xs={12} s={2}>
+            <Grid item xs={12} sm={2}>
               <Typography variant="body1">Participants:</Typography>
             </Grid>
             <Grid item xs={10}>
@@ -123,7 +123,7 @@ const concurs = () => {
                 enviades per persona.
               </Typography>
             </Grid>
-            <Grid item xs={12} s={2}>
+            <Grid item xs={12} sm={2}>
               <Typography variant="body1">Temàtica:</Typography>
             </Grid>
             <Grid item xs={10}>
@@ -132,7 +132,7 @@ const concurs = () => {
                 Benestar".
               </Typography>
             </Grid>
-            <Grid item xs={12} s={2}>
+            <Grid item xs={12} sm={2}>
               <Typography variant="body1">Qualitat:</Typography>
             </Grid>
             <Grid item xs={10}>
@@ -184,7 +184,7 @@ const concurs = () => {
                 </ListItem>
               </List>
             </Grid>
-            <Grid item xs={12} s={2}>
+            <Grid item xs={12} sm={2}>
               <Typography variant="body1">Enviament:</Typography>
             </Grid>
             <Grid item xs={10}>
@@ -246,7 +246,7 @@ const concurs = () => {
                 a salut@farmaciadelmar.com.
               </Typography>
             </Grid>
-            <Grid item xs={12} s={2}>
+            <Grid item xs={12} sm={2}>
               <Typography variant="body1">Termini:</Typography>
             </Grid>
             <Grid item xs={10}>
@@ -259,7 +259,7 @@ const concurs = () => {
                 calendari es realitzarà a partir del 1️⃣5️⃣ de Desembre de 202️⃣1️⃣.
               </Typography>
             </Grid>
-            <Grid item xs={12} s={2}>
+            <Grid item xs={12} sm={2}>
               <Typography variant="body1">Votacions:</Typography>
             </Grid>
             <Grid item xs={10}>
@@ -271,7 +271,7 @@ const concurs = () => {
                 o presencialment a la Farmàcia on es penjaran les fotografies.
               </Typography>
             </Grid>
-            <Grid item xs={12} s={2}>
+            <Grid item xs={12} sm={2}>
               <Typography variant="body1">Guanyadors:</Typography>
             </Grid>
             <Grid item xs={10}>
@@ -283,7 +283,7 @@ const concurs = () => {
                 seran obsequiats amb un 🎁.
               </Typography>
             </Grid>
-            <Grid item xs={12} s={2}>
+            <Grid item xs={12} sm={2}>
               <Typography variant="body1">Drets d’Imatge:</Typography>
             </Grid>
             <Grid item xs={10}>
@@ -295,7 +295,7 @@ const concurs = () => {
                 fotografia.
               </Typography>
             </Grid>
-            <Grid item xs={12} s={2}>
+            <Grid item xs={12} sm={2}>
               <Typography variant="body1">
                 Dades de caràcter personal:
               </Typography>
@@ -321,7 +321,7 @@ const concurs = () => {
                 responsable de tractament.
               </Typography>
             </Grid>
-            <Grid item xs={12} s={2}>
+            <Grid item xs={12} sm={2}>
               <Typography variant="body1">Acceptació:</Typography>
             </Grid>
             <Grid item xs={10}>
