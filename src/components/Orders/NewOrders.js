@@ -108,8 +108,6 @@ const NewOrders = () => {
                   </TableRow>
                 ))
             )}
-          </TableBody>
-          <TableFooter>
             <TablePagination
               rowsPerPageOptions={[]}
               count={newOrders.length}
@@ -117,7 +115,7 @@ const NewOrders = () => {
               page={page}
               onPageChange={handleChangePage}
             />
-          </TableFooter>
+          </TableBody>
         </Table>
       </TableContainer>
       <Grid container spacing={4}>

@@ -15,12 +15,7 @@ import VisibilityIcon from '@material-ui/icons/Visibility';
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
 import SearchIcon from '@material-ui/icons/Search';
-import {
-  Button,
-  TableFooter,
-  TablePagination,
-  Typography,
-} from '@material-ui/core';
+import { IconButton, Typography } from '@material-ui/core';
 
 import OrderContext from '@/context/OrderContext';
 
@@ -138,26 +133,27 @@ const AllOrders = () => {
                       {order.payed ? 'Yes' : 'No'}
                     </TableCell>
                     <TableCell align="center">
-                      <Button
+                      <IconButton
                         color="secondary"
                         size="small"
                         onClick={() => handleView(order._id)}
                       >
                         <VisibilityIcon />
-                      </Button>
-                      <Button
+                      </IconButton>
+                      <IconButton
                         color="primary"
                         size="small"
                         onClick={() => handleEdit(order._id)}
                       >
                         <EditIcon />
-                      </Button>
-                      <Button
+                      </IconButton>
+                      <IconButton
+                        style={{ color: 'red' }}
                         size="small"
                         onClick={() => handleDelete(order._id)}
                       >
-                        <DeleteIcon color="red" />
-                      </Button>
+                        <DeleteIcon />
+                      </IconButton>
                     </TableCell>
                   </TableRow>
                 ))}
@@ -217,26 +213,27 @@ const AllOrders = () => {
                       {order.payed ? 'Yes' : 'No'}
                     </TableCell>
                     <TableCell align="center">
-                      <Button
+                      <IconButton
                         color="secondary"
                         size="small"
                         onClick={() => handleView(order._id)}
                       >
                         <VisibilityIcon />
-                      </Button>
-                      <Button
+                      </IconButton>
+                      <IconButton
                         color="primary"
                         size="small"
                         onClick={() => handleEdit(order._id)}
                       >
                         <EditIcon />
-                      </Button>
-                      <Button
+                      </IconButton>
+                      <IconButton
+                        style={{ color: 'red' }}
                         size="small"
                         onClick={() => handleDelete(order._id)}
                       >
-                        <DeleteIcon color="red" />
-                      </Button>
+                        <DeleteIcon />
+                      </IconButton>
                     </TableCell>
                   </TableRow>
                 ))}

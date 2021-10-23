@@ -57,7 +57,7 @@ export default function ProfileHeader() {
                 // @TODO Define Edit profile photo Onclick event
                 onClick={handleClickOpen}
                 badgeContent={<EditIcon />}
-                overlap="circle"
+                // overlap="circle"
                 anchorOrigin={{
                   vertical: 'bottom',
                   horizontal: 'right',

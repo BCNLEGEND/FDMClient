@@ -24,7 +24,7 @@ function ProfilePrimary() {
           <Badge
             color="primary"
             badgeContent={<EditIcon />}
-            overlap="circle"
+            overlap="circlar"
             anchorOrigin={{
               vertical: 'bottom',
               horizontal: 'right',

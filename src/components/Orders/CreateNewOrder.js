@@ -129,8 +129,8 @@ const CreateNewOrder = () => {
             justifyContent="center"
             spacing={2}
           >
-            <Grid container item>
-              <Grid item xs={12} spacing={4}>
+            <Grid container item spacing={4}>
+              <Grid item xs={12}>
                 <Typography variant="h5" component="h3" color="primary">
                   Detalls Client:
                 </Typography>

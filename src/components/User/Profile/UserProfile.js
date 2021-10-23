@@ -30,7 +30,7 @@ export default function userProfile() {
         className={classes.gridContainer}
         container
         spacing={2}
-        justifyContent="space-arround"
+        justifyContent="space-around"
       >
         <Grid item xs={12}>
           <Link href="/">
