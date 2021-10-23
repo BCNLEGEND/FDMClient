@@ -16,7 +16,7 @@ const photocontest = (props) => {
     <>
       <main>
         <section style={{ width: '80%', margin: '2rem auto' }}>
-          <Link href={`/photocontests`}>
+          <Link href={`/2021`}>
             <Button color="primary">
               <ArrowBackIosIcon fontSize="small" /> Enrere
             </Button>
@@ -26,7 +26,7 @@ const photocontest = (props) => {
             variant="h3"
             component="h1"
           >
-            Participants del concurs {photos[0].year}:
+            Participants del concurs 2021:
           </Typography>
           <Grid container spacing={2}>
             {photos.map((photo) => (

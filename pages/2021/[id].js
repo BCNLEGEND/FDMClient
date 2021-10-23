@@ -55,11 +55,11 @@ const IndividualPhoto = (props, params) => {
 };
 
 export async function getStaticPaths() {
-  const res = await axios.get(`${API_URL}photos`);
+  const res = await axios.get(`${API_URL}photos/2021`);
   const photos = await res.data;
 
   const paths = photos.map((photo) => ({
-    params: { year: String(photo.year), id: photo._id },
+    params: { year: 2021, id: photo._id },
   }));
 
   return {
@@ -70,7 +70,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { id, year } = params;
-  const res = await axios.get(`${API_URL}photos/${year}/${id}`);
+  const res = await axios.get(`${API_URL}photos/2021/${id}`);
 
   const photo = await res.data;
 
