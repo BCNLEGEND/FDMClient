@@ -45,11 +45,10 @@ const concurs = () => {
           </Grid>
           <Grid item xs={12}>
             <Typography variant="body1">
-              Us animem a participar en el 3️er concurs fotogràfic de la
-              Farmàcia del Mar. L'objectiu del concurs és aconseguir una
-              magnífica col·lecció de fotografies. Les fotografies guanyadores
-              formaran part del calendari "Salut i Benestar" 202️2 de la
-              Farmàcia del Mar.
+              Us animem a participar en el 3er concurs fotogràfic de la Farmàcia
+              del Mar. L'objectiu del concurs és aconseguir una magnífica
+              col·lecció de fotografies. Les fotografies guanyadores formaran
+              part del calendari "Salut i Benestar" 2022 de la Farmàcia del Mar.
             </Typography>
             <Typography variant="body1">
               Aquest calendari l'obsequiramen durant les properes Festes
@@ -119,7 +118,7 @@ const concurs = () => {
             </Grid>
             <Grid item xs={10}>
               <Typography variant="body2">
-                Podrà participar qualsevol persona amb un màxim de 3️ fotos
+                Podrà participar qualsevol persona amb un màxim de 3 fotos
                 enviades per persona.
               </Typography>
             </Grid>
@@ -253,9 +252,9 @@ const concurs = () => {
             <Grid item xs={10}>
               <Typography variant="body2">
                 El plaç màxim per enviar fotografies, finalitzarà el dia 14 de
-                Novembre del 202️1️ a les 24:00 hores 🕛. Els guanyadors del
-                concurs s’anunciaran el dia 2️9 de Novembre del 202️1️
-                mitjançant nota de manera individual a cada un dels premiats via
+                Novembre del 2021 a les 24:00 hores 🕛. Els guanyadors del
+                concurs s’anunciaran el dia 29 de Novembre del 2021 mitjançant
+                nota de manera individual a cada un dels premiats via
                 mail/whatsapp/telèfon, segons ens ho hagi demanat.
               </Typography>
             </Grid>
@@ -278,11 +277,11 @@ const concurs = () => {
             </Grid>
             <Grid item xs={10}>
               <Typography variant="body2">
-                Les 1️2️ fotografies (rebudes dins el termini i la qualitat
+                Les 12 fotografies (rebudes dins el termini i la qualitat
                 sol·licitada) que siguin més votades i d'autor diferents, seran
-                les 1️2️ imatges que il·lustraran els 1️2️ mesos de l’any 2022
-                del calendari de la Farmàcia del Mar 202️2️. Els 1️2️ autors
-                seran obsequiats amb un regal.
+                les 12 imatges que il·lustraran els 12 mesos de l’any 2022 del
+                calendari de la Farmàcia del Mar 2022. Els 12 autors seran
+                obsequiats amb un regal.
               </Typography>
             </Grid>
             <Grid item xs={12} sm={2}>
