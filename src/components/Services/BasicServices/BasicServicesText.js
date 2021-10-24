@@ -1,6 +1,6 @@
 export const title = {
-  ca: 'Nostres serveis basics:',
-  es: 'Nuestros servicios basicos:',
+  ca: 'Nostres serveis bàsics:',
+  es: 'Nuestros servicios básicos:',
   en: 'Our basic services:',
 };
 

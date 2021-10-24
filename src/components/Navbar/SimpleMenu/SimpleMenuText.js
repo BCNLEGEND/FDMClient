@@ -4,7 +4,7 @@ const text = {
     service: 'Serveis',
     team: 'Equip',
     contact: 'Contacte',
-    emergencies: 'Guardiès',
+    emergencies: 'Guàridies',
     photocontest: 'Concurs Fotogràfic',
     participate: 'Concurs 2021',
   },

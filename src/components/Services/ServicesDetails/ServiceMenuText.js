@@ -10,7 +10,7 @@ const text = {
     olis: {
       title: 'Aromateràpia',
       text:
-        "Els olis esencials són extractes de plantes aromàtiques o dels òrgans d'aquestes plantes que s'obtenen per destilació al vapor. L'Aromateràpia és l'ús d'aquests olis essencials que utilitzats per diferents vies d'administració i forma, ofereixen i proporcionen tractaments preventius, curatius o complementaris per curar moltes dolències, millorar la salut i el benestar de la persona. ",
+        "Els olis essencials són extractes de plantes aromàtiques o dels òrgans d'aquestes plantes que s'obtenen per destilació al vapor. L'Aromateràpia és l'ús d'aquests olis essencials que utilitzats per diferents vies d'administració i forma, ofereixen i proporcionen tractaments preventius, curatius o complementaris per curar moltes dolències, millorar la salut i el benestar de la persona. ",
       img: 'service02.jpg',
     },
     flors: {
@@ -26,14 +26,14 @@ const text = {
       img: 'service04.jpg',
     },
     consells: {
-      title: 'Consells per tu',
+      title: 'Consells per a tu',
       text:
-        "A la Farmàcia del Mar enfoquem el nostre consell des d'una perspectiva integrativa. És a dir, busquem i ens centrem en la causa del problema que ens explica el nostre client i no tant en els símptomes, i a partir d'aquí dissenyem la millor recomanació. Us oferim tant consell al mostrador com cites personalitzades amb les nostres expertes. A continuació us mostrem exemples d'àrees d'actuació:",
+        "A la Farmàcia del Mar enfoquem el nostre consell des d'una perspectiva integrativa. És a dir, busquem i ens centrem en la causa del problema que ens explica el nostre client i no tant en els símptomes, i a partir d'aquí dissenyem la millor recomanació. Us oferim consell tant a nivell de mostrador, com cites personalitzades amb les nostres expertes. A continuació us mostrem exemples d'àrees d'actuació:",
       img: 'service05.jpg',
       bullets: [
         'Control de pes i Dietoteràpia',
         'Deshabituació del tabac: seguiment i acompanyament durant el procés',
-        'Tractament del acné, rosacea, etc.',
+        "Tractament de l'acné, rosacea, etc.",
         'Estrés, ansietat, fatiga, ...',
         'Transtors de la son',
         'Estrenyiment, cames cansades,...',

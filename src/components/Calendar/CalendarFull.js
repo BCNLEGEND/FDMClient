@@ -23,7 +23,7 @@ export default function GuardiesCalendar(props) {
   const classes = useStyles();
   return (
     <section className={classes.root}>
-      <h3 className={classes.heading}>Estem de Guardià</h3>
+      <h3 className={classes.heading}>Estem de Guàrdia</h3>
       <DayPicker
         disabledDays={{ daysOfWeek: [0] }}
         initialMonth={new Date()}

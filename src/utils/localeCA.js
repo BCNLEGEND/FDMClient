@@ -10,7 +10,7 @@ export const MONTHS = [
   'Septembre',
   'Octubre',
   'Novembre',
-  'Dicembre',
+  'Desembre',
 ];
 export const WEEKDAYS_LONG = [
   'Diumenge',

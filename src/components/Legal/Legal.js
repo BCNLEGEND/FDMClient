@@ -65,7 +65,7 @@ export default function legal() {
         <p>Datos de la actividad profesional reglada:</p>
         <ul>
           <li>Colegio Profesional: Col·legi de Farmacèutics de Barcelona</li>
-          <li>Nº Colegiado: XXXXXX</li>
+          <li>Nº Colegiado: 19057</li>
           <li>Título académico oficial: Licenciado en farmacia</li>
           <li>Estado UE de expedición: España</li>
         </ul>

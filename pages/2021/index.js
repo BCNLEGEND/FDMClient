@@ -45,10 +45,10 @@ const concurs = () => {
           </Grid>
           <Grid item xs={12}>
             <Typography variant="body1">
-              Us animem a participar en el 3️⃣ er concurs fotogràfic de la
+              Us animem a participar en el 3️er concurs fotogràfic de la
               Farmàcia del Mar. L'objectiu del concurs és aconseguir una
-              magnifica collecció de fotografies, els fotografies guanyadores
-              formaran part del calendari "Salut i Benestar" 202️⃣2️⃣ de la
+              magnífica col·lecció de fotografies. Les fotografies guanyadores
+              formaran part del calendari "Salut i Benestar" 202️2 de la
               Farmàcia del Mar.
             </Typography>
             <Typography variant="body1">
@@ -70,7 +70,7 @@ const concurs = () => {
           <Grid item xs={12} sm={5}>
             <Link href="/2021/upload">
               <Button variant="contained" color="secondary">
-                Participe
+                Vull participar
               </Button>
             </Link>
           </Grid>
@@ -119,7 +119,7 @@ const concurs = () => {
             </Grid>
             <Grid item xs={10}>
               <Typography variant="body2">
-                Podrà participar qualsevol persona amb un màxim de 3️⃣ fotos
+                Podrà participar qualsevol persona amb un màxim de 3️ fotos
                 enviades per persona.
               </Typography>
             </Grid>
@@ -128,7 +128,7 @@ const concurs = () => {
             </Grid>
             <Grid item xs={10}>
               <Typography variant="body2">
-                La fotografia ha d'il.listrar i/o inspirar el concepte: "Salut i
+                La fotografia ha d'il.lustrar i/o inspirar el concepte: "Salut i
                 Benestar".
               </Typography>
             </Grid>
@@ -137,7 +137,7 @@ const concurs = () => {
             </Grid>
             <Grid item xs={10}>
               <Typography variant="body2">
-                Només s’acceptaran 📷 amb alta resolució i suficient per ser
+                Només s’acceptaran fotografies amb resolució suficient per ser
                 reproduïdes a tamany DIN A4 en format horitzontal.
               </Typography>
               <List>
@@ -178,7 +178,7 @@ const concurs = () => {
                   </ListItemIcon>
                   <ListItemText>
                     <Typography variant="body1" color="error">
-                      Important Fotografia amb format Horizontal
+                      Important: Fotografia en format Horizontal
                     </Typography>
                   </ListItemText>
                 </ListItem>
@@ -189,11 +189,12 @@ const concurs = () => {
             </Grid>
             <Grid item xs={10}>
               <Typography variant="body2">
-                La fotografia s’haurà d’enviar a través nostre web:{' '}
+                Les fotografies s’hauran d’enviar mitjançant la nostra web:{' '}
                 <a href="https://www.farmaciadelmar.com/2021">
                   www.farmaciadelmar.com/2021
                 </a>{' '}
-                o del correu electrònic concurs@farmaciadelmar.com, indicant:
+                o bé, pel correu electrònic concurs@farmaciadelmar.com,
+                indicant:
               </Typography>
               <List>
                 <ListItem>
@@ -241,7 +242,7 @@ const concurs = () => {
               </List>
               <Typography variant="body2">
                 Per poder gaudir-les tothom, les fotografies es penjaran a la
-                pàgina web www.farmaciadelmar.com El procediment per fer-ho és
+                pàgina web www.farmaciadelmar.com. El procediment per fer-ho és
                 senzill, en cas de dubtes, podeu enviar-nos un correu electrònic
                 a salut@farmaciadelmar.com.
               </Typography>
@@ -251,12 +252,11 @@ const concurs = () => {
             </Grid>
             <Grid item xs={10}>
               <Typography variant="body2">
-                El plaç màxim per enviar fotografies, finalitzarà el dia 5️⃣ de
-                Novembre del 202️⃣1️⃣ a les 24:00 hores 🕛. Els guanyadors del
-                concurs s’anunciaran el dia 2️⃣3️⃣ de Novembre del 202️⃣1️⃣
-                mitjançant nota de manera individua a cada un dels premiats via
-                mail/whatsapp/telèfon, segons ens ho hagi demanat. L’entrega del
-                calendari es realitzarà a partir del 1️⃣5️⃣ de Desembre de 202️⃣1️⃣.
+                El plaç màxim per enviar fotografies, finalitzarà el dia 14 de
+                Novembre del 202️1️ a les 24:00 hores 🕛. Els guanyadors del
+                concurs s’anunciaran el dia 2️9 de Novembre del 202️1️
+                mitjançant nota de manera individual a cada un dels premiats via
+                mail/whatsapp/telèfon, segons ens ho hagi demanat.
               </Typography>
             </Grid>
             <Grid item xs={12} sm={2}>
@@ -269,6 +269,8 @@ const concurs = () => {
                   www.farmaciadelmar.com/2021/vote
                 </a>{' '}
                 o presencialment a la Farmàcia on es penjaran les fotografies.
+                El termini de votació serà del 15 de Novembre al 28 de Novembre
+                del 2021.
               </Typography>
             </Grid>
             <Grid item xs={12} sm={2}>
@@ -276,11 +278,11 @@ const concurs = () => {
             </Grid>
             <Grid item xs={10}>
               <Typography variant="body2">
-                Les 1️⃣2️⃣ fotografies (rebudes dins el termini i la qualitat
+                Les 1️2️ fotografies (rebudes dins el termini i la qualitat
                 sol·licitada) que siguin més votades i d'autor diferents, seran
-                les 1️⃣2️⃣ imatges que il·lustraran els 1️⃣2️⃣ mesos de l’any 2022
-                del calendari de la Farmàcia del Mar 202️⃣2️⃣. Els 1️⃣2️⃣ autors
-                seran obsequiats amb un 🎁.
+                les 1️2️ imatges que il·lustraran els 1️2️ mesos de l’any 2022
+                del calendari de la Farmàcia del Mar 202️2️. Els 1️2️ autors
+                seran obsequiats amb un regal.
               </Typography>
             </Grid>
             <Grid item xs={12} sm={2}>
@@ -291,8 +293,8 @@ const concurs = () => {
                 Els participants accepten cedir a favor de la Farmàcia del Mar,
                 els drets de reproducció, distribució i comunicació pública de
                 les fotografies guanyadores. La publicació de les fotografies
-                guanyadores es farà sempre, citant el seu autor i el títol de la
-                fotografia.
+                guanyadores es farà sempre, citant el seu autor/àlies i el títol
+                de la fotografia.
               </Typography>
             </Grid>
             <Grid item xs={12} sm={2}>

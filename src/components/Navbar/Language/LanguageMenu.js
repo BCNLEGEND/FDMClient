@@ -12,7 +12,7 @@ import useStyles from './LanguageMenuStyles';
 
 const text = {
   ca: {
-    lang: 'Llenguatge',
+    lang: 'Idioma',
   },
   es: {
     lang: 'Idioma',

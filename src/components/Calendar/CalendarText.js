@@ -13,7 +13,7 @@ const text = {
       'Septembre',
       'Octubre',
       'Novembre',
-      'Dicembre',
+      'Desembre',
     ],
     WEEKDAYS_LONG: [
       'Diumenge',

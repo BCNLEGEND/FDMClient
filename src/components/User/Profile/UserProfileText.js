@@ -6,16 +6,16 @@ const text = {
     bday: 'Aniversari',
     gender: 'Sexe',
     tel: 'fixe',
-    mob: 'Mòvil',
-    email: 'Email',
-    address: 'Direcciò',
-    editPhoto: 'Canvia Foto',
-    editProfile: 'Canvia Perfìl',
-    editPhotoText: 'Sisplau, Escull el seu nou foto de perfìl:',
-    contestText: 'Sisplau, Escull la foto:'
+    mob: 'Mòbil',
+    email: 'Mail',
+    address: 'Direcció',
+    editPhoto: 'Canvia la fotografia',
+    editProfile: 'Canvia Perfil',
+    editPhotoText: 'Si us plau, escull la teva nova fotografia de perfil:',
+    contestText: 'Si us plau, escull la fotografia:',
   },
   es: {
-    back: 'Atras',
+    back: 'Atrás',
     id: 'DNI/ NIE',
     CIP: 'CIP',
     bday: 'Cumpleaños',
@@ -25,9 +25,9 @@ const text = {
     email: 'Email',
     address: 'Dirección',
     editPhoto: 'Cambiar Foto',
-    editProfile: 'Cambiar Perfil',
-    editPhotoText: 'Por favor, seleciona su nuevo foto de peril:',
-    contestText: 'Por favor, seleciona su foto:',
+    editProfile: 'Cambiar perfil',
+    editPhotoText: 'Por favor, selecciona tu nueva foto de perfil:',
+    contestText: 'Por favor, selecciona tu foto:',
   },
   en: {
     back: 'Go Back',
@@ -42,7 +42,7 @@ const text = {
     editPhoto: 'Edit Photo',
     editProfile: 'Edit Profile',
     editPhotoText: 'Please, Select your new  profile image:',
-    contestText: 'Please, Select your image:'
+    contestText: 'Please, Select your image:',
   },
 };
 

@@ -85,10 +85,10 @@ const Upload = () => {
           },
         }
       );
-      setSuccess('Photo successfully uploaded!');
+      setSuccess('Fotografia penjada correctament!');
     } catch (err) {
       setError(
-        'Something went wrong, we were not able to upload your photo, please try again. '
+        "No s'ha pogut penjar la fotografia, si us plau intenta-ho de nou."
       );
       setError(null);
     }
@@ -131,7 +131,7 @@ const Upload = () => {
             <Grid container spacing={4}>
               <Grid item xs={12}>
                 <Typography variant="h3" component="h1">
-                  Participa en el 3ª concurs fotogràfic
+                  Participa en el 3er Concurs Fotogràfic
                 </Typography>
               </Grid>
 
@@ -162,7 +162,7 @@ const Upload = () => {
                   required
                   id="email"
                   name="email"
-                  label="Email"
+                  label="Mail"
                   value={email}
                   style={{ width: '80%' }}
                   onChange={handleChange}
@@ -173,7 +173,7 @@ const Upload = () => {
                   required
                   id="mobile"
                   name="mobile"
-                  label="Movìl"
+                  label="Mòbil"
                   value={mobile}
                   style={{ width: '80%' }}
                   onChange={handleChange}
@@ -183,7 +183,7 @@ const Upload = () => {
                 <TextField
                   id="title"
                   name="title"
-                  label="Titulo de la foto"
+                  label="Títol de la foto"
                   value={title}
                   style={{ width: '80%' }}
                   onChange={handleChange}
@@ -201,7 +201,7 @@ const Upload = () => {
                 ) : (
                   <IconButton onClick={handleClickOpen} color="secondary">
                     <InsertPhotoIcon />
-                    Seleciona la teva foto
+                    Selecciona i puja la teva fotografia
                   </IconButton>
                 )}
               </Grid>
@@ -219,14 +219,14 @@ const Upload = () => {
               )}
               <Grid item xs={12}>
                 <Typography variant="h4" component="h2">
-                  Foto's:
+                  Recorda les bases del Concurs:
                 </Typography>
               </Grid>
               <Grid item xs={2}></Grid>
               <Grid item xs={10}>
                 <Typography variant="body2">
-                  Només s’acceptaran imatges amb alta resolució i suficient per
-                  ser reproduïdes a tamany DIN A4 en format horitzontal.
+                  Només s’acceptaran imatges en resolució suficient per ser
+                  reproduïdes a tamany DIN A4 en format horitzontal.
                 </Typography>
                 <List>
                   <ListItem>
@@ -236,7 +236,7 @@ const Upload = () => {
                     <ListItemText>
                       <Typography variant="body2">
                         Podrà participar qualsevol persona amb un màxim de 3
-                        fotos enviades per persona.
+                        fotografies enviades per persona.
                       </Typography>
                     </ListItemText>
                   </ListItem>
@@ -277,7 +277,7 @@ const Upload = () => {
                     </ListItemIcon>
                     <ListItemText>
                       <Typography variant="body1" color="error">
-                        Important Fotografia amb format Horizontal
+                        Important: Fotografia en format horizontal
                       </Typography>
                     </ListItemText>
                   </ListItem>

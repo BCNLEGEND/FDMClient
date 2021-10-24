@@ -37,7 +37,7 @@ export default function AdditionalPharmacies() {
   return (
     <section>
       <Typography variant="h4" component="h3" className={classes.title}>
-        Farmàcies d'Arenys de Mar:
+        Altres Farmàcies d'Arenys de Mar:
       </Typography>
       <div className={classes.cardContainer}>{html}</div>
     </section>
