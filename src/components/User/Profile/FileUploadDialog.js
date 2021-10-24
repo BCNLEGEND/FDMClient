@@ -2,10 +2,10 @@ import { useState, useContext } from 'react';
 import { API_URL } from '@/utils/api';
 import axios from 'axios';
 import AuthContext from '@/context/AuthContext';
-import Button from '@material-ui/core/Button';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import DialogContent from '@material-ui/core/DialogContent';
-import Dialog from '@material-ui/core/Dialog';
+import Button from '@mui/material/Button';
+import DialogTitle from '@mui/material/DialogTitle';
+import DialogContent from '@mui/material/DialogContent';
+import Dialog from '@mui/material/Dialog';
 import text from './UserProfileText';
 import { LanguageContext } from '@/context/language';
 

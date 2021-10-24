@@ -1,20 +1,20 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import Button from '@material-ui/core/Button';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import CameraIcon from '@material-ui/icons/Camera';
-import AspectRatioIcon from '@material-ui/icons/AspectRatio';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import InsertPhotoIcon from '@material-ui/icons/InsertPhoto';
-import ContactMailIcon from '@material-ui/icons/ContactMail';
-import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
-import PersonIcon from '@material-ui/icons/Person';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
+import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import CameraIcon from '@mui/icons-material/Camera';
+import AspectRatioIcon from '@mui/icons-material/AspectRatio';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import InsertPhotoIcon from '@mui/icons-material/InsertPhoto';
+import ContactMailIcon from '@mui/icons-material/ContactMail';
+import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
+import PersonIcon from '@mui/icons-material/Person';
 
 const concurs = () => {
   return (

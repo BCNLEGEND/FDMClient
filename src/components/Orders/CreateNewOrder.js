@@ -1,29 +1,29 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
+import Typography from '@mui/material/Typography';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import IconButton from '@material-ui/core/IconButton';
-import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
-import SearchIcon from '@material-ui/icons/Search';
-import DeleteIcon from '@material-ui/icons/Delete';
-import CloseIcon from '@material-ui/icons/Close';
-import DoneAllIcon from '@material-ui/icons/DoneAll';
+import IconButton from '@mui/material/IconButton';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import SearchIcon from '@mui/icons-material/Search';
+import DeleteIcon from '@mui/icons-material/Delete';
+import CloseIcon from '@mui/icons-material/Close';
+import DoneAllIcon from '@mui/icons-material/DoneAll';
 
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
 
 import useStyles from './OrderStyles';
 import Image from 'next/image';
-import { MenuItem } from '@material-ui/core';
+import { MenuItem } from '@mui/material';
 
 const CreateNewOrder = () => {
   const [products, setProducts] = useState([]);
@@ -263,7 +263,7 @@ const CreateNewOrder = () => {
                 md={2}
                 style={{ marginTop: 'var(--size-xxs)', width: '75%' }}
               >
-                <IconButton onClick={handleSearch}>
+                <IconButton onClick={handleSearch} size="large">
                   <SearchIcon />
                 </IconButton>
               </Grid>
@@ -372,7 +372,7 @@ const CreateNewOrder = () => {
                 style={{ marginTop: 'var(--size-xxs)' }}
               >
                 <Grid item xs={12}>
-                  <IconButton onClick={handleAddProduct}>
+                  <IconButton onClick={handleAddProduct} size="large">
                     <AddCircleOutlineIcon color="secondary" size="large" />
                     <Typography variant="button" color="secondary">
                       {' '}
@@ -456,7 +456,7 @@ const CreateNewOrder = () => {
                     </TableCell>
                     <TableCell>{product.mayorista}</TableCell>
                     <TableCell>
-                      <IconButton onClick={() => handleDelete(i)}>
+                      <IconButton onClick={() => handleDelete(i)} size="large">
                         <DeleteIcon color="error" />
                       </IconButton>
                     </TableCell>

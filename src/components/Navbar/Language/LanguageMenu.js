@@ -1,8 +1,8 @@
 import { useContext } from 'react';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import TranslateIcon from '@material-ui/icons/Translate';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import TranslateIcon from '@mui/icons-material/Translate';
 import { useMediaQuery } from '@/utils/useMediaQuery';
 import { bp } from '@/utils/breakpoints';
 

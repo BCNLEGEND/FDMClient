@@ -3,8 +3,8 @@ import { useState } from 'react';
 import DashboardColumn from './DashboardColumn';
 import UserProfile from '../Profile/UserProfile';
 import UserHealthProfile from '../Health/UserHealthProfile';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
 import useStyles from './DashboardStyles';
 
 export default function Dashboard() {

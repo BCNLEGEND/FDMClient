@@ -8,8 +8,8 @@ import { bp } from '@/utils/breakpoints';
 // Styling imports
 import useStyles from './HeaderStyles';
 // Material UI Imports
-import MouseIcon from '@material-ui/icons/Mouse';
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import MouseIcon from '@mui/icons-material/Mouse';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Typewriter from '../Typewriter/Typewriter';
 // Context Imports
 import { LanguageContext } from '@/context/language';

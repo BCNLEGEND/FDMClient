@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { withStyles } from '@material-ui/styles';
+import { withStyles } from '@mui/styles';
 import { LanguageContext } from '@/context/language';
 import styles from './TypewriterStyles';
 import Typer from './Typer';

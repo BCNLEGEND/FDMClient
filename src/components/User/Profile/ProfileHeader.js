@@ -5,11 +5,11 @@ import Image from 'next/image';
 
 import FileUploadDialog from './FileUploadDialog';
 
-import Tooltip from '@material-ui/core/Tooltip';
-import Typography from '@material-ui/core/Typography';
-import Badge from '@material-ui/core/Badge';
-import EditIcon from '@material-ui/icons/Edit';
-import Grid from '@material-ui/core/Grid';
+import Tooltip from '@mui/material/Tooltip';
+import Typography from '@mui/material/Typography';
+import Badge from '@mui/material/Badge';
+import EditIcon from '@mui/icons-material/Edit';
+import Grid from '@mui/material/Grid';
 
 import AuthContext from '@/context/AuthContext';
 

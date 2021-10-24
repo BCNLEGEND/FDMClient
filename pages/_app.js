@@ -7,9 +7,9 @@ import Navbar from '@/components/Navbar/Navbar';
 import CookieConsent from 'react-cookie-consent';
 import CookieBanner from '@/components/Legal/CookieBanner';
 
-import CssBaseline from '@material-ui/core/CssBaseline';
+import CssBaseline from '@mui/material/CssBaseline';
 import theme from '../src/theme/theme';
-import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 import '@/styles/globals.css';
 
 // Context imports
@@ -104,25 +104,27 @@ export default function MyApp({ Component, pageProps }) {
               crossOrigin="anonymous"
             />
           </Head>
-          <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <Navbar />
-            <Component {...pageProps} />
+          <StyledEngineProvider injectFirst>
+            <ThemeProvider theme={theme}>
+              <CssBaseline />
+              <Navbar />
+              <Component {...pageProps} />
 
-            <CookieConsent
-              location="bottom"
-              style={{
-                margin: 'var(--size-m) auto',
-                background: '',
-              }}
-              buttonStyle={{ display: 'none' }}
-              expires={150}
-              children={<CookieBanner />}
-              acceptOnScroll={true}
-              acceptOnScrollPercentage={10}
-            ></CookieConsent>
-            <CrispWithNoSSR />
-          </ThemeProvider>
+              <CookieConsent
+                location="bottom"
+                style={{
+                  margin: 'var(--size-m) auto',
+                  background: '',
+                }}
+                buttonStyle={{ display: 'none' }}
+                expires={150}
+                children={<CookieBanner />}
+                acceptOnScroll={true}
+                acceptOnScrollPercentage={10}
+              ></CookieConsent>
+              <CrispWithNoSSR />
+            </ThemeProvider>
+          </StyledEngineProvider>
         </OrderProvider>
       </LanguageProvider>
     </AuthProvider>

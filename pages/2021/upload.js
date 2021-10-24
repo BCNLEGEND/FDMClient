@@ -6,24 +6,24 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
-import TextField from '@material-ui/core/TextField';
-import Divider from '@material-ui/core/Divider';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import CameraIcon from '@material-ui/icons/Camera';
-import AspectRatioIcon from '@material-ui/icons/AspectRatio';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import InsertPhotoIcon from '@material-ui/icons/InsertPhoto';
-import PersonIcon from '@material-ui/icons/Person';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Paper from '@mui/material/Paper';
+import TextField from '@mui/material/TextField';
+import Divider from '@mui/material/Divider';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import CameraIcon from '@mui/icons-material/Camera';
+import AspectRatioIcon from '@mui/icons-material/AspectRatio';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import InsertPhotoIcon from '@mui/icons-material/InsertPhoto';
+import PersonIcon from '@mui/icons-material/Person';
 import FileUploadDialog from '@/components/User/Profile/FileUploadDialog';
-import { CircularProgress } from '@material-ui/core';
+import { CircularProgress } from '@mui/material';
 
 const Upload = () => {
   const [firstName, setFirstName] = useState('');
@@ -199,7 +199,7 @@ const Upload = () => {
                     src={`${API_URL}photocontestupload/${image}`}
                   />
                 ) : (
-                  <IconButton onClick={handleClickOpen} color="secondary">
+                  <IconButton onClick={handleClickOpen} color="secondary" size="large">
                     <InsertPhotoIcon />
                     Seleciona la teva foto
                   </IconButton>
@@ -207,11 +207,7 @@ const Upload = () => {
               </Grid>
               {image && (
                 <Grid item xs={12}>
-                  <IconButton
-                    onClick={handleSubmit}
-                    type="submit"
-                    color="secondary"
-                  >
+                  <IconButton onClick={handleSubmit} type="submit" color="secondary" size="large">
                     <InsertPhotoIcon />
                     Confirma la teva participació
                   </IconButton>

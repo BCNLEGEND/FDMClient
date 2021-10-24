@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Typography from '@material-ui/core/Typography';
-import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
-import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
-import AllInboxIcon from '@material-ui/icons/AllInbox';
-import IconButton from '@material-ui/core/Button';
-import Divider from '@material-ui/core/Divider';
-import Badge from '@material-ui/core/Badge';
-import EditIcon from '@material-ui/icons/Edit';
+import Typography from '@mui/material/Typography';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
+import AllInboxIcon from '@mui/icons-material/AllInbox';
+import IconButton from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
+import Badge from '@mui/material/Badge';
+import EditIcon from '@mui/icons-material/Edit';
 
 import { UserContext } from '../../../context/user';
 
@@ -144,17 +144,17 @@ function ProfilePrimary() {
         )}
       </div>
       <div className={classes.additionalMenu}>
-        <IconButton aria-label="Health profile" className={classes.iconbtn}>
+        <IconButton aria-label="Health profile" className={classes.iconbtn} size="large">
           <LocalHospitalIcon className={classes.icon} />
           <Typography variant="body1">Health Profile</Typography>
         </IconButton>
-        <IconButton aria-label="my orders" className={classes.iconbtn}>
+        <IconButton aria-label="my orders" className={classes.iconbtn} size="large">
           <AllInboxIcon className={classes.icon} />
           <Link href="/orders/my-orders">
             <Typography variant="body1">My Orders</Typography>
           </Link>
         </IconButton>
-        <IconButton aria-label="add order" className={classes.iconbtn}>
+        <IconButton aria-label="add order" className={classes.iconbtn} size="large">
           <AddShoppingCartIcon className={classes.icon} />
           <Link href="../orders/new-order">
             <Typography variant="body1">Place an order</Typography>

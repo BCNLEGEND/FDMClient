@@ -2,24 +2,24 @@ import React, { useEffect, useState, useContext } from 'react';
 import OrderDetails from '@/components/Orders/OrderDetails';
 import Link from 'next/link';
 
-import Grid from '@material-ui/core/Grid';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
+import Grid from '@mui/material/Grid';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 import {
   Button,
   TableFooter,
   TablePagination,
   Typography,
-} from '@material-ui/core';
-import VisibilityIcon from '@material-ui/icons/Visibility';
-import ViewListIcon from '@material-ui/icons/ViewList';
-import EditIcon from '@material-ui/icons/Edit';
-import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
+} from '@mui/material';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import ViewListIcon from '@mui/icons-material/ViewList';
+import EditIcon from '@mui/icons-material/Edit';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 
 import OrderContext from '@/context/OrderContext';
 

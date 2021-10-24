@@ -4,10 +4,10 @@ import { useState, useContext } from 'react';
 import Link from 'next/link';
 
 // Material UI Imports
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
 //  Context Imports
 import { LanguageContext } from '@/context/language';
@@ -39,7 +39,7 @@ export default function SimpleMenu() {
         aria-label="navigation-menu"
         onClick={handleClick}
         color="inherit"
-      >
+        size="large">
         <MenuIcon className={classes.iconBtn} />
       </IconButton>
       <Menu

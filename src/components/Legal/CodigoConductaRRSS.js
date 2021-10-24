@@ -1,4 +1,4 @@
-import Paper from '@material-ui/core/Paper';
+import Paper from '@mui/material/Paper';
 import useStyles from './LegalStyles';
 
 export default function CodigoConductaRRSS() {

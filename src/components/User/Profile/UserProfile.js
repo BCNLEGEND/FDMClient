@@ -1,16 +1,16 @@
 import { useContext } from 'react';
 import Link from 'next/link';
 
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Button from '@material-ui/core/Button';
-import EditIcon from '@material-ui/icons/Edit';
-import Grid from '@material-ui/core/Grid';
+import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Button from '@mui/material/Button';
+import EditIcon from '@mui/icons-material/Edit';
+import Grid from '@mui/material/Grid';
 
-import Switch from '@material-ui/core/Switch';
-import Paper from '@material-ui/core/Paper';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import Switch from '@mui/material/Switch';
+import Paper from '@mui/material/Paper';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 import AuthContext from '@/context/AuthContext';
 

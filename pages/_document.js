@@ -1,7 +1,7 @@
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import theme from '../src/theme/theme';
-import { ServerStyleSheets } from '@material-ui/core/styles';
+import ServerStyleSheets from '@mui/styles/ServerStyleSheets';
 import { GA_TRACKING_ID } from '../src/utils/lib';
 
 class MyDocument extends Document {
