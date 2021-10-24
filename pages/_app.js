@@ -2,13 +2,15 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import { ThemeProvider } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import '../styles/globals.css';
-import theme from '../src/theme/theme';
 
 import Navbar from '@/components/Navbar/Navbar';
+import CookieConsent from 'react-cookie-consent';
+import CookieBanner from '@/components/Legal/CookieBanner';
 
+import { ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import theme from '../src/theme/theme';
+import '../styles/globals.css';
 // Context imports
 import { AuthProvider } from '@/context/AuthContext';
 import { LanguageProvider } from '@/context/language';
@@ -105,6 +107,19 @@ export default function MyApp({ Component, pageProps }) {
             <CssBaseline />
             <Navbar />
             <Component {...pageProps} />
+
+            <CookieConsent
+              location="bottom"
+              style={{
+                margin: 'var(--size-m) auto',
+                background: '',
+              }}
+              buttonStyle={{ display: 'none' }}
+              expires={150}
+              children={<CookieBanner />}
+              acceptOnScroll={true}
+              acceptOnScrollPercentage={10}
+            ></CookieConsent>
             <CrispWithNoSSR />
           </ThemeProvider>
         </OrderProvider>

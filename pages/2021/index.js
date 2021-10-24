@@ -40,12 +40,12 @@ const concurs = () => {
               variant="h2"
               component="h1"
             >
-              3ª CONCURS FOTOGRÀFIC
+              3er CONCURS FOTOGRÀFIC
             </Typography>
           </Grid>
           <Grid item xs={12}>
             <Typography variant="body1">
-              Us animem a participar en el 3️⃣ ª concurs fotogràfic de la
+              Us animem a participar en el 3️⃣ er concurs fotogràfic de la
               Farmàcia del Mar. L'objectiu del concurs és aconseguir una
               magnifica collecció de fotografies, els fotografies guanyadores
               formaran part del calendari "Salut i Benestar" 202️⃣2️⃣ de la
