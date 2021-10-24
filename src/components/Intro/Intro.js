@@ -36,7 +36,7 @@ export default function Intro() {
           layout="responsive"
           width="102"
           height="100"
-          src="/media/img/ETI_round.png"
+          src="/media/img/ETI_round.webp"
           alt="Terapias Integrativa"
           className={classes.image}
         />

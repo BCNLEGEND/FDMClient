@@ -8,7 +8,7 @@ export const team = [
       es: 'Farmacéutica Sustituta',
       en: 'Substitute Pharmacict',
     },
-    img: 'team02.png',
+    img: 'team02.webp',
   },
   {
     id: 3,
@@ -19,7 +19,7 @@ export const team = [
       es: 'Técnico en Farmacia y Parafarmacia',
       en: 'Pharmacy and Parapharmacy Technician',
     },
-    img: 'team03.png',
+    img: 'team03.webp',
   },
   {
     id: 4,
@@ -30,7 +30,7 @@ export const team = [
       es: 'Naturópata y experta en dietoterapia',
       en: 'Naturopath and expert in diet therapy',
     },
-    img: 'team04.png',
+    img: 'team04.webp',
   },
   {
     id: 1,
@@ -41,7 +41,7 @@ export const team = [
       es: 'Farmacéutica Titular',
       en: 'Principle Pharmacict',
     },
-    img: 'team01.png',
+    img: 'team01.webp',
   },
 ];
 

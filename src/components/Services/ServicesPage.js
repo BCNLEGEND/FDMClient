@@ -29,7 +29,7 @@ function ServicesPage() {
           objectFit="contain"
           width="100"
           height="45"
-          src="/media/img/services01.png"
+          src="/media/img/services01.webp"
           alt="Farmàcia del Mar foto"
           className={classes.image}
           priority="true"
@@ -44,7 +44,7 @@ function ServicesPage() {
           objectFit="contain"
           width="67"
           height="100"
-          src="/media/img/services02.png"
+          src="/media/img/services02.webp"
           alt="Farmàcia del Mar foto"
           priority="true"
         />

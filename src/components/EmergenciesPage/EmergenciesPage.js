@@ -32,7 +32,7 @@ function EmergenciesPage(props) {
         </Typography>
       </Typography>
       <div className={classes.img}>
-        <Image src="/media/img/guardia01.png" width={600} height={180} />
+        <Image src="/media/img/guardia01.webp" width={600} height={180} />
       </div>
       <Typography
         variant="h4"

@@ -82,7 +82,7 @@ const concurs = () => {
           </Grid>
           <Grid item xs={12}>
             <Image
-              src={`/media/img/IMG_WEB_CONCURSO FOTO_V3.jpg`}
+              src={`/media/img/IMG_WEB_CONCURSO FOTO_V3.webp`}
               width={100}
               height={35}
               layout="responsive"

@@ -23,7 +23,7 @@ export default function Services() {
       <div className={classes.imgContainer}>
         {isBreakPoint ? (
           <Image
-            src="/media/img/services_lg.png"
+            src="/media/img/services_lg.webp"
             width={208}
             height={100}
             layout="responsive"
@@ -31,7 +31,7 @@ export default function Services() {
           />
         ) : (
           <Image
-            src="/media/img/services.png"
+            src="/media/img/services.webp"
             width={265}
             height={100}
             layout="responsive"
