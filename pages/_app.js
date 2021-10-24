@@ -7,10 +7,11 @@ import Navbar from '@/components/Navbar/Navbar';
 import CookieConsent from 'react-cookie-consent';
 import CookieBanner from '@/components/Legal/CookieBanner';
 
-import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../src/theme/theme';
-import '../styles/globals.css';
+import { ThemeProvider } from '@material-ui/core/styles';
+import '@/styles/globals.css';
+
 // Context imports
 import { AuthProvider } from '@/context/AuthContext';
 import { LanguageProvider } from '@/context/language';
