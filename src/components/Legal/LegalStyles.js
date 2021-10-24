@@ -16,8 +16,8 @@ const useStyles = makeStyles({
     zIndex: '100',
   },
   cookieContainer: {
-    backgroundColor: 'rgba(255,255,255, .4)',
-    color: 'var(--primary-color)',
+    backgroundColor: 'rgba(0,71,186, .4)',
+    color: 'var(--white-color)',
     width: '90%',
     padding: '1rem',
     margin: '0 auto',
