@@ -51,7 +51,7 @@ const concurs = () => {
               part del calendari "Salut i Benestar" 2022 de la Farmàcia del Mar.
             </Typography>
             <Typography variant="body1">
-              Aquest calendari l'obsequiramen durant les properes Festes
+              Aquest calendari l'obsequiarem durant les properes Festes
               Nadalenques.(*)
             </Typography>
           </Grid>
@@ -263,7 +263,7 @@ const concurs = () => {
             </Grid>
             <Grid item xs={10}>
               <Typography variant="body2">
-                Les votacions es realitzaran a través de la pàgina web
+                Les votacions es realitzaran mitjançant de la pàgina web
                 <a href="https://www.farmaciadelmar.com/2021/vote">
                   www.farmaciadelmar.com/2021/vote
                 </a>{' '}
