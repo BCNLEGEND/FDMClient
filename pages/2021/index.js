@@ -263,13 +263,13 @@ const concurs = () => {
             </Grid>
             <Grid item xs={10}>
               <Typography variant="body2">
-                Les votacions es realitzaran mitjançant de la pàgina web
+                Les votacions es realitzaran mitjançant de la pàgina web{' '}
                 <a href="https://www.farmaciadelmar.com/2021/vote">
                   www.farmaciadelmar.com/2021/vote
                 </a>{' '}
                 o presencialment a la Farmàcia on es penjaran les fotografies.
-                El termini de votació serà del 15 de Novembre al 28 de Novembre
-                del 2021.
+                El plaç de votació serà del 15 de Novembre al 28 de Novembre del
+                2021.
               </Typography>
             </Grid>
             <Grid item xs={12} sm={2}>
