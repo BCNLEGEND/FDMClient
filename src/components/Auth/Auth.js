@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import CircularProgress from '@material-ui/core/CircularProgress';
-import { withStyles } from '@material-ui/core/styles';
-import Divider from '@material-ui/core/Divider';
-import Paper from '@material-ui/core/Paper';
+import CircularProgress from '@mui/material/CircularProgress';
+import withStyles from '@mui/styles/withStyles';
+import Divider from '@mui/material/Divider';
+import Paper from '@mui/material/Paper';
 
 import SignupForm from './Signup/SignupForm';
 import LoginForm from './Login/LoginForm';

@@ -1,5 +1,5 @@
 import sizes from '../../utils/mediaSizes';
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 const currentHour = new Date().getHours();
 const currentDay = new Date().getDay();
 const openHour = currentHour > 9 && currentHour < 21;

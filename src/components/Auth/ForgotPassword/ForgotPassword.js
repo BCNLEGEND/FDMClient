@@ -1,12 +1,12 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
 
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import Paper from '@material-ui/core/Paper';
-import CloseIcon from '@material-ui/icons/Close';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import Paper from '@mui/material/Paper';
+import CloseIcon from '@mui/icons-material/Close';
 
 const ForgotPassword = ({
   setForgot,
@@ -53,7 +53,7 @@ const ForgotPassword = ({
         <Grid container spacing={1}>
           <Grid item xs={11}></Grid>
           <Grid item xs={1}>
-            <IconButton aria-label="close-popup" onClick={handleClose}>
+            <IconButton aria-label="close-popup" onClick={handleClose} size="large">
               <CloseIcon color="primary" />
             </IconButton>
           </Grid>

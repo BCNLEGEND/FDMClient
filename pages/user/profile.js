@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import CircularProgress from '@mui/material/CircularProgress';
 import UserProfile from '@/components/User/Profile/UserProfile';
 import AuthContext from '@/context/AuthContext';
 

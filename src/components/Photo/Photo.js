@@ -1,10 +1,10 @@
 import { IMG_API } from '@/utils/api';
-import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
+import Grid from '@mui/material/Grid';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
 import Image from 'next/image';
 import Link from 'next/link';
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 
 const Photo = ({ photo, fullPhoto }) => {
   return (

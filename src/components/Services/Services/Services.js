@@ -2,9 +2,9 @@ import { useContext } from 'react';
 
 import Image from 'next/image';
 
-import Typography from '@material-ui/core/Typography';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
+import Typography from '@mui/material/Typography';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
 
 import useStyles from './ServicesStyles';
 import { text } from '../ServicesText';

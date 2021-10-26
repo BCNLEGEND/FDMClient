@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import Paper from '@material-ui/core/Paper';
+import Paper from '@mui/material/Paper';
 import { DataGrid } from '@material-ui/data-grid';
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 
 const columns = [
   {

@@ -2,23 +2,21 @@ import { useState, useContext } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Button from '@material-ui/core/Button';
-import EditIcon from '@material-ui/icons/Edit';
-import Paper from '@material-ui/core/Paper';
-import TextField from '@material-ui/core/TextField';
-import {
-  MuiPickersUtilsProvider,
-  KeyboardDatePicker,
-} from '@material-ui/pickers';
-import DateFnsUtils from '@date-io/date-fns';
-import Grid from '@material-ui/core/Grid';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import Switch from '@material-ui/core/Switch';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Button from '@mui/material/Button';
+import EditIcon from '@mui/icons-material/Edit';
+import Paper from '@mui/material/Paper';
+import TextField from '@mui/material/TextField';
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import DatePicker from '@mui/lab/DatePicker';
+import Grid from '@mui/material/Grid';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import Switch from '@mui/material/Switch';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 import AuthContext from '@/context/AuthContext';
 import { LanguageContext } from '@/context/language';
@@ -149,6 +147,7 @@ export default function EditProfile() {
                 label={text[language].firstName}
                 value={firstName}
                 onChange={handleChange}
+                variant="standard"
               />
             </Grid>
             <Grid item xs={12} md={6}>
@@ -159,6 +158,7 @@ export default function EditProfile() {
                 label={text[language].lastName}
                 value={lastName}
                 onChange={handleChange}
+                variant="standard"
               />
             </Grid>
           </Grid>
@@ -177,6 +177,7 @@ export default function EditProfile() {
                 label="Email"
                 value={email}
                 onChange={handleChange}
+                variant="standard"
               />
             </Grid>
             <Grid item xs={12} md={4}>
@@ -187,6 +188,7 @@ export default function EditProfile() {
                 label="Tel"
                 value={tel}
                 onChange={handleChange}
+                variant="standard"
               />
             </Grid>
             <Grid item xs={12} md={4}>
@@ -197,6 +199,7 @@ export default function EditProfile() {
                 label={text[language].mob}
                 value={mobile}
                 onChange={handleChange}
+                variant="standard"
               />
             </Grid>
           </Grid>
@@ -207,16 +210,18 @@ export default function EditProfile() {
             justifyContent="space-evenly"
           >
             <Grid item xs={12} md={6}>
-              <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                <KeyboardDatePicker
+              <LocalizationProvider dateAdapter={AdapterDateFns}>
+                <DatePicker
                   id="birthday"
                   name="birthday"
-                  format="dd/MM/yyyy"
-                  label={text[language].bday}
                   value={birthday}
+                  label={text[language].bday}
                   onChange={handleBirthdayChange}
+                  inputFormat="dd-MMM-yyyy"
+                  variant="standard"
+                  renderInput={(props) => <TextField {...props} />}
                 />
-              </MuiPickersUtilsProvider>
+              </LocalizationProvider>
             </Grid>
             <Grid item xs={12} md={6}>
               <FormControl className={classes.formControl}>
@@ -227,6 +232,7 @@ export default function EditProfile() {
                   name="gender"
                   value={gender}
                   onChange={handleChange}
+                  variant="standard"
                 >
                   <MenuItem value={'male'}>{text[language].male}</MenuItem>
                   <MenuItem value={'female'}>{text[language].female}</MenuItem>
@@ -248,6 +254,7 @@ export default function EditProfile() {
                 label="DNI/ NIE"
                 value={dni}
                 onChange={handleChange}
+                variant="standard"
               />
             </Grid>
             <Grid item xs={12} md={6}>
@@ -258,6 +265,7 @@ export default function EditProfile() {
                 label="cip"
                 value={cip}
                 onChange={handleChange}
+                variant="standard"
               />
             </Grid>
           </Grid>
@@ -275,6 +283,7 @@ export default function EditProfile() {
                 label={text[language].streetName}
                 value={streetName}
                 onChange={handleChange}
+                variant="standard"
               />
             </Grid>
             <Grid item xs={12} md={3}>
@@ -285,6 +294,7 @@ export default function EditProfile() {
                 label={text[language].streetNumber}
                 value={streetNumber}
                 onChange={handleChange}
+                variant="standard"
               />
             </Grid>
             <Grid item xs={12} md={3}>
@@ -295,6 +305,7 @@ export default function EditProfile() {
                 label={text[language].pCode}
                 value={postalcode}
                 onChange={handleChange}
+                variant="standard"
               />
             </Grid>
             <Grid item xs={12} md={3}>
@@ -305,6 +316,7 @@ export default function EditProfile() {
                 label={text[language].city}
                 value={city}
                 onChange={handleChange}
+                variant="standard"
               />
             </Grid>
           </Grid>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import mapboxgl from 'mapbox-gl';
-import { withStyles } from '@material-ui/core/styles';
+import withStyles from '@mui/styles/withStyles';
 import styles from './FooterMapStyles';
 
 class FooterMap extends Component {

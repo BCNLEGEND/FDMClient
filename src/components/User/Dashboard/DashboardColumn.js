@@ -1,11 +1,11 @@
 import ProfileHeader from '../Profile/ProfileHeader';
-import Button from '@material-ui/core/Button';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
 import useStyles from './DashboardStyles';
 
 import Link from 'next/link';
 
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 
 export default function DashboardColumn(props) {
   const classes = useStyles();

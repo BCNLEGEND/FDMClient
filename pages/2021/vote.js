@@ -3,10 +3,10 @@ import axios from 'axios';
 import Link from 'next/link';
 import { NEXT_API } from '@/utils/api';
 import { API_URL } from '@/utils/api';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import Button from '@material-ui/core/Button';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import Button from '@mui/material/Button';
 import Photo from '@/components/Photo/Photo';
 import Footer from '@/components/Footer/Footer';
 

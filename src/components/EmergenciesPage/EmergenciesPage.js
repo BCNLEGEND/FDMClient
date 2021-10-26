@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import Calendar from '../Calendar/CalendarFull';
 import Image from 'next/image';
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 import AdditionalPharmacies from './AdditionalPharmacies';
 import { LanguageContext } from '@/context/language';
 import { calendarDates } from '@/utils/Guardies';

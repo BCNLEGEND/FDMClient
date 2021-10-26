@@ -3,9 +3,9 @@ import { useRouter } from 'next/router';
 import AuthContext from '@/context/AuthContext';
 import { OrderProvider} from '@/context/OrderContext';
 
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 import AdminDashboard from '@/components/Admin/AdminDashboard';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import CircularProgress from '@mui/material/CircularProgress';
 
 export default function dashboard() {
   const { loggedIn } = useContext(AuthContext);

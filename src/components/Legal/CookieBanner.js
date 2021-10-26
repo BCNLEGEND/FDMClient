@@ -1,6 +1,6 @@
-import Paper from '@material-ui/core/Paper';
+import Paper from '@mui/material/Paper';
 import Link from 'next/link';
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 import useStyles from './LegalStyles';
 
 export default function CookieBanner({ setCookies }) {

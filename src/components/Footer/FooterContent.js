@@ -1,6 +1,6 @@
-import Typography from '@material-ui/core/Typography';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
+import Typography from '@mui/material/Typography';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import useStyles from './FooterStyles';
 import { useMediaQuery } from '@/utils/useMediaQuery';
 import { bp } from '@/utils/breakpoints';

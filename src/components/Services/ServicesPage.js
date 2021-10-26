@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import Image from 'next/image';
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 import useStyles from './ServicePageStyles';
 import Services from './Services/Services';
 import ServiceTabs from './ServicesDetails/ServiceMenu';

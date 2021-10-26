@@ -1,6 +1,6 @@
 {
   "name": "farmacia-del-mar",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "dev": "NODE_ENV='development' nodemon server.js",
@@ -10,11 +10,17 @@
   },
   "dependencies": {
     "@date-io/date-fns": "^2.11.0",
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
     "@material-ui/core": "^4.12.3",
     "@material-ui/data-grid": "^4.0.0-alpha.37",
     "@material-ui/icons": "^4.11.2",
     "@material-ui/pickers": "^3.3.10",
     "@material-ui/styles": "^4.11.4",
+    "@mui/icons-material": "^5.0.4",
+    "@mui/lab": "^5.0.0-alpha.51",
+    "@mui/material": "^5.0.4",
+    "@mui/styles": "^5.0.1",
     "axios": "^0.23.0",
     "cookie": "^0.4.1",
     "date-fns": "^2.25.0",

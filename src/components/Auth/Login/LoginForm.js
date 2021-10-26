@@ -3,11 +3,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useState, useContext, useEffect } from 'react';
 import Link from 'next/link';
 
-import PersonIcon from '@material-ui/icons/Person';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import Paper from '@material-ui/core/Paper';
+import PersonIcon from '@mui/icons-material/Person';
+import CircularProgress from '@mui/material/CircularProgress';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Paper from '@mui/material/Paper';
 
 import { LanguageContext } from '@/context/language';
 import AuthContext from '@/context/AuthContext';

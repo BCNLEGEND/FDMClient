@@ -8,12 +8,12 @@ import React from 'react';
 import useStyles from './UserHealthProfileStyles';
 import Link from 'next/link';
 
-import AddCircleIcon from '@material-ui/icons/AddCircle';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 import WeightGraph from './WeightGraph';
 import BMIGraph from './BMIGraph';

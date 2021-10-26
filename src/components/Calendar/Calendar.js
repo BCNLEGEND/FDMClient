@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 import useStyles from './CalendarStyles';
 import text from './CalendarText';
 
