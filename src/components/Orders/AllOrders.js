@@ -73,6 +73,7 @@ const AllOrders = () => {
                 label="Search Orders"
                 value={searchTerm}
                 onChange={handleChange}
+                variant="standard"
                 style={{ width: '100%', color: 'var(--primary-color)' }}
               ></TextField>
             </Grid>

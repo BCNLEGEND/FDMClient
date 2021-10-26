@@ -38,6 +38,7 @@ export default function LanguageMenu() {
         id="Language Menu"
         aria-label="language-menu"
         value=""
+        variant="standard"
         onChange={handleChange}
         displayEmpty
         className={classes.select}

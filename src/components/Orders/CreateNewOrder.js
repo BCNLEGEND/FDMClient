@@ -143,6 +143,7 @@ const CreateNewOrder = () => {
                   name="firstName"
                   label="Nom"
                   type="text"
+                  variant="standard"
                   value={firstName}
                   required
                   style={{ width: '75%' }}
@@ -155,6 +156,7 @@ const CreateNewOrder = () => {
                   name="lastName"
                   label="Cognom"
                   type="text"
+                  variant="standard"
                   value={lastName}
                   required
                   style={{ width: '75%' }}
@@ -169,6 +171,7 @@ const CreateNewOrder = () => {
                   name="phone"
                   label="Nº Movìl"
                   type="text"
+                  variant="standard"
                   value={phone}
                   required
                   style={{ width: '75%' }}
@@ -181,6 +184,7 @@ const CreateNewOrder = () => {
                   name="email"
                   label="Email"
                   type="mail"
+                  variant="standard"
                   value={email}
                   style={{ width: '75%' }}
                   onChange={handleChange}
@@ -241,6 +245,7 @@ const CreateNewOrder = () => {
                   name="encarrec"
                   label="Nº de Encarrec"
                   type="number"
+                  variant="standard"
                   value={encarrec}
                   onChange={handleChange}
                   style={{ marginTop: 'var(--size-xxs)', width: '75%' }}
@@ -252,6 +257,7 @@ const CreateNewOrder = () => {
                   name="cn"
                   label="Còdig Nacional"
                   type="text"
+                  variant="standard"
                   value={cn}
                   onChange={handleChange}
                   style={{ marginTop: 'var(--size-xxs)', width: '75%' }}
@@ -273,6 +279,7 @@ const CreateNewOrder = () => {
                   name="mayorista"
                   label="Mayorista"
                   select
+                  variant="standard"
                   value={mayorista}
                   onChange={handleChange}
                   style={{ marginTop: 'var(--size-xxs)', width: '75%' }}
@@ -310,6 +317,7 @@ const CreateNewOrder = () => {
                   type="text"
                   label="Descripciò de producte"
                   value={description}
+                  variant="standard"
                   required
                   style={{ marginTop: 'var(--size-xxs)', width: '90%' }}
                   onChange={handleChange}
@@ -322,6 +330,7 @@ const CreateNewOrder = () => {
                   type="number"
                   label="Qty"
                   value={qty}
+                  variant="standard"
                   required
                   onChange={handleChange}
                   style={{ marginTop: 'var(--size-xxs)', width: '75%' }}
@@ -334,6 +343,7 @@ const CreateNewOrder = () => {
                   name="payed"
                   label="Pagat"
                   required
+                  variant="standard"
                   style={{ width: '25%' }}
                   onChange={handleChange}
                   style={{ marginTop: 'var(--size-xxs)', width: '75%' }}
@@ -352,6 +362,7 @@ const CreateNewOrder = () => {
                   id="coupon"
                   name="coupon"
                   label="Retallar Coupo?"
+                  variant="standard"
                   required
                   style={{ marginTop: 'var(--size-xxs)', width: '75%' }}
                   onChange={handleChange}
