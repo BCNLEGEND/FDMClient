@@ -141,6 +141,7 @@ const Upload = () => {
                   id="firstName"
                   name="firstName"
                   label="Nom"
+                  variant="standard"
                   value={firstName}
                   style={{ width: '80%' }}
                   onChange={handleChange}
@@ -152,6 +153,7 @@ const Upload = () => {
                   id="lastName"
                   name="lastName"
                   label="Cognom"
+                  variant="standard"
                   value={lastName}
                   style={{ width: '80%' }}
                   onChange={handleChange}
@@ -163,6 +165,7 @@ const Upload = () => {
                   id="email"
                   name="email"
                   label="Mail"
+                  variant="standard"
                   value={email}
                   style={{ width: '80%' }}
                   onChange={handleChange}
@@ -174,6 +177,7 @@ const Upload = () => {
                   id="mobile"
                   name="mobile"
                   label="Mòbil"
+                  variant="standard"
                   value={mobile}
                   style={{ width: '80%' }}
                   onChange={handleChange}
@@ -184,6 +188,7 @@ const Upload = () => {
                   id="title"
                   name="title"
                   label="Títol de la foto"
+                  variant="standard"
                   value={title}
                   style={{ width: '80%' }}
                   onChange={handleChange}
@@ -199,7 +204,11 @@ const Upload = () => {
                     src={`${API_URL}photocontestupload/${image}`}
                   />
                 ) : (
-                  <IconButton onClick={handleClickOpen} color="secondary" size="large">
+                  <IconButton
+                    onClick={handleClickOpen}
+                    color="secondary"
+                    size="large"
+                  >
                     <InsertPhotoIcon />
                     Selecciona i puja la teva fotografia
                   </IconButton>
@@ -207,7 +216,12 @@ const Upload = () => {
               </Grid>
               {image && (
                 <Grid item xs={12}>
-                  <IconButton onClick={handleSubmit} type="submit" color="secondary" size="large">
+                  <IconButton
+                    onClick={handleSubmit}
+                    type="submit"
+                    color="secondary"
+                    size="large"
+                  >
                     <InsertPhotoIcon />
                     Confirma la teva participació
                   </IconButton>
