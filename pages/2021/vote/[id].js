@@ -1,13 +1,12 @@
 import React from 'react';
 import axios from 'axios';
 import Link from 'next/link';
-import { NEXT_API } from '@/utils/api';
 import { API_URL } from '@/utils/api';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Button from '@mui/material/Button';
-import Photo from '@/components/Photo/Photo';
+import PhotoVote from '@/components/Photo/PhotoVote';
 
 const IndividualPhoto = (props, params) => {
   const { photo } = props;
@@ -16,7 +15,7 @@ const IndividualPhoto = (props, params) => {
       <section style={{ width: '80%', height: '90vh', margin: '2rem auto' }}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            <Link href={`/photocontests/${photo.year}`}>
+            <Link href={`/2021/vote`}>
               <Button color="primary">
                 <ArrowBackIosIcon fontSize="small" /> Enrere
               </Button>
@@ -46,7 +45,7 @@ const IndividualPhoto = (props, params) => {
             </Typography>
           </Grid>
           <Grid key={photo._id} item xs={12}>
-            <Photo photo={photo} fullPhoto={true} />
+            <PhotoVote photo={photo} fullPhoto={true} />
           </Grid>
         </Grid>
       </section>
@@ -59,7 +58,7 @@ export async function getStaticPaths() {
   const photos = await res.data;
 
   const paths = photos.map((photo) => ({
-    params: { year: 2021, id: photo._id },
+    params: { id: photo._id },
   }));
 
   return {
@@ -69,7 +68,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const { id, year } = params;
+  const { id } = params;
   const res = await axios.get(`${API_URL}photos/2021/${id}`);
 
   const photo = await res.data;

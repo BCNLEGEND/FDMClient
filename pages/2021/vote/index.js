@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Button from '@mui/material/Button';
-import Photo from '@/components/Photo/Photo';
+import PhotoVote from '@/components/Photo/PhotoVote';
 import Footer from '@/components/Footer/Footer';
 
 const photocontest = (props) => {
@@ -16,7 +16,7 @@ const photocontest = (props) => {
     <>
       <main>
         <section style={{ width: '80%', margin: '2rem auto' }}>
-          <Link href={`/2021`}>
+          <Link href={`/`}>
             <Button color="primary">
               <ArrowBackIosIcon fontSize="small" /> Enrere
             </Button>
@@ -26,26 +26,12 @@ const photocontest = (props) => {
             variant="h3"
             component="h1"
           >
-            Voting is not yet possible!
-          </Typography>
-          <Typography
-            style={{ color: 'var(--primary-color)', margin: '1rem 0' }}
-            variant="h3"
-            component="h1"
-          >
-            La votacion no esta abierto todavia!
-          </Typography>
-          <Typography
-            style={{ color: 'var(--primary-color)', margin: '1rem 0' }}
-            variant="h3"
-            component="h1"
-          >
-            No pots votar encara!
+            Participants del concurs {photos[0].year}:
           </Typography>
           <Grid container spacing={2}>
             {photos.map((photo) => (
               <Grid key={photo._id} item xs={12} sm={6} md={4}>
-                <Photo photo={photo} />
+                <PhotoVote photo={photo} />
               </Grid>
             ))}
           </Grid>
@@ -56,9 +42,8 @@ const photocontest = (props) => {
   );
 };
 
-export async function getStaticProps() {
+export async function getStaticProps({ params }) {
   const res = await axios.get(`${API_URL}photos/2021`);
-
   const photos = await res.data;
 
   if (!photos) {
