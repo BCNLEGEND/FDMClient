@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
 import { NEXT_API } from '@/utils/api';
@@ -10,7 +10,14 @@ import Button from '@mui/material/Button';
 import PhotoVote from '@/components/Photo/PhotoVote';
 import Footer from '@/components/Footer/Footer';
 
-const photocontest = (props) => {
+const photocontest2021 = (props) => {
+  const [votes, setVotes] = useState([]);
+
+  useEffect(() => {
+    localStorage.getItem('votes2021') &&
+      setVotes(localStorage.getItem('votes2021').split(','));
+  }, []);
+
   const { photos } = props;
   return (
     <>
@@ -31,7 +38,7 @@ const photocontest = (props) => {
           <Grid container spacing={2}>
             {photos.map((photo) => (
               <Grid key={photo._id} item xs={12} sm={6} md={4}>
-                <PhotoVote photo={photo} />
+                <PhotoVote photo={photo} votes={votes} setVotes={setVotes} />
               </Grid>
             ))}
           </Grid>
@@ -57,4 +64,4 @@ export async function getServerSideProps({ params }) {
   };
 }
 
-export default photocontest;
+export default photocontest2021;
