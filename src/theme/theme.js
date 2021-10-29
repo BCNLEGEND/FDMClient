@@ -1,8 +1,8 @@
-import { createTheme, adaptV4Theme } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
 
 // Create a theme instance.
-const theme = createTheme(adaptV4Theme({
+const theme = createTheme({
   palette: {
     primary: {
       main: '#0047ba',
@@ -20,6 +20,6 @@ const theme = createTheme(adaptV4Theme({
   typography: {
     fontFamily: 'Nexa bold',
   },
-}));
+});
 
 export default theme;

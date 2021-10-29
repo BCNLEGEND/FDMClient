@@ -42,7 +42,7 @@ const photocontest = (props) => {
   );
 };
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const res = await axios.get(`${API_URL}photos/2021`);
   const photos = await res.data;
 
