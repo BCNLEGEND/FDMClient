@@ -16,6 +16,7 @@
     "@mui/lab": "^5.0.0-alpha.52",
     "@mui/material": "^5.0.5",
     "@mui/styles": "^5.0.2",
+    "@mui/x-data-grid": "^5.0.0-beta.6",
     "axios": "^0.24.0",
     "cookie": "^0.4.1",
     "date-fns": "^2.25.0",
