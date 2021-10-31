@@ -95,6 +95,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: { photo },
+    revalidate: 1,
   };
 }
 
