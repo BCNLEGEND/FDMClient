@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import axios from 'axios';
+import { API_URL } from '@/utils/api';
 import { IMG_VOTE_API } from '@/utils/api';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
@@ -27,11 +29,14 @@ const PhotoVote = ({ photo, votes, setVotes }) => {
     setOpen(false);
   };
 
-  const handleVote = (id) => {
+  const handleVote = async (id, e) => {
+    e.stopPropagation();
     const allVotes = [...votes];
     if (allVotes.length < 3) {
       allVotes.push(id);
       localStorage.setItem('votes2021', allVotes.toString());
+      const res = await axios.patch(`${API_URL}photos/vote/${id}`);
+      const votedPhoto = await res.data;
     } else {
       setError('You already voted 3 times!!!');
     }
