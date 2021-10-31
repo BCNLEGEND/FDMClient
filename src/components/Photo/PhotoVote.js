@@ -5,6 +5,7 @@ import { IMG_VOTE_API } from '@/utils/api';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
 import Image from 'next/image';
 import Link from 'next/link';
 import Typography from '@mui/material/Typography';
@@ -53,17 +54,24 @@ const PhotoVote = ({ photo, votes, setVotes, setError }) => {
 
   return (
     <Link href={`/2021/vote/${photo._id}`}>
-      <Card>
+      <Card style={{ padding: 'var(--size-xxs)' }}>
         <CardContent>
-          <Image
-            src={`${IMG_VOTE_API}${photo.image}`}
-            width="12"
-            height="9"
-            layout="responsive"
+          <CardMedia
+            children={
+              <Image
+                src={`${IMG_VOTE_API}${photo.image}`}
+                width="12"
+                height="9"
+                layout="responsive"
+                alt={photo.title}
+              />
+            }
           />
-          <Grid container spacing={2} style={{ margin: '1rem 0' }}>
+          <Grid container item xs={12} style={{ marginTop: 'var(--size-xxs)' }}>
             <Grid item xs={12}>
-              <Typography variant="h6">{photo.title && photo.title}</Typography>
+              <Typography variant="h6" color="primary">
+                {photo.title && photo.title}
+              </Typography>
             </Grid>
             <Grid
               container
@@ -85,12 +93,17 @@ const PhotoVote = ({ photo, votes, setVotes, setError }) => {
                   }
                   onClick={(e) => handleVote(e, photo._id)}
                   color="secondary"
+                  aria-label="Vote image button"
                 >
                   <ThumbUpIcon />
                 </IconButton>
               </Grid>
               <Grid item xs={2}>
-                <IconButton onClick={(e) => handleShare(e)} color="primary">
+                <IconButton
+                  onClick={(e) => handleShare(e)}
+                  color="primary"
+                  aria-label="Share image to social media"
+                >
                   <ShareIcon />
                 </IconButton>
                 <Dialog onClose={handleClose} open={open}>

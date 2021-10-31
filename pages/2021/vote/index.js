@@ -6,11 +6,14 @@ import Link from 'next/link';
 import { NEXT_API } from '@/utils/api';
 import { API_URL } from '@/utils/api';
 import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Button from '@mui/material/Button';
 import PhotoVote from '@/components/Photo/PhotoVote';
 import Footer from '@/components/Footer/Footer';
+import Alert from '@mui/material/Alert';
+import AlertTitle from '@mui/material/AlertTitle';
 
 const photocontest2021 = (props) => {
   const { photos } = props;
@@ -30,12 +33,13 @@ const photocontest2021 = (props) => {
     <>
       <main>
         <ToastContainer />
-        <section style={{ width: '80%', margin: '2rem auto' }}>
+        <section style={{ width: '80%', margin: 'var(--size-xs) auto' }}>
           <Link href={`/`}>
             <Button color="primary">
               <ArrowBackIosIcon fontSize="small" /> Enrere
             </Button>
           </Link>
+
           <Typography
             style={{ color: 'var(--primary-color)', margin: '1rem 0' }}
             variant="h3"
@@ -43,9 +47,45 @@ const photocontest2021 = (props) => {
           >
             Participants del concurs {photos[0].year}:
           </Typography>
+
           <Grid container spacing={2}>
+            <Grid item xs={12}>
+              {!(votes.length >= 3) ? (
+                <Alert severity="info">
+                  <AlertTitle>Votación</AlertTitle>
+                  <Typography variant="body1">
+                    Nomes pots votar 3 vagades per dispositiu!! Una vagada ves
+                    click en el <strong>like button</strong> no ets pots
+                    cancelar el teu vot.
+                  </Typography>
+                  <Typography variant="body1">
+                    Solo puedes votar 3 veces por dispositivo!! Una vez haces
+                    click en el <strong>like button</strong> no se puede volver
+                    a cancelar tu voto.
+                  </Typography>
+                  <Typography variant="body1">
+                    You can only vote 3 times per device!! Once you clicked the{' '}
+                    <strong>like button</strong> your vote can not be undone.
+                  </Typography>
+                </Alert>
+              ) : (
+                <Alert severity="warning">
+                  <AlertTitle>Limit</AlertTitle>
+                  <Typography variant="body1">
+                    Gracies per la teva participación, ja has votat 3 vagades!!!
+                  </Typography>
+                  <Typography variant="body1">
+                    Gracias por tu participación, ya has votado 3 veces!!!
+                  </Typography>
+                  <Typography variant="body1">
+                    Thank you for your participation, Your votes have been
+                    recorded!!!
+                  </Typography>
+                </Alert>
+              )}
+            </Grid>
             {photos.map((photo) => (
-              <Grid key={photo._id} item xs={12} sm={6} md={4}>
+              <Grid key={photo._id} item xs={12} sm={6} lg={4}>
                 <PhotoVote
                   photo={photo}
                   votes={votes}

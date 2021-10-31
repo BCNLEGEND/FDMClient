@@ -7,18 +7,16 @@ import { IMG_VOTE_API } from '@/utils/api';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Button from '@mui/material/Button';
-import PhotoVote from '@/components/Photo/PhotoVote';
 
 const IndividualPhoto = (props, params) => {
   const { photo } = props;
   return (
     <main>
-      <section
-        style={{ width: '80%', height: '90vh', margin: 'var(--size-m) auto' }}
-      >
+      <section style={{ width: '80%', margin: 'var(--size-s) auto' }}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Link href={`/2021/vote`}>
@@ -27,13 +25,13 @@ const IndividualPhoto = (props, params) => {
               </Button>
             </Link>
           </Grid>
-          <Card style={{ width: '90%', margin: 'var(--size-s) auto' }}>
+          <Card style={{ width: '100%', margin: 'var(--size-s) auto' }}>
             <CardContent>
               <Grid container item xs={12} spacing={4}>
                 <Grid item xs={8}>
                   <Typography
                     style={{ color: 'var(--primary-color)', margin: '1rem 0' }}
-                    variant="h4"
+                    variant="h3"
                     component="h1"
                   >
                     {photo.firstName} {photo.lastName}
@@ -48,16 +46,28 @@ const IndividualPhoto = (props, params) => {
                     {photo.votes} ❤️
                   </Typography>
                 </Grid>
-                <Typography variant="h5" component="h2">
-                  {photo.title && photo.title}
-                </Typography>
+                <Grid item xs={12}>
+                  <Typography variant="h4" component="h2">
+                    {photo.title && photo.title}
+                  </Typography>
+                </Grid>
               </Grid>
-              <Grid key={photo._id} item xs={12}>
-                <Image
-                  src={`${IMG_VOTE_API}${photo.image}`}
-                  width="120"
-                  height="90"
-                  layout="responsive"
+              <Grid
+                key={photo._id}
+                item
+                xs={12}
+                style={{ marginTop: 'var(--size-xxs)' }}
+              >
+                <CardMedia
+                  children={
+                    <Image
+                      src={`${IMG_VOTE_API}${photo.image}`}
+                      width="12"
+                      height="9"
+                      layout="responsive"
+                      alt={photo.title}
+                    />
+                  }
                 />
               </Grid>
             </CardContent>
