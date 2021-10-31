@@ -85,7 +85,6 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const { id } = params;
   const res = await axios.get(`${API_URL}photos/2021/${id}`);
-
   const photo = await res.data;
 
   if (!photo) {
