@@ -7,7 +7,7 @@ export const IMG_API =
 
 // @TODO In deployment check that the URL direction is correct
 export const IMG_VOTE_API =
-  process.env.NEXT_IMG_VOTE_URL ||
+  process.env.NEXT_PUBLIC_IMG_VOTE_URL ||
   'http://localhost:8000/api/v1/photocontestupload/';
 
 // Public API route for build process: 'https://api-farmacia-del-mar.herokuapp.com/api/v1/';
