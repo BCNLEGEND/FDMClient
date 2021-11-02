@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import { API_URL } from '@/utils/api';
 import { IMG_VOTE_API } from '@/utils/api';

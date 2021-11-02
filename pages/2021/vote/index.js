@@ -3,10 +3,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import Link from 'next/link';
-import { NEXT_API } from '@/utils/api';
+import Head from 'next/head';
 import { API_URL } from '@/utils/api';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Button from '@mui/material/Button';
@@ -31,6 +30,11 @@ const photocontest2021 = (props) => {
 
   return (
     <>
+      <Head>
+        <title>
+          Concurs Fotogràfic 2021 - Vote » Farmàcia del mar » Arenys de Mar
+        </title>
+      </Head>
       <main>
         <ToastContainer />
         <section style={{ width: '80%', margin: 'var(--size-xs) auto' }}>

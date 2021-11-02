@@ -1,5 +1,5 @@
 import makeStyles from '@mui/styles/makeStyles';
-import sizes from '../../../utils/mediaSizes';
+import sizes from '@/utils/mediaSizes';
 
 const useStyles = makeStyles({
   root: {

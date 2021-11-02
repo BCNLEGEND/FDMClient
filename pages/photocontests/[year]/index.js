@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import Link from 'next/link';
-import { NEXT_API } from '@/utils/api';
 import { API_URL } from '@/utils/api';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
@@ -9,11 +8,17 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Button from '@mui/material/Button';
 import Photo from '@/components/Photo/Photo';
 import Footer from '@/components/Footer/Footer';
+import Head from 'next/head';
 
 const photocontest = (props) => {
   const { photos } = props;
   return (
     <>
+      <Head>
+        <title>
+          Concurs Fotogràfic {photos[0].year} » Farmàcia del mar » Arenys de Mar
+        </title>
+      </Head>
       <main>
         <section style={{ width: '80%', margin: '2rem auto' }}>
           <Link href={`/photocontests`}>

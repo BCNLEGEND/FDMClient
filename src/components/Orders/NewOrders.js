@@ -10,12 +10,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import {
-  Button,
-  TableFooter,
-  TablePagination,
-  Typography,
-} from '@mui/material';
+import { Button, TablePagination, Typography } from '@mui/material';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import ViewListIcon from '@mui/icons-material/ViewList';
 import EditIcon from '@mui/icons-material/Edit';

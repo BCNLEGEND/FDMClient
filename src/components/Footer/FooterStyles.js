@@ -1,4 +1,4 @@
-import sizes from '../../utils/mediaSizes';
+import sizes from '@/utils/mediaSizes';
 import makeStyles from '@mui/styles/makeStyles';
 const currentHour = new Date().getHours();
 const currentDay = new Date().getDay();

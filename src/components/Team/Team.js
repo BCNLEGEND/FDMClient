@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Typography from '@mui/material/Typography';
 import useStyles from './TeamStyles';
 
-import { LanguageContext } from '../../context/language';
+import { LanguageContext } from '@/context/language';
 
 import { team, text } from './TeamData';
 import { text as txt } from '../Header/HeaderText';

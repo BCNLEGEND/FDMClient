@@ -10,7 +10,7 @@ import Divider from '@mui/material/Divider';
 import Badge from '@mui/material/Badge';
 import EditIcon from '@mui/icons-material/Edit';
 
-import { UserContext } from '../../../context/user';
+import { UserContext } from '@/context/user';
 
 import useStyles from './ProfileStyles';
 
@@ -144,17 +144,29 @@ function ProfilePrimary() {
         )}
       </div>
       <div className={classes.additionalMenu}>
-        <IconButton aria-label="Health profile" className={classes.iconbtn} size="large">
+        <IconButton
+          aria-label="Health profile"
+          className={classes.iconbtn}
+          size="large"
+        >
           <LocalHospitalIcon className={classes.icon} />
           <Typography variant="body1">Health Profile</Typography>
         </IconButton>
-        <IconButton aria-label="my orders" className={classes.iconbtn} size="large">
+        <IconButton
+          aria-label="my orders"
+          className={classes.iconbtn}
+          size="large"
+        >
           <AllInboxIcon className={classes.icon} />
           <Link href="/orders/my-orders">
             <Typography variant="body1">My Orders</Typography>
           </Link>
         </IconButton>
-        <IconButton aria-label="add order" className={classes.iconbtn} size="large">
+        <IconButton
+          aria-label="add order"
+          className={classes.iconbtn}
+          size="large"
+        >
           <AddShoppingCartIcon className={classes.icon} />
           <Link href="../orders/new-order">
             <Typography variant="body1">Place an order</Typography>

@@ -10,7 +10,6 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
-import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
@@ -24,6 +23,7 @@ import InsertPhotoIcon from '@mui/icons-material/InsertPhoto';
 import PersonIcon from '@mui/icons-material/Person';
 import FileUploadDialog from '@/components/User/Profile/FileUploadDialog';
 import { CircularProgress } from '@mui/material';
+import Head from 'next/head';
 
 const Upload = () => {
   const [firstName, setFirstName] = useState('');
@@ -106,205 +106,212 @@ const Upload = () => {
   };
 
   return (
-    <main>
-      <section
-        style={{
-          color: 'var(--primary-color)',
-          width: '80%',
-          margin: '2rem auto',
-        }}
-      >
-        <Link href={`/2021`}>
-          <Button color="primary">
-            <ArrowBackIosIcon fontSize="small" /> Enrere
-          </Button>
-        </Link>
-        <Paper
+    <>
+      <Head>
+        <title>
+          Concurs Fotogràfic 2021 - upload » Farmàcia del mar » Arenys de Mar
+        </title>
+      </Head>
+      <main>
+        <section
           style={{
             color: 'var(--primary-color)',
-            margin: 'var(--size-s) auto',
-            padding: 'var(--size-xxs)',
+            width: '80%',
+            margin: '2rem auto',
           }}
         >
-          <ToastContainer />
-          <form>
-            <Grid container spacing={4}>
-              <Grid item xs={12}>
-                <Typography variant="h3" component="h1">
-                  Participa en el 3er Concurs Fotogràfic
-                </Typography>
-              </Grid>
-
-              <Grid item xs={12} md={6}>
-                <TextField
-                  required
-                  id="firstName"
-                  name="firstName"
-                  label="Nom"
-                  variant="standard"
-                  value={firstName}
-                  style={{ width: '80%' }}
-                  onChange={handleChange}
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  required
-                  id="lastName"
-                  name="lastName"
-                  label="Cognom"
-                  variant="standard"
-                  value={lastName}
-                  style={{ width: '80%' }}
-                  onChange={handleChange}
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  required
-                  id="email"
-                  name="email"
-                  label="Mail"
-                  variant="standard"
-                  value={email}
-                  style={{ width: '80%' }}
-                  onChange={handleChange}
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  required
-                  id="mobile"
-                  name="mobile"
-                  label="Mòbil"
-                  variant="standard"
-                  value={mobile}
-                  style={{ width: '80%' }}
-                  onChange={handleChange}
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  id="title"
-                  name="title"
-                  label="Títol de la foto"
-                  variant="standard"
-                  value={title}
-                  style={{ width: '80%' }}
-                  onChange={handleChange}
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                {loading ? (
-                  <CircularProgress />
-                ) : image ? (
-                  <Image
-                    width={120}
-                    height={90}
-                    src={`${API_URL}photocontestupload/${image}`}
-                  />
-                ) : (
-                  <IconButton
-                    onClick={handleClickOpen}
-                    color="secondary"
-                    size="large"
-                  >
-                    <InsertPhotoIcon />
-                    Selecciona i puja la teva fotografia
-                  </IconButton>
-                )}
-              </Grid>
-              {image && (
+          <Link href={`/2021`}>
+            <Button color="primary">
+              <ArrowBackIosIcon fontSize="small" /> Enrere
+            </Button>
+          </Link>
+          <Paper
+            style={{
+              color: 'var(--primary-color)',
+              margin: 'var(--size-s) auto',
+              padding: 'var(--size-xxs)',
+            }}
+          >
+            <ToastContainer />
+            <form>
+              <Grid container spacing={4}>
                 <Grid item xs={12}>
-                  <IconButton
-                    onClick={handleSubmit}
-                    type="submit"
-                    color="secondary"
-                    size="large"
-                  >
-                    <InsertPhotoIcon />
-                    Confirma la teva participació
-                  </IconButton>
+                  <Typography variant="h3" component="h1">
+                    Participa en el 3er Concurs Fotogràfic
+                  </Typography>
                 </Grid>
-              )}
-              <Grid item xs={12}>
-                <Typography variant="h4" component="h2">
-                  Recorda les bases del Concurs:
-                </Typography>
+
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    required
+                    id="firstName"
+                    name="firstName"
+                    label="Nom"
+                    variant="standard"
+                    value={firstName}
+                    style={{ width: '80%' }}
+                    onChange={handleChange}
+                  />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    required
+                    id="lastName"
+                    name="lastName"
+                    label="Cognom"
+                    variant="standard"
+                    value={lastName}
+                    style={{ width: '80%' }}
+                    onChange={handleChange}
+                  />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    required
+                    id="email"
+                    name="email"
+                    label="Mail"
+                    variant="standard"
+                    value={email}
+                    style={{ width: '80%' }}
+                    onChange={handleChange}
+                  />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    required
+                    id="mobile"
+                    name="mobile"
+                    label="Mòbil"
+                    variant="standard"
+                    value={mobile}
+                    style={{ width: '80%' }}
+                    onChange={handleChange}
+                  />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    id="title"
+                    name="title"
+                    label="Títol de la foto"
+                    variant="standard"
+                    value={title}
+                    style={{ width: '80%' }}
+                    onChange={handleChange}
+                  />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  {loading ? (
+                    <CircularProgress />
+                  ) : image ? (
+                    <Image
+                      width={120}
+                      height={90}
+                      src={`${API_URL}photocontestupload/${image}`}
+                    />
+                  ) : (
+                    <IconButton
+                      onClick={handleClickOpen}
+                      color="secondary"
+                      size="large"
+                    >
+                      <InsertPhotoIcon />
+                      Selecciona i puja la teva fotografia
+                    </IconButton>
+                  )}
+                </Grid>
+                {image && (
+                  <Grid item xs={12}>
+                    <IconButton
+                      onClick={handleSubmit}
+                      type="submit"
+                      color="secondary"
+                      size="large"
+                    >
+                      <InsertPhotoIcon />
+                      Confirma la teva participació
+                    </IconButton>
+                  </Grid>
+                )}
+                <Grid item xs={12}>
+                  <Typography variant="h4" component="h2">
+                    Recorda les bases del Concurs:
+                  </Typography>
+                </Grid>
+                <Grid item xs={2}></Grid>
+                <Grid item xs={10}>
+                  <Typography variant="body2">
+                    Només s’acceptaran imatges en resolució suficient per ser
+                    reproduïdes a tamany DIN A4 en format horitzontal.
+                  </Typography>
+                  <List>
+                    <ListItem>
+                      <ListItemIcon>
+                        <PersonIcon color="primary" />
+                      </ListItemIcon>
+                      <ListItemText>
+                        <Typography variant="body2">
+                          Podrà participar qualsevol persona amb un màxim de 3
+                          fotografies enviades per persona.
+                        </Typography>
+                      </ListItemText>
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon>
+                        <CameraIcon color="primary" />
+                      </ListItemIcon>
+                      <ListItemText>
+                        <Typography variant="body2">
+                          Si una imatge no té bona resolució no podrà participar
+                          en el concurs.
+                        </Typography>
+                      </ListItemText>
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon>
+                        <CameraIcon color="primary" />
+                      </ListItemIcon>
+                      <ListItemText>
+                        <Typography variant="body2">
+                          No s’accepten muntatges ni retocs.
+                        </Typography>
+                      </ListItemText>
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon>
+                        <CameraIcon color="primary" />
+                      </ListItemIcon>
+                      <ListItemText>
+                        <Typography variant="body2">
+                          L’ arxiu enviat ha de ser l’original en format jpg.
+                        </Typography>
+                      </ListItemText>
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon>
+                        <AspectRatioIcon color="error" />
+                      </ListItemIcon>
+                      <ListItemText>
+                        <Typography variant="body1" color="error">
+                          Important: Fotografia en format horizontal
+                        </Typography>
+                      </ListItemText>
+                    </ListItem>
+                  </List>
+                </Grid>
+                <FileUploadDialog
+                  type="photoContest"
+                  open={open}
+                  onClose={handleClose}
+                  setImage={setImage}
+                  setLoading={setLoading}
+                />
               </Grid>
-              <Grid item xs={2}></Grid>
-              <Grid item xs={10}>
-                <Typography variant="body2">
-                  Només s’acceptaran imatges en resolució suficient per ser
-                  reproduïdes a tamany DIN A4 en format horitzontal.
-                </Typography>
-                <List>
-                  <ListItem>
-                    <ListItemIcon>
-                      <PersonIcon color="primary" />
-                    </ListItemIcon>
-                    <ListItemText>
-                      <Typography variant="body2">
-                        Podrà participar qualsevol persona amb un màxim de 3
-                        fotografies enviades per persona.
-                      </Typography>
-                    </ListItemText>
-                  </ListItem>
-                  <ListItem>
-                    <ListItemIcon>
-                      <CameraIcon color="primary" />
-                    </ListItemIcon>
-                    <ListItemText>
-                      <Typography variant="body2">
-                        Si una imatge no té bona resolució no podrà participar
-                        en el concurs.
-                      </Typography>
-                    </ListItemText>
-                  </ListItem>
-                  <ListItem>
-                    <ListItemIcon>
-                      <CameraIcon color="primary" />
-                    </ListItemIcon>
-                    <ListItemText>
-                      <Typography variant="body2">
-                        No s’accepten muntatges ni retocs.
-                      </Typography>
-                    </ListItemText>
-                  </ListItem>
-                  <ListItem>
-                    <ListItemIcon>
-                      <CameraIcon color="primary" />
-                    </ListItemIcon>
-                    <ListItemText>
-                      <Typography variant="body2">
-                        L’ arxiu enviat ha de ser l’original en format jpg.
-                      </Typography>
-                    </ListItemText>
-                  </ListItem>
-                  <ListItem>
-                    <ListItemIcon>
-                      <AspectRatioIcon color="error" />
-                    </ListItemIcon>
-                    <ListItemText>
-                      <Typography variant="body1" color="error">
-                        Important: Fotografia en format horizontal
-                      </Typography>
-                    </ListItemText>
-                  </ListItem>
-                </List>
-              </Grid>
-              <FileUploadDialog
-                type="photoContest"
-                open={open}
-                onClose={handleClose}
-                setImage={setImage}
-                setLoading={setLoading}
-              />
-            </Grid>
-          </form>
-        </Paper>
-      </section>
-    </main>
+            </form>
+          </Paper>
+        </section>
+      </main>
+    </>
   );
 };
 

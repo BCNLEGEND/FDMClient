@@ -1,4 +1,3 @@
-import React from 'react';
 import Copy from './Copy';
 import FooterContent from './FooterContent';
 import useStyles from './FooterStyles';

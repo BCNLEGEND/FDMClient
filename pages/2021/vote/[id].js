@@ -11,70 +11,86 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Button from '@mui/material/Button';
+import Head from 'next/head';
 
 const IndividualPhoto = (props, params) => {
   const { photo } = props;
   return (
-    <main>
-      <section style={{ width: '80%', margin: 'var(--size-s) auto' }}>
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <Link href={`/2021/vote`}>
-              <Button color="primary">
-                <ArrowBackIosIcon fontSize="small" /> Enrere
-              </Button>
-            </Link>
+    <>
+      <Head>
+        <title>
+          Concurs Fotogràfic {photo.year}
+          {photo.title && ` - ${photo.title}`} » Farmàcia del mar » Arenys de
+          Mar
+        </title>
+      </Head>
+      <main>
+        <section style={{ width: '80%', margin: 'var(--size-s) auto' }}>
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <Link href={`/2021/vote`}>
+                <Button color="primary">
+                  <ArrowBackIosIcon fontSize="small" /> Enrere
+                </Button>
+              </Link>
+            </Grid>
+            <Card style={{ width: '100%', margin: 'var(--size-s) auto' }}>
+              <CardContent>
+                <Grid container item xs={12} spacing={4}>
+                  <Grid item xs={8}>
+                    <Typography
+                      style={{
+                        color: 'var(--primary-color)',
+                        margin: '1rem 0',
+                      }}
+                      variant="h3"
+                      component="h1"
+                    >
+                      {photo.firstName} {photo.lastName}
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={4}>
+                    <Typography
+                      style={{
+                        color: 'var(--primary-color)',
+                        margin: '1rem 0',
+                      }}
+                      variant="h4"
+                      component="h3"
+                    >
+                      {photo.votes} ❤️
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Typography variant="h4" component="h2">
+                      {photo.title && photo.title}
+                    </Typography>
+                  </Grid>
+                </Grid>
+                <Grid
+                  key={photo._id}
+                  item
+                  xs={12}
+                  style={{ marginTop: 'var(--size-xxs)' }}
+                >
+                  <CardMedia
+                    children={
+                      <Image
+                        src={`${IMG_VOTE_API}${photo.image}`}
+                        width="12"
+                        height="9"
+                        layout="responsive"
+                        alt={photo.title}
+                      />
+                    }
+                  />
+                </Grid>
+              </CardContent>
+            </Card>
           </Grid>
-          <Card style={{ width: '100%', margin: 'var(--size-s) auto' }}>
-            <CardContent>
-              <Grid container item xs={12} spacing={4}>
-                <Grid item xs={8}>
-                  <Typography
-                    style={{ color: 'var(--primary-color)', margin: '1rem 0' }}
-                    variant="h3"
-                    component="h1"
-                  >
-                    {photo.firstName} {photo.lastName}
-                  </Typography>
-                </Grid>
-                <Grid item xs={4}>
-                  <Typography
-                    style={{ color: 'var(--primary-color)', margin: '1rem 0' }}
-                    variant="h4"
-                    component="h3"
-                  >
-                    {photo.votes} ❤️
-                  </Typography>
-                </Grid>
-                <Grid item xs={12}>
-                  <Typography variant="h4" component="h2">
-                    {photo.title && photo.title}
-                  </Typography>
-                </Grid>
-              </Grid>
-              <Grid
-                key={photo._id}
-                item
-                xs={12}
-                style={{ marginTop: 'var(--size-xxs)' }}
-              >
-                <CardMedia
-                  children={
-                    <Image
-                      src={`${IMG_VOTE_API}${photo.image}`}
-                      width="12"
-                      height="9"
-                      layout="responsive"
-                      alt={photo.title}
-                    />
-                  }
-                />
-              </Grid>
-            </CardContent>
-          </Card>
-        </Grid>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 };
 
