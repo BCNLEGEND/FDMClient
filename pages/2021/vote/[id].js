@@ -94,21 +94,21 @@ const IndividualPhoto = (props, params) => {
   );
 };
 
-export async function getStaticPaths() {
-  const res = await axios.get(`${API_URL}photos/2021`);
-  const photos = await res.data;
+// export async function getStaticPaths() {
+//   const res = await axios.get(`${API_URL}photos/2021`);
+//   const photos = await res.data;
 
-  const paths = photos.map((photo) => ({
-    params: { id: photo._id },
-  }));
+//   const paths = photos.map((photo) => ({
+//     params: { id: photo._id },
+//   }));
 
-  return {
-    paths,
-    fallback: false,
-  };
-}
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const { id } = params;
   const res = await axios.get(`${API_URL}photos/2021/${id}`);
   const photo = await res.data;
@@ -121,7 +121,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: { photo },
-    revalidate: 1,
+    // revalidate: 1,
   };
 }
 
