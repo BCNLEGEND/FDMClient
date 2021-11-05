@@ -53,7 +53,7 @@ const photocontest2021 = (props) => {
       <main>
         <ToastContainer />
         <section style={{ width: '80%', margin: 'var(--size-xs) auto' }}>
-          <Link href={`/`}>
+          <Link href={`/admin/dashboard`}>
             <Button color="primary">
               <ArrowBackIosIcon fontSize="small" /> Enrere
             </Button>

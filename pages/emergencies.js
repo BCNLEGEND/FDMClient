@@ -6,14 +6,14 @@ export default function Emergencies() {
   return (
     <>
       <Head>
-        <title>{`Guàrdies ${new Date().getMonth()} » Farmàcia del mar » Arenys de Mar`}</title>
+        <title>{`Guàrdies  » Farmàcia del mar » Arenys de Mar`}</title>
         <meta
           name="description"
-          content={`La Farmàcia del Mar està dins la roda de torns de Guàrdia d’Arenys de Mar. Durant el mes de ${new Date().getMonth()} ens pertoquen els següents dies de Guàrdia`}
+          content={`La Farmàcia del Mar està dins la roda de torns de Guàrdia d’Arenys de Mar. Durant aquet mes ens pertoquen els següents dies de Guàrdia`}
         />
         <meta
           property="og:description"
-          content={`La Farmàcia del Mar està dins la roda de torns de Guàrdia d’Arenys de Mar. Durant el mes de ${new Date().getMonth()} ens pertoquen els següents dies de Guàrdia`}
+          content={`La Farmàcia del Mar està dins la roda de torns de Guàrdia d’Arenys de Mar. Durant aquet mes ens pertoquen els següents dies de Guàrdia`}
         />
       </Head>
       <main>
