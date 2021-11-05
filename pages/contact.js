@@ -7,6 +7,14 @@ export default function Contact() {
     <>
       <Head>
         <title>Contact Us » Farmàcia del mar » Arenys de Mar</title>
+        <meta
+          name="description"
+          content="Si necessites saber alguna cosa, només has de contactar amb nosaltres"
+        />
+        <meta
+          property="og:description"
+          content="Si necessites saber alguna cosa, només has de contactar amb nosaltres"
+        />
       </Head>
       <main>
         <Map />

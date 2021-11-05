@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.farmaciadelmar.com
+
+# Sitemaps
+Sitemap: https://www.farmaciadelmar.com/sitemap.xml

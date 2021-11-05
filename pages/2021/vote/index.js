@@ -32,8 +32,17 @@ const photocontest2021 = (props) => {
     <>
       <Head>
         <title>
-          Concurs Fotogràfic 2021 - Vote » Farmàcia del mar » Arenys de Mar
+          Vota el guanyador del Concurs Fotogràfic 2021 » Farmàcia del mar »
+          Arenys de Mar
         </title>
+        <meta
+          name="description"
+          content="Vota la teva foto favorita en el 3er concurs fotogràfic de la Farmàcia del Mar."
+        />
+        <meta
+          property="og:description"
+          content="Vota la teva foto favorita en el 3er concurs fotogràfic de la Farmàcia del Mar."
+        />
       </Head>
       <main>
         <ToastContainer />

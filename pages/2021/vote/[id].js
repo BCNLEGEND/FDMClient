@@ -23,6 +23,18 @@ const IndividualPhoto = (props, params) => {
           {photo.title && ` - ${photo.title}`} » Farmàcia del mar » Arenys de
           Mar
         </title>
+        <meta
+          name="description"
+          content={`${photo.title && photo.title} ❤️❤️❤️ ${photo.firstName} ${
+            photo.lastName
+          } ❤️❤️❤️`}
+        />
+        <meta
+          property="og:description"
+          content={`${photo.title && photo.title} ❤️❤️❤️ ${photo.firstName} ${
+            photo.lastName
+          } ❤️❤️❤️`}
+        />
       </Head>
       <main>
         <section style={{ width: '80%', margin: 'var(--size-s) auto' }}>

@@ -24,6 +24,14 @@ const concurs = () => {
         <title>
           Concurs Fotogràfic 2021 » Farmàcia del mar » Arenys de Mar
         </title>
+        <meta
+          name="description"
+          content="Us animem a participar en el 3er concurs fotogràfic de la Farmàcia del Mar. L'objectiu del concurs és aconseguir una magnífica col·lecció de fotografies. Les fotografies guanyadores formaran part del calendari Salut i Benestar 2022 de la Farmàcia del Mar."
+        />
+        <meta
+          property="og:description"
+          content="Us animem a participar en el 3er concurs fotogràfic de la Farmàcia del Mar. L'objectiu del concurs és aconseguir una magnífica col·lecció de fotografies. Les fotografies guanyadores formaran part del calendari Salut i Benestar 2022 de la Farmàcia del Mar."
+        />
       </Head>
       <main>
         <section

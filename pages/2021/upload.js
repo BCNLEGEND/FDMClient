@@ -109,8 +109,17 @@ const Upload = () => {
     <>
       <Head>
         <title>
-          Concurs Fotogràfic 2021 - upload » Farmàcia del mar » Arenys de Mar
+          Participa en el 3er Concurs Fotogràfic 2021 » Farmàcia del mar »
+          Arenys de Mar
         </title>
+        <meta
+          name="description"
+          content="Puja la teva foto per participar en el 3er concurs fotogràfic de la Farmàcia del Mar."
+        />
+        <meta
+          property="og:description"
+          content="Puja la teva foto per participar en el 3er concurs fotogràfic de la Farmàcia del Mar."
+        />
       </Head>
       <main>
         <section
