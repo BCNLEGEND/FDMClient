@@ -36,34 +36,36 @@ export default function UserProfileMenu() {
     logout();
   };
 
-  return <>
-    {loggedIn && (
-      <div className={classes.root}>
-        <IconButton
-          aria-controls="simple-menu"
-          aria-haspopup="true"
-          onClick={handleClick}
-          color="inherit"
-          size="large">
-          <Avatar
-            src={`${IMG_API}${user.photo}`}
-            className={classes.iconBtn}
-          />
-        </IconButton>
-        {!admin && !staff ? (
-          <Menu
-            id="simple-menu"
-            anchorEl={anchorEl}
-            keepMounted
-            open={Boolean(anchorEl)}
-            onClose={handleClose}
+  return (
+    <>
+      {loggedIn && (
+        <div className={classes.root}>
+          <IconButton
+            aria-controls="simple-menu"
+            aria-haspopup="true"
+            onClick={handleClick}
+            color="inherit"
+            size="large"
           >
-            <MenuItem onClick={handleClose} className={classes.link}>
-              <Link href="/user/profile" passHref>
-                {text[language].profile}
-              </Link>
-            </MenuItem>
-            {/* <MenuItem onClick={handleClose} className={classes.link}>
+            <Avatar
+              src={`${IMG_API}${user.photo}`}
+              className={classes.iconBtn}
+            />
+          </IconButton>
+          {!admin && !staff ? (
+            <Menu
+              id="simple-menu"
+              anchorEl={anchorEl}
+              keepMounted
+              open={Boolean(anchorEl)}
+              onClose={handleClose}
+            >
+              <MenuItem onClick={handleClose} className={classes.link}>
+                <Link href="/user/profile" passHref>
+                  {text[language].profile}
+                </Link>
+              </MenuItem>
+              {/* <MenuItem onClick={handleClose} className={classes.link}>
               <Link href="/orders/my-orders" passHref>
                 {text[language].orders}
               </Link>
@@ -73,45 +75,51 @@ export default function UserProfileMenu() {
                 {text[language].neworder}
               </Link>
             </MenuItem> */}
-            <MenuItem onClick={userLogout} className={classes.link}>
-              <ExitToAppIcon className={classes.icon} />
-              <Link href="/" passHref>
-                {text[language].logout}
-              </Link>
-            </MenuItem>
-          </Menu>
-        ) : (
-          <Menu
-            id="simple-menu"
-            anchorEl={anchorEl}
-            keepMounted
-            open={Boolean(anchorEl)}
-            onClose={handleClose}
-          >
-            <MenuItem onClick={handleClose} className={classes.link}>
-              <Link href="/admin" passHref>
-                Dashboard
-              </Link>
-            </MenuItem>
-            <MenuItem onClick={handleClose} className={classes.link}>
-              <Link href="/admin/allorders" passHref>
-                See All Orders
-              </Link>
-            </MenuItem>
-            <MenuItem onClick={handleClose} className={classes.link}>
-              <Link href="/admin/createorder" passHref>
-                Place New Order
-              </Link>
-            </MenuItem>
-            <MenuItem onClick={userLogout} className={classes.link}>
-              <ExitToAppIcon className={classes.icon} />
-              <Link href="#" passHref>
-                {text[language].logout}
-              </Link>
-            </MenuItem>
-          </Menu>
-        )}
-      </div>
-    )}
-  </>;
+              <MenuItem onClick={userLogout} className={classes.link}>
+                <ExitToAppIcon className={classes.icon} />
+                <Link href="/" passHref>
+                  {text[language].logout}
+                </Link>
+              </MenuItem>
+            </Menu>
+          ) : (
+            <Menu
+              id="simple-menu"
+              anchorEl={anchorEl}
+              keepMounted
+              open={Boolean(anchorEl)}
+              onClose={handleClose}
+            >
+              <MenuItem onClick={handleClose} className={classes.link}>
+                <Link href="/admin" passHref>
+                  Dashboard
+                </Link>
+              </MenuItem>
+              <MenuItem onClick={handleClose} className={classes.link}>
+                <Link href="/admin/photocontest" passHref>
+                  Concurs 2021
+                </Link>
+              </MenuItem>
+              <MenuItem onClick={handleClose} className={classes.link}>
+                <Link href="/admin/allorders" passHref>
+                  See All Orders
+                </Link>
+              </MenuItem>
+              <MenuItem onClick={handleClose} className={classes.link}>
+                <Link href="/admin/createorder" passHref>
+                  Place New Order
+                </Link>
+              </MenuItem>
+              <MenuItem onClick={userLogout} className={classes.link}>
+                <ExitToAppIcon className={classes.icon} />
+                <Link href="#" passHref>
+                  {text[language].logout}
+                </Link>
+              </MenuItem>
+            </Menu>
+          )}
+        </div>
+      )}
+    </>
+  );
 }
