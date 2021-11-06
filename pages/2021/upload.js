@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { NEXT_API } from '@/utils/api';
 import { API_URL } from '@/utils/api';
 import axios from 'axios';
@@ -25,7 +25,12 @@ import FileUploadDialog from '@/components/User/Profile/FileUploadDialog';
 import { CircularProgress } from '@mui/material';
 import Head from 'next/head';
 
+import { LanguageContext } from '@/context/language';
+import genericText from '@/utils/texts/genericTexts';
+import text from '@/utils/texts/upload2021Text';
+
 const Upload = () => {
+  const { language } = useContext(LanguageContext);
   const [firstName, setFirstName] = useState('');
   const [image, setImage] = useState(null);
   const [lastName, setLastName] = useState('');
@@ -131,7 +136,7 @@ const Upload = () => {
         >
           <Link href={`/2021`}>
             <Button color="primary">
-              <ArrowBackIosIcon fontSize="small" /> Enrere
+              <ArrowBackIosIcon fontSize="small" /> {genericText[language].back}
             </Button>
           </Link>
           <Paper
@@ -146,7 +151,7 @@ const Upload = () => {
               <Grid container spacing={4}>
                 <Grid item xs={12}>
                   <Typography variant="h3" component="h1">
-                    Participa en el 3er Concurs Fotogràfic
+                    {text[language].title}
                   </Typography>
                 </Grid>
 
@@ -155,7 +160,7 @@ const Upload = () => {
                     required
                     id="firstName"
                     name="firstName"
-                    label="Nom"
+                    label={genericText[language].firstName}
                     variant="standard"
                     value={firstName}
                     style={{ width: '80%' }}
@@ -167,7 +172,7 @@ const Upload = () => {
                     required
                     id="lastName"
                     name="lastName"
-                    label="Cognom"
+                    label={genericText[language].lastName}
                     variant="standard"
                     value={lastName}
                     style={{ width: '80%' }}
@@ -179,7 +184,7 @@ const Upload = () => {
                     required
                     id="email"
                     name="email"
-                    label="Mail"
+                    label={genericText[language].mail}
                     variant="standard"
                     value={email}
                     style={{ width: '80%' }}
@@ -191,7 +196,7 @@ const Upload = () => {
                     required
                     id="mobile"
                     name="mobile"
-                    label="Mòbil"
+                    label={genericText[language].mobile}
                     variant="standard"
                     value={mobile}
                     style={{ width: '80%' }}
@@ -202,7 +207,7 @@ const Upload = () => {
                   <TextField
                     id="title"
                     name="title"
-                    label="Títol de la foto"
+                    label={text[language].titlePhoto}
                     variant="standard"
                     value={title}
                     style={{ width: '80%' }}
@@ -225,7 +230,7 @@ const Upload = () => {
                       size="large"
                     >
                       <InsertPhotoIcon />
-                      Selecciona i puja la teva fotografia
+                      {text[language].btn1}
                     </IconButton>
                   )}
                 </Grid>
@@ -238,21 +243,18 @@ const Upload = () => {
                       size="large"
                     >
                       <InsertPhotoIcon />
-                      Confirma la teva participació
+                      {text[language].btn2}
                     </IconButton>
                   </Grid>
                 )}
                 <Grid item xs={12}>
                   <Typography variant="h4" component="h2">
-                    Recorda les bases del Concurs:
+                    {text[language].title2}
                   </Typography>
                 </Grid>
                 <Grid item xs={2}></Grid>
                 <Grid item xs={10}>
-                  <Typography variant="body2">
-                    Només s’acceptaran imatges en resolució suficient per ser
-                    reproduïdes a tamany DIN A4 en format horitzontal.
-                  </Typography>
+                  <Typography variant="body2">{text[language].text}</Typography>
                   <List>
                     <ListItem>
                       <ListItemIcon>
@@ -260,8 +262,7 @@ const Upload = () => {
                       </ListItemIcon>
                       <ListItemText>
                         <Typography variant="body2">
-                          Podrà participar qualsevol persona amb un màxim de 3
-                          fotografies enviades per persona.
+                          {text[language].listItem1}
                         </Typography>
                       </ListItemText>
                     </ListItem>
@@ -271,8 +272,7 @@ const Upload = () => {
                       </ListItemIcon>
                       <ListItemText>
                         <Typography variant="body2">
-                          Si una imatge no té bona resolució no podrà participar
-                          en el concurs.
+                          {text[language].listItem2}
                         </Typography>
                       </ListItemText>
                     </ListItem>
@@ -282,7 +282,7 @@ const Upload = () => {
                       </ListItemIcon>
                       <ListItemText>
                         <Typography variant="body2">
-                          No s’accepten muntatges ni retocs.
+                          {text[language].listItem3}
                         </Typography>
                       </ListItemText>
                     </ListItem>
@@ -292,7 +292,7 @@ const Upload = () => {
                       </ListItemIcon>
                       <ListItemText>
                         <Typography variant="body2">
-                          L’ arxiu enviat ha de ser l’original en format jpg.
+                          {text[language].listItem4}
                         </Typography>
                       </ListItemText>
                     </ListItem>
@@ -302,7 +302,7 @@ const Upload = () => {
                       </ListItemIcon>
                       <ListItemText>
                         <Typography variant="body1" color="error">
-                          Important: Fotografia en format horizontal
+                          {text[language].listItem5}
                         </Typography>
                       </ListItemText>
                     </ListItem>

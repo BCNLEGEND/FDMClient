@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Grid from '@mui/material/Grid';
@@ -17,7 +18,13 @@ import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 import PersonIcon from '@mui/icons-material/Person';
 import Head from 'next/head';
 
+import { LanguageContext } from '@/context/language';
+
+import text from '@/utils/texts/photoContest2021Text';
+import genericText from '@/utils/texts/genericTexts';
+
 const concurs = () => {
+  const { language } = useContext(LanguageContext);
   return (
     <>
       <Head>
@@ -43,7 +50,7 @@ const concurs = () => {
         >
           <Link href={`/`}>
             <Button color="primary">
-              <ArrowBackIosIcon fontSize="small" /> Enrere
+              <ArrowBackIosIcon fontSize="small" /> {genericText[language].back}
             </Button>
           </Link>
           <Grid container spacing={4}>
@@ -55,20 +62,13 @@ const concurs = () => {
                 variant="h2"
                 component="h1"
               >
-                3er CONCURS FOTOGRÀFIC
+                {text[language].title}
               </Typography>
             </Grid>
             <Grid item xs={12}>
+              <Typography variant="body1">{text[language].subTitle}</Typography>
               <Typography variant="body1">
-                Us animem a participar en el 3er concurs fotogràfic de la
-                Farmàcia del Mar. L'objectiu del concurs és aconseguir una
-                magnífica col·lecció de fotografies. Les fotografies guanyadores
-                formaran part del calendari "Salut i Benestar" 2022 de la
-                Farmàcia del Mar.
-              </Typography>
-              <Typography variant="body1">
-                Aquest calendari l'obsequiarem durant les properes Festes
-                Nadalenques.(*)
+                {text[language].subTitle2}
               </Typography>
             </Grid>
             <Grid item xs={12}>
@@ -79,20 +79,20 @@ const concurs = () => {
                 variant="h3"
                 component="h2"
               >
-                Tu ets protagonista!
+                {text[language].standOut}
               </Typography>
             </Grid>
             <Grid item xs={12} sm={5}>
               <Link href="/2021/upload">
                 <Button variant="contained" color="secondary">
-                  Vull participar
+                  {text[language].btn1}
                 </Button>
               </Link>
             </Grid>
             <Grid item xs={12} sm={5}>
               <a href="#bases" style={{ textDecoration: 'none' }}>
                 <Button variant="outlined" color="primary">
-                  Bases del concurs
+                  {text[language].btn2}
                 </Button>
               </a>
             </Grid>
@@ -125,35 +125,38 @@ const concurs = () => {
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <Typography variant="h4" component="h3">
-                Bases del Concurs
+                {text[language].title2}
               </Typography>
             </Grid>
             <Grid item container xs={12} spacing={1}>
               <Grid item xs={12} sm={2}>
-                <Typography variant="body1">Participants:</Typography>
+                <Typography variant="body1">
+                  {text[language].itemTitle}
+                </Typography>
               </Grid>
               <Grid item xs={10}>
                 <Typography variant="body2">
-                  Podrà participar qualsevol persona amb un màxim de 3 fotos
-                  enviades per persona.
+                  {text[language].itemText}
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={2}>
-                <Typography variant="body1">Temàtica:</Typography>
+                <Typography variant="body1">
+                  {text[language].itemTitle2}
+                </Typography>
               </Grid>
               <Grid item xs={10}>
                 <Typography variant="body2">
-                  La fotografia ha d'il.lustrar i/o inspirar el concepte: "Salut
-                  i Benestar".
+                  {text[language].itemText2}
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={2}>
-                <Typography variant="body1">Qualitat:</Typography>
+                <Typography variant="body1">
+                  {text[language].itemTitle3}
+                </Typography>
               </Grid>
               <Grid item xs={10}>
                 <Typography variant="body2">
-                  Només s’acceptaran fotografies amb resolució suficient per ser
-                  reproduïdes a tamany DIN A4 en format horitzontal.
+                  {text[language].itemText3}
                 </Typography>
                 <List>
                   <ListItem>
@@ -162,8 +165,7 @@ const concurs = () => {
                     </ListItemIcon>
                     <ListItemText>
                       <Typography variant="body2">
-                        Si una imatge no té bona resolució no podrà participar
-                        en el concurs.
+                        {text[language].item3ListItem1}
                       </Typography>
                     </ListItemText>
                   </ListItem>
@@ -173,7 +175,7 @@ const concurs = () => {
                     </ListItemIcon>
                     <ListItemText>
                       <Typography variant="body2">
-                        No s’accepten muntatges ni retocs.
+                        {text[language].item3ListItem2}
                       </Typography>
                     </ListItemText>
                   </ListItem>
@@ -183,7 +185,7 @@ const concurs = () => {
                     </ListItemIcon>
                     <ListItemText>
                       <Typography variant="body2">
-                        L’ arxiu enviat ha de ser l’original en format jpg.
+                        {text[language].item3ListItem3}
                       </Typography>
                     </ListItemText>
                   </ListItem>
@@ -193,23 +195,24 @@ const concurs = () => {
                     </ListItemIcon>
                     <ListItemText>
                       <Typography variant="body1" color="error">
-                        Important: Fotografia en format Horizontal
+                        {text[language].item3ListItem4}
                       </Typography>
                     </ListItemText>
                   </ListItem>
                 </List>
               </Grid>
               <Grid item xs={12} sm={2}>
-                <Typography variant="body1">Enviament:</Typography>
+                <Typography variant="body1">
+                  {text[language].itemTitle4}
+                </Typography>
               </Grid>
               <Grid item xs={10}>
                 <Typography variant="body2">
-                  Les fotografies s’hauran d’enviar mitjançant la nostra web:{' '}
-                  <a href="https://www.farmaciadelmar.com/2021">
+                  {text[language].itemText4a}{' '}
+                  <Link href="https://www.farmaciadelmar.com/2021">
                     www.farmaciadelmar.com/2021
-                  </a>{' '}
-                  o bé, pel correu electrònic concurs@farmaciadelmar.com,
-                  indicant:
+                  </Link>{' '}
+                  {text[language].itemText4b}
                 </Typography>
                 <List>
                   <ListItem>
@@ -218,7 +221,7 @@ const concurs = () => {
                     </ListItemIcon>
                     <ListItemText>
                       <Typography variant="body2">
-                        Títol de la fotografia
+                        {text[language].item4ListItem1}
                       </Typography>
                     </ListItemText>
                   </ListItem>
@@ -227,7 +230,9 @@ const concurs = () => {
                       <PersonIcon color="primary" />
                     </ListItemIcon>
                     <ListItemText>
-                      <Typography variant="body2">Nom</Typography>
+                      <Typography variant="body2">
+                        {text[language].item4ListItem2}
+                      </Typography>
                     </ListItemText>
                   </ListItem>
                   <ListItem>
@@ -235,7 +240,9 @@ const concurs = () => {
                       <PersonIcon color="primary" />
                     </ListItemIcon>
                     <ListItemText>
-                      <Typography variant="body2">Cognoms o alies</Typography>
+                      <Typography variant="body2">
+                        {text[language].item4ListItem3}
+                      </Typography>
                     </ListItemText>
                   </ListItem>
                   <ListItem>
@@ -244,7 +251,7 @@ const concurs = () => {
                     </ListItemIcon>
                     <ListItemText>
                       <Typography variant="body2">
-                        telèfon de contacte
+                        {text[language].item4ListItem4}
                       </Typography>
                     </ListItemText>
                   </ListItem>
@@ -253,101 +260,78 @@ const concurs = () => {
                       <ContactMailIcon color="primary" />
                     </ListItemIcon>
                     <ListItemText>
-                      <Typography variant="body2">correu electrònic</Typography>
+                      <Typography variant="body2">
+                        {text[language].item4ListItem5}
+                      </Typography>
                     </ListItemText>
                   </ListItem>
                 </List>
                 <Typography variant="body2">
-                  Per poder gaudir-les tothom, les fotografies es penjaran a la
-                  pàgina web www.farmaciadelmar.com. El procediment per fer-ho
-                  és senzill, en cas de dubtes, podeu enviar-nos un correu
-                  electrònic a salut@farmaciadelmar.com.
-                </Typography>
-              </Grid>
-              <Grid item xs={12} sm={2}>
-                <Typography variant="body1">Termini:</Typography>
-              </Grid>
-              <Grid item xs={10}>
-                <Typography variant="body2">
-                  El plaç màxim per enviar fotografies, finalitzarà el dia 14 de
-                  Novembre del 2021 a les 24:00 hores 🕛. Els guanyadors del
-                  concurs s’anunciaran el dia 29 de Novembre del 2021 mitjançant
-                  nota de manera individual a cada un dels premiats via
-                  mail/whatsapp/telèfon, segons ens ho hagi demanat.
-                </Typography>
-              </Grid>
-              <Grid item xs={12} sm={2}>
-                <Typography variant="body1">Votacions:</Typography>
-              </Grid>
-              <Grid item xs={10}>
-                <Typography variant="body2">
-                  Les votacions es realitzaran mitjançant de la pàgina web{' '}
-                  <a href="https://www.farmaciadelmar.com/2021/vote">
-                    www.farmaciadelmar.com/2021/vote
-                  </a>{' '}
-                  o presencialment a la Farmàcia on es penjaran les fotografies.
-                  El plaç de votació serà del 15 de Novembre al 28 de Novembre
-                  del 2021.
-                </Typography>
-              </Grid>
-              <Grid item xs={12} sm={2}>
-                <Typography variant="body1">Guanyadors:</Typography>
-              </Grid>
-              <Grid item xs={10}>
-                <Typography variant="body2">
-                  Les 12 fotografies (rebudes dins el termini i la qualitat
-                  sol·licitada) que siguin més votades i d'autor diferents,
-                  seran les 12 imatges que il·lustraran els 12 mesos de l’any
-                  2022 del calendari de la Farmàcia del Mar 2022. Els 12 autors
-                  seran obsequiats amb un regal.
-                </Typography>
-              </Grid>
-              <Grid item xs={12} sm={2}>
-                <Typography variant="body1">Drets d’Imatge:</Typography>
-              </Grid>
-              <Grid item xs={10}>
-                <Typography variant="body2">
-                  Els participants accepten cedir a favor de la Farmàcia del
-                  Mar, els drets de reproducció, distribució i comunicació
-                  pública de les fotografies guanyadores. La publicació de les
-                  fotografies guanyadores es farà sempre, citant el seu
-                  autor/àlies i el títol de la fotografia.
+                  {text[language].itemText4c}
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={2}>
                 <Typography variant="body1">
-                  Dades de caràcter personal:
+                  {text[language].itemTitle5}
                 </Typography>
               </Grid>
               <Grid item xs={10}>
                 <Typography variant="body2">
-                  Les persones que enviïn imatges estan informades que al
-                  participar en el concurs Fotogràfic, promogut per la titular
-                  de l’oficina de Farmàcia, en cas de resultar escollides, estan
-                  d’acord que les seves dades de contacte siguin utilitzades per
-                  comunicar que han sigut escollides, i que la seva fotografia i
-                  nom poden aparèixer clarament identificables en les xarxes
-                  socials de la titular de l’oficina de Farmàcia. Sense aquest
-                  consentiment no es possible participar en el concurs
-                  fotogràfic. Els participants estan informats que per exercir
-                  els seus drets d’accés, rectificació, supressió, portabilitat
-                  i la limitació o oposició al seu tractament, han de dirigir un
-                  escrit a Sílvia Ametlla Pallí, titular de l’oficina de
-                  Farmàcia del Mar, a l’adreça a baix detallada o per correu
-                  electrònic a salut@farmaciadelmar.com Els participants estan
-                  informats que poden presentar una reclamació davant l’Agència
-                  Espanyola de Protecció de Dades per l’ús indegut de les dades
-                  per part del responsable de tractament.
+                  {text[language].itemText5}
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={2}>
-                <Typography variant="body1">Acceptació:</Typography>
+                <Typography variant="body1">
+                  {text[language].itemTitle6}
+                </Typography>
               </Grid>
               <Grid item xs={10}>
                 <Typography variant="body2">
-                  La participació en el concurs implica el coneixement i
-                  l’acceptació de tots els apartats anteriors de les bases del
-                  mateix.
+                  {text[language].itemText6a}{' '}
+                  <Link href="https://www.farmaciadelmar.com/2021/vote">
+                    www.farmaciadelmar.com/2021/vote
+                  </Link>{' '}
+                  {text[language].itemText6b}
+                </Typography>
+              </Grid>
+              <Grid item xs={12} sm={2}>
+                <Typography variant="body1">
+                  {text[language].itemTitle7}
+                </Typography>
+              </Grid>
+              <Grid item xs={10}>
+                <Typography variant="body2">
+                  {text[language].itemText7}
+                </Typography>
+              </Grid>
+              <Grid item xs={12} sm={2}>
+                <Typography variant="body1">
+                  {text[language].itemTitle8}
+                </Typography>
+              </Grid>
+              <Grid item xs={10}>
+                <Typography variant="body2">
+                  {text[language].itemText8}
+                </Typography>
+              </Grid>
+              <Grid item xs={12} sm={2}>
+                <Typography variant="body1">
+                  {text[language].itemTitle9}
+                </Typography>
+              </Grid>
+              <Grid item xs={10}>
+                <Typography variant="body2">
+                  {text[language].itemText9}
+                </Typography>
+              </Grid>
+              <Grid item xs={12} sm={2}>
+                <Typography variant="body1">
+                  {text[language].itemTitle10}
+                </Typography>
+              </Grid>
+              <Grid item xs={10}>
+                <Typography variant="body2">
+                  {text[language].itemText10}
                 </Typography>
               </Grid>
             </Grid>

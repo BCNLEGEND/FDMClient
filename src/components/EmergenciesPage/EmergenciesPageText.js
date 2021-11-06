@@ -16,11 +16,11 @@ export const pageText = {
     text02: 'nos corresponden los siguientes días de Guardia:',
   },
   en: {
-    title: 'Guard Calendar:',
+    title: 'Emergency Service Calendar:',
     subTitle:
       'At the Farmacia del Mar de Arenys de Mar, also known as Farmacia Silvia Ametlla Pallí, our main objective is to be ...',
     text01:
-      'La Farmacia del Mar is within the Arenys de Mar Guard shifts. During the month of',
-    text02: 'the following days of Guard belong to us:',
+      'La Farmacia del Mar is within the Arenys de Mar Emergency shifts. During the month of',
+    text02: 'the following days of Emergency Service belong to us:',
   },
 };
