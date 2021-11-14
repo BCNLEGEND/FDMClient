@@ -8,6 +8,7 @@ import { API_URL } from '@/utils/api';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import Button from '@mui/material/Button';
 import PhotoVote from '@/components/Photo/PhotoVote';
 import Footer from '@/components/Footer/Footer';
@@ -65,34 +66,35 @@ const photocontest2021 = (props) => {
             <Grid item xs={12}>
               {!(votes.length >= 3) ? (
                 <Alert severity="info">
-                  <AlertTitle>Votación</AlertTitle>
+                  <AlertTitle>Informació:</AlertTitle>
                   <Typography variant="body1">
-                    Nomes pots votar 3 vagades!! Una vagada ves click en el{' '}
-                    <strong>like button</strong> no ets pots cancelar el teu
+                    Només pots votar 3 imatges!! Un cop has votat una imatge{' '}
+                    <ThumbUpIcon color="secondary" /> no pots cancel.lar el teu
                     vot.
                   </Typography>
                   <Typography variant="body1">
-                    Solo puedes votar 3 veces!! Una vez haces click en el{' '}
-                    <strong>like button</strong> no se puede volver a cancelar
-                    tu voto.
+                    Solo puedes votar 3 imagenes!! Una vez has votado un imagen{' '}
+                    <ThumbUpIcon color="secondary" /> no puedes cancelar tu
+                    voto.
                   </Typography>
                   <Typography variant="body1">
-                    You can only vote 3 times!! Once you clicked the{' '}
-                    <strong>like button</strong> your vote can not be undone.
+                    You can only vote 3 images!! Once you clicked the{' '}
+                    <ThumbUpIcon color="secondary" /> you are not able to cancel
+                    your vote.
                   </Typography>
                 </Alert>
               ) : (
                 <Alert severity="warning">
                   <AlertTitle>Limit</AlertTitle>
                   <Typography variant="body1">
-                    Gracies per la teva participación, ja has votat 3 vagades!!!
+                    Gràcies per participar, ja has votat 3 imatges!!!
                   </Typography>
                   <Typography variant="body1">
-                    Gracias por tu participación, ya has votado 3 veces!!!
+                    Gracias por participar, ya has votado 3 imagenes!!!
                   </Typography>
                   <Typography variant="body1">
-                    Thank you for your participation, Your votes have been
-                    recorded!!!
+                    Thank you for participating, you already have voted 3
+                    images!!!
                   </Typography>
                 </Alert>
               )}

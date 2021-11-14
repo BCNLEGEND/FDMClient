@@ -8,7 +8,7 @@ const text = {
     standOut: 'Tu ets protagonista!',
     vote:
       'A partir del 15 fins el 28 de Novembre serà el periode de votació per tal de seleccionar les 12 imatges que correspondran als 12 mesos de l’any. Cada persona podrà votar un màxim de 3 imatges.',
-    btn1: 'Clique aqui per votar',
+    btn1: 'Vull votar',
     btn2: 'Bases del concurs',
     title2: 'Bases del concurs',
     itemTitle: 'Participants:',
@@ -65,7 +65,7 @@ const text = {
     standOut: '¡Tú eres protagonista!',
     vote:
       'A partir del 15 hasta el 28 de Noviembre será el periodo de votación con el fin de seleccionar las 12 imágenes que corresponderán a los 12 meses del año. Cada persona podrá votar un máximo de 3 imágenes.',
-    btn1: 'Clica aqui para votar',
+    btn1: 'Quiero votar',
     btn2: 'Bases del concurso',
     title2: 'Bases del concurso',
     itemTitle: 'Participantes:',
@@ -122,7 +122,7 @@ const text = {
     standOut: 'You are the protagonist!',
     vote:
       'From the 15th untill the 28th of November you are able to vote for the the 12 photos that will represent the 12 months of 2022. Each person can vote a maximum of 3 photos.',
-    btn1: 'Go to vote',
+    btn1: 'I want to vote',
     btn2: 'Contest rules',
     title2: 'Contest rules',
     itemTitle: 'Participants:',
