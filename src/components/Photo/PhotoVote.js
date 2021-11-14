@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { API_URL } from '@/utils/api';
+import { IMG_API } from '@/utils/api';
 import { IMG_VOTE_API } from '@/utils/api';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
@@ -59,7 +60,7 @@ const PhotoVote = ({ photo, votes, setVotes, setError }) => {
           <CardMedia
             children={
               <Image
-                src={`${IMG_VOTE_API}${photo.image}`}
+                src={`${IMG_API}${photo.image}`}
                 width="12"
                 height="9"
                 layout="responsive"

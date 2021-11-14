@@ -67,17 +67,17 @@ const photocontest2021 = (props) => {
                 <Alert severity="info">
                   <AlertTitle>Votación</AlertTitle>
                   <Typography variant="body1">
-                    Nomes pots votar 3 vagades per dispositiu!! Una vagada ves
-                    click en el <strong>like button</strong> no ets pots
-                    cancelar el teu vot.
+                    Nomes pots votar 3 vagades!! Una vagada ves click en el{' '}
+                    <strong>like button</strong> no ets pots cancelar el teu
+                    vot.
                   </Typography>
                   <Typography variant="body1">
-                    Solo puedes votar 3 veces por dispositivo!! Una vez haces
-                    click en el <strong>like button</strong> no se puede volver
-                    a cancelar tu voto.
+                    Solo puedes votar 3 veces!! Una vez haces click en el{' '}
+                    <strong>like button</strong> no se puede volver a cancelar
+                    tu voto.
                   </Typography>
                   <Typography variant="body1">
-                    You can only vote 3 times per device!! Once you clicked the{' '}
+                    You can only vote 3 times!! Once you clicked the{' '}
                     <strong>like button</strong> your vote can not be undone.
                   </Typography>
                 </Alert>
