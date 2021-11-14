@@ -13,6 +13,3 @@ export const IMG_VOTE_API =
   'https://api-farmacia-del-mar.herokuapp.com/api/v1/photocontestupload/';
 
 // Public API route for build process: 'https://api-farmacia-del-mar.herokuapp.com/api/v1/';
-
-https://api-farmacia-del-mar.herokuapp.com/api/v1/photocontestupload/
-
