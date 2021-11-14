@@ -39,7 +39,8 @@ export default function SimpleMenu() {
         aria-label="navigation-menu"
         onClick={handleClick}
         color="inherit"
-        size="large">
+        size="large"
+      >
         <MenuIcon className={classes.iconBtn} />
       </IconButton>
       <Menu
@@ -80,8 +81,8 @@ export default function SimpleMenu() {
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose} className={classes.linkGlow}>
-          <Link href="/2021" passHref>
-            {text[language].participate}
+          <Link href="/2021/vote" passHref>
+            {text[language].vote}
           </Link>
         </MenuItem>
       </Menu>
