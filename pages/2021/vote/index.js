@@ -68,14 +68,14 @@ const photocontest2021 = (props) => {
                 <Alert severity="info">
                   <AlertTitle>Informació:</AlertTitle>
                   <Typography variant="body1">
-                    Només pots votar 3 imatges!! Un cop has votat una imatge{' '}
-                    <ThumbUpIcon color="secondary" /> no pots cancel.lar el teu
-                    vot.
+                    Només pots votar 3 imatges!! Un cop hagis votat una imatge{' '}
+                    <ThumbUpIcon color="secondary" /> no podràs cancel.lar el
+                    teu vot.
                   </Typography>
                   <Typography variant="body1">
-                    Solo puedes votar 3 imagenes!! Una vez has votado un imagen{' '}
-                    <ThumbUpIcon color="secondary" /> no puedes cancelar tu
-                    voto.
+                    Solo puedes votar 3 imágenes!! Una vez hayas votado una
+                    imagen <ThumbUpIcon color="secondary" /> no podrás cancelar
+                    tu voto.
                   </Typography>
                   <Typography variant="body1">
                     You can only vote 3 images!! Once you clicked the{' '}
@@ -90,7 +90,7 @@ const photocontest2021 = (props) => {
                     Gràcies per participar, ja has votat 3 imatges!!!
                   </Typography>
                   <Typography variant="body1">
-                    Gracias por participar, ya has votado 3 imagenes!!!
+                    Gracias por participar, ya has votado 3 imágenes!!!
                   </Typography>
                   <Typography variant="body1">
                     Thank you for participating, you already have voted 3
