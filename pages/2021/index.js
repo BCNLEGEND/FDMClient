@@ -82,9 +82,20 @@ const concurs = () => {
                 {text[language].standOut}
               </Typography>
             </Grid>
+            <Grid item xs={12}>
+              <Typography
+                style={{
+                  color: 'var(--primary-color)',
+                }}
+                variant="h5"
+                component="h3"
+              >
+                {text[language].vote}
+              </Typography>
+            </Grid>
             <Grid item xs={12} sm={5}>
-              <Link href="/2021/upload">
-                <Button variant="contained" color="secondary" disabled>
+              <Link href="/2021/vote">
+                <Button variant="contained" color="secondary">
                   {text[language].btn1}
                 </Button>
               </Link>

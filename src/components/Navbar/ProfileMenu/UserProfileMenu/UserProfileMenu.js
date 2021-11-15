@@ -96,11 +96,6 @@ export default function UserProfileMenu() {
                 </Link>
               </MenuItem>
               <MenuItem onClick={handleClose} className={classes.link}>
-                <Link href="/admin/photocontest" passHref>
-                  Concurs 2021
-                </Link>
-              </MenuItem>
-              <MenuItem onClick={handleClose} className={classes.link}>
                 <Link href="/admin/allorders" passHref>
                   See All Orders
                 </Link>

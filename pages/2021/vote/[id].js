@@ -3,6 +3,7 @@ import axios from 'axios';
 import Link from 'next/link';
 import Image from 'next/image';
 import { API_URL } from '@/utils/api';
+import { IMG_API } from '@/utils/api';
 import { IMG_VOTE_API } from '@/utils/api';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
@@ -17,7 +18,7 @@ const IndividualPhoto = (props, params) => {
   const { photo } = props;
   return (
     <>
-      {/* <Head>
+      <Head>
         <title>
           Concurs Fotogràfic {photo.year}
           {photo.title && ` - ${photo.title}`} » Farmàcia del mar » Arenys de
@@ -88,7 +89,7 @@ const IndividualPhoto = (props, params) => {
                   <CardMedia
                     children={
                       <Image
-                        src={`${IMG_VOTE_API}${photo.image}`}
+                        src={`${IMG_API}/uploads/photos/${photo.year}/${photo.image}`}
                         width="12"
                         height="9"
                         layout="responsive"
@@ -101,26 +102,26 @@ const IndividualPhoto = (props, params) => {
             </Card>
           </Grid>
         </section>
-      </main> */}
+      </main>
     </>
   );
 };
 
-// export async function getServerSideProps({ params }) {
-//   const { id } = params;
-//   const res = await axios.get(`${API_URL}photos/2021/${id}`);
-//   const photo = await res.data;
+export async function getServerSideProps({ params }) {
+  const { id } = params;
+  const res = await axios.get(`${API_URL}photos/2021/${id}`);
+  const photo = await res.data;
 
-//   if (!photo) {
-//     return {
-//       notFound: true,
-//     };
-//   }
+  if (!photo) {
+    return {
+      notFound: true,
+    };
+  }
 
-//   return {
-//     props: { photo },
-//     // revalidate: 1,
-//   };
-// }
+  return {
+    props: { photo },
+    // revalidate: 1,
+  };
+}
 
 export default IndividualPhoto;
