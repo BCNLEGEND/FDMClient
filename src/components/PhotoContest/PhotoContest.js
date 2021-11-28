@@ -27,7 +27,7 @@ const PhotoContest = () => {
         justifyContent="space-evenly"
         spacing={4}
       >
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={6} lg={4}>
           <Card>
             <CardContent>
               <Typography
@@ -38,7 +38,7 @@ const PhotoContest = () => {
                 {text[language].contest} 2021
               </Typography>
               <Image
-                src={`${IMG_API}/uploads/photos/2020/a3156850-9a9e-4fb1-9d0e-6f59ae40e7ca.JPG`}
+                src={`${IMG_API}/uploads/photos/2021/PHOTO-2021-11-28-17-09-31.jpg`}
                 width="50"
                 height="50"
                 layout="responsive"
@@ -51,7 +51,7 @@ const PhotoContest = () => {
             </CardActions>
           </Card>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={6} lg={4}>
           <Card>
             <CardContent>
               <Typography
@@ -75,7 +75,7 @@ const PhotoContest = () => {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={6} lg={4}>
           <Card>
             <CardContent>
               <Typography
