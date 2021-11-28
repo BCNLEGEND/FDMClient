@@ -21,8 +21,7 @@ const photocontest2021 = (props) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    localStorage.getItem('votes2021') &&
-      setVotes(localStorage.getItem('votes2021').split(','));
+    localStorage.getItem('votes2021') && localStorage.removeItem('votes2021')
   }, []);
 
   useEffect(() => {
@@ -64,40 +63,19 @@ const photocontest2021 = (props) => {
 
           <Grid container spacing={2}>
             <Grid item xs={12}>
-              {!(votes.length >= 3) ? (
-                <Alert severity="info">
+              <Alert severity="info">
                   <AlertTitle>Informació:</AlertTitle>
                   <Typography variant="body1">
-                    Només pots votar 3 imatges!! Un cop hagis votat una imatge{' '}
-                    <ThumbUpIcon color="secondary" /> no podràs cancel.lar el
-                    teu vot.
+                  El període de votació ha caducat, en breu, anunciarem els guanyadors. 🏆 🏆 🏆
                   </Typography>
                   <Typography variant="body1">
-                    Solo puedes votar 3 imágenes!! Una vez hayas votado una
-                    imagen <ThumbUpIcon color="secondary" /> no podrás cancelar
-                    tu voto.
-                  </Typography>
-                  <Typography variant="body1">
-                    You can only vote 3 images!! Once you clicked the{' '}
-                    <ThumbUpIcon color="secondary" /> you are not able to cancel
-                    your vote.
-                  </Typography>
-                </Alert>
-              ) : (
-                <Alert severity="warning">
-                  <AlertTitle>Limit</AlertTitle>
-                  <Typography variant="body1">
-                    Gràcies per participar, ja has votat 3 imatges!!!
-                  </Typography>
-                  <Typography variant="body1">
-                    Gracias por participar, ya has votado 3 imágenes!!!
-                  </Typography>
-                  <Typography variant="body1">
-                    Thank you for participating, you already have voted 3
-                    images!!!
-                  </Typography>
-                </Alert>
-              )}
+                  El plazo de votación ha caducado, en breve, daremos a conocer los ganadores. 🏆 🏆 🏆
+                 </Typography>
+                 <Typography variant="body1">
+                    The voting period has expired, in brief, we will announce the winners. 🏆 🏆 🏆 
+                 </Typography>
+                 {/* <Button variant='filled' color='primary'><Link href='/2021/winners'>Winners</Link></Button> */}
+              </Alert>
             </Grid>
             {photos.map((photo) => (
               <Grid key={photo._id} item xs={12} sm={6} lg={4}>

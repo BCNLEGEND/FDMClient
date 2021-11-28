@@ -10,6 +10,7 @@ const useStyles = makeStyles({
   },
   heading: {
     color: 'var(--primary-color)',
+    marginBottom: 'var(--size-xxs)'
   },
 });
 

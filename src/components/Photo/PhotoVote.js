@@ -87,19 +87,17 @@ const PhotoVote = ({ photo, votes, setVotes, setError }) => {
                   {photo.firstName} {photo.lastName}
                 </Typography>
               </Grid>
-              <Grid item xs={2}>
+              {/* <Grid item xs={2}>
                 <IconButton
-                  disabled={
-                    disabled || votes.includes(photo._id) || votes.length >= 3
-                  }
+                  disabled
                   onClick={(e) => handleVote(e, photo._id)}
                   color="secondary"
                   aria-label="Vote image button"
                 >
                   <ThumbUpIcon />
                 </IconButton>
-              </Grid>
-              <Grid item xs={2}>
+              </Grid>*/}
+              <Grid item xs={2}> 
                 <IconButton
                   onClick={(e) => handleShare(e)}
                   color="primary"
@@ -144,7 +142,7 @@ const PhotoVote = ({ photo, votes, setVotes, setError }) => {
                   </Paper>
                 </Dialog>
               </Grid>
-              <Grid item xs={2}>
+              <Grid item xs={4}>
                 <Typography variant="body1">{photoVotes} ❤️</Typography>
               </Grid>
             </Grid>

@@ -12,9 +12,9 @@ const Photo = ({ photo, fullPhoto }) => {
       <Card>
         <CardContent>
           <Image
-            src={`${IMG_API}${photo.image}`}
-            width="100"
-            height="100"
+            src={`${IMG_API}/uploads/photos/${photo.year}/${photo.image}`}
+            width="12"
+            height="9"
             layout="responsive"
           />
           {!fullPhoto && (

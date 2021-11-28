@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { API_URL } from '@/utils/api';
 import { IMG_API } from '@/utils/api';
-import { IMG_VOTE_API } from '@/utils/api';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
