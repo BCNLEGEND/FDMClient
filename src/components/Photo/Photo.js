@@ -24,12 +24,12 @@ const Photo = ({ photo, fullPhoto }) => {
                   {photo.title && photo.title}
                 </Typography>
               </Grid>
-              <Grid item xs={9}>
+              <Grid item xs={8}>
                 <Typography variant="body2">
                   {photo.firstName} {photo.lastName}
                 </Typography>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item xs={4}>
                 <Typography variant="body1">{photo.votes} ❤️</Typography>
               </Grid>
             </Grid>
