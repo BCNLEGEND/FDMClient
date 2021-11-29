@@ -1,6 +1,11 @@
 import React, { useState, useEffect, useContext } from 'react';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import OrderDetails from '@/components/Orders/OrderDetails';
+import OrderEdit from '@/components/Orders/OrderEdit'
+import OrderDelete from '@/components/Orders/OrderDelete'
 
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -20,20 +25,28 @@ import { IconButton, Typography } from '@mui/material';
 import OrderContext from '@/context/OrderContext';
 
 const AllOrders = () => {
-  const { allOrders, getAllOrders } = useContext(OrderContext);
+  const { allOrders, getAllOrders, success, error } = useContext(OrderContext);
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [openOrderDetails, setOpenOrderDetails] = useState(false);
+  const [openOrderEdit, setOpenOrderEdit] = useState(false);
+  const [openOrderDelete, setOpenOrderDelete] = useState(false);
   const [selectedOrder, setSelectedOrder] = useState({});
 
   useEffect(() => {
     getAllOrders();
-  }, []);
+  }, [success]);
+
+  useEffect(
+    () => (error && toast.error(error)) || (success && toast.success(success)),
+    [error, success]
+  );
 
   const handleChange = (e) => {
     setSearchTerm(e.target.value);
     const data = allOrders.filter(
       (order) =>
+        order.mayorista.toLowerCase().includes(e.target.value.toLowerCase()) ||
         order.status.toLowerCase().includes(e.target.value.toLowerCase()) ||
         order.firstName.toLowerCase().includes(e.target.value.toLowerCase()) ||
         order.lastName.toLowerCase().includes(e.target.value.toLowerCase()) ||
@@ -49,11 +62,34 @@ const AllOrders = () => {
     setOpenOrderDetails(true);
   };
 
+  const handleEdit = (id) => {
+    setSelectedOrder(allOrders.filter((order) => order._id === id)[0]);
+    setOpenOrderEdit(true);
+  };
+
+  const handleDelete = (id) => {
+    setSelectedOrder(allOrders.filter((order) => order._id === id)[0]);
+    setOpenOrderDelete(true);
+  };
+
   return (
     <section>
+      <ToastContainer />
       {openOrderDetails && (
         <OrderDetails
           setOpenOrderDetails={setOpenOrderDetails}
+          order={selectedOrder}
+        />
+      )}
+      {openOrderEdit && (
+        <OrderEdit
+          setOpenOrderEdit={setOpenOrderEdit}
+          order={selectedOrder}
+        />
+      )}
+      {openOrderDelete && (
+        <OrderDelete
+          setOpenOrderDelete={setOpenOrderDelete}
           order={selectedOrder}
         />
       )}
@@ -96,6 +132,11 @@ const AllOrders = () => {
                       Nº de Encarrec:
                     </Typography>
                   </TableCell>
+                  <TableCell>
+                    <Typography variant="h6" color="primary">
+                      Mayorista:
+                    </Typography>
+                  </TableCell>
                   <TableCell align="right">
                     <Typography variant="h6" color="primary">
                       Order Date:
@@ -124,6 +165,9 @@ const AllOrders = () => {
                   <TableRow key={order._id}>
                     <TableCell component="th" scope="row">
                       {order.encarrec}
+                    </TableCell>
+                    <TableCell component="th" scope="row">
+                      {order.mayorista}
                     </TableCell>
                     <TableCell align="right">
                       {String(order.newDate).substring(0, 10)}
@@ -178,6 +222,11 @@ const AllOrders = () => {
                       Nº de Encarrec:
                     </Typography>
                   </TableCell>
+                  <TableCell>
+                    <Typography variant="h6" color="primary">
+                      Mayorista:
+                    </Typography>
+                  </TableCell>
                   <TableCell align="right">
                     <Typography variant="h6" color="primary">
                       Order Date:
@@ -205,6 +254,7 @@ const AllOrders = () => {
                 {allOrders.map((order) => (
                   <TableRow key={order._id}>
                     <TableCell>{order.encarrec}</TableCell>
+                    <TableCell>{order.mayorista}</TableCell>
                     <TableCell align="right">
                       {String(order.newDate).substring(0, 10)}
                     </TableCell>

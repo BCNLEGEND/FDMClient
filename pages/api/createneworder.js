@@ -5,8 +5,9 @@ export default async (req, res) => {
   try {
     const newOrder = req.body
     const apiRes = await axios.post(`${API_URL}orders`, newOrder);
-    const data = await apiRes.data;
-    res.status(200).json({ message: 'success' });
+    if (apiRes.status === 200 ){
+      res.status(200).json({ message: 'success' });
+    }
   } catch (err) {
     res.status(401).json(err);
   }

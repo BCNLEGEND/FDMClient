@@ -71,11 +71,58 @@ export const OrderProvider = ({ children }) => {
       );
       if (res.status === 200) {
         setSuccess('Order successfully created!');
+        setSuccess(null);
         router.push('/admin/allorders')
       }
     } catch (err) {
       setError(
         'Something went wrong, we were not able create the order, please try again. '
+      );
+      setError(null);
+    }
+  };
+
+  const updateOrder = async (updatedOrder) => {
+    try {
+      const res = await axios.patch(
+        `${NEXT_API}update-order`,
+        { updatedOrder },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+      if (res.status === 200) {
+        setSuccess('Order successfully updated!');
+        setSuccess(null);
+      }
+    } catch (err) {
+      setError(
+        'Something went wrong, we were not able to update the order, please try again. '
+      );
+      setError(null);
+    }
+  };
+
+  const deleteOrder = async (deletedOrder) => {
+    try {
+      const res = await axios.patch(
+        `${NEXT_API}delete-order`,
+        { deletedOrder },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+      if (res.status === 200) {
+        setSuccess('Order successfully deleted!');
+        setSuccess(null);
+      }
+    } catch (err) {
+      setError(
+        'Something went wrong, we were not able to delete the order, please try again. '
       );
       setError(null);
     }
@@ -92,6 +139,8 @@ export const OrderProvider = ({ children }) => {
         createNewOrder,
         getAllOrders,
         getNewOrders,
+        updateOrder, 
+        deleteOrder
       }}
     >
       {children}

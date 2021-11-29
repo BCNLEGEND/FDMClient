@@ -1,4 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import OrderDetails from '@/components/Orders/OrderDetails';
 import OrderEdit from '@/components/Orders/OrderEdit';
 import Link from 'next/link';
@@ -20,7 +22,7 @@ import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import OrderContext from '@/context/OrderContext';
 
 const NewOrders = () => {
-  const { newOrders, getNewOrders } = useContext(OrderContext);
+  const { newOrders, getNewOrders, error, success } = useContext(OrderContext);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [openOrderDetails, setOpenOrderDetails] = useState(false);
@@ -29,7 +31,12 @@ const NewOrders = () => {
 
   useEffect(() => {
     getNewOrders();
-  }, []);
+  }, [success]);
+
+  useEffect(
+    () => (error && toast.error(error)) || (success && toast.success(success)),
+    [error, success]
+  );
 
   const handleView = (id) => {
     setSelectedOrder(newOrders.filter((order) => order._id === id)[0]);
@@ -47,6 +54,7 @@ const NewOrders = () => {
 
   return (
     <section>
+      <ToastContainer />
       {openOrderDetails && (
         <OrderDetails
           setOpenOrderDetails={setOpenOrderDetails}
@@ -63,13 +71,46 @@ const NewOrders = () => {
         <Table size="small" aria-label="Order Table">
           <TableHead>
             <TableRow>
-              <TableCell>Nº de Encarrec:</TableCell>
-              <TableCell align="right">Order Date:</TableCell>
-              <TableCell align="right">Customer Name:</TableCell>
-              <TableCell align="right">Status:</TableCell>
-              <TableCell align="right">Payed:</TableCell>
-              <TableCell>View:</TableCell>
-              <TableCell>Edit:</TableCell>
+              <TableCell>
+                <Typography variant="body2" color="primary">
+                  Nº de Encarrec:
+                </Typography>
+              </TableCell>
+              <TableCell>
+                <Typography variant="body2" color="primary">
+                  Mayorista:
+                </Typography>
+              </TableCell>
+              <TableCell align="right">
+                <Typography variant="body2" color="primary">
+                  Order Date:
+                </Typography>
+              </TableCell>
+              <TableCell align="right">
+                <Typography variant="body2" color="primary">
+                  Customer Name:
+                </Typography>
+              </TableCell>
+              <TableCell align="right">
+                <Typography variant="body2" color="primary">
+                  Status:
+                </Typography>
+              </TableCell>
+              <TableCell align="right">
+                <Typography variant="body2" color="primary">
+                  Payed:
+                </Typography>
+              </TableCell>
+              <TableCell align="right">
+                <Typography variant="body2" color="primary">
+                  View:
+                </Typography>
+              </TableCell>
+              <TableCell align="right">
+                <Typography variant="body2" color="primary">
+                  Edit:
+                </Typography>
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -83,6 +124,7 @@ const NewOrders = () => {
                 .map((order) => (
                   <TableRow key={order._id}>
                     <TableCell>{order.encarrec}</TableCell>
+                    <TableCell>{order.mayorista}</TableCell>
                     <TableCell align="right">
                       {String(order.newDate).substring(0, 10)}
                     </TableCell>

@@ -1,4 +1,7 @@
+import React, {useContext} from 'react';
+import { IMG_API } from '@/utils/api';
 import { Paper, Grid, Button, Typography } from '@mui/material';
+
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -6,11 +9,22 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import CloseIcon from '@mui/icons-material/Close';
+import DeleteIcon from '@mui/icons-material/Delete';
+import { IconButton } from '@mui/material';
 
-const OrderDetails = ({ order, setOpenOrderDetails }) => {
+import OrderContext  from '@/context/OrderContext';
+
+const OrderDetails = ({ order, setOpenOrderDelete }) => {
+  const {deleteOrder} = useContext(OrderContext)
+ 
   const handleClose = () => {
-    setOpenOrderDetails(false);
+    setOpenOrderDelete(false);
   };
+
+  const handleDelete = () => {
+    deleteOrder(order)
+    setOpenOrderDelete(false);
+  }
 
   return (
     <section
@@ -41,8 +55,8 @@ const OrderDetails = ({ order, setOpenOrderDetails }) => {
             </Button>
           </Grid>
         </Grid>
-        <Typography variant="h5" color="primary">
-          {`Order Details for order with ID : ${order.encarrec}`}
+        <Typography variant="h5" color="error">
+          {`⚠️⚠️⚠️ Are you sure you want to DELETE Order with ID : ${order.encarrec} ⚠️⚠️⚠️`}
         </Typography>
         <Paper
           style={{
@@ -147,6 +161,20 @@ const OrderDetails = ({ order, setOpenOrderDetails }) => {
             </Table>
           </TableContainer>
         </Paper>
+        <Grid container>
+            <Grid item xs={8}></Grid>
+            <Grid container item xs={4}>
+            <IconButton
+                variant='outline'
+                style={{ color: 'red' }}
+                size="large"
+                onClick={() => handleDelete(order._id)}
+            >
+                <DeleteIcon /> Delete Order
+            </IconButton>
+          </Grid>
+        </Grid>
+        
       </Paper>
     </section>
   );
