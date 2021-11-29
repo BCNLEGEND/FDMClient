@@ -1,5 +1,4 @@
 import React from 'react';
-import { IMG_API } from '@/utils/api';
 import { Paper, Grid, Button, Typography } from '@mui/material';
 
 import Table from '@mui/material/Table';
@@ -9,11 +8,10 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import CloseIcon from '@mui/icons-material/Close';
-import Image from 'next/image';
 
-const OrderDetails = ({ order, setOpenOrderDetails }) => {
+const OrderEdit = ({ order, setOpenOrderEdit }) => {
   const handleClose = () => {
-    setOpenOrderDetails(false);
+    setOpenOrderEdit(false);
   };
 
   return (
@@ -32,14 +30,13 @@ const OrderDetails = ({ order, setOpenOrderDetails }) => {
       <Paper
         style={{
           width: '75%',
-          // height: '100%',
           margin: '0 auto',
           padding: 'var(--size-xs)',
           backgroundColor: 'rgba(255,255,255,.8)',
         }}
       >
         <Grid container>
-          <Grid item xs={11}></Grid>
+          <Grid item xs={11}></Grid> {/* PLACEHOLDER GRID TO POSITION X IN CORRECT PLACE */}
           <Grid item xs={1}>
             <Button color="primary" size="small" onClick={handleClose}>
               <CloseIcon />
@@ -47,7 +44,7 @@ const OrderDetails = ({ order, setOpenOrderDetails }) => {
           </Grid>
         </Grid>
         <Typography variant="h5" color="primary">
-          {`Order Details for order with ID : ${order._id}`}
+          {`Edit Order Details for order with ID : ${order._id}`}
         </Typography>
         <Paper
           style={{
@@ -178,4 +175,4 @@ const OrderDetails = ({ order, setOpenOrderDetails }) => {
   );
 };
 
-export default OrderDetails;
+export default OrderEdit;

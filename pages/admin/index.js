@@ -31,16 +31,11 @@ const Admin = () => {
   ) : (
     <main style={{ width: '90%', margin: '1rem auto' }}>
       <Grid container spacing={4}>
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12}>
           <Typography color="primary" variant="h6" component="h2">
             New Orders:
           </Typography>
           <NewOrders />
-        </Grid>
-        <Grid item xs={12} md={4}>
-          <Typography color="primary" variant="h6" component="h2">
-            ToDo's:
-          </Typography>
         </Grid>
       </Grid>
     </main>

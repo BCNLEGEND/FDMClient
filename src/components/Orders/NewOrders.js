@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import OrderDetails from '@/components/Orders/OrderDetails';
+import OrderEdit from '@/components/Orders/OrderEdit';
 import Link from 'next/link';
 
 import Grid from '@mui/material/Grid';
@@ -21,8 +22,9 @@ import OrderContext from '@/context/OrderContext';
 const NewOrders = () => {
   const { newOrders, getNewOrders } = useContext(OrderContext);
   const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [rowsPerPage, setRowsPerPage] = useState(10);
   const [openOrderDetails, setOpenOrderDetails] = useState(false);
+  const [openOrderEdit, setOpenOrderEdit] = useState(false);
   const [selectedOrder, setSelectedOrder] = useState({});
 
   useEffect(() => {
@@ -35,7 +37,8 @@ const NewOrders = () => {
   };
 
   const handleEdit = (id) => {
-    console.log(id);
+    setSelectedOrder(newOrders.filter((order) => order._id === id)[0]);
+    setOpenOrderEdit(true);
   };
 
   const handleChangePage = (event, newPage) => {
@@ -47,6 +50,12 @@ const NewOrders = () => {
       {openOrderDetails && (
         <OrderDetails
           setOpenOrderDetails={setOpenOrderDetails}
+          order={selectedOrder}
+        />
+      )}
+      {openOrderEdit && (
+        <OrderEdit
+          setOpenOrderEdit={setOpenOrderEdit}
           order={selectedOrder}
         />
       )}
