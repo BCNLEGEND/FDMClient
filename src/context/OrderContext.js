@@ -12,6 +12,7 @@ export const OrderProvider = ({ children }) => {
   const [newOrders, setNewOrders] = useState([{}]);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
+
   const router = useRouter();
 
   //   Register User
@@ -68,7 +69,10 @@ export const OrderProvider = ({ children }) => {
           },
         }
       );
-      setSucces('Order successfully created!');
+      if (res.status === 200) {
+        setSuccess('Order successfully created!');
+        router.push('/admin/allorders')
+      }
     } catch (err) {
       setError(
         'Something went wrong, we were not able create the order, please try again. '

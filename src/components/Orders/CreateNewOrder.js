@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
+import { useRouter } from 'next/router';
 import axios from 'axios';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
@@ -22,10 +23,12 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 
 import useStyles from './OrderStyles';
-import Image from 'next/image';
 import { MenuItem } from '@mui/material';
 
+import OrderContext from '@/context/OrderContext';
+
 const CreateNewOrder = () => {
+  const {error, success, createNewOrder} = useContext(OrderContext)
   const [products, setProducts] = useState([]);
   const [firstName, setFirstName] = useState(null);
   const [lastName, setLastName] = useState(null);
@@ -40,7 +43,20 @@ const CreateNewOrder = () => {
   const [payed, setPayed] = useState(false);
   const [coupon, setCoupon] = useState(false);
 
+  const [submit, setSubmit] = useState(false)
+
+  const router = useRouter()
+
   const classes = useStyles();
+
+// Check if order is correctly passed
+
+useEffect(
+  () => (error && toast.error(error)) || (success && toast.success(success)),
+  [error, success]
+);
+
+// FORM FUNCTIONALITIES
 
   const handleDelete = (i) => {
     const newProducts = products.filter((product, index) => index != i);
@@ -48,9 +64,13 @@ const CreateNewOrder = () => {
   };
 
   const handleAddProduct = () => {
+
     if (!encarrec || !cn) {
       toast.error('Please fill-in "encarrec" or "Còdigo Nacional!');
       return;
+    }
+    if (!submit) {
+      setSubmit(true)
     }
     const newProductsList = [
       ...products,
@@ -114,6 +134,14 @@ const CreateNewOrder = () => {
       toast.error('No product found with that CN number!');
     }
   };
+
+// @TODO - API PUT REQUEST IMPLEMENTATION
+
+  const handleSubmit = () => {
+    const client = {firstName, lastName, email, phone}
+    const newOrder = {client, products}
+    createNewOrder(newOrder)
+  }
 
   return (
     <section className={classes.section}>
@@ -476,6 +504,14 @@ const CreateNewOrder = () => {
               </TableBody>
             </Table>
           </TableContainer>
+          {submit && 
+            (<IconButton onClick={handleSubmit} size="large">
+                <AddCircleOutlineIcon color="secondary" size="large" />
+                <Typography variant="button" color="secondary">
+                  {' '}
+                  Save Order
+                </Typography>
+              </IconButton>)}
         </Paper>
       )}
     </section>
