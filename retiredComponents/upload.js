@@ -27,7 +27,7 @@ import Head from 'next/head';
 
 import { LanguageContext } from '@/context/language';
 import genericText from '@/utils/texts/genericTexts';
-import text from '@/utils/texts/upload2021Text';
+import text from '@/utils/texts/upload2022Text';
 
 const Upload = () => {
   const { language } = useContext(LanguageContext);
@@ -134,7 +134,7 @@ const Upload = () => {
             margin: '2rem auto',
           }}
         >
-          <Link href={`/2021`}>
+          <Link href={`/2022`}>
             <Button color="primary">
               <ArrowBackIosIcon fontSize="small" /> {genericText[language].back}
             </Button>

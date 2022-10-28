@@ -27,7 +27,7 @@ import Head from 'next/head';
 
 import { LanguageContext } from '@/context/language';
 import genericText from '@/utils/texts/genericTexts';
-import text from '@/utils/texts/upload2021Text';
+import text from '@/utils/texts/upload2022Text';
 
 const Upload = () => {
   const { language } = useContext(LanguageContext);
@@ -134,7 +134,7 @@ const Upload = () => {
             margin: '2rem auto',
           }}
         >
-          <Link href={`/2021`}>
+          <Link href={`/2022`}>
             <Button color="primary">
               <ArrowBackIosIcon fontSize="small" /> {genericText[language].back}
             </Button>
@@ -165,7 +165,7 @@ const Upload = () => {
                     value={firstName}
                     style={{ width: '80%' }}
                     onChange={handleChange}
-                    disabled
+                    // disabled
                   />
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -178,7 +178,7 @@ const Upload = () => {
                     value={lastName}
                     style={{ width: '80%' }}
                     onChange={handleChange}
-                    disabled
+                    // disabled
                   />
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -191,7 +191,7 @@ const Upload = () => {
                     value={email}
                     style={{ width: '80%' }}
                     onChange={handleChange}
-                    disabled
+                    // disabled
                   />
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -204,7 +204,7 @@ const Upload = () => {
                     value={mobile}
                     style={{ width: '80%' }}
                     onChange={handleChange}
-                    disabled
+                    // disabled
                   />
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -216,7 +216,7 @@ const Upload = () => {
                     value={title}
                     style={{ width: '80%' }}
                     onChange={handleChange}
-                    disabled
+                    // disabled
                   />
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -233,7 +233,7 @@ const Upload = () => {
                       onClick={handleClickOpen}
                       color="secondary"
                       size="large"
-                      disabled
+                      // disabled
                     >
                       <InsertPhotoIcon />
                       {text[language].btn1}

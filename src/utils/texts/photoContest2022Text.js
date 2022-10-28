@@ -1,15 +1,16 @@
 const text = {
   ca: {
-    title: '3er CONCURS FOTOGRÀFIC',
+    title: '4rt CONCURS FOTOGRÀFIC',
     subTitle:
-      'Us animem a participar en el 3er concurs fotogràfic de la Farmàcia del Mar. L\'objectiu del concurs és aconseguir una magnífica col·lecció de fotografies. Les fotografies guanyadores formaran part del calendari "Salut i Benestar" 2022 de la Farmàcia del Mar.',
+      'Us animem a participar en el 4rt concurs fotogràfic de la Farmàcia del Mar. L\'objectiu del concurs és aconseguir una magnífica col·lecció de fotografies. Les fotografies guanyadores formaran part del calendari "Salut i Benestar" 2023 de la Farmàcia del Mar.',
     subTitle2:
       "Aquest calendari l'obsequiarem durant les properes Festes Nadalenques.",
     standOut: 'Tu ets protagonista!',
     vote:
-      'A partir del 15 fins el 28 de Novembre serà el periode de votació per tal de seleccionar les 12 imatges que correspondran als 12 mesos de l’any. Cada persona podrà votar un màxim de 3 imatges.',
+      'A partir del 19 de Novembre fins el 3 de Desembre serà el periode de votació per tal de seleccionar les 12 imatges que correspondran als 12 mesos de l’any. Cada persona podrà votar un màxim de 3 imatges.',
     btn1: 'Vull votar',
     btn2: 'Bases del concurs',
+    btn3: 'Vull participar',
     title2: 'Bases del concurs',
     itemTitle: 'Participants:',
     itemText:
@@ -38,14 +39,14 @@ const text = {
     item4ListItem5: 'correu electrònic',
     itemTitle5: 'Termini:',
     itemText5:
-      'El plaç màxim per enviar fotografies, finalitzarà el dia 14 de Novembre del 2021 a les 24:00 hores 🕛. Els guanyadors del concurs s’anunciaran el dia 29 de Novembre del 2021 mitjançant nota de manera individual a cada un dels premiats via mail/whatsapp/telèfon, segons ens ho hagi demanat.',
+      'El plaç màxim per enviar fotografies, finalitzarà el dia 18 de Novembre del 2022 a les 24:00 hores 🕛. Els guanyadors del concurs s’anunciaran el dia 4 de Desembre del 2022 mitjançant nota de manera individual a cada un dels premiats via mail/whatsapp/telèfon, segons ens ho hagi demanat.',
     itemTitle6: 'Votacions:',
     itemText6a: 'Les votacions es realitzaran mitjançant de la pàgina web:',
     itemText6b:
-      'o presencialment a la Farmàcia on es penjaran les fotografies. El plaç de votació serà del 15 de Novembre al 28 de Novembre del 2021.',
+      'o presencialment a la Farmàcia on es penjaran les fotografies. El plaç de votació serà del 18 de Novembre al 3 de Desembre del 2022.',
     itemTitle7: 'Guanyadors:',
     itemText7:
-      "Les 12 fotografies (rebudes dins el termini i la qualitat sol·licitada) que siguin més votades i d'autor diferents, seran les 12 imatges que il·lustraran els 12 mesos de l’any 2022 del calendari de la Farmàcia del Mar 2022. Els 12 autors seran obsequiats amb un regal.",
+      "Les 12 fotografies (rebudes dins el termini i la qualitat sol·licitada) que siguin més votades i d'autor diferents, seran les 12 imatges que il·lustraran els 12 mesos de l’any 2023 del calendari de la Farmàcia del Mar 2023. Els 12 autors seran obsequiats amb un regal.",
     itemTitle8: 'Drets d’Imatge:',
     itemText8:
       'Els participants accepten cedir a favor de la Farmàcia del Mar, els drets de reproducció, distribució i comunicació pública de les fotografies guanyadores. La publicació de les fotografies guanyadores es farà sempre, citant el seu autor/àlies i el títol de la fotografia.',
@@ -59,14 +60,15 @@ const text = {
   es: {
     title: '3er CONCURSO FOTOGRÀFICO',
     subTitle:
-      'Os animamos a participar en el 3er concurso fotográfico de la Farmacia del Mar. El objetivo del concurso es conseguir una magnífica colección de fotografías. Las fotografías ganadoras formarán parte del calendario "Salud y Bienestar" 2022 de la Farmacia del Mar.',
+      'Os animamos a participar en el 4rt concurso fotográfico de la Farmacia del Mar. El objetivo del concurso es conseguir una magnífica colección de fotografías. Las fotografías ganadoras formarán parte del calendario "Salud y Bienestar" 2023 de la Farmacia del Mar.',
     subTitle2:
       'Este calendario lo obsequiaremos durante las próximas Fiestas Navideñas.',
     standOut: '¡Tú eres protagonista!',
     vote:
-      'A partir del 15 hasta el 28 de Noviembre será el periodo de votación con el fin de seleccionar las 12 imágenes que corresponderán a los 12 meses del año. Cada persona podrá votar un máximo de 3 imágenes.',
+      'A partir del 19 de Noviembre hasta el 3 de Diciembre será el periodo de votación con el fin de seleccionar las 12 imágenes que corresponderán a los 12 meses del año. Cada persona podrá votar un máximo de 3 imágenes.',
     btn1: 'Quiero votar',
     btn2: 'Bases del concurso',
+    btn3: 'Quiero participar',
     title2: 'Bases del concurso',
     itemTitle: 'Participantes:',
     itemText:
@@ -95,14 +97,14 @@ const text = {
     item4ListItem5: 'correo electrónico',
     itemTitle5: 'Plazo:',
     itemText5:
-      'El plazo máximo para enviar fotografías, finalizará el día 14 de Noviembre de 2021 a las 24:00 horas 🕛. Los ganadores del concurso se anunciarán el día 29 de Noviembre de 2021 mediante nota de forma individual a cada uno de los premiados vía mail/whatsapp/teléfono, según nos lo haya pedido.',
+      'El plazo máximo para enviar fotografías, finalizará el día 18 de Noviembre de 2022 a las 24:00 horas 🕛. Los ganadores del concurso se anunciarán el día 4 de Diciembre de 2022 mediante nota de forma individual a cada uno de los premiados vía mail/whatsapp/teléfono, según nos lo haya pedido.',
     itemTitle6: 'Votaciones:',
     itemText6a: 'Las votaciones se realizarán mediante la página web:',
     itemText6b:
-      'o presencialmente en la Farmacia donde se colgarán las fotografías. El plazo de votación será del 15 de Noviembre al 28 de Noviembre de 2021.',
-    itemTitle7: 'Ganadores:d',
+      'o presencialmente en la Farmacia donde se colgarán las fotografías. El plazo de votación será del 19 de Noviembre al 3 de Diciembre de 2022.',
+    itemTitle7: 'Ganadores:',
     itemText7:
-      'Las 12 fotografías (recibidas dentro del plazo y la calidad solicitada) que sean más votadas y de autor diferentes, serán las 12 imágenes que ilustrarán los 12 meses del año 2022 del calendario de la Farmacia del Mar 2022. Los 12 autores serán obsequiados con un regalo.',
+      'Las 12 fotografías (recibidas dentro del plazo y la calidad solicitada) que sean más votadas y de autor diferentes, serán las 12 imágenes que ilustrarán los 12 meses del año 2023 del calendario de la Farmacia del Mar 2023. Los 12 autores serán obsequiados con un regalo.',
     itemTitle8: 'Derechos de Imagen:',
     itemText8:
       'Los participantes aceptan ceder a favor de la Farmacia del Mar, los derechos de reproducción, distribución y comunicación pública de las fotografías ganadoras. La publicación de las fotografías ganadoras se hará siempre, citando a su autor/alias y el título de la fotografía.',
@@ -114,16 +116,17 @@ const text = {
       'La participación en el concurso implica el conocimiento y aceptación de todos los apartados anteriores de las bases del mismo.',
   },
   en: {
-    title: '3rd PHOTO CONTEST',
+    title: '4th PHOTO CONTEST',
     subTitle:
-      'We encourage you to participate in the 3rd photo contest of Farmàcia del Mar. The aim of the contest is to get a magnificent collection of photographs. The winning photographs will be part of the "Health and Wellness" 2022 calendar of Farmàcia del Mar.',
+      'We encourage you to participate in the 4th photo contest of Farmàcia del Mar. The aim of the contest is to get a magnificent collection of photographs. The winning photographs will be part of the "Health and Wellness" 2023 calendar of Farmàcia del Mar.',
     subTitle2:
       'We will give away this calendar during this Christmas festivities.',
     standOut: 'You are the protagonist!',
     vote:
-      'From the 15th untill the 28th of November you are able to vote for the the 12 photos that will represent the 12 months of 2022. Each person can vote a maximum of 3 photos.',
+      'From the 19th of November untill the 3rd of December you are able to vote for the the 12 photos that will represent the 12 months of 2023. Each person can vote a maximum of 3 photos.',
     btn1: 'I want to vote',
     btn2: 'Contest rules',
+    btn3: 'Want to participate?',
     title2: 'Contest rules',
     itemTitle: 'Participants:',
     itemText:
@@ -151,14 +154,14 @@ const text = {
     item4ListItem5: 'email',
     itemTitle5: 'Deadlines:',
     itemText5:
-      'The deadline for sending photographs will end on November 14, 2021 at 24:00 🕛. The winners of the competition will be announced on November 29, 2021 by individual note to each of the winners via email / whatsapp / phone, as requested.',
+      'The deadline for sending photographs will end on November 18, 2022 at 24:00 🕛. The winners of the competition will be announced on December 4th, 2022 by individual note to each of the winners via email / whatsapp / phone, as requested.',
     itemTitle6: 'Votes:',
     itemText6a: 'Voting will take place on the website:',
     itemText6b:
-      'or in person at the Pharmacy where the photographs will be posted. The voting period will be from November 15 to November 28, 2021.',
+      'or in person at the Pharmacy where the photographs will be posted. The voting period will be from November 19 to December 3, 2022.',
     itemTitle7: 'Winners:',
     itemText7:
-      'The 12 photographs (received within the deadline and the quality requested) that are most voted and of different authorship, will be the 12 images that will illustrate the 12 months of the year 2022 of the calendar of Farmàcia del Mar 2022. The 12 authors will be presented with a gift.',
+      'The 12 photographs (received within the deadline and the quality requested) that are most voted and of different authorship, will be the 12 images that will illustrate the 12 months of the year 2023 of the calendar of Farmàcia del Mar 2023. The 12 authors will be presented with a gift.',
     itemTitle8: 'Image Rights:',
     itemText8:
       'Participants agree to assign in favor of Farmàcia del Mar, the rights of reproduction, distribution and public communication of the winning photographs. The winning photographs will always be published, citing their author / alias and the title of the photograph.',
