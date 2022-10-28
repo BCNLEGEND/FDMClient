@@ -20,7 +20,7 @@ import Head from 'next/head';
 
 import { LanguageContext } from '@/context/language';
 
-import text from '@/utils/texts/photoContest2021Text';
+import text from '@/utils/texts/photoContest2022Text';
 import genericText from '@/utils/texts/genericTexts';
 
 const concurs = () => {
@@ -29,15 +29,15 @@ const concurs = () => {
     <>
       <Head>
         <title>
-          Concurs Fotogràfic 2021 » Farmàcia del mar » Arenys de Mar
+          Concurs Fotogràfic 2022 » Farmàcia del mar » Arenys de Mar
         </title>
         <meta
           name="description"
-          content="Us animem a participar en el 3er concurs fotogràfic de la Farmàcia del Mar. L'objectiu del concurs és aconseguir una magnífica col·lecció de fotografies. Les fotografies guanyadores formaran part del calendari Salut i Benestar 2022 de la Farmàcia del Mar."
+          content="Us animem a participar en el 4rt concurs fotogràfic de la Farmàcia del Mar. L'objectiu del concurs és aconseguir una magnífica col·lecció de fotografies. Les fotografies guanyadores formaran part del calendari Salut i Benestar 2023 de la Farmàcia del Mar."
         />
         <meta
           property="og:description"
-          content="Us animem a participar en el 3er concurs fotogràfic de la Farmàcia del Mar. L'objectiu del concurs és aconseguir una magnífica col·lecció de fotografies. Les fotografies guanyadores formaran part del calendari Salut i Benestar 2022 de la Farmàcia del Mar."
+          content="Us animem a participar en el 4rt concurs fotogràfic de la Farmàcia del Mar. L'objectiu del concurs és aconseguir una magnífica col·lecció de fotografies. Les fotografies guanyadores formaran part del calendari Salut i Benestar 2023 de la Farmàcia del Mar."
         />
       </Head>
       <main>
@@ -87,19 +87,26 @@ const concurs = () => {
                 style={{
                   color: 'var(--primary-color)',
                 }}
-                variant="h5"
+                variant="h4"
                 component="h3"
               >
                 {text[language].vote}
               </Typography>
             </Grid>
             <Grid item xs={12} sm={5}>
+              <Link href="/2022/upload">
+                <Button variant="contained" color="secondary">
+                  {text[language].btn3}
+                </Button>
+              </Link>
+            </Grid>
+            {/* <Grid item xs={12} sm={5}>
               <Link href="/2021/vote">
                 <Button variant="contained" color="secondary">
                   {text[language].btn1}
                 </Button>
               </Link>
-            </Grid>
+            </Grid> */}
             <Grid item xs={12} sm={5}>
               <a href="#bases" style={{ textDecoration: 'none' }}>
                 <Button variant="outlined" color="primary">
@@ -220,8 +227,8 @@ const concurs = () => {
               <Grid item xs={10}>
                 <Typography variant="body2">
                   {text[language].itemText4a}{' '}
-                  <Link href="https://www.farmaciadelmar.com/2021">
-                    www.farmaciadelmar.com/2021
+                  <Link href="https://www.farmaciadelmar.com/2022">
+                    www.farmaciadelmar.com/2022
                   </Link>{' '}
                   {text[language].itemText4b}
                 </Typography>
@@ -299,8 +306,8 @@ const concurs = () => {
               <Grid item xs={10}>
                 <Typography variant="body2">
                   {text[language].itemText6a}{' '}
-                  <Link href="https://www.farmaciadelmar.com/2021/vote">
-                    www.farmaciadelmar.com/2021/vote
+                  <Link href="https://www.farmaciadelmar.com/2022/vote">
+                    www.farmaciadelmar.com/2022/vote
                   </Link>{' '}
                   {text[language].itemText6b}
                 </Typography>

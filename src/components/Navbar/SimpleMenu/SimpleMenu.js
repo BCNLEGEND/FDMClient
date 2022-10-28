@@ -17,7 +17,6 @@ import useStyles from './SimpleMenuStyles';
 
 // Text Imports
 import text from './SimpleMenuText';
-import { Typography } from '@mui/material';
 
 export default function SimpleMenu() {
   const { language } = useContext(LanguageContext);
@@ -81,16 +80,21 @@ export default function SimpleMenu() {
             {text[language].photocontest}
           </Link>
         </MenuItem>
+        <MenuItem onClick={handleClose} className={classes.linkGlow}>
+          <Link href="/2022" passHref>
+            {text[language].participate}
+          </Link>
+        </MenuItem>
         {/* <MenuItem onClick={handleClose} className={classes.linkGlow}>
           <Link href="/2021/vote" passHref>
             {text[language].vote}
           </Link>
         </MenuItem> */}
-        <MenuItem onClick={handleClose} className={classes.linkGlow}>
+        {/* <MenuItem onClick={handleClose} className={classes.linkGlow}>
           <Link href="/2021/winners" passHref>
             {text[language].winners}
           </Link>
-        </MenuItem>
+        </MenuItem> */}
       </Menu>
     </div>
   );

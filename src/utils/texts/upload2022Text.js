@@ -1,6 +1,6 @@
 const text = {
   ca: {
-    title: 'Participa en el 3er Concurs Fotogràfic',
+    title: 'Participa en el 4rt Concurs Fotogràfic',
     titlePhoto: 'Títol de la foto',
     btn1: 'Selecciona i puja la teva fotografia',
     btn2: 'Confirma la teva participació',
@@ -16,7 +16,7 @@ const text = {
     listItem5: 'Important: Fotografia en format horizontal',
   },
   es: {
-    title: 'Participa en el 3er Concurso Fotográfico',
+    title: 'Participa en el 4rt Concurso Fotográfico',
     titlePhoto: 'Título de la foto',
     btn1: 'Selecciona y sube tu fotografía',
     btn2: 'Confirma tu participación',
@@ -32,7 +32,7 @@ const text = {
     listItem5: 'Importante: Fotografía en formato Horizontal',
   },
   en: {
-    title: 'Participate in the 3rd Photo Contest',
+    title: 'Participate in the 4th Photo Contest',
     titlePhoto: 'Title of the photograph',
     btn1: 'Select and upload your photo',
     btn2: 'Confirm your participation',

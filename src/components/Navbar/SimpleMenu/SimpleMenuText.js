@@ -6,9 +6,9 @@ const text = {
     contact: 'Contacte',
     emergencies: 'Guàrdies',
     photocontest: 'Concurs Fotogràfic',
-    participate: 'Concurs Fotogràfic 2021',
-    vote: 'Votació 2021',
-    winners: 'Guanyadors Concurs 2021',
+    participate: 'Concurs Fotogràfic 2022',
+    vote: 'Votació 2022',
+    winners: 'Guanyadors Concurs 2022',
   },
   es: {
     home: 'Inicio',
@@ -17,9 +17,9 @@ const text = {
     contact: 'Contacto',
     emergencies: 'Guardias',
     photocontest: 'Concurso de Fotografia',
-    participate: 'Concurso de Fotografia 2021',
-    vote: 'Votacion 2021',
-    winners: 'Ganadores Concurso 2021',
+    participate: 'Concurso de Fotografia 2022',
+    vote: 'Votacion 2022',
+    winners: 'Ganadores Concurso 2022',
   },
   en: {
     home: 'Home',
@@ -28,9 +28,9 @@ const text = {
     contact: 'Contact',
     emergencies: 'Emergencies',
     photocontest: 'Photo Contest',
-    participate: 'Photo Contest 2021',
-    vote: 'Vote 2021',
-    winners: 'Winners Contest 2021',
+    participate: 'Photo Contest 2022',
+    vote: 'Vote 2022',
+    winners: 'Winners Contest 2022',
   },
 };
 
