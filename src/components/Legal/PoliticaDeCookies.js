@@ -92,9 +92,9 @@ export default function PoliticaDeCookies() {
         </Typography>
         <Typography variant="body2">
           Si utiliza Microsoft Internet Explorer, en la opción de menú
-          Herramientas > Opciones de Internet > Privacidad > Avanzadas. <br />
-          Si utiliza Firefox, en la opción de menú Herramientas > Opciones >
-          Privacidad > Cookies.
+          Herramientas &gt; Opciones de Internet &gt; Privacidad &gt; Avanzadas. <br />
+          Si utiliza Firefox, en la opción de menú Herramientas &gt; Opciones &gt;
+          Privacidad &gt; Cookies.
           <br /> Si utiliza Chrome, pulsar botón de herramientas, a continuación
           configuración, y por último configuraciones avanzas, Configuración del
           proxy, Privacidad “usar configuración personalizada para el historial”
