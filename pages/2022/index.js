@@ -29,7 +29,7 @@ const concurs = () => {
     <>
       <Head>
         <title>
-          Concurs Fotogràfic 2022 » Farmàcia del mar » Arenys de Mar
+          Concurs Fotogràfic 2023 » Farmàcia del mar » Arenys de Mar
         </title>
         <meta
           name="description"
@@ -93,20 +93,20 @@ const concurs = () => {
                 {text[language].vote}
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={5}>
+            {/* <Grid item xs={12} sm={5}>
               <Link href="/2022/upload">
                 <Button variant="contained" color="secondary">
                   {text[language].btn3}
                 </Button>
               </Link>
-            </Grid>
-            {/* <Grid item xs={12} sm={5}>
-              <Link href="/2021/vote">
+            </Grid> */}
+            <Grid item xs={12} sm={5}>
+              <Link href="/2022/vote">
                 <Button variant="contained" color="secondary">
                   {text[language].btn1}
                 </Button>
               </Link>
-            </Grid> */}
+            </Grid>
             <Grid item xs={12} sm={5}>
               <a href="#bases" style={{ textDecoration: 'none' }}>
                 <Button variant="outlined" color="primary">

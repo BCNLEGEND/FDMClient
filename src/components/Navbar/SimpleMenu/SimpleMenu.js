@@ -85,11 +85,11 @@ export default function SimpleMenu() {
             {text[language].participate}
           </Link>
         </MenuItem>
-        {/* <MenuItem onClick={handleClose} className={classes.linkGlow}>
-          <Link href="/2021/vote" passHref>
+        <MenuItem onClick={handleClose} className={classes.linkGlow}>
+          <Link href="/2022/vote" passHref>
             {text[language].vote}
           </Link>
-        </MenuItem> */}
+        </MenuItem>
         {/* <MenuItem onClick={handleClose} className={classes.linkGlow}>
           <Link href="/2021/winners" passHref>
             {text[language].winners}

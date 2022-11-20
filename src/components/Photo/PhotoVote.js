@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { API_URL } from '@/utils/api';
 import { IMG_API } from '@/utils/api';
@@ -18,10 +18,10 @@ import ShareIcon from '@mui/icons-material/Share';
 import SocialShare from '@/components/SocialShare/SocialShare';
 import Dialog from '@mui/material/Dialog';
 
-const PhotoVote = ({ photo, votes, setVotes, setError }) => {
+const PhotoVote = ({ photo, votes, setVotes, setError}) => {
   const [open, setOpen] = useState(false);
   const [photoVotes, setPhotoVotes] = useState(photo.votes);
-  const [disabled, setDisabled] = useState(false);
+  const [disabled, setDisabled] = useState(false)
 
   const handleShare = (e) => {
     e.stopPropagation();
@@ -37,7 +37,7 @@ const PhotoVote = ({ photo, votes, setVotes, setError }) => {
     const allVotes = [...votes];
     if (allVotes.length < 3) {
       allVotes.push(id);
-      localStorage.setItem('votes2021', allVotes.toString());
+      localStorage.setItem('votes2022', allVotes.toString());
       const res = await axios.patch(`${API_URL}photos/vote/${id}`);
       const resPhoto = await res;
       if (resPhoto.status == 200) {
@@ -49,12 +49,13 @@ const PhotoVote = ({ photo, votes, setVotes, setError }) => {
         setError('Sorry something went wrong, Please try again later!!!');
       }
     } else {
+      setDisabledAll(true)
       setError('You already voted 3 times!!!');
     }
   };
 
   return (
-    <Link href={`/2021/vote/${photo._id}`}>
+    <Link href={`/2022/vote/${photo._id}`}>
       <Card style={{ padding: 'var(--size-xxs)' }}>
         <CardContent>
           <CardMedia
@@ -84,19 +85,19 @@ const PhotoVote = ({ photo, votes, setVotes, setError }) => {
             >
               <Grid item xs={6}>
                 <Typography variant="body2">
-                  {photo.firstName} {photo.lastName}
+                  {photo.firstName} {photo.lastName[0]}.
                 </Typography>
               </Grid>
-              {/* <Grid item xs={2}>
+              <Grid item xs={2}>
                 <IconButton
-                  disabled
+                  disabled = {disabled || votes.includes(photo._id) || votes.length >= 3}
                   onClick={(e) => handleVote(e, photo._id)}
                   color="secondary"
                   aria-label="Vote image button"
                 >
                   <ThumbUpIcon />
                 </IconButton>
-              </Grid>*/}
+              </Grid>
               <Grid item xs={2}> 
                 <IconButton
                   onClick={(e) => handleShare(e)}
@@ -142,7 +143,7 @@ const PhotoVote = ({ photo, votes, setVotes, setError }) => {
                   </Paper>
                 </Dialog>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={2}>
                 <Typography variant="body1">{photoVotes} ❤️</Typography>
               </Grid>
             </Grid>

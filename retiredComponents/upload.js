@@ -165,6 +165,7 @@ const Upload = () => {
                     value={firstName}
                     style={{ width: '80%' }}
                     onChange={handleChange}
+                    // disabled
                   />
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -177,6 +178,7 @@ const Upload = () => {
                     value={lastName}
                     style={{ width: '80%' }}
                     onChange={handleChange}
+                    // disabled
                   />
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -189,6 +191,7 @@ const Upload = () => {
                     value={email}
                     style={{ width: '80%' }}
                     onChange={handleChange}
+                    // disabled
                   />
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -201,6 +204,7 @@ const Upload = () => {
                     value={mobile}
                     style={{ width: '80%' }}
                     onChange={handleChange}
+                    // disabled
                   />
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -212,6 +216,7 @@ const Upload = () => {
                     value={title}
                     style={{ width: '80%' }}
                     onChange={handleChange}
+                    // disabled
                   />
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -228,6 +233,7 @@ const Upload = () => {
                       onClick={handleClickOpen}
                       color="secondary"
                       size="large"
+                      // disabled
                     >
                       <InsertPhotoIcon />
                       {text[language].btn1}

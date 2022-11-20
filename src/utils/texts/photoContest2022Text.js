@@ -58,7 +58,7 @@ const text = {
       'La participació en el concurs implica el coneixement i l’acceptació de tots els apartats anteriors de les bases del mateix.',
   },
   es: {
-    title: '3er CONCURSO FOTOGRÀFICO',
+    title: '4rt CONCURSO FOTOGRÀFICO',
     subTitle:
       'Os animamos a participar en el 4rt concurso fotográfico de la Farmacia del Mar. El objetivo del concurso es conseguir una magnífica colección de fotografías. Las fotografías ganadoras formarán parte del calendario "Salud y Bienestar" 2023 de la Farmacia del Mar.',
     subTitle2:
