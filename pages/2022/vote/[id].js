@@ -58,7 +58,7 @@ const IndividualPhoto = (props, params) => {
                       variant="h3"
                       component="h1"
                     >
-                      {photo.firstName[0]} {photo.lastName[0]}
+                      {photo.firstName} {photo.lastName[0]}.
                     </Typography>
                   </Grid>
                   <Grid item xs={4}>
