@@ -15,6 +15,8 @@ import Footer from '@/components/Footer/Footer';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 
+// Changed nothing
+
 const photocontest2022 = (props) => {
   const { photos } = props;
   const [votes, setVotes] = useState([]);
