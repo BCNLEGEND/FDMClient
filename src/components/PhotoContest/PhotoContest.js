@@ -38,7 +38,7 @@ const PhotoContest = () => {
                 {text[language].contest} 2022
               </Typography>
               <Image
-                src={`${IMG_API}/uploads/photos/2021/IMG WEB CONCURS FOTOGRAFIC 2022.jpg`}
+                src={`${IMG_API}/uploads/photos/2022/img_2022.jpg`}
                 width="50"
                 height="50"
                 layout="responsive"
