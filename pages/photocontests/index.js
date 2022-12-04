@@ -11,7 +11,6 @@ const calendar = () => {
       <main>
         <PhotoContest />
       </main>
-      <Footer/>
     </>
   );
 };
