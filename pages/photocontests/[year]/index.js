@@ -43,6 +43,7 @@ const photocontest = (props) => {
         </section>
       </main>
       <Footer />
+      
     </>
   );
 };

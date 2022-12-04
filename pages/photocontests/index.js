@@ -1,4 +1,5 @@
 import PhotoContest from '@/components/PhotoContest/PhotoContest';
+import Footer from '@/components/Footer/Footer';
 import Head from 'next/head';
 
 const calendar = () => {
@@ -10,6 +11,7 @@ const calendar = () => {
       <main>
         <PhotoContest />
       </main>
+      <Footer/>
     </>
   );
 };
