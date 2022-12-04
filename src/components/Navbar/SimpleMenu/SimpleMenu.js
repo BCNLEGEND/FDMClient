@@ -80,21 +80,21 @@ export default function SimpleMenu() {
             {text[language].photocontest}
           </Link>
         </MenuItem>
-        <MenuItem onClick={handleClose} className={classes.linkGlow}>
+        {/* <MenuItem onClick={handleClose} className={classes.linkGlow}>
           <Link href="/2022" passHref>
             {text[language].participate}
           </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose} className={classes.linkGlow}>
+        </MenuItem> */}
+        {/* <MenuItem onClick={handleClose} className={classes.linkGlow}>
           <Link href="/2022/vote" passHref>
             {text[language].vote}
           </Link>
-        </MenuItem>
-        {/* <MenuItem onClick={handleClose} className={classes.linkGlow}>
-          <Link href="/2021/winners" passHref>
+        </MenuItem> */}
+        <MenuItem onClick={handleClose} className={classes.linkGlow}>
+          <Link href="/2022/winners" passHref>
             {text[language].winners}
           </Link>
-        </MenuItem> */}
+        </MenuItem>
       </Menu>
     </div>
   );

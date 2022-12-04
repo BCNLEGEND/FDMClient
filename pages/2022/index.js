@@ -102,7 +102,7 @@ const concurs = () => {
             </Grid> */}
             <Grid item xs={12} sm={5}>
               <Link href="/2022/vote">
-                <Button variant="contained" color="secondary">
+                <Button variant="contained" color="secondary" disabled>
                   {text[language].btn1}
                 </Button>
               </Link>
@@ -120,7 +120,7 @@ const concurs = () => {
                 width={100}
                 height={35}
                 layout="responsive"
-                alt="3ª photocontest 2021"
+                alt="3ª photocontest 2022"
               />
             </Grid>
           </Grid>

@@ -27,7 +27,31 @@ const PhotoContest = () => {
         justifyContent="space-evenly"
         spacing={4}
       >
-        <Grid item xs={12} md={6} lg={4}>
+        <Grid item xs={12} md={6} lg={6}>
+          <Card>
+            <CardContent>
+              <Typography
+                className={classes.heading}
+                variant="h4"
+                component="h2"
+              >
+                {text[language].contest} 2022
+              </Typography>
+              <Image
+                src={`${IMG_API}/uploads/photos/2021/IMG WEB CONCURS FOTOGRAFIC 2022.jpg`}
+                width="50"
+                height="50"
+                layout="responsive"
+              />
+            </CardContent>
+            <CardActions>
+              <Link href="/photocontests/2022">
+                <Button size="large">{text[language].all}</Button>
+              </Link>
+            </CardActions>
+          </Card>
+          </Grid>
+        <Grid item xs={12} md={6} lg={6}>
           <Card>
             <CardContent>
               <Typography
@@ -51,7 +75,7 @@ const PhotoContest = () => {
             </CardActions>
           </Card>
           </Grid>
-          <Grid item xs={12} md={6} lg={4}>
+          <Grid item xs={12} md={6} lg={6}>
           <Card>
             <CardContent>
               <Typography
@@ -75,7 +99,7 @@ const PhotoContest = () => {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={12} md={6} lg={4}>
+        <Grid item xs={12} md={6} lg={6}>
           <Card>
             <CardContent>
               <Typography
